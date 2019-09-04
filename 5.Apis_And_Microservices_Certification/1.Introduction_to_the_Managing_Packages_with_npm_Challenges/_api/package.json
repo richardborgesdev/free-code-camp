@@ -1,0 +1,8 @@
+{
+    "author": "richardborgescc",
+    "description": "NPM lesson 2",
+    "keywords": ["freecodecamp", "richardborgescc", "npmlesson3"],
+    "license": "MIT",
+    "version": "1.2",
+    "dependencies": {}
+}

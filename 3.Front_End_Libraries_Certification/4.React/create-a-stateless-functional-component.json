@@ -1,0 +1,1 @@
+{"index.jsx":"const MyComponent = function() {\n  // change code below this line\n  return (\n    <div>\n      My first stateless componente\n    </div>\n  );\n  // change code above this line\n}"}
