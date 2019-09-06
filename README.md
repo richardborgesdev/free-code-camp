@@ -25,7 +25,330 @@
 1. Responsive Web Design Projects
 ----
 ## Javascript Algorithms And Data Structures Certification (300 hours)
-1. Basic JavaScript
+1. [Basic JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/)
+    1. [Comment Your JavaScript Code](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/comment-your-javascript-code/)
+        ```javascript
+        // line comment
+        /* block comment */
+        ```
+    1. [Declare JavaScript Variables]()
+        ```javascript
+        ```
+    1. [Storing Values with the Assignment Operator]()
+        ```javascript
+        ```
+    1. [Initializing Variables with the Assignment Operator]()
+        ```javascript
+        ```
+    1. [Understanding Uninitialized Variables]()
+        ```javascript
+        ```
+    1. [Understanding Case Sensitivity in Variables]()
+        ```javascript
+        ```
+    1. [Add Two Numbers with JavaScript]()
+        ```javascript
+        ```
+    1. [Subtract One Number from Another with JavaScript]()
+        ```javascript
+        ```
+    1. [Multiply Two Numbers with JavaScript]()
+        ```javascript
+        ```
+    1. [Divide One Number by Another with JavaScript]()
+        ```javascript
+        ```
+    1. [Increment a Number with JavaScript]()
+        ```javascript
+        ```
+    1. [Decrement a Number with JavaScript]()
+        ```javascript
+        ```
+    1. [Create Decimal Numbers with JavaScript]()
+        ```javascript
+        ```
+    1. [Multiply Two Decimals with JavaScript]()
+        ```javascript
+        ```
+    1. [Divide One Decimal by Another with JavaScript]()
+        ```javascript
+        ```
+    1. [Finding a Remainder in JavaScript]()
+        ```javascript
+        ```
+    1. [Compound Assignment With Augmented Addition]()
+        ```javascript
+        ```
+    1. [Compound Assignment With Augmented Subtraction]()
+        ```javascript
+        ```
+    1. [Compound Assignment With Augmented Multiplication]()
+        ```javascript
+        ```
+    1. [Compound Assignment With Augmented Division]()
+        ```javascript
+        ```
+    1. [Declare String Variables]()
+        ```javascript
+        ```
+    1. [Escaping Literal Quotes in Strings]()
+        ```javascript
+        ```
+    1. [Quoting Strings with Single Quotes]()
+        ```javascript
+        ```
+    1. [Escape Sequences in Strings]()
+        ```javascript
+        ```
+    1. [Concatenating Strings with Plus Operator]()
+        ```javascript
+        ```
+    1. [Concatenating Strings with the Plus Equals Operator]()
+        ```javascript
+        ```
+    1. [Constructing Strings with Variables]()
+        ```javascript
+        ```
+    1. [Appending Variables to Strings]()
+        ```javascript
+        ```
+    1. [Find the Length of a String]()
+        ```javascript
+        ```
+    1. [Use Bracket Notation to Find the First Character in a String]()
+        ```javascript
+        ```
+    1. [Understand String Immutability]()
+        ```javascript
+        ```
+    1. [Use Bracket Notation to Find the Nth Character in a String]()
+        ```javascript
+        ```
+    1. [Use Bracket Notation to Find the Last Character in a String]()
+        ```javascript
+        ```
+    1. [Use Bracket Notation to Find the Nth-to-Last Character in a String]()
+        ```javascript
+        ```
+    1. [Word Blanks]()
+        ```javascript
+        ```
+    1. [Store Multiple Values in one Variable using JavaScript Arrays]()
+        ```javascript
+        ```
+    1. [Nest one Array within Another Array]()
+        ```javascript
+        ```
+    1. [Access Array Data with Indexes]()
+        ```javascript
+        ```
+    1. [Modify Array Data With Indexes]()
+        ```javascript
+        ```
+    1. [Access Multi-Dimensional Arrays With Indexes]()
+        ```javascript
+        ```
+    1. [Manipulate Arrays With push()]()
+        ```javascript
+        ```
+    1. [Manipulate Arrays With pop()]()
+        ```javascript
+        ```
+    1. [Manipulate Arrays With shift()]()
+        ```javascript
+        ```
+    1. [Manipulate Arrays With unshift()]()
+        ```javascript
+        ```
+    1. [Shopping List]()
+        ```javascript
+        ```
+    1. [Write Reusable JavaScript with Functions]()
+        ```javascript
+        ```
+    1. [Passing Values to Functions with Arguments]()
+        ```javascript
+        ```
+    1. [Global Scope and Functions]()
+        ```javascript
+        ```
+    1. [Local Scope and Functions]()
+        ```javascript
+        ```
+    1. [Global vs. Local Scope in Functions]()
+        ```javascript
+        ```
+    1. [Return a Value from a Function with Return]()
+        ```javascript
+        ```
+    1. [Understanding Undefined Value returned from a Function]()
+        ```javascript
+        ```
+    1. [Assignment with a Returned Value]()
+        ```javascript
+        ```
+    1. [Stand in Line]()
+        ```javascript
+        ```
+    1. [Understanding Boolean Values]()
+        ```javascript
+        ```
+    1. [Use Conditional Logic with If Statements]()
+        ```javascript
+        ```
+    1. [Comparison with the Equality Operator]()
+        ```javascript
+        ```
+    1. [Comparison with the Strict Equality Operator]()
+        ```javascript
+        ```
+    1. [Practice comparing different values]()
+        ```javascript
+        ```
+    1. [Comparison with the Inequality Operator]()
+        ```javascript
+        ```
+    1. [Comparison with the Strict Inequality Operator]()
+        ```javascript
+        ```
+    1. [Comparison with the Greater Than Operator]()
+        ```javascript
+        ```
+    1. [Comparison with the Greater Than Or Equal To Operator]()
+        ```javascript
+        ```
+    1. [Comparison with the Less Than Operator]()
+        ```javascript
+        ```
+    1. [Comparison with the Less Than Or Equal To Operator]()
+        ```javascript
+        ```
+    1. [Comparisons with the Logical And Operator]()
+        ```javascript
+        ```
+    1. [Comparisons with the Logical Or Operator]()
+        ```javascript
+        ```
+    1. [Introducing Else Statements]()
+        ```javascript
+        ```
+    1. [Introducing Else If Statements]()
+        ```javascript
+        ```
+    1. [Logical Order in If Else Statements]()
+        ```javascript
+        ```
+    1. [Chaining If Else Statements]()
+        ```javascript
+        ```
+    1. [Golf Code]()
+        ```javascript
+        ```
+    1. [Selecting from Many Options with Switch Statements]()
+        ```javascript
+        ```
+    1. [Adding a Default Option in Switch Statements]()
+        ```javascript
+        ```
+    1. [Multiple Identical Options in Switch Statements]()
+        ```javascript
+        ```
+    1. [Replacing If Else Chains with Switch]()
+        ```javascript
+        ```
+    1. [Returning Boolean Values from Functions]()
+        ```javascript
+        ```
+    1. [Return Early Pattern for Functions]()
+        ```javascript
+        ```
+    1. [Counting Cards]()
+        ```javascript
+        ```
+    1. [Build JavaScript Objects]()
+        ```javascript
+        ```
+    1. [Accessing Object Properties with Dot Notation]()
+        ```javascript
+        ```
+    1. [Accessing Object Properties with Bracket Notation]()
+        ```javascript
+        ```
+    1. [Accessing Object Properties with Variables]()
+        ```javascript
+        ```
+    1. [Updating Object Properties]()
+        ```javascript
+        ```
+    1. [Add New Properties to a JavaScript Object]()
+        ```javascript
+        ```
+    1. [Delete Properties from a JavaScript Object]()
+        ```javascript
+        ```
+    1. [Using Objects for Lookups]()
+        ```javascript
+        ```
+    1. [Testing Objects for Properties]()
+        ```javascript
+        ```
+    1. [Manipulating Complex Objects]()
+        ```javascript
+        ```
+    1. [Accessing Nested Objects]()
+        ```javascript
+        ```
+    1. [Accessing Nested Arrays]()
+        ```javascript
+        ```
+    1. [Record Collection]()
+        ```javascript
+        ```
+    1. [Iterate with JavaScript While Loops]()
+        ```javascript
+        ```
+    1. [Iterate with JavaScript For Loops]()
+        ```javascript
+        ```
+    1. [Iterate Odd Numbers With a For Loop]()
+        ```javascript
+        ```
+    1. [Count Backwards With a For Loop]()
+        ```javascript
+        ```
+    1. [Iterate Through an Array with a For Loop]()
+        ```javascript
+        ```
+    1. [Nesting For Loops]()
+        ```javascript
+        ```
+    1. [Iterate with JavaScript Do...While Loops]()
+        ```javascript
+        ```
+    1. [Profile Lookup]()
+        ```javascript
+        ```
+    1. [Generate Random Fractions with JavaScript]()
+        ```javascript
+        ```
+    1. [Generate Random Whole Numbers with JavaScript]()
+        ```javascript
+        ```
+    1. [Generate Random Whole Numbers within a Range]()
+        ```javascript
+        ```
+    1. [Use the parseInt Function]()
+        ```javascript
+        ```
+    1. [Use the parseInt Function with a Radix]()
+        ```javascript
+        ```
+    1. [Use the Conditional (Ternary) Operator]()
+        ```javascript
+        ```
+    1. [Use Multiple Conditional (Ternary) Operators]()
+        ```javascript
+        ```
 1. ES6
 1. Regular Expressions
 1. Debugging
