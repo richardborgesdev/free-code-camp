@@ -31,14 +31,31 @@
         // line comment
         /* block comment */
         ```
-    1. [Declare JavaScript Variables]()
+    1. [Declare JavaScript Variables](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/declare-javascript-variables/)
         ```javascript
+        // Example
+        var ourName;
+
+        // Declare myName below this line
+        var myName;
         ```
-    1. [Storing Values with the Assignment Operator]()
+    1. [Storing Values with the Assignment Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assignment-operator/)
         ```javascript
+        // Setup
+        var a;
+        var b = 2;
+
+        // Only change code below this line
+        a = 7;
+        b = a;
         ```
-    1. [Initializing Variables with the Assignment Operator]()
+    1. [Initializing Variables with the Assignment Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/initializing-variables-with-the-assignment-operator/)
         ```javascript
+        // Example
+        var ourVar = 19;
+
+        // Only change code below this line
+        var a = 9;
         ```
     1. [Understanding Uninitialized Variables]()
         ```javascript
