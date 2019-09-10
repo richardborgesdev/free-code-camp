@@ -70,8 +70,17 @@
         b = b + 5;
         c = c + " String!";
         ```
-    1. [Understanding Case Sensitivity in Variables]()
+    1. [Understanding Case Sensitivity in Variables](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/understanding-case-sensitivity-in-variables/)
         ```javascript
+        // Declarations
+        var studlyCapVar;
+        var properCamelCase;
+        var titleCaseOver;
+
+        // Assignments
+        studlyCapVar = 10;
+        properCamelCase = "A String";
+        titleCaseOver = 9000;
         ```
     1. [Add Two Numbers with JavaScript]()
         ```javascript
