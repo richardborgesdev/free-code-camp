@@ -57,8 +57,18 @@
         // Only change code below this line
         var a = 9;
         ```
-    1. [Understanding Uninitialized Variables]()
+    1. [Understanding Uninitialized Variables](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/understanding-uninitialized-variables/)
         ```javascript
+        // Initialize these three variables
+        var a = 5;
+        var b = 10;
+        var c = 'I am a';
+
+        // Do not change code below this line
+
+        a = a + 1;
+        b = b + 5;
+        c = c + " String!";
         ```
     1. [Understanding Case Sensitivity in Variables]()
         ```javascript
