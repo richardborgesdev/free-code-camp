@@ -82,17 +82,21 @@
         properCamelCase = "A String";
         titleCaseOver = 9000;
         ```
-    1. [Add Two Numbers with JavaScript]()
+    1. [Add Two Numbers with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/add-two-numbers-with-javascript/)
         ```javascript
+        var sum = 10 + 10;
         ```
-    1. [Subtract One Number from Another with JavaScript]()
+    1. [Subtract One Number from Another with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/subtract-one-number-from-another-with-javascript/)
         ```javascript
+        var difference = 45 - 33;
         ```
-    1. [Multiply Two Numbers with JavaScript]()
+    1. [Multiply Two Numbers with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/multiply-two-numbers-with-javascript/)
         ```javascript
+        var product = 8 * 10;
         ```
-    1. [Divide One Number by Another with JavaScript]()
+    1. [Divide One Number by Another with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/divide-one-number-by-another-with-javascript/)
         ```javascript
+        var quotient = 66 / 33;
         ```
     1. [Increment a Number with JavaScript]()
         ```javascript
