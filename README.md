@@ -98,20 +98,34 @@
         ```javascript
         var quotient = 66 / 33;
         ```
-    1. [Increment a Number with JavaScript]()
+    1. [Increment a Number with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/increment-a-number-with-javascript/)
         ```javascript
+        var myVar = 87;
+
+        // Only change code below this line
+        myVar++;
         ```
-    1. [Decrement a Number with JavaScript]()
+    1. [Decrement a Number with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/decrement-a-number-with-javascript/)
         ```javascript
+        var myVar = 11;
+
+        // Only change code below this line
+        myVar--;
         ```
-    1. [Create Decimal Numbers with JavaScript]()
+    1. [Create Decimal Numbers with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/create-decimal-numbers-with-javascript/)
         ```javascript
+        var ourDecimal = 5.7;
+
+        // Only change code below this line
+        var myDecimal = 5.7;
         ```
-    1. [Multiply Two Decimals with JavaScript]()
+    1. [Multiply Two Decimals with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/multiply-two-decimals-with-javascript/)
         ```javascript
+        var product = 2.0 * 2.5;
         ```
-    1. [Divide One Decimal by Another with JavaScript]()
+    1. [Divide One Decimal by Another with JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/divide-one-decimal-by-another-with-javascript/)
         ```javascript
+        var quotient = 4.4 / 2.0; // Fix this line
         ```
     1. [Finding a Remainder in JavaScript]()
         ```javascript
