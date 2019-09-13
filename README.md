@@ -127,20 +127,59 @@
         ```javascript
         var quotient = 4.4 / 2.0; // Fix this line
         ```
-    1. [Finding a Remainder in JavaScript]()
+    1. [Finding a Remainder in JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/finding-a-remainder-in-javascript/)
         ```javascript
+        // Only change code below this line
+
+        var remainder = 11 % 3;
         ```
-    1. [Compound Assignment With Augmented Addition]()
+    1. [Compound Assignment With Augmented Addition](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-addition/)
         ```javascript
+        var a = 3;
+        var b = 17;
+        var c = 12;
+
+        // Only modify code below this line
+
+        a += 12;
+        b += 9;
+        c += 7;
         ```
-    1. [Compound Assignment With Augmented Subtraction]()
+    1. [Compound Assignment With Augmented Subtraction](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-subtraction/)
         ```javascript
+        var a = 11;
+        var b = 9;
+        var c = 3;
+
+        // Only modify code below this line
+
+        a -= 6;
+        b -= 15;
+        c -= 1;
         ```
-    1. [Compound Assignment With Augmented Multiplication]()
+    1. [Compound Assignment With Augmented Multiplication](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication/)
         ```javascript
+        var a = 5;
+        var b = 12;
+        var c = 4.6;
+
+        // Only modify code below this line
+
+        a *= 5;
+        b *= 3;
+        c *= 10;
         ```
-    1. [Compound Assignment With Augmented Division]()
+    1. [Compound Assignment With Augmented Division](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-division/)
         ```javascript
+        var a = 48;
+        var b = 108;
+        var c = 33;
+
+        // Only modify code below this line
+
+        a /= 12;
+        b /= 4;
+        c /= 11;
         ```
     1. [Declare String Variables]()
         ```javascript
