@@ -181,20 +181,36 @@
         b /= 4;
         c /= 11;
         ```
-    1. [Declare String Variables]()
+    1. [Declare String Variables](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/declare-string-variables/)
         ```javascript
+        // Example
+        var firstName = "Alan";
+        var lastName = "Turing";
+
+        // Only change code below this line
+        var myFirstName = "Richard";
+        var myLastName = "Borges";
         ```
-    1. [Escaping Literal Quotes in Strings]()
+    1. [Escaping Literal Quotes in Strings](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/escaping-literal-quotes-in-strings/)
         ```javascript
+        var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
         ```
-    1. [Quoting Strings with Single Quotes]()
+    1. [Quoting Strings with Single Quotes](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/quoting-strings-with-single-quotes/)
         ```javascript
+        var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
         ```
-    1. [Escape Sequences in Strings]()
+    1. [Escape Sequences in Strings](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/escape-sequences-in-strings/)
         ```javascript
+        var myStr = 'FirstLine\n\t\\SecondLine\nThirdLine'; // Change this line
         ```
-    1. [Concatenating Strings with Plus Operator]()
+    1. [Concatenating Strings with Plus Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/concatenating-strings-with-plus-operator/)
         ```javascript
+        // Example
+        var ourStr = "I come first. " + "I come second.";
+
+        // Only change code below this line
+
+        var myStr =  "This is the start. " + "This is the end.";
         ```
     1. [Concatenating Strings with the Plus Equals Operator]()
         ```javascript
