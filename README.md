@@ -212,20 +212,69 @@
 
         var myStr =  "This is the start. " + "This is the end.";
         ```
-    1. [Concatenating Strings with the Plus Equals Operator]()
+    1. [Concatenating Strings with the Plus Equals Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/concatenating-strings-with-the-plus-equals-operator/)
         ```javascript
+        // Example
+        var ourStr = "I come first. ";
+        ourStr += "I come second.";
+
+        // Only change code below this line
+
+        var myStr = "This is the first sentence. ";
+        myStr += "This is the second sentence.";
         ```
-    1. [Constructing Strings with Variables]()
+    1. [Constructing Strings with Variables](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/constructing-strings-with-variables/)
         ```javascript
+        // Example
+        var ourName = "freeCodeCamp";
+        var ourStr = "Hello, our name is " + ourName + ", how are you?";
+
+        // Only change code below this line
+        var myName = "Richard";
+        var myStr = "My name is " + myName + " and I am well";
         ```
-    1. [Appending Variables to Strings]()
+    1. [Appending Variables to Strings](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/appending-variables-to-strings/)
         ```javascript
+        // Example
+        var anAdjective = "awesome!";
+        var ourStr = "freeCodeCamp is ";
+        ourStr += anAdjective;
+
+        // Only change code below this line
+
+        var someAdjective = "excellent";
+        var myStr = "Learning to code is ";
+        myStr += someAdjective;
         ```
-    1. [Find the Length of a String]()
+    1. [Find the Length of a String](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/find-the-length-of-a-string/)
         ```javascript
+        // Example
+        var firstNameLength = 0;
+        var firstName = "Ada";
+
+        firstNameLength = firstName.length;
+
+        // Setup
+        var lastNameLength = 0;
+        var lastName = "Lovelace";
+
+        // Only change code below this line.
+        lastNameLength = lastName.length;
         ```
-    1. [Use Bracket Notation to Find the First Character in a String]()
+    1. [Use Bracket Notation to Find the First Character in a String](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-first-character-in-a-string/)
         ```javascript
+        // Example
+        var firstLetterOfFirstName = "";
+        var firstName = "Ada";
+
+        firstLetterOfFirstName = firstName[0];
+
+        // Setup
+        var firstLetterOfLastName = "";
+        var lastName = "Lovelace";
+
+        // Only change code below this line
+        firstLetterOfLastName = lastName[0];
         ```
     1. [Understand String Immutability]()
         ```javascript
