@@ -276,20 +276,63 @@
         // Only change code below this line
         firstLetterOfLastName = lastName[0];
         ```
-    1. [Understand String Immutability]()
+    1. [Understand String Immutability](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/understand-string-immutability/)
         ```javascript
+        // Setup
+        var myStr = "Jello World";
+
+        // Only change code below this line
+
+        myStr = "Hello World"; // Fix Me
         ```
-    1. [Use Bracket Notation to Find the Nth Character in a String]()
+    1. [Use Bracket Notation to Find the Nth Character in a String](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-nth-character-in-a-string/)
         ```javascript
+        // Example
+        var firstName = "Ada";
+        var secondLetterOfFirstName = firstName[1];
+
+        // Setup
+        var lastName = "Lovelace";
+
+        // Only change code below this line.
+        var thirdLetterOfLastName = lastName[2];
         ```
-    1. [Use Bracket Notation to Find the Last Character in a String]()
+    1. [Use Bracket Notation to Find the Last Character in a String](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-last-character-in-a-string/)
         ```javascript
+        // Example
+        var firstName = "Ada";
+        var lastLetterOfFirstName = firstName[firstName.length - 1];
+
+        // Setup
+        var lastName = "Lovelace";
+
+        // Only change code below this line.
+        var lastLetterOfLastName = lastName[lastName.length - 1];
         ```
-    1. [Use Bracket Notation to Find the Nth-to-Last Character in a String]()
+    1. [Use Bracket Notation to Find the Nth-to-Last Character in a String](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-nth-to-last-character-in-a-string/)
         ```javascript
+        // Example
+        var firstName = "Ada";
+        var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
+
+        // Setup
+        var lastName = "Lovelace";
+
+        // Only change code below this line
+        var secondToLastLetterOfLastName = lastName[lastName.length - 2];
         ```
-    1. [Word Blanks]()
+    1. [Word Blanks](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/word-blanks/)
         ```javascript
+        function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+            // Your code below this line
+            var result = "My " + myNoun + " is " + myAdjective + " and " + myVerb + " very " + myAdverb;
+
+            // Your code above this line
+            return result;
+        }
+
+        // Change the words here to test your function
+        wordBlanks("dog", "big", "ran", "quickly");
         ```
     1. [Store Multiple Values in one Variable using JavaScript Arrays]()
         ```javascript
