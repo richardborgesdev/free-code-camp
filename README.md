@@ -334,20 +334,56 @@
         // Change the words here to test your function
         wordBlanks("dog", "big", "ran", "quickly");
         ```
-    1. [Store Multiple Values in one Variable using JavaScript Arrays]()
+    1. [Store Multiple Values in one Variable using JavaScript Arrays](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/store-multiple-values-in-one-variable-using-javascript-arrays/)
         ```javascript
+        // Example
+        var ourArray = ["John", 23];
+
+        // Only change code below this line.
+        var myArray = ["String", 1];
         ```
-    1. [Nest one Array within Another Array]()
+    1. [Nest one Array within Another Array](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/nest-one-array-within-another-array/)
         ```javascript
+        // Example
+        var ourArray = [["the universe", 42], ["everything", 101010]];
+
+        // Only change code below this line.
+        var myArray = [
+            ["Array", 1],
+            ["Array", 2]
+        ];
         ```
-    1. [Access Array Data with Indexes]()
+    1. [Access Array Data with Indexes](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/access-array-data-with-indexes/)
         ```javascript
+        // Example
+        var ourArray = [50,60,70];
+        var ourData = ourArray[0]; // equals 50
+
+        // Setup
+        var myArray = [50,60,70];
+
+        // Only change code below this line.
+        var myData = myArray[0];
         ```
-    1. [Modify Array Data With Indexes]()
+    1. [Modify Array Data With Indexes](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/modify-array-data-with-indexes/)
         ```javascript
+        // Example
+        var ourArray = [18,64,99];
+        ourArray[1] = 45; // ourArray now equals [18,45,99].
+
+        // Setup
+        var myArray = [18,64,99];
+
+        // Only change code below this line.
+        myArray[0] = 45;
         ```
-    1. [Access Multi-Dimensional Arrays With Indexes]()
+    1. [Access Multi-Dimensional Arrays With Indexes](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/access-multi-dimensional-arrays-with-indexes/)
         ```javascript
+        // Setup
+        var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+
+        // Only change code below this line.
+        var myData = myArray[2][1];
         ```
     1. [Manipulate Arrays With push()]()
         ```javascript
