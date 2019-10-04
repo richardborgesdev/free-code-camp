@@ -398,17 +398,56 @@
         // Only change code below this line.
         myArray.push(["dog", 3]);
         ```
-    1. [Manipulate Arrays With pop()]()
+    1. [Manipulate Arrays With pop()](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-pop/)
         ```javascript
+        // Example
+        var ourArray = [1,2,3];
+        var removedFromOurArray = ourArray.pop();
+        // removedFromOurArray now equals 3, and ourArray now equals [1,2]
+
+        // Setup
+        var myArray = [["John", 23], ["cat", 2]];
+
+        // Only change code below this line.
+        var removedFromMyArray = myArray.pop();
         ```
-    1. [Manipulate Arrays With shift()]()
+    1. [Manipulate Arrays With shift()](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-shift/)
         ```javascript
+        // Example
+        var ourArray = ["Stimpson", "J", ["cat"]];
+        var removedFromOurArray = ourArray.shift();
+        // removedFromOurArray now equals "Stimpson" and ourArray now equals ["J", ["cat"]].
+
+        // Setup
+        var myArray = [["John", 23], ["dog", 3]];
+
+        // Only change code below this line.
+        var removedFromMyArray = myArray.shift();
         ```
-    1. [Manipulate Arrays With unshift()]()
+    1. [Manipulate Arrays With unshift()](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-unshift/)
         ```javascript
+        // Example
+        var ourArray = ["Stimpson", "J", "cat"];
+        ourArray.shift(); // ourArray now equals ["J", "cat"]
+        ourArray.unshift("Happy");
+        // ourArray now equals ["Happy", "J", "cat"]
+
+        // Setup
+        var myArray = [["John", 23], ["dog", 3]];
+        myArray.shift();
+
+        // Only change code below this line.
+        myArray.unshift(["Paul", 35]);
         ```
-    1. [Shopping List]()
+    1. [Shopping List](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/shopping-list/)
         ```javascript
+        var myList = [
+            ["Shampoo", 1],
+            ["Teeth brush", 2],
+            ["Soap", 6],
+            ["Massa", 3],
+            ["Beef", 10]
+        ];
         ```
     1. [Write Reusable JavaScript with Functions]()
         ```javascript
