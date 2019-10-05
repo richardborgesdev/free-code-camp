@@ -449,20 +449,92 @@
             ["Beef", 10]
         ];
         ```
-    1. [Write Reusable JavaScript with Functions]()
+    1. [Write Reusable JavaScript with Functions](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/write-reusable-javascript-with-functions/)
         ```javascript
+        // Example
+        function ourReusableFunction() {
+            console.log("Heyya, World");
+        }
+
+        ourReusableFunction();
+
+        // Only change code below this line
+        function reusableFunction() {
+            console.log("Hi World");
+        }
+
+        reusableFunction();
         ```
-    1. [Passing Values to Functions with Arguments]()
+    1. [Passing Values to Functions with Arguments](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/passing-values-to-functions-with-arguments/)
         ```javascript
+        // Example
+        function ourFunctionWithArgs(a, b) {
+            console.log(a - b);
+        }
+        ourFunctionWithArgs(10, 5); // Outputs 5
+
+        // Only change code below this line.
+        function functionWithArgs(num1, num2) {
+            console.log(num1 + num2);
+        }
+
+        functionWithArgs(1, 2);
+        functionWithArgs(7, 9);
         ```
-    1. [Global Scope and Functions]()
+    1. [Global Scope and Functions](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/local-scope-and-functions/)
         ```javascript
+        // Declare your variable here
+        var myGlobal = 10;
+
+        function fun1() {
+            // Assign 5 to oopsGlobal Here
+            oopsGlobal = 5
+        }
+
+        // Only change code above this line
+        function fun2() {
+            var output = "";
+
+            if (typeof myGlobal != "undefined") {
+                output += "myGlobal: " + myGlobal;
+            }
+
+            if (typeof oopsGlobal != "undefined") {
+                output += " oopsGlobal: " + oopsGlobal;
+            }
+            console.log(output);
+        }
         ```
-    1. [Local Scope and Functions]()
+    1. [Local Scope and Functions](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/local-scope-and-functions/)
         ```javascript
+        function myLocalScope() {
+            'use strict'; // you shouldn't need to edit this line
+            var myVar;
+
+            console.log(myVar);
+        }
+        myLocalScope();
+
+        // Run and check the console
+        // myVar is not defined outside of myLocalScope
+        //console.log(myVar);
+
+        // Now remove the console log line to pass the test
         ```
-    1. [Global vs. Local Scope in Functions]()
+    1. [Global vs. Local Scope in Functions](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/global-vs--local-scope-in-functions/)
         ```javascript
+        // Setup
+        var outerWear = "T-Shirt";
+
+        function myOutfit() {
+            // Only change code below this line
+            var outerWear = "sweater";
+
+            // Only change code above this line
+            return outerWear;
+        }
+
+        myOutfit();
         ```
     1. [Return a Value from a Function with Return]()
         ```javascript
