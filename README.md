@@ -536,20 +536,84 @@
 
         myOutfit();
         ```
-    1. [Return a Value from a Function with Return]()
+    1. [Return a Value from a Function with Return](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/return-a-value-from-a-function-with-return/)
         ```javascript
+        // Example
+        function minusSeven(num) {
+            return num - 7;
+        }
+
+        // Only change code below this line
+        function timesFive(arg) {
+            return arg * 5;
+        }
+
+        console.log(timesFive(10));
         ```
-    1. [Understanding Undefined Value returned from a Function]()
+    1. [Understanding Undefined Value returned from a Function](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/understanding-undefined-value-returned-from-a-function/)
         ```javascript
+        // Example
+        var sum = 0;
+        function addThree() {
+            sum = sum + 3;
+        }
+
+        // Only change code below this line
+        function addFive() {
+            sum += 5;
+        }
+
+        // Only change code above this line
+        var returnedValue = addFive();
         ```
-    1. [Assignment with a Returned Value]()
+    1. [Assignment with a Returned Value](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/assignment-with-a-returned-value/)
         ```javascript
+        // Example
+        var changed = 0;
+
+        function change(num) {
+            return (num + 5) / 3;
+        }
+
+        changed = change(10);
+
+        // Setup
+        var processed = 0;
+
+        function processArg(num) {
+            return (num + 3) / 5;
+        }
+
+        // Only change code below this line
+        processed = processArg(7);
         ```
-    1. [Stand in Line]()
+    1. [Stand in Line](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/stand-in-line/)
         ```javascript
+        function nextInLine(arr, item) {
+            // Your code here
+            debugger
+            arr.push(item);
+
+            return arr.shift();  // Change this line
+        }
+
+        // Test Setup
+        var testArr = [1,2,3,4,5];
+
+        // Display Code
+        console.log("Before: " + JSON.stringify(testArr));
+        console.log(nextInLine(testArr, 6)); // Modify this line to test
+        console.log("After: " + JSON.stringify(testArr));
         ```
-    1. [Understanding Boolean Values]()
+    1. [Understanding Boolean Values](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/understanding-boolean-values/)
         ```javascript
+        function welcomeToBooleans() {
+            // Only change code below this line.
+
+            return true; // Change this line
+
+            // Only change code above this line.
+        }
         ```
     1. [Use Conditional Logic with If Statements]()
         ```javascript
