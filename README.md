@@ -615,20 +615,80 @@
             // Only change code above this line.
         }
         ```
-    1. [Use Conditional Logic with If Statements]()
+    1. [Use Conditional Logic with If Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/use-conditional-logic-with-if-statements/)
         ```javascript
+        // Example
+        function ourTrueOrFalse(isItTrue) {
+            if (isItTrue) {
+                return "Yes, it's true";
+            }
+            return "No, it's false";
+        }
+
+        // Setup
+        function trueOrFalse(wasThatTrue) {
+            // Only change code below this line.
+            if (wasThatTrue) {
+                return "Yes, that was true";
+            }
+            return "No, that was false"
+            // Only change code above this line.
+        }
+
+        // Change this value to test
+        trueOrFalse(true);
         ```
-    1. [Comparison with the Equality Operator]()
+    1. [Comparison with the Equality Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator/)
         ```javascript
+        // Setup
+        function testEqual(val) {
+            if (val == 12) { // Change this line
+                return "Equal";
+            }
+            return "Not Equal";
+        }
+
+        // Change this value to test
+        testEqual(10);
         ```
-    1. [Comparison with the Strict Equality Operator]()
+    1. [Comparison with the Strict Equality Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-strict-equality-operator/)
         ```javascript
+        // Setup
+        function testStrict(val) {
+            if (val === 7) { // Change this line
+                return "Equal";
+            }
+            return "Not Equal";
+        }
+
+        // Change this value to test
+        testStrict(10);
         ```
-    1. [Practice comparing different values]()
+    1. [Practice comparing different values](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/practice-comparing-different-values/)
         ```javascript
+        // Setup
+        function compareEquality(a, b) {
+            if (a === b) { // Change this line
+                return "Equal";
+            }
+            return "Not Equal";
+        }
+
+        // Change this value to test
+        compareEquality(10, "10");
         ```
-    1. [Comparison with the Inequality Operator]()
+    1. [Comparison with the Inequality Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-inequality-operator/)
         ```javascript
+        // Setup
+        function testNotEqual(val) {
+            if (val != 99) { // Change this line
+                return "Not Equal";
+            }
+            return "Equal";
+        }
+
+        // Change this value to test
+        testNotEqual(10);
         ```
     1. [Comparison with the Strict Inequality Operator]()
         ```javascript
