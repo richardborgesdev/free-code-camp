@@ -775,20 +775,86 @@
         // Change this value to test
         testLessOrEqual(10);
         ```
-    1. [Comparisons with the Logical And Operator]()
+    1. [Comparisons with the Logical And Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/comparisons-with-the-logical-and-operator/)
         ```javascript
+        function testLogicalAnd(val) {
+        // Only change code below this line
+
+        if (val <= 50 && val >= 25) {
+            return "Yes";
+        }
+
+        // Only change code above this line
+        return "No";
+        }
+
+        // Change this value to test
+        testLogicalAnd(10);
         ```
-    1. [Comparisons with the Logical Or Operator]()
+    1. [Comparisons with the Logical Or Operator](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/comparisons-with-the-logical-or-operator/)
         ```javascript
+        function testLogicalOr(val) {
+            // Only change code below this line
+
+            if (val < 10 || val > 20) {
+                return "Outside";
+            }
+
+            // Only change code above this line
+            return "Inside";
+        }
+
+        // Change this value to test
+        testLogicalOr(15);
         ```
-    1. [Introducing Else Statements]()
+    1. [Introducing Else Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/introducing-else-statements/)
         ```javascript
+        function testElse(val) {
+            var result = "";
+            // Only change code below this line
+
+            if (val > 5) {
+                result = "Bigger than 5";
+            } else {
+                result = "5 or Smaller";
+            }
+
+            // Only change code above this line
+            return result;
+        }
+
+        // Change this value to test
+        testElse(4);
         ```
-    1. [Introducing Else If Statements]()
+    1. [Introducing Else If Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/introducing-else-if-statements/)
         ```javascript
+        function testElseIf(val) {
+            if (val > 10) {
+                return "Greater than 10";
+            } else if (val < 5) {
+                return "Smaller than 5";
+            } else {
+                return "Between 5 and 10";
+            }
+        }
+
+        // Change this value to test
+        testElseIf(7);
         ```
-    1. [Logical Order in If Else Statements]()
+    1. [Logical Order in If Else Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/logical-order-in-if-else-statements/)
         ```javascript
+        function orderMyLogic(val) {
+            if (val < 5) {
+                return "Less than 5";
+            } else if (val < 10) {
+                return "Less than 10";
+            } else {
+                return "Greater than or equal to 10";
+            }
+        }
+
+        // Change this value to test
+        orderMyLogic(7);
         ```
     1. [Chaining If Else Statements]()
         ```javascript
