@@ -856,20 +856,140 @@
         // Change this value to test
         orderMyLogic(7);
         ```
-    1. [Chaining If Else Statements]()
+    1. [Chaining If Else Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/chaining-if-else-statements/)
         ```javascript
+        function testSize(num) {
+            // Only change code below this line
+            if (num < 5) {
+                return "Tiny";
+            } else if (num < 10) {
+                return "Small";
+            } else if (num < 15) {
+                return "Medium";
+            } else if (num < 20) {
+                return "Large";
+            } else if (num >= 20) {
+                return "Huge"
+            }
+
+            return "Change Me";
+            // Only change code above this line
+        }
+
+        // Change this value to test
+        testSize(7);
         ```
-    1. [Golf Code]()
+    1. [Golf Code](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/golf-code/)
         ```javascript
+        var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+        function golfScore(par, strokes) {
+        // Only change code below this line
+        if (strokes == 1) {
+            return names[0];
+        } else if (strokes <= par - 2) {
+            return names[1];
+        } else if (strokes == par - 1) {
+            return names[2];
+        } else if (strokes == par) {
+            return names[3];
+        } else if (strokes == par + 1) {
+            return names[4];
+        } else if (strokes == par + 2) {
+            return names[5];
+        } else if (strokes >= par + 3) {
+            return names[6];
+        }
+
+        return "Change Me";
+        // Only change code above this line
+        }
+
+        // Change these values to test
+        golfScore(5, 4);
         ```
-    1. [Selecting from Many Options with Switch Statements]()
+    1. [Selecting from Many Options with Switch Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/selecting-from-many-options-with-switch-statements/)
         ```javascript
+        function caseInSwitch(val) {
+            var answer = "";
+            // Only change code below this line
+            switch (val) {
+            case 1:
+                answer = "alpha";
+                break;
+            case 2:
+                answer = "beta";
+                break;
+            case 3:
+                answer = "gamma";
+                break;
+            case 4:
+                answer = "delta";
+                break;
+            }
+            // Only change code above this line
+            return answer;
+        }
+
+        // Change this value to test
+        caseInSwitch(1);
         ```
-    1. [Adding a Default Option in Switch Statements]()
+    1. [Adding a Default Option in Switch Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/adding-a-default-option-in-switch-statements/)
         ```javascript
+        function switchOfStuff(val) {
+            var answer = "";
+            // Only change code below this line
+            switch (val) {
+            case "a":
+                answer = "apple";
+                break;
+            case "b":
+                answer = "bird";
+                break;
+            case "c":
+                answer = "cat";
+                break;
+            default:
+                answer = "stuff";
+            }
+
+
+            // Only change code above this line
+            return answer;
+        }
+
+        // Change this value to test
+        switchOfStuff(1);
         ```
-    1. [Multiple Identical Options in Switch Statements]()
+    1. [Multiple Identical Options in Switch Statements](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/multiple-identical-options-in-switch-statements/)
         ```javascript
+        function sequentialSizes(val) {
+            var answer = "";
+            // Only change code below this line
+            switch (val) {
+                case 1:
+                case 2:
+                case 3:
+                    answer = "Low";
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    answer = "Mid";
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    answer = "High";
+                    break;
+            }
+
+
+            // Only change code above this line
+            return answer;
+        }
+
+        // Change this value to test
+        sequentialSizes(1);
         ```
     1. [Replacing If Else Chains with Switch]()
         ```javascript
