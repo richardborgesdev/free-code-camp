@@ -1095,20 +1095,93 @@
             friends: ["Bed", "Food"]
         };
         ```
-    1. [Accessing Object Properties with Dot Notation]()
+    1. [Accessing Object Properties with Dot Notation](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-dot-notation/)
         ```javascript
+        // Setup
+        var testObj = {
+            "hat": "ballcap",
+            "shirt": "jersey",
+            "shoes": "cleats"
+        };
+
+        // Only change code below this line
+
+        var hatValue = testObj.hat;      // Change this line
+        var shirtValue = testObj.shirt;    // Change this line
         ```
-    1. [Accessing Object Properties with Bracket Notation]()
+    1. [Accessing Object Properties with Bracket Notation](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-bracket-notation/)
         ```javascript
+        // Setup
+        var testObj = {
+            "an entree": "hamburger",
+            "my side": "veggies",
+            "the drink": "water"
+        };
+
+        // Only change code below this line
+
+        var entreeValue = testObj["an entree"];   // Change this line
+        var drinkValue = testObj["the drink"];    // Change this line
         ```
-    1. [Accessing Object Properties with Variables]()
+    1. [Accessing Object Properties with Variables](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-variables/)
         ```javascript
+        // Setup
+        var testObj = {
+            12: "Namath",
+            16: "Montana",
+            19: "Unitas"
+        };
+
+        // Only change code below this line;
+
+        var playerNumber = 16;       // Change this Line
+        var player = testObj[playerNumber];   // Change this Line
         ```
-    1. [Updating Object Properties]()
+    1. [Updating Object Properties](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/updating-object-properties/)
         ```javascript
+        // Example
+        var ourDog = {
+            "name": "Camper",
+            "legs": 4,
+            "tails": 1,
+            "friends": ["everything!"]
+        };
+
+        ourDog.name = "Happy Camper";
+
+        // Setup
+        var myDog = {
+            "name": "Coder",
+            "legs": 4,
+            "tails": 1,
+            "friends": ["freeCodeCamp Campers"]
+        };
+
+        // Only change code below this line.
+        myDog.name = "Happy coder";
         ```
-    1. [Add New Properties to a JavaScript Object]()
+    1. [Add New Properties to a JavaScript Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/add-new-properties-to-a-javascript-object/)
         ```javascript
+        // Example
+        var ourDog = {
+            "name": "Camper",
+            "legs": 4,
+            "tails": 1,
+            "friends": ["everything!"]
+        };
+
+        ourDog.bark = "bow-wow";
+
+        // Setup
+        var myDog = {
+            "name": "Happy Coder",
+            "legs": 4,
+            "tails": 1,
+            "friends": ["freeCodeCamp Campers"]
+        };
+
+        // Only change code below this line.
+        myDog.bark = "woof";
         ```
     1. [Delete Properties from a JavaScript Object]()
         ```javascript
