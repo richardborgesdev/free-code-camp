@@ -1183,20 +1183,118 @@
         // Only change code below this line.
         myDog.bark = "woof";
         ```
-    1. [Delete Properties from a JavaScript Object]()
+    1. [Delete Properties from a JavaScript Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/delete-properties-from-a-javascript-object/)
         ```javascript
+        // Example
+        var ourDog = {
+            "name": "Camper",
+            "legs": 4,
+            "tails": 1,
+            "friends": ["everything!"],
+            "bark": "bow-wow"
+        };
+
+        delete ourDog.bark;
+
+        // Setup
+        var myDog = {
+            "name": "Happy Coder",
+            "legs": 4,
+            "tails": 1,
+            "friends": ["freeCodeCamp Campers"],
+            "bark": "woof"
+        };
+
+        // Only change code below this line.
+        delete myDog.tails;
         ```
-    1. [Using Objects for Lookups]()
+    1. [Using Objects for Lookups](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/using-objects-for-lookups/)
         ```javascript
+        // Setup
+        function phoneticLookup(val) {
+            var result = "";
+
+            // Only change code below this line
+            var objData = {
+                alpha: "Adams",
+                bravo: "Boston",
+                charlie: "Chicago",
+                delta: "Denver",
+                echo: "Easy",
+                foxtrot: "Frank"
+            }
+            // Only change code above this line
+            result = objData[val];
+            return result;
+        }
+
+        // Change this value to test
+        phoneticLookup("charlie");
         ```
     1. [Testing Objects for Properties]()
         ```javascript
+        // Setup
+        var myObj = {
+            gift: "pony",
+            pet: "kitten",
+            bed: "sleigh"
+        };
+
+        function checkObj(checkProp) {
+            // Your Code Here
+            if (myObj.hasOwnProperty(checkProp)) {
+            return myObj[checkProp];
+            }
+
+            return "Not Found";
+        }
+
+        // Test your code by modifying these values
+        checkObj("gift");
         ```
-    1. [Manipulating Complex Objects]()
+    1. [Manipulating Complex Objects](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/manipulating-complex-objects/)
         ```javascript
+        var myMusic = [
+            {
+                "artist": "Billy Joel",
+                "title": "Piano Man",
+                "release_year": 1973,
+                "formats": [
+                    "CD",
+                    "8T",
+                    "LP"
+                ],
+                "gold": true
+            },
+            // Add record here
+            {
+                "artist": "Stevie Ray Vaughan",
+                "title": "texas flood",
+                "release_year": 1983,
+                "formats": [
+                    "LP",
+                    "MP3"
+                ],
+                "gold": true
+            },
+        ];
         ```
-    1. [Accessing Nested Objects]()
+    1. [Accessing Nested Objects](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-objects/)
         ```javascript
+        // Setup
+        var myStorage = {
+            "car": {
+                "inside": {
+                    "glove box": "maps",
+                    "passenger seat": "crumbs"
+                },
+                "outside": {
+                    "trunk": "jack"
+                }
+            }
+        };
+
+        var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
         ```
     1. [Accessing Nested Arrays]()
         ```javascript
