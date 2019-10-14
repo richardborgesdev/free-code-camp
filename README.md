@@ -1296,20 +1296,133 @@
 
         var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
         ```
-    1. [Accessing Nested Arrays]()
+    1. [Accessing Nested Arrays](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-arrays/)
         ```javascript
+        // Setup
+        var myPlants = [
+            {
+                type: "flowers",
+                list: [
+                    "rose",
+                    "tulip",
+                    "dandelion"
+                ]
+            },
+            {
+                type: "trees",
+                list: [
+                    "fir",
+                    "pine",
+                    "birch"
+                ]
+            }
+        ];
+
+        // Only change code below this line
+
+        var secondTree = myPlants[1].list[1]; // Change this line
         ```
-    1. [Record Collection]()
+    1. [Record Collection](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/record-collection/)
         ```javascript
+        // Setup
+        var collection = {
+            "2548": {
+                "album": "Slippery When Wet",
+                "artist": "Bon Jovi",
+                "tracks": [
+                    "Let It Rock",
+                    "You Give Love a Bad Name"
+                ]
+            },
+            "2468": {
+                "album": "1999",
+                "artist": "Prince",
+                "tracks": [
+                    "1999",
+                    "Little Red Corvette"
+                ]
+            },
+            "1245": {
+                "artist": "Robert Palmer",
+                "tracks": [ ]
+            },
+            "5439": {
+                "album": "ABBA Gold"
+            }
+        };
+        // Keep a copy of the collection for tests
+        var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+        // Only change code below this line
+        function updateRecords(id, prop, value) {
+            if (!collection[id].hasOwnProperty("tracks")) {
+                collection[id].tracks = [];
+            }
+
+            if (prop == "tracks" && value != "") {
+                collection[id]["tracks"].push(value);
+            }
+
+            if (prop != "tracks" && value != "") {
+                collection[id][prop] = value;
+            }
+
+            if (value == "") {
+                delete collection[id][prop];
+            }
+
+            return collection;
+        }
+
+        // Alter values below to test your code
+        updateRecords(5439, "artist", "ABBA");
         ```
-    1. [Iterate with JavaScript While Loops]()
+    1. [Iterate with JavaScript While Loops](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-while-loops/)
         ```javascript
+        // Setup
+        var myArray = [];
+
+        // Only change code below this line.
+        var count = 0;
+        while (count <= 4) {
+            myArray.push(count);
+            count++;
+        }
         ```
-    1. [Iterate with JavaScript For Loops]()
+    1. [Iterate with JavaScript For Loops](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-for-loops/)
         ```javascript
+        // Example
+        var ourArray = [];
+
+        for (var i = 0; i < 5; i++) {
+            ourArray.push(i);
+        }
+
+        // Setup
+        var myArray = [];
+
+        // Only change code below this line.
+        var myArray = [];
+        for (var i = 1; i <= 5; i++) {
+            myArray.push(i);
+        }
         ```
-    1. [Iterate Odd Numbers With a For Loop]()
+    1. [Iterate Odd Numbers With a For Loop](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/iterate-odd-numbers-with-a-for-loop/)
         ```javascript
+        // Example
+        var ourArray = [];
+
+        for (var i = 0; i < 10; i += 2) {
+            ourArray.push(i);
+        }
+
+        // Setup
+        var myArray = [];
+
+        // Only change code below this line.
+        for (var j = 1; j < 10; j += 2) {
+            myArray.push(j);
+        }
         ```
     1. [Count Backwards With a For Loop]()
         ```javascript
