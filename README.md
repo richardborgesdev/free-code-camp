@@ -1424,20 +1424,120 @@
             myArray.push(j);
         }
         ```
-    1. [Count Backwards With a For Loop]()
+    1. [Count Backwards With a For Loop](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/count-backwards-with-a-for-loop/)
         ```javascript
+        // Example
+        var ourArray = [];
+
+        for (var i = 10; i > 0; i -= 2) {
+            ourArray.push(i);
+        }
+
+        // Setup
+        var myArray = [];
+
+        // Only change code below this line.
+        for (var j = 9; j > 0; j -= 2) {
+            myArray.push(j);
+        }
         ```
-    1. [Iterate Through an Array with a For Loop]()
+    1. [Iterate Through an Array with a For Loop](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/iterate-through-an-array-with-a-for-loop/)
         ```javascript
+        // Example
+        var ourArr = [ 9, 10, 11, 12];
+        var ourTotal = 0;
+
+        for (var i = 0; i < ourArr.length; i++) {
+            ourTotal += ourArr[i];
+        }
+
+        // Setup
+        var myArr = [ 2, 3, 4, 5, 6];
+
+        // Only change code below this line
+        var total = 0;
+        for (var j = 0; j < myArr.length; j++) {
+            total += myArr[j];
+        }
         ```
-    1. [Nesting For Loops]()
+    1. [Nesting For Loops](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/nesting-for-loops/)
         ```javascript
+        function multiplyAll(arr) {
+            var product = 1;
+            // Only change code below this line
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr[i].length; j++) {
+                    product *= arr[i][j];
+                }
+            }
+            // Only change code above this line
+            return product;
+        }
+
+        // Modify values below to test your code
+        multiplyAll([[1,2],[3,4],[5,6,7]]);
         ```
-    1. [Iterate with JavaScript Do...While Loops]()
+    1. [Iterate with JavaScript Do...While Loops](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-do---while-loops/)
         ```javascript
+        // Setup
+        var myArray = [];
+        var i = 10;
+
+        // Only change code below this line.
+        do {
+            myArray.push(i);
+            i++;
+        } while (i < 5);
         ```
-    1. [Profile Lookup]()
+    1. [Profile Lookup](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup/)
         ```javascript
+        //Setup
+        var contacts = [
+            {
+                "firstName": "Akira",
+                "lastName": "Laine",
+                "number": "0543236543",
+                "likes": ["Pizza", "Coding", "Brownie Points"]
+            },
+            {
+                "firstName": "Harry",
+                "lastName": "Potter",
+                "number": "0994372684",
+                "likes": ["Hogwarts", "Magic", "Hagrid"]
+            },
+            {
+                "firstName": "Sherlock",
+                "lastName": "Holmes",
+                "number": "0487345643",
+                "likes": ["Intriguing Cases", "Violin"]
+            },
+            {
+                "firstName": "Kristian",
+                "lastName": "Vos",
+                "number": "unknown",
+                "likes": ["JavaScript", "Gaming", "Foxes"]
+            }
+        ];
+
+
+        function lookUpProfile(name, prop) {
+            // Only change code below this line
+            for (var count = 0; count < contacts.length; count++) {
+                if (contacts[count].firstName == name) {
+                    if (contacts[count].hasOwnProperty(prop)) {
+                        return contacts[count][prop];
+                    } else {
+                        return "No such property";
+                    }
+                }
+            }
+
+            return "No such contact";
+            // Only change code above this line
+        }
+
+        // Change these values to test your function
+        lookUpProfile("Akira", "likes");
         ```
     1. [Generate Random Fractions with JavaScript]()
         ```javascript
