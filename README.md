@@ -1539,20 +1539,50 @@
         // Change these values to test your function
         lookUpProfile("Akira", "likes");
         ```
-    1. [Generate Random Fractions with JavaScript]()
+    1. [Generate Random Fractions with JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/generate-random-fractions-with-javascript)
         ```javascript
+        function randomFraction() {
+        // Only change code below this line.
+
+            return Math.random();
+
+        // Only change code above this line.
+        }
         ```
-    1. [Generate Random Whole Numbers with JavaScript]()
+    1. [Generate Random Whole Numbers with JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/generate-random-whole-numbers-with-javascript)
         ```javascript
+        var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+        function randomWholeNum() {
+
+            // Only change code below this line.
+
+            return Math.floor(Math.random() * 10);
+        }
         ```
-    1. [Generate Random Whole Numbers within a Range]()
+    1. [Generate Random Whole Numbers within a Range](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/generate-random-whole-numbers-within-a-range)
         ```javascript
+        function checkEqual(a, b) {
+            return a == b ? "Equal" : "Not Equal";
+        }
+
+        checkEqual(1, 2);
         ```
-    1. [Use the parseInt Function]()
+    1. [Use the parseInt Function](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-the-parseint-function)
         ```javascript
+        function convertToInteger(str) {
+            return parseInt(str);
+        }
+
+        convertToInteger("56");
         ```
-    1. [Use the parseInt Function with a Radix]()
+    1. [Use the parseInt Function with a Radix](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-the-parseint-function-with-a-radix)
         ```javascript
+        function convertToInteger(str) {
+            return parseInt(str, 2);
+        }
+
+        convertToInteger("10011");
         ```
     1. [Use the Conditional (Ternary) Operator]()
         ```javascript
