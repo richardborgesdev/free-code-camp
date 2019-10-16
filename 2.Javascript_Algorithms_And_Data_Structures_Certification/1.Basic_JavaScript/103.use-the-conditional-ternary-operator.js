@@ -1,5 +1,5 @@
 function checkEqual(a, b) {
-  return a == b ? true : false;
+  return a == b ? "Equal" : "Not Equal";
 }
 
 checkEqual(1, 2);
