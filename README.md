@@ -1,6 +1,6 @@
 # Free Code Camp
 
-## Responsive Web Design Certification (300 hours)
+## 1. Responsive Web Design Certification (300 hours)
 ### Basic HTML and HTML5
 1. [Say Hello to HTML Elements](https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements)
     ```html
@@ -24,8 +24,8 @@
 ### CSS Grid
 ### Responsive Web Design Projects
 ----
-### Javascript Algorithms And Data Structures Certification (300 hours)
-1. [Basic JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/)
+## 2. Javascript Algorithms And Data Structures Certification (300 hours)
+### [Basic JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/)
 1. [Comment Your JavaScript Code](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/comment-your-javascript-code/)
     ```javascript
     // line comment
@@ -3299,13 +3299,13 @@
     ```
 ### JavaScript Algorithms and Data Structures Projects
 ----
-## Front End Libraries Certification (300 hours)
+## 3. Front End Libraries Certification (300 hours)
 
 ----
-## Data Visualization Certification (300 hours)
+## 4. Data Visualization Certification (300 hours)
 
 ----
-## Apis And Microservices Certification (300 hours)
+## 5. Apis And Microservices Certification (300 hours)
 
 ----
-## Information Security And Quality Assurance Certification (300 hours)
+## 6. Information Security And Quality Assurance Certification (300 hours)
