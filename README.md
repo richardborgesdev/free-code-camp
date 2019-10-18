@@ -1584,12 +1584,33 @@
 
     convertToInteger("10011");
     ```
-1. [Use the Conditional (Ternary) Operator]()
+1. [Use the Conditional (Ternary) Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-the-conditional-ternary-operator)
+    ```javascript
+    function checkEqual(a, b) {
+        return a == b ? "Equal" : "Not Equal";
+    }
+
+    checkEqual(1, 2);
+    ```
+1. [Use Multiple Conditional (Ternary) Operators](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-multiple-conditional-ternary-operators)
+    ```javascript
+    function checkSign(num) {
+        return (num > 0)
+            ? "positive"
+            : num < 0
+                ? "negative"
+                : "zero";
+    }
+
+    checkSign(10);
+    ```
+1. [Use Recursion to Create a Range of Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-range-of-numbers)
     ```javascript
     ```
-1. [Use Multiple Conditional (Ternary) Operators]()
+1. [Use Recursion to Create a Countdown](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-countdown)
     ```javascript
     ```
+
 ### ES6
 ### Regular Expressions
 ### Debugging
