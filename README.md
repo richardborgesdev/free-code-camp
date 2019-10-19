@@ -1489,6 +1489,20 @@
         i++;
     } while (i < 5);
     ```
+1. [Replace Loops using Recursion](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/replace-loops-using-recursion)
+    ```javascript
+    function sum(arr, n) {
+        // Only change code below this line
+        if (n <= 0) {
+            return arr[0];
+        } else {
+            return sum(arr, n - 1) + arr[n];
+        }
+        // Only change code above this line
+        }
+
+        console.log(sum([2, 3, 4], 1));
+    ```
 1. [Profile Lookup](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup/)
     ```javascript
     //Setup
@@ -1606,6 +1620,17 @@
     ```
 1. [Use Recursion to Create a Range of Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-range-of-numbers)
     ```javascript
+    function rangeOfNumbers(startNum, endNum) {
+        if (startNum === endNum) {
+            return [startNum];
+        } else {
+            var numbers = rangeOfNumbers(startNum, endNum - 1);
+            numbers.push(endNum);
+            return numbers;
+        }
+    };
+
+    console.log(rangeOfNumbers(1, 5));
     ```
 1. [Use Recursion to Create a Countdown](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-countdown)
     ```javascript
