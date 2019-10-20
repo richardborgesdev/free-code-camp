@@ -1646,8 +1646,100 @@
 
         console.log(countdown([], 5));
     ```
-
 ### ES6
+1. [Explore Differences Between the var and let Keywords]()
+    ```javascript
+    ```
+1. [Compare Scopes of the var and let Keywords]()
+    ```javascript
+    ```
+1. [Declare a Read-Only Variable with the const Keyword]()
+    ```javascript
+    ```
+1. [Mutate an Array Declared with const]()
+    ```javascript
+    ```
+1. [Prevent Object Mutation]()
+    ```javascript
+    ```
+1. [Use Arrow Functions to Write Concise Anonymous Functions]()
+    ```javascript
+    ```
+1. [Write Arrow Functions with Parameters]()
+    ```javascript
+    ```
+1. [Set Default Parameters for Your Functions]()
+    ```javascript
+    ```
+1. [Use the Rest Parameter with Function Parameters]()
+    ```javascript
+    ```
+1. [Use the Spread Operator to Evaluate Arrays In-Place]()
+    ```javascript
+    ```
+1. [Use Destructuring Assignment to Extract Values from Objects]()
+    ```javascript
+    ```
+1. [Use Destructuring Assignment to Assign Variables from Objects]()
+    ```javascript
+    ```
+1. [Use Destructuring Assignment to Assign Variables from Nested Objects]()
+    ```javascript
+    ```
+1. [Use Destructuring Assignment to Assign Variables from Arrays]()
+    ```javascript
+    ```
+1. [Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements]()
+    ```javascript
+    ```
+1. [Use Destructuring Assignment to Pass an Object as a Function's Parameters]()
+    ```javascript
+    ```
+1. [Create Strings using Template Literals]()
+    ```javascript
+    ```
+1. [Write Concise Object Literal Declarations Using Object Property Shorthand]()
+    ```javascript
+    ```
+1. [Write Concise Declarative Functions with ES6]()
+    ```javascript
+    ```
+1. [Use class Syntax to Define a Constructor Function]()
+    ```javascript
+    ```
+1. [Use getters and setters to Control Access to an Object]()
+    ```javascript
+    ```
+1. [Create a Module Script]()
+    ```javascript
+    ```
+1. [Use export to Share a Code Block]()
+    ```javascript
+    ```
+1. [Reuse Javascript Code Using import]()
+    ```javascript
+    ```
+1. [Use * to Import Everything from a File]()
+    ```javascript
+    ```
+1. [Create an Export Fallback with export default]()
+    ```javascript
+    ```
+1. [Import a Default Export]()
+    ```javascript
+    ```
+1. [Create a JavaScript Promise]()
+    ```javascript
+    ```
+1. [Complete a Promise with resolve and reject]()
+    ```javascript
+    ```
+1. [Handle a Fulfilled Promise with then]()
+    ```javascript
+    ```
+1. [Handle a Rejected Promise with catch]()
+    ```javascript
+    ```
 ### Regular Expressions
 ### Debugging
 ### Basic Data Structures
