@@ -1634,6 +1634,17 @@
     ```
 1. [Use Recursion to Create a Countdown](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-countdown)
     ```javascript
+    //Only change code below this line
+        function countdown(myArray, n){
+            if (n < 1) {
+                return myArray;
+            } else {
+                myArray.push(n);
+                return countdown(myArray, n - 1);
+            }
+        }
+
+        console.log(countdown([], 5));
     ```
 
 ### ES6
