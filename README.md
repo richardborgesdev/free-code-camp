@@ -1635,32 +1635,96 @@
 1. [Use Recursion to Create a Countdown](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-countdown)
     ```javascript
     //Only change code below this line
-        function countdown(myArray, n){
-            if (n < 1) {
-                return myArray;
-            } else {
-                myArray.push(n);
-                return countdown(myArray, n - 1);
-            }
+    function countdown(myArray, n){
+        if (n < 1) {
+            return myArray;
+        } else {
+            myArray.push(n);
+            return countdown(myArray, n - 1);
         }
+    }
 
-        console.log(countdown([], 5));
+    console.log(countdown([], 5));
     ```
 ### ES6
-1. [Explore Differences Between the var and let Keywords]()
+1. [Explore Differences Between the var and let Keywords](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/explore-differences-between-the-var-and-let-keywords)
     ```javascript
+    let catName;
+    let quote;
+    function catTalk() {
+        "use strict";
+
+        catName = "Oliver";
+        quote = catName + " says Meow!";
+    }
+    catTalk();
     ```
-1. [Compare Scopes of the var and let Keywords]()
+1. [Compare Scopes of the var and let Keywords](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/compare-scopes-of-the-var-and-let-keywords)
     ```javascript
+    function checkScope() {
+        "use strict";
+        let i = "function scope";
+
+        if (true) {
+            let i = "block scope";
+            console.log("Block scope i is: ", i);
+        }
+        console.log("Function scope i is: ", i);
+        return i;
+    }
     ```
-1. [Declare a Read-Only Variable with the const Keyword]()
+1. [Declare a Read-Only Variable with the const Keyword](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/declare-a-read-only-variable-with-the-const-keyword)
     ```javascript
+    function printManyTimes(str) {
+        "use strict";
+
+        // change code below this line
+
+        const SENTENCE = str + " is cool!";
+        for(let i = 0; i < str.length; i+=2) {
+            console.log(SENTENCE);
+        }
+
+        // change code above this line
+
+    }
+    printManyTimes("freeCodeCamp");
     ```
-1. [Mutate an Array Declared with const]()
+1. [Mutate an Array Declared with const](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/mutate-an-array-declared-with-const)
     ```javascript
+    const s = [5, 7, 2];
+    function editInPlace() {
+        "use strict";
+        // change code below this line
+
+        // s = [2, 5, 7]; <- this is invalid
+        s[0] = 2;
+        s[1] = 5;
+        s[2] = 7;
+        // change code above this line
+    }
+
+    editInPlace();
     ```
-1. [Prevent Object Mutation]()
+1. [Prevent Object Mutation](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/prevent-object-mutation)
     ```javascript
+    function freezeObj() {
+        "use strict";
+        const MATH_CONSTANTS = {
+            PI: 3.14
+        };
+        // change code below this line
+        Object.freeze(MATH_CONSTANTS);
+
+        // change code above this line
+        try {
+            MATH_CONSTANTS.PI = 99;
+        } catch( ex ) {
+            console.log(ex);
+        }
+        return MATH_CONSTANTS.PI;
+    }
+    const PI = freezeObj();
     ```
 1. [Use Arrow Functions to Write Concise Anonymous Functions]()
     ```javascript
