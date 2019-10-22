@@ -1726,8 +1726,9 @@
     }
     const PI = freezeObj();
     ```
-1. [Use Arrow Functions to Write Concise Anonymous Functions]()
+1. [Use Arrow Functions to Write Concise Anonymous Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-arrow-functions-to-write-concise-anonymous-functions)
     ```javascript
+    const magic = () => new Date();
     ```
 1. [Write Arrow Functions with Parameters]()
     ```javascript
