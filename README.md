@@ -1730,8 +1730,11 @@
     ```javascript
     const magic = () => new Date();
     ```
-1. [Write Arrow Functions with Parameters]()
+1. [Write Arrow Functions with Parameters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/write-arrow-functions-with-parameters)
     ```javascript
+    const myConcat = (arr1, arr2) => arr1.concat(arr2);
+    // test your code
+    console.log(myConcat([1, 2], [3, 4, 5]));
     ```
 1. [Set Default Parameters for Your Functions]()
     ```javascript
