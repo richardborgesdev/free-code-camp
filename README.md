@@ -1736,8 +1736,16 @@
     // test your code
     console.log(myConcat([1, 2], [3, 4, 5]));
     ```
-1. [Set Default Parameters for Your Functions]()
+1. [Set Default Parameters for Your Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions)
     ```javascript
+    const increment = (function() {
+        "use strict";
+        return function increment(number, value = 1) {
+            return number + value;
+        };
+    })();
+    console.log(increment(5, 2)); // returns 7
+    console.log(increment(5)); // returns 6
     ```
 1. [Use the Rest Parameter with Function Parameters]()
     ```javascript
