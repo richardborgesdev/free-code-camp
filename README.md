@@ -1747,11 +1747,22 @@
     console.log(increment(5, 2)); // returns 7
     console.log(increment(5)); // returns 6
     ```
-1. [Use the Rest Parameter with Function Parameters]()
+1. [Use the Rest Parameter with Function Parameters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-rest-parameter-with-function-parameters)
     ```javascript
+    const sum = (...args) => {
+        return args.reduce((a, b) => a + b, 0);
+    }
+    console.log(sum(1, 2, 3)); // 6
     ```
 1. [Use the Spread Operator to Evaluate Arrays In-Place]()
     ```javascript
+    const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+    let arr2;
+    (function() {
+        "use strict";
+        arr2 = [...arr1]; // change this line
+    })();
+    console.log(arr2);
     ```
 1. [Use Destructuring Assignment to Extract Values from Objects]()
     ```javascript
