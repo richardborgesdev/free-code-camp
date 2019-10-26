@@ -1764,20 +1764,89 @@
     })();
     console.log(arr2);
     ```
-1. [Use Destructuring Assignment to Extract Values from Objects]()
+1. [Use Destructuring Assignment to Extract Values from Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-extract-values-from-objects)
     ```javascript
+    const HIGH_TEMPERATURES = {
+        yesterday: 75,
+        today: 77,
+        tomorrow: 80
+    };
+
+    // change code below this line
+
+    const { today } = HIGH_TEMPERATURES;
+    const { tomorrow } = HIGH_TEMPERATURES;
+
+    // change code above this line
+
+    console.log(yesterday) // should be not defined
+    console.log(today); // should be 77
+    console.log(tomorrow); // should be 80
     ```
-1. [Use Destructuring Assignment to Assign Variables from Objects]()
+1. [Use Destructuring Assignment to Assign Variables from Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-objects)
     ```javascript
+    const HIGH_TEMPERATURES = {
+        yesterday: 75,
+        today: 77,
+        tomorrow: 80
+    };
+
+    // change code below this line
+
+    const { today: highToday } = HIGH_TEMPERATURES;
+    const { tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+
+    // change code above this line
+
+    console.log(yesterday) // should be not defined
+    console.log(highToday); // should be 77
+    console.log(highTomorrow); // should be 80
     ```
-1. [Use Destructuring Assignment to Assign Variables from Nested Objects]()
+1. [Use Destructuring Assignment to Assign Variables from Nested Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-nested-objects)
     ```javascript
+    const LOCAL_FORECAST = {
+        yesterday: { low: 61, high: 75 },
+        today: { low: 64, high: 77 },
+        tomorrow: { low: 68, high: 80 }
+    };
+
+    // change code below this line
+
+    const { today: {low: lowToday}} = LOCAL_FORECAST;
+    const { today: {high: highToday}} = LOCAL_FORECAST;
+
+    // change code above this line
+
+    console.log(lowToday); // should be 64
+    console.log(highToday); // should be 77
     ```
-1. [Use Destructuring Assignment to Assign Variables from Arrays]()
+1. [Use Destructuring Assignment to Assign Variables from Arrays](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-arrays)
     ```javascript
+    let a = 8, b = 6;
+    (() => {
+        "use strict";
+        // change code below this line
+        [b, a] = [a, b];
+        // change code above this line
+    })();
+    console.log(a); // should be 6
+    console.log(b); // should be 8
     ```
-1. [Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements]()
+1. [Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-with-the-rest-parameter-to-reassign-array-elements)
     ```javascript
+    const source = [1,2,3,4,5,6,7,8,9,10];
+
+    function removeFirstTwo(list) {
+        "use strict";
+        // change code below this line
+        const [a, b, ...arr] = list; // change this
+        // change code above this line
+        return arr;
+    }
+
+    const arr = removeFirstTwo(source);
+    console.log(arr); // should be [3,4,5,6,7,8,9,10]
+    console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
     ```
 1. [Use Destructuring Assignment to Pass an Object as a Function's Parameters]()
     ```javascript
