@@ -1935,20 +1935,72 @@
     const carrot = new Vegetable('carrot');
     console.log(carrot.name); // => should be 'carrot'
     ```
-1. [Use getters and setters to Control Access to an Object]()
+1. [Use getters and setters to Control Access to an Object](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-getters-and-setters-to-control-access-to-an-object)
     ```javascript
+    function makeClass() {
+        "use strict";
+        /* Alter code below this line */
+        class Thermostat {
+            constructor(fahrenheit) {
+                this.fahrenheit = fahrenheit;
+            }
+
+            set temperature(celsius) {
+                this.fahrenheit = celsius * 9.0 / 5 + 32;
+            }
+
+            get temperature() {
+                return 5/9 * (this.fahrenheit - 32);
+            }
+        }
+
+        /* Alter code above this line */
+        return Thermostat;
+    }
+
+    const Thermostat = makeClass();
+    const thermos = new Thermostat(76); // setting in Fahrenheit scale
+    let temp = thermos.temperature; // 24.44 in C
+    thermos.temperature = 26;
+    temp = thermos.temperature; // 26 in C
     ```
-1. [Create a Module Script]()
-    ```javascript
+1. [Create a Module Script](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/create-a-module-script)
+    ```html
+    <html>
+        <body>
+            <!-- add your code below -->
+            <script type="module" src="index.js"></script>
+            <!-- add your code above -->
+        </body>
+    </html>
     ```
-1. [Use export to Share a Code Block]()
+1. [Use export to Share a Code Block](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-export-to-share-a-code-block)
     ```javascript
+    const uppercaseString = (string) => {
+        return string.toUpperCase();
+    }
+
+    const lowercaseString = (string) => {
+        return string.toLowerCase()
+    }
+
+    export { uppercaseString, lowercaseString };
     ```
-1. [Reuse Javascript Code Using import]()
+1. [Reuse Javascript Code Using import](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/reuse-javascript-code-using-import)
     ```javascript
+    import { uppercaseString, lowercaseString } from './string_functions.js';
+    // add code above this line
+
+    uppercaseString("hello");
+    lowercaseString("WORLD!");
     ```
-1. [Use * to Import Everything from a File]()
+1. [Use * to Import Everything from a File](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use--to-import-everything-from-a-file)
     ```javascript
+    import * as stringFunctions from "./string_functions.js";
+    // add code above this line
+
+    stringFunctions.uppercaseString("hello");
+    stringFunctions.lowercaseString("WORLD!");
     ```
 1. [Create an Export Fallback with export default]()
     ```javascript
