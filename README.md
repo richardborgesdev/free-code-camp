@@ -2002,25 +2002,187 @@
     stringFunctions.uppercaseString("hello");
     stringFunctions.lowercaseString("WORLD!");
     ```
-1. [Create an Export Fallback with export default]()
+1. [Create an Export Fallback with export default](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/create-an-export-fallback-with-export-default)
     ```javascript
+    export default function subtract(x,y) {return x - y;}
     ```
-1. [Import a Default Export]()
+1. [Import a Default Export](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/import-a-default-export)
     ```javascript
+    import subtract from "./math_functions.js";
+    subtract(7,4);
     ```
-1. [Create a JavaScript Promise]()
+1. [Create a JavaScript Promise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/create-a-javascript-promise)
     ```javascript
+    const makeServerRequest = new Promise((resolve, reject) => {
+
+    });
     ```
 1. [Complete a Promise with resolve and reject]()
     ```javascript
+    const makeServerRequest = new Promise((resolve, reject) => {
+        // responseFromServer represents a response from a server
+        let responseFromServer;
+
+        if (responseFromServer) {
+            // change this line
+            resolve("We got the data");
+        } else {
+            // change this line
+            reject("Data not received");
+        }
+    });
     ```
-1. [Handle a Fulfilled Promise with then]()
+1. [Handle a Fulfilled Promise with then](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/handle-a-fulfilled-promise-with-then)
     ```javascript
+    const makeServerRequest = new Promise((resolve, reject) => {
+        // responseFromServer is set to true to represent a successful response from a server
+        let responseFromServer = true;
+
+        if(responseFromServer) {
+            resolve("We got the data");
+        } else {
+            reject("Data not received");
+        }
+    });
+
+    makeServerRequest.then(result => {
+        console.log(result);
+    });
     ```
-1. [Handle a Rejected Promise with catch]()
+1. [Handle a Rejected Promise with catch](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/handle-a-rejected-promise-with-catch)
     ```javascript
+    const makeServerRequest = new Promise((resolve, reject) => {
+        // responseFromServer is set to false to represent an unsuccessful response from a server
+        let responseFromServer = false;
+
+        if (responseFromServer) {
+            resolve("We got the data");
+        } else {
+            reject("Data not received");
+        }
+    });
+
+    makeServerRequest.then(result => {
+        console.log(result);
+    }).catch(error => {
+        console.log(error);
+    });
     ```
 ### Regular Expressions
+1. [Using the Test Method](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/using-the-test-method)
+    ```javascript
+    let myString = "Hello, World!";
+    let myRegex = /Hello/;
+    let result = myRegex.test(myString); // Change this line
+    ```
+1. [Match Literal Strings](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-literal-strings)
+    ```javascript
+    let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+    let waldoRegex = /Waldo/; // Change this line
+    let result = waldoRegex.test(waldoIsHiding);
+    ```
+1. [Match a Literal String with Different Possibilities](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-a-literal-string-with-different-possibilities)
+    ```javascript
+    let petString = "James has a pet cat.";
+    let petRegex = /dog|cat|bird|fish/; // Change this line
+    let result = petRegex.test(petString);
+    ```
+1. [Ignore Case While Matching](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/ignore-case-while-matching)
+    ```javascript
+    let myString = "freeCodeCamp";
+    let fccRegex = /freeCodeCamp/i; // Change this line
+    let result = fccRegex.test(myString);
+    ```
+1. [Extract Matches](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/extract-matches)
+    ```javascript
+    let extractStr = "Extract the word 'coding' from this string.";
+    let codingRegex = /coding/; // Change this line
+    let result = extractStr.match(codingRegex); // Change this line
+    ```
+1. [Find More Than the First Match]()
+    ```javascript
+    ```
+1. [Match Anything with Wildcard Period]()
+    ```javascript
+    ```
+1. [Match Single Character with Multiple Possibilities]()
+    ```javascript
+    ```
+1. [Match Letters of the Alphabet]()
+    ```javascript
+    ```
+1. [Match Numbers and Letters of the Alphabet]()
+    ```javascript
+    ```
+1. [Match Single Characters Not Specified]()
+    ```javascript
+    ```
+1. [Match Characters that Occur One or More Times]()
+    ```javascript
+    ```
+1. [Match Characters that Occur Zero or More Times]()
+    ```javascript
+    ```
+1. [Find Characters with Lazy Matching]()
+    ```javascript
+    ```
+1. [Find One or More Criminals in a Hunt]()
+    ```javascript
+    ```
+1. [Match Beginning String Patterns]()
+    ```javascript
+    ```
+1. [Match Ending String Patterns]()
+    ```javascript
+    ```
+1. [Match All Letters and Numbers]()
+    ```javascript
+    ```
+1. [Match Everything But Letters and Numbers]()
+    ```javascript
+    ```
+1. [Match All Numbers]()
+    ```javascript
+    ```
+1. [Match All Non-Numbers]()
+    ```javascript
+    ```
+1. [Restrict Possible Usernames]()
+    ```javascript
+    ```
+1. [Match Whitespace]()
+    ```javascript
+    ```
+1. [Match Non-Whitespace Characters]()
+    ```javascript
+    ```
+1. [Specify Upper and Lower Number of Matches]()
+    ```javascript
+    ```
+1. [Specify Only the Lower Number of Matches]()
+    ```javascript
+    ```
+1. [Specify Exact Number of Matches]()
+    ```javascript
+    ```
+1. [Check for All or None]()
+    ```javascript
+    ```
+1. [Positive and Negative Lookahead]()
+    ```javascript
+    ```
+1. [Check For Mixed Grouping of Characters]()
+    ```javascript
+    ```
+1. [Reuse Patterns Using Capture Groups]()
+    ```javascript
+    ```
+1. [Use Capture Groups to Search and Replace]()
+    ```javascript
+    ```
+1. [Remove Whitespace from Start and End]()
+    ```javascript
+    ```
 ### Debugging
 ### Basic Data Structures
 ### Basic Algorithm Scripting
