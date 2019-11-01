@@ -2099,20 +2099,35 @@
     let codingRegex = /coding/; // Change this line
     let result = extractStr.match(codingRegex); // Change this line
     ```
-1. [Find More Than the First Match]()
+1. [Find More Than the First Match](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/find-more-than-the-first-match)
     ```javascript
+    let twinkleStar = "Twinkle, twinkle, little star";
+    let starRegex = /Twinkle/gi; // Change this line
+    let result = twinkleStar.match(starRegex); // Change this line
     ```
-1. [Match Anything with Wildcard Period]()
+1. [Match Anything with Wildcard Period](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-anything-with-wildcard-period)
     ```javascript
+    let exampleStr = "Let's have fun with regular expressions!";
+    let unRegex = /.un/; // Change this line
+    let result = unRegex.test(exampleStr);
     ```
-1. [Match Single Character with Multiple Possibilities]()
+1. [Match Single Character with Multiple Possibilities](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-single-character-with-multiple-possibilities)
     ```javascript
+    let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+    let vowelRegex = /[aeiou]/ig; // Change this line
+    let result = quoteSample.match(vowelRegex); // Change this line
     ```
-1. [Match Letters of the Alphabet]()
+1. [Match Letters of the Alphabet](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-letters-of-the-alphabet)
     ```javascript
+    let quoteSample = "The quick brown fox jumps over the lazy dog.";
+    let alphabetRegex = /[a-z]/ig; // Change this line
+    let result = quoteSample.match(alphabetRegex); // Change this line
     ```
-1. [Match Numbers and Letters of the Alphabet]()
+1. [Match Numbers and Letters of the Alphabet](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-numbers-and-letters-of-the-alphabet)
     ```javascript
+    let quoteSample = "Blueberry 3.141592653s are delicious.";
+    let myRegex = /[h-s2-6]/ig; // Change this line
+    let result = quoteSample.match(myRegex); // Change this line
     ```
 1. [Match Single Characters Not Specified]()
     ```javascript
