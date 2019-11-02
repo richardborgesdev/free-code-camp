@@ -2129,20 +2129,40 @@
     let myRegex = /[h-s2-6]/ig; // Change this line
     let result = quoteSample.match(myRegex); // Change this line
     ```
-1. [Match Single Characters Not Specified]()
+1. [Match Single Characters Not Specified](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-single-characters-not-specified)
     ```javascript
+    let quoteSample = "3 blind mice.";
+    let myRegex = /[^0-9aeiou]/ig; // Change this line
+    let result = quoteSample.match(myRegex); // Change this line
     ```
-1. [Match Characters that Occur One or More Times]()
+1. [Match Characters that Occur One or More Times](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-characters-that-occur-one-or-more-times)
     ```javascript
+    let difficultSpelling = "Mississippi";
+    let myRegex = /s+/ig; // Change this line
+    let result = difficultSpelling.match(myRegex);
     ```
-1. [Match Characters that Occur Zero or More Times]()
+1. [Match Characters that Occur Zero or More Times](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-characters-that-occur-zero-or-more-times)
     ```javascript
+    let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+    let chewieRegex = /A[a]*/; // Change this line
+    let result = chewieQuote.match(chewieRegex);
     ```
-1. [Find Characters with Lazy Matching]()
+1. [Find Characters with Lazy Matching](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/find-characters-with-lazy-matching)
     ```javascript
+    let text = "<h1>Winter is coming</h1>";
+    let myRegex = /<h1>?/; // Change this line
+    let result = text.match(myRegex);
+    console.log(result);
     ```
-1. [Find One or More Criminals in a Hunt]()
+1. [Find One or More Criminals in a Hunt](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/find-one-or-more-criminals-in-a-hunt)
     ```javascript
+    // example crowd gathering
+    let crowd = 'P1P2P3P4P5P6CCCP7P8P9';
+
+    let reCriminals = /C+/; // Change this line
+
+    let matchedCriminals = crowd.match(reCriminals);
+    console.log(matchedCriminals);
     ```
 1. [Match Beginning String Patterns]()
     ```javascript
