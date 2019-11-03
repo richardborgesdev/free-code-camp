@@ -2164,20 +2164,38 @@
     let matchedCriminals = crowd.match(reCriminals);
     console.log(matchedCriminals);
     ```
-1. [Match Beginning String Patterns]()
+1. [Match Beginning String Patterns](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-beginning-string-patterns)
     ```javascript
+    let rickyAndCal = "Cal and Ricky both like racing.";
+    let calRegex = /^Cal/; // Change this line
+    let result = calRegex.test(rickyAndCal);
     ```
-1. [Match Ending String Patterns]()
+1. [Match Ending String Patterns](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-ending-string-patterns)
     ```javascript
+    let caboose = "The last car on a train is the caboose";
+    let lastRegex = /caboose$/; // Change this line
+    let result = lastRegex.test(caboose);
     ```
-1. [Match All Letters and Numbers]()
+1. [Match All Letters and Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-all-letters-and-numbers)
     ```javascript
+    let quoteSample = "The five boxing wizards jump quickly.";
+    let alphabetRegexV2 = /[\w+]/g; // Change this line
+    let result = quoteSample.match(alphabetRegexV2).length;
+    console.log(quoteSample.match(alphabetRegexV2));
     ```
-1. [Match Everything But Letters and Numbers]()
+1. [Match Everything But Letters and Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-everything-but-letters-and-numbers)
     ```javascript
+    let quoteSample = "The five boxing wizards jump quickly.";
+    let nonAlphabetRegex = /[\W+]/g; // Change this line
+    let result = quoteSample.match(nonAlphabetRegex).length;
+    console.log(quoteSample.match(nonAlphabetRegex));
     ```
-1. [Match All Numbers]()
+1. [Match All Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-all-numbers)
     ```javascript
+    let numString = "Your sandwich will be $5.00";
+    let numRegex = /\d/g; // Change this line
+    let result = numString.match(numRegex).length;
+    console.log(result);
     ```
 1. [Match All Non-Numbers]()
     ```javascript
