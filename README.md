@@ -2197,20 +2197,38 @@
     let result = numString.match(numRegex).length;
     console.log(result);
     ```
-1. [Match All Non-Numbers]()
+1. [Match All Non-Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-all-non-numbers)
     ```javascript
+    let numString = "Your sandwich will be $5.00";
+    let noNumRegex = /\D/g; // Change this line
+    let result = numString.match(noNumRegex).length;
+    console.log(result);
     ```
-1. [Restrict Possible Usernames]()
+1. [Restrict Possible Usernames](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/restrict-possible-usernames)
     ```javascript
+    let username = "JackOfAllTrades";
+    const userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i; // Change this line
+    let result = userCheck.test(username);
+    console.log(result);
     ```
-1. [Match Whitespace]()
+1. [Match Whitespace](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-whitespace)
     ```javascript
+    let sample = "Whitespace is important in separating words";
+    let countWhiteSpace = /\s/g; // Change this line
+    let result = sample.match(countWhiteSpace);
     ```
-1. [Match Non-Whitespace Characters]()
+1. [Match Non-Whitespace Characters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-non-whitespace-characters)
     ```javascript
+    let sample = "Whitespace is important in separating words";
+    let countNonWhiteSpace = /\S/g; // Change this line
+    let result = sample.match(countNonWhiteSpace);
     ```
-1. [Specify Upper and Lower Number of Matches]()
+1. [Specify Upper and Lower Number of Matches](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/specify-upper-and-lower-number-of-matches)
     ```javascript
+    let ohStr = "Ohhh no";
+    let ohRegex = /Oh{3,6}\sno/; // Change this line
+    let result = ohRegex.test(ohStr);
+    console.log(result);
     ```
 1. [Specify Only the Lower Number of Matches]()
     ```javascript
