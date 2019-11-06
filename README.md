@@ -2230,20 +2230,36 @@
     let result = ohRegex.test(ohStr);
     console.log(result);
     ```
-1. [Specify Only the Lower Number of Matches]()
+1. [Specify Only the Lower Number of Matches](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/specify-only-the-lower-number-of-matches)
     ```javascript
+    let haStr = "Hazzzzah";
+    let haRegex = /Haz{4,}ah/; // Change this line
+    let result = haRegex.test(haStr);
     ```
-1. [Specify Exact Number of Matches]()
+1. [Specify Exact Number of Matches](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/specify-exact-number-of-matches)
     ```javascript
+    let timStr = "Timmmmber";
+    let timRegex = /Tim{4}ber/; // Change this line
+    let result = timRegex.test(timStr);
     ```
-1. [Check for All or None]()
+1. [Check for All or None](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/check-for-all-or-none)
     ```javascript
+    let favWord = "favorite";
+    let favRegex = /favou?rite/; // Change this line
+    let result = favRegex.test(favWord);
     ```
-1. [Positive and Negative Lookahead]()
+1. [Positive and Negative Lookahead](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/positive-and-negative-lookahead)
     ```javascript
+    let sampleWord = "astronaut";
+    let pwRegex = /^(?=\w{5,})(?=\D*\d{2,})/; // Change this line
+    let result = pwRegex.test(sampleWord);
     ```
-1. [Check For Mixed Grouping of Characters]()
+1. [Check For Mixed Grouping of Characters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/check-for-mixed-grouping-of-characters)
     ```javascript
+    let myString = "Eleanor Roosevelt";
+    let myRegex = /(Franklin|Eleanor)?Roosevelt/; // Change this line
+    let result = myRegex.test(myString); // Change this line
+    // After passing the challenge experiment with myString and see how the grouping works
     ```
 1. [Reuse Patterns Using Capture Groups]()
     ```javascript
