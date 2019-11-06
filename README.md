@@ -2261,14 +2261,26 @@
     let result = myRegex.test(myString); // Change this line
     // After passing the challenge experiment with myString and see how the grouping works
     ```
-1. [Reuse Patterns Using Capture Groups]()
+1. [Reuse Patterns Using Capture Groups](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/reuse-patterns-using-capture-groups)
     ```javascript
+    let repeatNum = "42 42 42";
+    let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+    let result = reRegex.test(repeatNum);
+    console.log(result);
     ```
-1. [Use Capture Groups to Search and Replace]()
+1. [Use Capture Groups to Search and Replace](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/use-capture-groups-to-search-and-replace)
     ```javascript
+    let huhText = "This sandwich is good.";
+    let fixRegex = /good/; // Change this line
+    let replaceText = "okey-dokey"; // Change this line
+    let result = huhText.replace(fixRegex, replaceText);
     ```
-1. [Remove Whitespace from Start and End]()
+1. [Remove Whitespace from Start and End](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/remove-whitespace-from-start-and-end)
     ```javascript
+    let hello = "   Hello, World!  ";
+    let wsRegex = /^\s*|\s*$/g; // Change this line
+    let result = hello.replace(wsRegex, ""); // Change this line
+    console.log(result);
     ```
 ### Debugging
 ### Basic Data Structures
