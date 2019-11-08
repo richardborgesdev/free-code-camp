@@ -2068,7 +2068,7 @@
         console.log(error);
     });
     ```
-### Regular Expressions
+### [Regular Expressions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/)
 1. [Using the Test Method](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/using-the-test-method)
     ```javascript
     let myString = "Hello, World!";
@@ -2282,7 +2282,43 @@
     let result = hello.replace(wsRegex, ""); // Change this line
     console.log(result);
     ```
-### Debugging
+### [Debugging](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/)
+1. [Use the JavaScript Console to Check the Value of a Variable]()
+    ```javascript
+    ```
+1. [Understanding the Differences between the freeCodeCamp and Browser Console]()
+    ```javascript
+    ```
+1. [Use typeof to Check the Type of a Variable]()
+    ```javascript
+    ```
+1. [Catch Misspelled Variable and Function Names]()
+    ```javascript
+    ```
+1. [Catch Unclosed Parentheses, Brackets, Braces and Quotes]()
+    ```javascript
+    ```
+1. [Catch Mixed Usage of Single and Double Quotes]()
+    ```javascript
+    ```
+1. [Catch Use of Assignment Operator Instead of Equality Operator]()
+    ```javascript
+    ```
+1. [Catch Missing Open and Closing Parenthesis After a Function Call]()
+    ```javascript
+    ```
+1. [Catch Arguments Passed in the Wrong Order When Calling a Function]()
+    ```javascript
+    ```
+1. [Catch Off By One Errors When Using Indexing]()
+    ```javascript
+    ```
+1. [Use Caution When Reinitializing Variables Inside a Loop]()
+    ```javascript
+    ```
+1. [Prevent Infinite Loops with a Valid Terminal Condition]()
+    ```javascript
+    ```
 ### Basic Data Structures
 ### Basic Algorithm Scripting
 ### [Object Oriented Programming](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/)
