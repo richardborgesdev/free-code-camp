@@ -2294,17 +2294,40 @@
     let sumAB = a + b;
     console.log(sumAB);
     ```
-1. [Understanding the Differences between the freeCodeCamp and Browser Console]()
+1. [Understanding the Differences between the freeCodeCamp and Browser Console](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/understanding-the-differences-between-the-freecodecamp-and-browser-console)
     ```javascript
+    // Open your browser console.
+    let output = "Get this to log once in the browser console and twice in the freeCodeCamp console";
+    // Use console.clear() on the next line to clear the browser console.
+    console.clear();
+
+    // Use console.log() to print the output variable.
+    console.log(output)
+
+    // Check the two consoles to see the difference. The freeCodeCamp console should have printed the variable twice, once for each test of this challenge. The browser console should only print the variable once because you cleared it first.
+
     ```
-1. [Use typeof to Check the Type of a Variable]()
+1. [Use typeof to Check the Type of a Variable](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/use-typeof-to-check-the-type-of-a-variable)
     ```javascript
+    let seven = 7;
+    let three = "3";
+    console.log(seven + three);
+    // Add your code below this line
+    console.log(typeof seven);
+    console.log(typeof three);
     ```
-1. [Catch Misspelled Variable and Function Names]()
+1. [Catch Misspelled Variable and Function Names](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/catch-misspelled-variable-and-function-names)
     ```javascript
+    let receivables = 10;
+    let payables = 8;
+    let netWorkingCapital = receivables - payables;
+    console.log(`Net working capital is: ${netWorkingCapital}`);
     ```
-1. [Catch Unclosed Parentheses, Brackets, Braces and Quotes]()
+1. [Catch Unclosed Parentheses, Brackets, Braces and Quotes](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/catch-unclosed-parentheses-brackets-braces-and-quotes)
     ```javascript
+    let myArray = [1, 2, 3];
+    let arraySum = myArray.reduce((previous, current) =>  previous + current);
+    console.log(`Sum of array values is: ${arraySum}`);
     ```
 1. [Catch Mixed Usage of Single and Double Quotes]()
     ```javascript
