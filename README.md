@@ -2283,8 +2283,16 @@
     console.log(result);
     ```
 ### [Debugging](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/)
-1. [Use the JavaScript Console to Check the Value of a Variable]()
+1. [Use the JavaScript Console to Check the Value of a Variable](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/use-the-javascript-console-to-check-the-value-of-a-variable)
     ```javascript
+    let a = 5;
+    let b = 1;
+    a++;
+    // Add your code below this line
+    console.log(a);
+
+    let sumAB = a + b;
+    console.log(sumAB);
     ```
 1. [Understanding the Differences between the freeCodeCamp and Browser Console]()
     ```javascript
