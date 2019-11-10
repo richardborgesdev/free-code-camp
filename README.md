@@ -2329,20 +2329,60 @@
     let arraySum = myArray.reduce((previous, current) =>  previous + current);
     console.log(`Sum of array values is: ${arraySum}`);
     ```
-1. [Catch Mixed Usage of Single and Double Quotes]()
+1. [Catch Mixed Usage of Single and Double Quotes](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/catch-mixed-usage-of-single-and-double-quotes)
     ```javascript
+    let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
+    console.log(innerHtml);
     ```
-1. [Catch Use of Assignment Operator Instead of Equality Operator]()
+1. [Catch Use of Assignment Operator Instead of Equality Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/catch-use-of-assignment-operator-instead-of-equality-operator)
     ```javascript
+    let x = 7;
+    let y = 9;
+    let result = "to come";
+
+    if (x == y) {
+        result = "Equal!";
+    } else {
+        result = "Not equal!";
+    }
+
+    console.log(result);
     ```
-1. [Catch Missing Open and Closing Parenthesis After a Function Call]()
+1. [Catch Missing Open and Closing Parenthesis After a Function Call](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/catch-missing-open-and-closing-parenthesis-after-a-function-call)
     ```javascript
+    function getNine() {
+        let x = 6;
+        let y = 3;
+        return x + y;
+    }
+
+    let result = getNine();
+    console.log(result);
     ```
-1. [Catch Arguments Passed in the Wrong Order When Calling a Function]()
+1. [Catch Arguments Passed in the Wrong Order When Calling a Function](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/catch-arguments-passed-in-the-wrong-order-when-calling-a-function)
     ```javascript
+    function raiseToPower(b, e) {
+        return Math.pow(b, e);
+    }
+
+    let base = 2;
+    let exp = 3;
+    let power = raiseToPower(base, exp);
+    console.log(power);
     ```
-1. [Catch Off By One Errors When Using Indexing]()
+1. [Catch Off By One Errors When Using Indexing](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/catch-off-by-one-errors-when-using-indexing)
     ```javascript
+    function countToFive() {
+        let firstFive = "12345";
+        let len = firstFive.length;
+        // Fix the line below
+        for (let i = 0; i < len; i++) {
+            // Do not alter code below this line
+            console.log(firstFive[i]);
+        }
+    }
+
+    countToFive();
     ```
 1. [Use Caution When Reinitializing Variables Inside a Loop]()
     ```javascript
