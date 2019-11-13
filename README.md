@@ -2415,20 +2415,63 @@
     }
     ```
 ### [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/)
-1. [Use an Array to Store a Collection of Data]()
+1. [Use an Array to Store a Collection of Data](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/use-an-array-to-store-a-collection-of-data)
     ```javascript
+    let yourArray = [
+        "my string",
+        23,
+        true,
+        {
+            id: 'id',
+            nm: 'nm'
+        },
+        -1,
+        false
+    ]; // change this line
     ```
-1. [Access an Array's Contents Using Bracket Notation]()
+1. [Access an Array's Contents Using Bracket Notation](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/access-an-arrays-contents-using-bracket-notation)
     ```javascript
+    let myArray = ["a", "b", "c", "d"];
+    // change code below this line
+    myArray[1] = "not b :)";
+    //change code above this line
+    console.log(myArray);
     ```
-1. [Add Items to an Array with push() and unshift()]()
+1. [Add Items to an Array with push() and unshift()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/add-items-to-an-array-with-push-and-unshift)
     ```javascript
+    function mixedNumbers(arr) {
+        // change code below this line
+        arr.push(7, 'VIII', 9);
+        arr.unshift('I', 2, 'three');
+        // change code above this line
+        return arr;
+    }
+
+    // do not change code below this line
+    console.log(mixedNumbers(['IV', 5, 'six']));
     ```
-1. [Remove Items from an Array with pop() and shift()]()
+1. [Remove Items from an Array with pop() and shift()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/remove-items-from-an-array-with-pop-and-shift)
     ```javascript
+    function popShift(arr) {
+        let popped = arr.pop(); // change this line
+        let shifted = arr.shift(); // change this line
+        return [shifted, popped];
+    }
+
+    // do not change code below this line
+    console.log(popShift(['challenge', 'is', 'not', 'complete']));
     ```
-1. [Remove Items Using splice()]()
+1. [Remove Items Using splice()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/remove-items-using-splice)
     ```javascript
+    function sumOfTen(arr) {
+        // change code below this line
+        arr.splice(2, 2);
+        // change code above this line
+        return arr.reduce((a, b) => a + b);
+    }
+
+    // do not change code below this line
+    console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
     ```
 1. [Add Items Using splice()]()
     ```javascript
