@@ -2414,7 +2414,67 @@
         }
     }
     ```
-### Basic Data Structures
+### [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/)
+1. [Use an Array to Store a Collection of Data]()
+    ```javascript
+    ```
+1. [Access an Array's Contents Using Bracket Notation]()
+    ```javascript
+    ```
+1. [Add Items to an Array with push() and unshift()]()
+    ```javascript
+    ```
+1. [Remove Items from an Array with pop() and shift()]()
+    ```javascript
+    ```
+1. [Remove Items Using splice()]()
+    ```javascript
+    ```
+1. [Add Items Using splice()]()
+    ```javascript
+    ```
+1. [Copy Array Items Using slice()]()
+    ```javascript
+    ```
+1. [Copy an Array with the Spread Operator]()
+    ```javascript
+    ```
+1. [Combine Arrays with the Spread Operator]()
+    ```javascript
+    ```
+1. [Check For The Presence of an Element With indexOf()]()
+    ```javascript
+    ```
+1. [Iterate Through All an Array's Items Using For Loops]()
+    ```javascript
+    ```
+1. [Create complex multi-dimensional arrays]()
+    ```javascript
+    ```
+1. [Add Key-Value Pairs to JavaScript Objects]()
+    ```javascript
+    ```
+1. [Modify an Object Nested Within an Object]()
+    ```javascript
+    ```
+1. [Access Property Names with Bracket Notation]()
+    ```javascript
+    ```
+1. [Use the delete Keyword to Remove Object Properties]()
+    ```javascript
+    ```
+1. [Check if an Object has a Property]()
+    ```javascript
+    ```
+1. [Iterate Through the Keys of an Object with a for...in Statement]()
+    ```javascript
+    ```
+1. [Generate an Array of All Object Keys with Object.keys()]()
+    ```javascript
+    ```
+1. [Modify an Array Stored in an Object]()
+    ```javascript
+    ```
 ### Basic Algorithm Scripting
 ### [Object Oriented Programming](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/)
 1. [Create a Basic JavaScript Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/create-a-basic-javascript-object)
