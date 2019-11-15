@@ -2473,20 +2473,65 @@
     // do not change code below this line
     console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
     ```
-1. [Add Items Using splice()]()
+1. [Add Items Using splice()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/add-items-using-splice)
     ```javascript
+    function htmlColorNames(arr) {
+        // change code below this line
+        arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
+        // change code above this line
+        return arr;
+    }
+
+    // do not change code below this line
+    console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
     ```
-1. [Copy Array Items Using slice()]()
+1. [Copy Array Items Using slice()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice)
     ```javascript
+    function forecast(arr) {
+        // change code below this line
+        return arr.slice(2, 4);
+    }
+
+    // do not change code below this line
+    console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
     ```
-1. [Copy an Array with the Spread Operator]()
+1. [Copy an Array with the Spread Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-an-array-with-the-spread-operator)
     ```javascript
+    function copyMachine(arr, num) {
+        let newArr = [];
+        while (num >= 1) {
+        // change code below this line
+        newArr.push([...arr]);
+        // change code above this line
+        num--;
+        }
+        return newArr;
+    }
+
+    // change code here to test different cases:
+    console.log(copyMachine([true, false, true], 2));
     ```
-1. [Combine Arrays with the Spread Operator]()
+1. [Combine Arrays with the Spread Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/combine-arrays-with-the-spread-operator)
     ```javascript
+    function spreadOut() {
+        let fragment = ['to', 'code'];
+        let sentence = ['learning', ...fragment, 'is', 'fun']; // change this line
+        return sentence;
+    }
+
+    // do not change code below this line
+    console.log(spreadOut());
     ```
-1. [Check For The Presence of an Element With indexOf()]()
+1. [Check For The Presence of an Element With indexOf()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/check-for-the-presence-of-an-element-with-indexof)
     ```javascript
+    function quickCheck(arr, elem) {
+        // change code below this line
+        return arr.indexOf(elem) != -1;
+        // change code above this line
+    }
+
+    // change code here to test different cases:
+    console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
     ```
 1. [Iterate Through All an Array's Items Using For Loops]()
     ```javascript
