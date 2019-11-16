@@ -2622,20 +2622,136 @@
     // change code below this line to test different cases:
     console.log(checkInventory("apples"));
     ```
-1. [Use the delete Keyword to Remove Object Properties]()
+1. [Use the delete Keyword to Remove Object Properties](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/use-the-delete-keyword-to-remove-object-properties)
     ```javascript
+    let foods = {
+        apples: 25,
+        oranges: 32,
+        plums: 28,
+        bananas: 13,
+        grapes: 35,
+        strawberries: 27
+    };
+
+    // change code below this line
+    delete foods.oranges;
+    delete foods.plums;
+    delete foods.strawberries;
+    // change code above this line
+
+    console.log(foods);
     ```
-1. [Check if an Object has a Property]()
+1. [Check if an Object has a Property](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/check-if-an-object-has-a-property)
     ```javascript
+    let users = {
+        Alan: {
+            age: 27,
+            online: true
+        },
+        Jeff: {
+            age: 32,
+            online: true
+        },
+        Sarah: {
+            age: 48,
+            online: true
+        },
+        Ryan: {
+            age: 19,
+            online: true
+        }
+    };
+
+    function isEveryoneHere(obj) {
+        // change code below this line
+        if ('Alan' in obj
+            && 'Jeff' in obj
+            && 'Sarah' in obj
+            && 'Ryan' in obj
+        ) {
+            return true;
+        }
+
+        return false;
+        // change code above this line
+    }
+
+    console.log(isEveryoneHere(users));
     ```
-1. [Iterate Through the Keys of an Object with a for...in Statement]()
+1. [Iterate Through the Keys of an Object with a for...in Statement](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/iterate-through-the-keys-of-an-object-with-a-for...in-statement)
     ```javascript
+      function countOnline(obj) {
+        // change code below this line
+        let onlineUsers = 0;
+        for (let user in obj) {
+            if (obj[user].online) {
+                onlineUsers++;
+            }
+        }
+
+        return onlineUsers;
+        // change code above this line
+    }
     ```
-1. [Generate an Array of All Object Keys with Object.keys()]()
+1. [Generate an Array of All Object Keys with Object.keys()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/generate-an-array-of-all-object-keys-with-object.keys)
     ```javascript
+    let users = {
+        Alan: {
+            age: 27,
+            online: false
+        },
+        Jeff: {
+            age: 32,
+            online: true
+        },
+        Sarah: {
+            age: 48,
+            online: false
+        },
+        Ryan: {
+            age: 19,
+            online: true
+        }
+    };
+
+    function getArrayOfUsers(obj) {
+        // change code below this line
+        return Object.keys(obj);
+        // change code above this line
+    }
+
+    console.log(getArrayOfUsers(users));
     ```
-1. [Modify an Array Stored in an Object]()
+1. [Modify an Array Stored in an Object](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/modify-an-array-stored-in-an-object)
     ```javascript
+    let user = {
+        name: 'Kenneth',
+        age: 28,
+        data: {
+            username: 'kennethCodesAllDay',
+            joinDate: 'March 26, 2016',
+            organization: 'freeCodeCamp',
+            friends: [
+                'Sam',
+                'Kira',
+                'Tomo'
+            ],
+            location: {
+                city: 'San Francisco',
+                state: 'CA',
+                country: 'USA'
+            }
+        }
+    };
+
+    function addFriend(userObj, friend) {
+        // change code below this line
+        userObj.data.friends.push(friend);
+        return userObj.data.friends;
+        // change code above this line
+    }
+
+    console.log(addFriend(user, 'Pete'));
     ```
 ### Basic Algorithm Scripting
 ### [Object Oriented Programming](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/)
@@ -2646,15 +2762,15 @@
         numLegs: 4
     };
     ```
-    1. [Use Dot Notation to Access the Properties of an Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/use-dot-notation-to-access-the-properties-of-an-object)
-        ```javascript
-        let dog = {
-            name: "Spot",
-            numLegs: 4
-        };
-        // Add your code below this line
-        console.log(dog.name);
-        console.log(dog.numLegs);
+1. [Use Dot Notation to Access the Properties of an Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/use-dot-notation-to-access-the-properties-of-an-object)
+    ```javascript
+    let dog = {
+        name: "Spot",
+        numLegs: 4
+    };
+    // Add your code below this line
+    console.log(dog.name);
+    console.log(dog.numLegs);
         ```
 1. [Create a Method on an Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/create-a-method-on-an-object)
     ```javascript
