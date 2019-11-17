@@ -2753,7 +2753,117 @@
 
     console.log(addFriend(user, 'Pete'));
     ```
-### Basic Algorithm Scripting
+### [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
+
+1. [Convert Celsius to Fahrenheit](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/convert-celsius-to-fahrenheit)
+    ```javascript
+    function convertToF(celsius) {
+        let fahrenheit = celsius * 9/5 + 32;
+        return fahrenheit;
+    }
+
+    convertToF(30);
+    ```
+1. [Reverse a String](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/reverse-a-string)
+    ```javascript
+    function reverseString(str) {
+        let newStr = [];
+
+        for (let x = str.length - 1; x >= 0; x--) {
+            newStr.push(str[x]);
+        }
+        return newStr.join('');
+    }
+
+    console.log(reverseString("hello"));
+    ```
+1. [Factorialize a Number](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/factorialize-a-number)
+    ```javascript
+    function factorialize(num) {
+        let factor = 1;
+
+        for (let x = 2; x <= num; x++) {
+            factor *= x;
+        }
+        return factor;
+    }
+
+    factorialize(5);
+    ```
+1. [Find the Longest Word in a String](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string)
+    ```javascript
+    function findLongestWordLength(str) {
+        let longest = 0;
+        let arrStr = str.split(' ');
+        let longestIndex = -1;
+
+        for (let x = 0; x < arrStr.length; x++) {
+            if (arrStr[x].length > longest) {
+                longest = arrStr[x].length;
+                longestIndex = x;
+            }
+        }
+
+        return longest;
+    }
+
+    findLongestWordLength("The quick brown fox jumped over the lazy dog");
+    ```
+1. [Return Largest Numbers in Arrays](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/return-largest-numbers-in-arrays)
+    ```javascript
+    function largestOfFour(arr) {
+        // You can do this!
+        let largestNumbers = [];
+        for (let x = 0; x < arr.length; x++) {
+            let largest = arr[x][0];
+
+            for (let y = 1; y < arr[x].length; y++){
+                    if (arr[x][y] > largest) {
+                    largest = arr[x][y];
+                }
+            }
+
+            largestNumbers.push(largest);
+        }
+        console.log(largestNumbers);
+        return largestNumbers;
+    }
+
+    largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+    ```
+1. [Confirm the Ending]()
+    ```javascript
+    ```
+1. [Repeat a String Repeat a String]()
+    ```javascript
+    ```
+1. [Truncate a String]()
+    ```javascript
+    ```
+1. [Finders Keepers]()
+    ```javascript
+    ```
+1. [Boo who]()
+    ```javascript
+    ```
+1. [Title Case a Sentence]()
+    ```javascript
+    ```
+1. [Slice and Splice]()
+    ```javascript
+    ```
+1. [Falsy Bouncer]()
+    ```javascript
+    ```
+1. [Where do I Belong]()
+    ```javascript
+    ```
+1. [Mutations]()
+    ```javascript
+    ```
+1. [Chunky Monkey]()
+    ```javascript
+    ```
 ### [Object Oriented Programming](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/)
 1. [Create a Basic JavaScript Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/create-a-basic-javascript-object)
     ```javascript
