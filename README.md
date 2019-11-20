@@ -2861,14 +2861,43 @@
 
     repeatStringNumTimes("abc", 3);
     ```
-1. [Truncate a String]()
+1. [Truncate a String](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/truncate-a-string)
     ```javascript
+    function truncateString(str, num) {
+        // Clear out that junk in your trunk
+        if (num >= str.length) {
+            return str;
+        }
+    
+        str = str.substr(0, num);
+        return str + '...';
+    }
+
+    truncateString("A-tisket a-tasket A green and yellow basket", 8);
     ```
-1. [Finders Keepers]()
+1. [Finders Keepers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/finders-keepers)
     ```javascript
+    function findElement(arr, func) {
+        let num = 0;
+        num = arr.filter(func);
+    
+        return num.shift();
+    }
+
+    findElement([1, 2, 3, 4], num => num % 2 === 0);
     ```
-1. [Boo who]()
+1. [Boo who](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/boo-who)
     ```javascript
+    function booWho(bool) {
+        // What is the new fad diet for ghost developers? The Boolean.
+        if (typeof(bool) == "boolean") {
+            return true;
+        }
+
+        return false;
+    }
+
+    booWho(null);
     ```
 1. [Title Case a Sentence]()
     ```javascript
