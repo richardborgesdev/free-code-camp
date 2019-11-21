@@ -2899,23 +2899,113 @@
 
     booWho(null);
     ```
-1. [Title Case a Sentence]()
+1. [Title Case a Sentence](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence)
     ```javascript
+    function titleCase(str) {
+        let words = str.split(' ');
+        let wordsCaptalized = words.map(
+            (ele) => {
+                let captalize = ele[0].toUpperCase() + ele.substr(1).toLowerCase();
+                return captalize;
+            }
+        );
+
+        return wordsCaptalized.join(' ');
+    }
+
+    titleCase("I'm a little tea pot");
     ```
-1. [Slice and Splice]()
+1. [Slice and Splice](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/slice-and-splice)
     ```javascript
+    function frankenSplice(arr1, arr2, n) {
+        // It's alive. It's alive!
+        let arr2Copy = arr2.slice();
+
+        for (let i = 0; i < arr1.length; i++) {
+            arr2Copy.splice(n, 0, arr1[i]);
+            n++;
+        }
+
+        console.log(arr2Copy);
+        return arr2Copy;
+    }
+
+    frankenSplice([1, 2, 3], [4, 5, 6], 1);
+    frankenSplice([1, 2, 3], [4, 5], 1);
+    frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2);
     ```
-1. [Falsy Bouncer]()
+1. [Falsy Bouncer](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer)
     ```javascript
+    function bouncer(arr) {
+        // Don't show a false ID to this bouncer.
+        return arr.filter(
+            (ele) => {
+                return ele;
+            }
+        );
+    }
+
+    bouncer([7, "ate", "", false, 9]);
     ```
-1. [Where do I Belong]()
+1. [Where do I Belong](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong)
     ```javascript
+    function getIndexToIns(arr, num) {
+        // Find my place in this sorted array.
+        arr.sort((a, b) => {return a - b});
+        let indexToIns = 0;
+
+        for (let x = 0; x < arr.length; x++) {
+            if (num > arr[x]) {
+                indexToIns = x + 1;
+            } else if (num == arr[x]) {
+                indexToIns = x;
+            }
+        }
+        console.log(indexToIns);
+        return indexToIns;
+    }
+
+
+    getIndexToIns([10, 20, 30, 40, 50], 35);
     ```
-1. [Mutations]()
+1. [Mutations](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/mutations)
     ```javascript
+    function mutation(arr) {
+        let mainStr = arr[0];
+        let lettersToFind = arr[1].split('');
+
+        for (let x = 0; x < lettersToFind.length; x++) {
+            if (mainStr.indexOf(lettersToFind[x].toLowerCase()) == -1
+                && mainStr.indexOf(lettersToFind[x].toUpperCase()) == -1
+            ) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    mutation(["hello", "hey"]);
     ```
-1. [Chunky Monkey]()
+1. [Chunky Monkey](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey)
     ```javascript
+    function chunkArrayInGroups(arr, size) {
+        // Break it up.
+        let finalArr = [];
+
+        for (let x = 0; x < arr.length; x += size) {
+            console.log(x + ' - ' + (x + size));
+            debugger;
+            finalArr.push(
+                arr.slice(x, size + x)
+            );
+        }
+        console.log(finalArr);
+        return finalArr;
+    }
+
+    chunkArrayInGroups(["a", "b", "c", "d"], 2);
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2);
     ```
 ### [Object Oriented Programming](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/)
 1. [Create a Basic JavaScript Object](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/create-a-basic-javascript-object)
