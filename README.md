@@ -2849,7 +2849,7 @@
         if (num <= 0) {
             return "";
         }
-        
+
         // repeat after me
         let finalStr = str;
         for (let x = 0; x < num - 1; x++) {
@@ -2868,7 +2868,7 @@
         if (num >= str.length) {
             return str;
         }
-    
+
         str = str.substr(0, num);
         return str + '...';
     }
@@ -2880,7 +2880,7 @@
     function findElement(arr, func) {
         let num = 0;
         num = arr.filter(func);
-    
+
         return num.shift();
     }
 
@@ -4062,6 +4062,21 @@
     // Add your code above this line
 
     console.log(averageRating);
+    ```
+1. [Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-problem)
+    ```javascript
+    const squareList = (arr) => {
+        // only change code below this line
+        return arr
+            .filter((v) => v > 0 && Number.isInteger(v))
+            .map((v) => v * v);
+        // only change code above this line
+    };
+
+    // test your code
+    const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+    console.log(squaredIntegers);
+
     ```
 1. [Sort an Array Alphabetically using the sort Method](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/sort-an-array-alphabetically-using-the-sort-method/)
     ```javascript
