@@ -6,17 +6,36 @@
     ```html
     <h1>Hello World</h1>
     ```
-1. [Headline with the h2 Element]()
+1. [Headline with the h2 Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element)
     ```html
+    <h1>Hello World</h1>
+    <h2>CatPhotoApp</h2>
     ```
-1. [Inform with the Paragraph Element]()
+1. [Inform with the Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/inform-with-the-paragraph-element)
     ```html
+    <h1>Hello World</h1>
+    <h2>CatPhotoApp</h2>
+    <p>Hello Paragraph</p>
     ```
-1. [Fill in the Blank with Placeholder Text]()
+1. [Fill in the Blank with Placeholder Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/fill-in-the-blank-with-placeholder-text)
     ```html
+    <h1>Hello World</h1>
+
+    <h2>CatPhotoApp</h2>
+
+    <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
     ```
-1. [Uncomment HTML]()
+1. [Uncomment HTML](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/uncomment-html)
     ```html
+    <h1>Hello World</h1>
+
+    <h2>CatPhotoApp</h2>
+
+    <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+    <!--
+        COMMENT
+    -->
     ```
 1. [Comment out HTML]()
     ```html
