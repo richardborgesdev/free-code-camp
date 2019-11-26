@@ -37,20 +37,54 @@
         COMMENT
     -->
     ```
-1. [Comment out HTML]()
+1. [Comment out HTML](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/comment-out-html)
     ```html
+    <!--
+    <h1>Hello World</h1>
+    -->
+    <h2>CatPhotoApp</h2>
+    <!--
+    <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+    -->
     ```
-1. [Delete HTML Elements]()
+1. [Delete HTML Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/delete-html-elements)
     ```html
+    <h2>CatPhotoApp</h2>
+
+    <p>
+        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
+    </p>
     ```
-1. [Introduction to HTML5 Elements]()
+1. [Introduction to HTML5 Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/introduction-to-html5-elements)
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <p>
+            Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
+        </p>
+        <p>
+            Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+        </p>
+    </main>
     ```
-1. [Add Images to Your Website]()
+1. [Add Images to Your Website](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-images-to-your-website)
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <img src="https://bit.ly/fcc-relaxing-cat" alt="a cat photo">
+        <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+    </main>
     ```
-1. [Link to External Pages with Anchor Elements]()
+1. [Link to External Pages with Anchor Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/link-to-external-pages-with-anchor-elements)
     ```html
+        <h2>CatPhotoApp</h2>
+    <main>
+        <a href="http://freecatphotoapp.com">cat photos</a>
+        <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back.">
+        <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+    </main>
     ```
 1. [Link to Internal Sections of a Page with Anchor Elements]()
     ```html
