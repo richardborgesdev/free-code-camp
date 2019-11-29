@@ -157,8 +157,27 @@
         </ul>
     </main>
     ```
-1. [Create an Ordered List]()
+1. [Create an Ordered List](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-an-ordered-list)
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <p>Things cats love:</p>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+            <ol>
+            <li>dogs</li>
+            <li>human</li>
+            <li>others cats</li>
+        </ol>
+    </main>
     ```
 1. [Create a Text Field]()
     ```html
