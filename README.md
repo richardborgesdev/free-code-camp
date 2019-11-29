@@ -179,17 +179,102 @@
         </ol>
     </main>
     ```
-1. [Create a Text Field]()
+1. [Create a Text Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-text-field)
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <p>Things cats love:</p>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <input type="text" >
+    </main>
     ```
-1. [Add Placeholder Text to a Text Field]()
+1. [Add Placeholder Text to a Text Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-placeholder-text-to-a-text-field)
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <p>Things cats love:</p>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <input type="text" placeholder="cat photo URL">
+    </main>
     ```
-1. [Create a Form Element]()
+1. [Create a Form Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-form-element)
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <p>Things cats love:</p>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <form action="/submit-cat-photo">
+            <input type="text" placeholder="cat photo URL" >
+        </form>
+    </main>
     ```
-1. [Add a Submit Button to a Form]()
+1. [Add a Submit Button to a Form](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-a-submit-button-to-a-form)
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <p>Things cats love:</p>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <form action="/submit-cat-photo">
+            <input type="text" placeholder="cat photo URL">
+            <button type="submit">Submit</button>
+        </form>
+    </main>
     ```
 1. [Use HTML5 to Require a Field]()
     ```html
