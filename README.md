@@ -429,12 +429,55 @@
     ```
 1. [Nest Many Elements within a Single div Element]()
     ```html
+    <h2>CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <div>
+            <p>Things cats love:</p>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <p>Top 3 things cats hate:</p>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+        </div>
+        <form action="/submit-cat-photo">
+            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
+            <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
+            <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
+            <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+            <input type="text" placeholder="cat photo URL" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
     ```
-1. [Declare the Doctype of an HTML Document]()
+1. [Declare the Doctype of an HTML Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/declare-the-doctype-of-an-html-document)
     ```html
+    <!DOCTYPE html>
+    <html>
+        <h1>any text</h1>
+    </html>
     ```
-1. [Define the Head and Body of an HTML Document]()
+1. [Define the Head and Body of an HTML Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/define-the-head-and-body-of-an-html-document)
     ```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>The best page ever</title>
+        </head>
+        <body>
+            <h1>The best page ever</h1>
+            <p>Cat ipsum dolor sit amet, jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Go into a room to decide you didn't want to be in there anyway. I like big cats and i can not lie kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Meow i could pee on this if i had the energy for slap owner's face at 5am until human fills food dish yet scamper. Knock dish off table head butt cant eat out of my own dish scratch the furniture. Make meme, make cute face. Sleep in the bathroom sink chase laser but pee in the shoe. Paw at your fat belly licks your face and eat grass, throw it back up kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        </body>
+    </html>
     ```
 ### Basic CSS
 ### Applied Visual Design
