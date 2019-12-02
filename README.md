@@ -479,7 +479,139 @@
         </body>
     </html>
     ```
-### Basic CSS
+### [Basic CSS](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/)
+1. [Change the Color of Text]()
+    ```html
+    ```
+1. [Use CSS Selectors to Style Elements]()
+    ```html
+    ```
+1. [Use a CSS Class to Style an Element]()
+    ```html
+    ```
+1. [Style Multiple Elements with a CSS Class]()
+    ```html
+    ```
+1. [Change the Font Size of an Element]()
+    ```html
+    ```
+1. [Set the Font Family of an Element]()
+    ```html
+    ```
+1. [Import a Google Font]()
+    ```html
+    ```
+1. [Specify How Fonts Should Degrade]()
+    ```html
+    ```
+1. [Size Your Images]()
+    ```html
+    ```
+1. [Add Borders Around Your Elements]()
+    ```html
+    ```
+1. [Add Rounded Corners with border-radius]()
+    ```html
+    ```
+1. [Make Circular Images with a border-radius]()
+    ```html
+    ```
+1. [Give a Background Color to a div Element]()
+    ```html
+    ```
+1. [Set the id of an Element]()
+    ```html
+    ```
+1. [Use an id Attribute to Style an Element]()
+    ```html
+    ```
+1. [Adjust the Padding of an Element]()
+    ```html
+    ```
+1. [Adjust the Margin of an Element]()
+    ```html
+    ```
+1. [Add a Negative Margin to an Element]()
+    ```html
+    ```
+1. [Add Different Padding to Each Side of an Element]()
+    ```html
+    ```
+1. [Add Different Margins to Each Side of an Element]()
+    ```html
+    ```
+1. [Use Clockwise Notation to Specify the Padding of an Element]()
+    ```html
+    ```
+1. [Use Clockwise Notation to Specify the Margin of an Element]()
+    ```html
+    ```
+1. [Use Attribute Selectors to Style Elements]()
+    ```html
+    ```
+1. [Understand Absolute versus Relative Units]()
+    ```html
+    ```
+1. [Style the HTML Body Element]()
+    ```html
+    ```
+1. [Inherit Styles from the Body Element]()
+    ```html
+    ```
+1. [Prioritize One Style Over Another]()
+    ```html
+    ```
+1. [Override Styles in Subsequent CSS]()
+    ```html
+    ```
+1. [Override Class Declarations by Styling ID Attributes]()
+    ```html
+    ```
+1. [Override Class Declarations with Inline Styles]()
+    ```html
+    ```
+1. [Override All Other Styles by using Important]()
+    ```html
+    ```
+1. [Use Hex Code for Specific Colors]()
+    ```html
+    ```
+1. [Use Hex Code to Mix Colors]()
+    ```html
+    ```
+1. [Use Abbreviated Hex Code]()
+    ```html
+    ```
+1. [Use RGB values to Color Elements]()
+    ```html
+    ```
+1. [Use RGB to Mix Colors]()
+    ```html
+    ```
+1. [Use CSS Variables to change several elements at once]()
+    ```html
+    ```
+1. [Create a custom CSS Variable]()
+    ```html
+    ```
+1. [Use a custom CSS Variable]()
+    ```html
+    ```
+1. [Attach a Fallback value to a CSS Variable]()
+    ```html
+    ```
+1. [Improve Compatibility with Browser Fallbacks]()
+    ```html
+    ```
+1. [Inherit CSS Variables]()
+    ```html
+    ```
+1. [Change a variable for a specific area]()
+    ```html
+    ```
+1. [Use a media query to change a variable]()
+    ```html
+    ```
 ### Applied Visual Design
 ### Applied Accessibility
 ### Responsive Web Design Principles
