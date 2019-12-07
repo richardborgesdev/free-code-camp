@@ -480,20 +480,201 @@
     </html>
     ```
 ### [Basic CSS](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/)
-1. [Change the Color of Text]()
+1. [Change the Color of Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-color-of-text)
     ```html
+    <h2 style="color: red;">CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <div>
+            <p>Things cats love:</p>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <p>Top 3 things cats hate:</p>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+        </div>
+
+        <form action="/submit-cat-photo">
+            <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+            <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+            <label><input type="checkbox" name="personality" checked> Loving</label>
+            <label><input type="checkbox" name="personality"> Lazy</label>
+            <label><input type="checkbox" name="personality"> Energetic</label><br>
+            <input type="text" placeholder="cat photo URL" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
     ```
-1. [Use CSS Selectors to Style Elements]()
+1. [Use CSS Selectors to Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-selectors-to-style-elements)
     ```html
+        <style>
+        h2 {
+            color: blue;
+        }
+        </style>
+        <h2>CatPhotoApp</h2>
+        <main>
+            <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+            <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+            <div>
+                <p>Things cats love:</p>
+                <ul>
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+                <p>Top 3 things cats hate:</p>
+                <ol>
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+            </div>
+
+            <form action="/submit-cat-photo">
+                <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+                <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+                <label><input type="checkbox" name="personality" checked> Loving</label>
+                <label><input type="checkbox" name="personality"> Lazy</label>
+                <label><input type="checkbox" name="personality"> Energetic</label><br>
+                <input type="text" placeholder="cat photo URL" required>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
     ```
-1. [Use a CSS Class to Style an Element]()
+1. [Use a CSS Class to Style an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-css-class-to-style-an-element)
     ```html
+    <style>
+    .red-text {
+        color: red;
+    }
+    </style>
+
+    <h2 class="red-text">CatPhotoApp</h2>
+    <main>
+        <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <div>
+            <p>Things cats love:</p>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <p>Top 3 things cats hate:</p>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+        </div>
+
+        <form action="/submit-cat-photo">
+            <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+            <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+            <label><input type="checkbox" name="personality" checked> Loving</label>
+            <label><input type="checkbox" name="personality"> Lazy</label>
+            <label><input type="checkbox" name="personality"> Energetic</label><br>
+            <input type="text" placeholder="cat photo URL" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
     ```
-1. [Style Multiple Elements with a CSS Class]()
+1. [Style Multiple Elements with a CSS Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class)
     ```html
+    <style>
+    .red-text {
+        color: red;
+    }
+    </style>
+
+    <h2 class="red-text">CatPhotoApp</h2>
+    <main>
+        <p  class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <div>
+            <p>Things cats love:</p>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <p>Top 3 things cats hate:</p>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+        </div>
+
+        <form action="/submit-cat-photo">
+            <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+            <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+            <label><input type="checkbox" name="personality" checked> Loving</label>
+            <label><input type="checkbox" name="personality"> Lazy</label>
+            <label><input type="checkbox" name="personality"> Energetic</label><br>
+            <input type="text" placeholder="cat photo URL" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
     ```
-1. [Change the Font Size of an Element]()
+1. [Change the Font Size of an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-font-size-of-an-element)
     ```html
+    <style>
+    .red-text {
+        color: red;
+    }
+    p {
+        font-size: 16px;
+    }
+    </style>
+
+    <h2 class="red-text">CatPhotoApp</h2>
+    <main>
+        <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+        <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+        <div>
+            <p>Things cats love:</p>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <p>Top 3 things cats hate:</p>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+        </div>
+
+        <form action="/submit-cat-photo">
+            <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+            <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+            <label><input type="checkbox" name="personality" checked> Loving</label>
+            <label><input type="checkbox" name="personality"> Lazy</label>
+            <label><input type="checkbox" name="personality"> Energetic</label><br>
+            <input type="text" placeholder="cat photo URL" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
     ```
 1. [Set the Font Family of an Element]()
     ```html
