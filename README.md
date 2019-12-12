@@ -1262,20 +1262,218 @@
     </main>
 
     ```
-1. [Adjust the Padding of an Element]()
+1. [Adjust the Padding of an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/adjust-the-padding-of-an-element)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    .red-box {
+        background-color: crimson;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .blue-box {
+        background-color: blue;
+        color: #fff;
+        padding: 20px;
+    }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+    </div>
     ```
-1. [Adjust the Margin of an Element]()
+1. [Adjust the Margin of an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/adjust-the-margin-of-an-element)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    .red-box {
+        background-color: crimson;
+        color: #fff;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .blue-box {
+        background-color: blue;
+        color: #fff;
+        padding: 20px;
+        margin: 20px;
+    }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+    </div>
     ```
-1. [Add a Negative Margin to an Element]()
+1. [Add a Negative Margin to an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-a-negative-margin-to-an-element)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    .red-box {
+        background-color: crimson;
+        color: #fff;
+        padding: 20px;
+        margin: -15px;
+    }
+
+    .blue-box {
+        background-color: blue;
+        color: #fff;
+        padding: 20px;
+        margin: -15px;
+    }
+    </style>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+    </div>
+
     ```
-1. [Add Different Padding to Each Side of an Element]()
+1. [Add Different Padding to Each Side of an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-different-padding-to-each-side-of-an-element)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    .red-box {
+        background-color: crimson;
+        color: #fff;
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+
+    .blue-box {
+        background-color: blue;
+        color: #fff;
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+    </div>
+
     ```
-1. [Add Different Margins to Each Side of an Element]()
+1. [Add Different Margins to Each Side of an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-different-margins-to-each-side-of-an-element)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    .red-box {
+        background-color: crimson;
+        color: #fff;
+        margin-top: 40px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+
+    .blue-box {
+        background-color: blue;
+        color: #fff;
+        margin-top: 40px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+    </div>
+
     ```
 1. [Use Clockwise Notation to Specify the Padding of an Element]()
     ```html
