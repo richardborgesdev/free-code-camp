@@ -1475,20 +1475,200 @@
     </div>
 
     ```
-1. [Use Clockwise Notation to Specify the Padding of an Element]()
+1. [Use Clockwise Notation to Specify the Padding of an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-clockwise-notation-to-specify-the-padding-of-an-element)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .red-box {
+        background-color: crimson;
+        color: #fff;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .blue-box {
+        background-color: blue;
+        padding: 40px 20px 20px 40px;
+        color: #fff;
+    }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+    </div>
     ```
-1. [Use Clockwise Notation to Specify the Margin of an Element]()
+1. [Use Clockwise Notation to Specify the Margin of an Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-clockwise-notation-to-specify-the-margin-of-an-element)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .red-box {
+        background-color: crimson;
+        color: #fff;
+        margin: 20px 40px 20px 40px;
+    }
+
+    .blue-box {
+        background-color: blue;
+        color: #fff;
+        margin: 40px 20px 20px 40px;
+    }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+    </div>
     ```
-1. [Use Attribute Selectors to Style Elements]()
+1. [Use Attribute Selectors to Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-attribute-selectors-to-style-elements)
     ```html
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <style>
+    .red-text {
+        color: red;
+    }
+
+    h2 {
+        font-family: Lobster, monospace;
+    }
+
+    p {
+        font-size: 16px;
+        font-family: monospace;
+    }
+
+    .thick-green-border {
+        border-color: green;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 50%;
+    }
+
+    .smaller-image {
+        width: 100px;
+    }
+
+    .silver-background {
+        background-color: silver;
+    }
+
+    [type='checkbox'] {
+        margin: 10px 0px 15px 0px;
+    }
+    </style>
+
+    <h2 class="red-text">CatPhotoApp</h2>
+    <main>
+    <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+    <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+    <div class="silver-background">
+        <p>Things cats love:</p>
+        <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+        </ol>
+    </div>
+
+    <form action="/submit-cat-photo" id="cat-photo-form">
+        <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+        <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+        <label><input type="checkbox" name="personality" checked> Loving</label>
+        <label><input type="checkbox" name="personality"> Lazy</label>
+        <label><input type="checkbox" name="personality"> Energetic</label><br>
+        <input type="text" placeholder="cat photo URL" required>
+        <button type="submit">Submit</button>
+    </form>
+    </main>
     ```
-1. [Understand Absolute versus Relative Units]()
+1. [Understand Absolute versus Relative Units](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/understand-absolute-versus-relative-units)
     ```html
+    <style>
+    .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+
+    .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+    }
+
+    .yellow-box {
+        background-color: yellow;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .red-box {
+        background-color: red;
+        margin: 20px 40px 20px 40px;
+        padding: 1.5em;
+    }
+
+    .green-box {
+        background-color: green;
+        margin: 20px 40px 20px 40px;
+    }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box green-box">padding</h5>
+    </div>
+
     ```
-1. [Style the HTML Body Element]()
+1. [Style the HTML Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-the-html-body-element)
     ```html
+    <style>
+    body {
+        background-color: black;
+    }
+    </style>
+
     ```
 1. [Inherit Styles from the Body Element]()
     ```html
