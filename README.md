@@ -1668,10 +1668,20 @@
         background-color: black;
     }
     </style>
-
     ```
-1. [Inherit Styles from the Body Element]()
+1. [Inherit Styles from the Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/inherit-styles-from-the-body-element)
     ```html
+    <style>
+    body {
+        color: green;
+        font-family: monospace;
+    }
+    </style>
+    <body>
+    <h1>
+        Hello World
+    </h1>
+    </body>
     ```
 1. [Prioritize One Style Over Another]()
     ```html
