@@ -1683,17 +1683,77 @@
     </h1>
     </body>
     ```
-1. [Prioritize One Style Over Another]()
+1. [Prioritize One Style Over Another](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/prioritize-one-style-over-another)
     ```html
+    <style>
+    body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+    }
+
+    .pink-text {
+        color: pink;
+    }
+    </style>
+    <h1 class="pink-text">Hello World!</h1>
     ```
-1. [Override Styles in Subsequent CSS]()
+1. [Override Styles in Subsequent CSS](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-styles-in-subsequent-css)
     ```html
+    <style>
+    body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+    }
+    .pink-text {
+        color: pink;
+    }
+    .blue-text {
+        color: blue;
+    }
+    </style>
+    <h1 class="pink-text blue-text">Hello World!</h1>
     ```
-1. [Override Class Declarations by Styling ID Attributes]()
+1. [Override Class Declarations by Styling ID Attributes](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-by-styling-id-attributes)
     ```html
+    <style>
+    body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+    }
+    .pink-text {
+        color: pink;
+    }
+    .blue-text {
+        color: blue;
+    }
+    #orange-text {
+        color: orange;
+    }
+    </style>
+    <h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
     ```
-1. [Override Class Declarations with Inline Styles]()
+1. [Override Class Declarations with Inline Styles](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-with-inline-styles)
     ```html
+    <style>
+    body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+    }
+    #orange-text {
+        color: orange;
+    }
+    .pink-text {
+        color: pink;
+    }
+    .blue-text {
+        color: blue;
+    }
+    </style>
+    <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
     ```
 1. [Override All Other Styles by using Important]()
     ```html
