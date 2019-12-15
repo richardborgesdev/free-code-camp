@@ -1755,20 +1755,91 @@
     </style>
     <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
     ```
-1. [Override All Other Styles by using Important]()
+1. [Override All Other Styles by using Important](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-all-other-styles-by-using-important)
     ```html
+    <style>
+    body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+    }
+    #orange-text {
+        color: orange;
+    }
+    .pink-text {
+        color: pink !important;
+    }
+    .blue-text {
+        color: blue;
+    }
+    </style>
+    <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
     ```
-1. [Use Hex Code for Specific Colors]()
+1. [Use Hex Code for Specific Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-for-specific-colors)
     ```html
+    <style>
+    body {
+        background-color: #000000;
+    }
+    </style>
     ```
-1. [Use Hex Code to Mix Colors]()
+1. [Use Hex Code to Mix Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-to-mix-colors)
     ```html
+    <style>
+    .red-text {
+        color: #FF0000;
+    }
+    .green-text {
+        color: #00FF00;
+    }
+    .dodger-blue-text {
+        color: #1E90FF;
+    }
+    .orange-text {
+        color: #FFA500;
+    }
+    </style>
+
+    <h1 class="red-text">I am red!</h1>
+
+    <h1 class="green-text">I am green!</h1>
+
+    <h1 class="dodger-blue-text">I am dodger blue!</h1>
+
+    <h1 class="orange-text">I am orange!</h1>
     ```
 1. [Use Abbreviated Hex Code]()
     ```html
+    <style>
+    .red-text {
+        color: #F00;
+    }
+    .fuchsia-text {
+        color: #F0F;
+    }
+    .cyan-text {
+        color: 	#0FF;
+    }
+    .green-text {
+        color: #0F0;
+    }
+    </style>
+
+    <h1 class="red-text">I am red!</h1>
+
+    <h1 class="fuchsia-text">I am fuchsia!</h1>
+
+    <h1 class="cyan-text">I am cyan!</h1>
+
+    <h1 class="green-text">I am green!</h1>
     ```
-1. [Use RGB values to Color Elements]()
+1. [Use RGB values to Color Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-rgb-values-to-color-elements)
     ```html
+    <style>
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+    </style>
     ```
 1. [Use RGB to Mix Colors]()
     ```html
