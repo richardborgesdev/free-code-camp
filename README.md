@@ -3345,7 +3345,163 @@
     </div>
     </div>
     ```
-### Applied Visual Design
+### [Applied Visual Design](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/)
+1. [Create Visual Balance Using the text-align Property]()
+    ```html
+    ```
+1. [Adjust the Width of an Element Using the width Property]()
+    ```html
+    ```
+1. [Adjust the Height of an Element Using the height Property]()
+    ```html
+    ```
+1. [Use the strong Tag to Make Text Bold]()
+    ```html
+    ```
+1. [Use the u Tag to Underline Text]()
+    ```html
+    ```
+1. [Use the em Tag to Italicize Text]()
+    ```html
+    ```
+1. [Use the s Tag to Strikethrough Text]()
+    ```html
+    ```
+1. [Create a Horizontal Line Using the hr Element]()
+    ```html
+    ```
+1. [Adjust the background-color Property of Text]()
+    ```html
+    ```
+1. [Adjust the Size of a Header Versus a Paragraph Tag]()
+    ```html
+    ```
+1. [Add a box-shadow to a Card-like Element]()
+    ```html
+    ```
+1. [Decrease the Opacity of an Element]()
+    ```html
+    ```
+1. [Use the text-transform Property to Make Text Uppercase]()
+    ```html
+    ```
+1. [Set the font-size for Multiple Heading Elements]()
+    ```html
+    ```
+1. [Set the font-weight for Multiple Heading Elements]()
+    ```html
+    ```
+1. [Set the font-size of Paragraph Text]()
+    ```html
+    ```
+1. [Set the line-height of Paragraphs]()
+    ```html
+    ```
+1. [Adjust the Hover State of an Anchor Tag]()
+    ```html
+    ```
+1. [Change an Element's Relative Position]()
+    ```html
+    ```
+1. [Move a Relatively Positioned Element with CSS Offsets]()
+    ```html
+    ```
+1. [Lock an Element to its Parent with Absolute Positioning]()
+    ```html
+    ```
+1. [Lock an Element to the Browser Window with Fixed Positioning]()
+    ```html
+    ```
+1. [Push Elements Left or Right with the float Property]()
+    ```html
+    ```
+1. [Change the Position of Overlapping Elements with the z-index Property]()
+    ```html
+    ```
+1. [Center an Element Horizontally Using the margin Property]()
+    ```html
+    ```
+1. [Learn about Complementary Colors]()
+    ```html
+    ```
+1. [Learn about Tertiary Colors]()
+    ```html
+    ```
+1. [Adjust the Color of Various Elements to Complementary Colors]()
+    ```html
+    ```
+1. [Adjust the Hue of a Color]()
+    ```html
+    ```
+1. [Adjust the Tone of a Color]()
+    ```html
+    ```
+1. [Create a Gradual CSS Linear Gradient]()
+    ```html
+    ```
+1. [Use a CSS Linear Gradient to Create a Striped Element]()
+    ```html
+    ```
+1. [Create Texture by Adding a Subtle Pattern as a Background Image]()
+    ```html
+    ```
+1. [Use the CSS Transform scale Property to Change the Size of an Element]()
+    ```html
+    ```
+1. [Use the CSS Transform scale Property to Scale an Element on Hover]()
+    ```html
+    ```
+1. [Use the CSS Transform Property skewX to Skew an Element Along the X-Axis]()
+    ```html
+    ```
+1. [Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis]()
+    ```html
+    ```
+1. [Create a Graphic Using CSS]()
+    ```html
+    ```
+1. [Create a More Complex Shape Using CSS and HTML]()
+    ```html
+    ```
+1. [Learn How the CSS @keyframes and animation Properties Work]()
+    ```html
+    ```
+1. [Use CSS Animation to Change the Hover State of a Button]()
+    ```html
+    ```
+1. [Modify Fill Mode of an Animation]()
+    ```html
+    ```
+1. [Create Movement Using CSS Animation]()
+    ```html
+    ```
+1. [Create Visual Direction by Fading an Element from Left to Right]()
+    ```html
+    ```
+1. [Animate Elements Continually Using an Infinite Animation Count]()
+    ```html
+    ```
+1. [Make a CSS Heartbeat using an Infinite Animation Count]()
+    ```html
+    ```
+1. [Animate Elements at Variable Rates]()
+    ```html
+    ```
+1. [Animate Multiple Elements at Variable Rates]()
+    ```html
+    ```
+1. [Change Animation Timing with Keywords]()
+    ```html
+    ```
+1. [Learn How Bezier Curves Work]()
+    ```html
+    ```
+1. [Use a Bezier Curve to Move a Graphic]()
+    ```html
+    ```
+1. [Make Motion More Natural Using a Bezier Curve]()
+    ```html
+    ```
 ### Applied Accessibility
 ### Responsive Web Design Principles
 ### CSS Flexbox
