@@ -2916,11 +2916,11 @@
         --penguin-belly: pink;
         --penguin-beak: orange;
     }
-    
+
     body {
         background: var(--penguin-belly, #c6faf1);
     }
-    
+
     .penguin {
         /* add code below */
         --penguin-belly: white;
@@ -2932,7 +2932,7 @@
         width: 300px;
         height: 300px;
     }
-    
+
     .right-cheek {
         top: 15%;
         left: 35%;
@@ -2941,7 +2941,7 @@
         height: 70%;
         border-radius: 70% 70% 60% 60%;
     }
-    
+
     .left-cheek {
         top: 15%;
         left: 5%;
@@ -2950,7 +2950,7 @@
         height: 70%;
         border-radius: 70% 70% 60% 60%;
     }
-    
+
     .belly {
         top: 60%;
         left: 2.5%;
@@ -2959,7 +2959,7 @@
         height: 100%;
         border-radius: 120% 120% 100% 100%;
     }
-    
+
     .penguin-top {
         top: 10%;
         left: 25%;
@@ -2968,7 +2968,7 @@
         height: 45%;
         border-radius: 70% 70% 60% 60%;
     }
-    
+
     .penguin-bottom {
         top: 40%;
         left: 23.5%;
@@ -2977,7 +2977,7 @@
         height: 45%;
         border-radius: 70% 70% 100% 100%;
     }
-    
+
     .right-hand {
         top: 0%;
         left: -5%;
@@ -2988,7 +2988,7 @@
         transform: rotate(45deg);
         z-index: -1;
     }
-    
+
     .left-hand {
         top: 0%;
         left: 75%;
@@ -2999,7 +2999,7 @@
         transform: rotate(-45deg);
         z-index: -1;
     }
-    
+
     .right-feet {
         top: 85%;
         left: 60%;
@@ -3010,7 +3010,7 @@
         transform: rotate(-80deg);
         z-index: -2222;
     }
-    
+
     .left-feet {
         top: 85%;
         left: 25%;
@@ -3021,7 +3021,7 @@
         transform: rotate(80deg);
         z-index: -2222;
     }
-    
+
     .right-eye {
         top: 45%;
         left: 60%;
@@ -3030,7 +3030,7 @@
         height: 17%;
         border-radius: 50%;
     }
-    
+
     .left-eye {
         top: 45%;
         left: 25%;
@@ -3039,7 +3039,7 @@
         height: 17%;
         border-radius: 50%;
     }
-    
+
     .sparkle {
         top: 25%;
         left: 15%;
@@ -3048,7 +3048,7 @@
         height: 35%;
         border-radius: 50%;
     }
-    
+
     .blush-right {
         top: 65%;
         left: 15%;
@@ -3057,7 +3057,7 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     .blush-left {
         top: 65%;
         left: 70%;
@@ -3066,7 +3066,7 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     .beak-top {
         top: 60%;
         left: 40%;
@@ -3075,7 +3075,7 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     .beak-bottom {
         top: 65%;
         left: 42%;
@@ -3084,7 +3084,7 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     .penguin * {
         position: absolute;
     }
@@ -3122,7 +3122,7 @@
         --penguin-belly: white;
         --penguin-beak: orange;
     }
-    
+
     @media (max-width: 350px) {
         :root {
         /* add code below */
@@ -3131,7 +3131,7 @@
         /* add code above */
         }
     }
-    
+
     .penguin {
         position: relative;
         margin: auto;
@@ -3140,7 +3140,7 @@
         width: var(--penguin-size, 300px);
         height: var(--penguin-size, 300px);
     }
-    
+
     .right-cheek {
         top: 15%;
         left: 35%;
@@ -3149,7 +3149,7 @@
         height: 70%;
         border-radius: 70% 70% 60% 60%;
     }
-    
+
     .left-cheek {
         top: 15%;
         left: 5%;
@@ -3158,7 +3158,7 @@
         height: 70%;
         border-radius: 70% 70% 60% 60%;
     }
-    
+
     .belly {
         top: 60%;
         left: 2.5%;
@@ -3167,7 +3167,7 @@
         height: 100%;
         border-radius: 120% 120% 100% 100%;
     }
-    
+
     .penguin-top {
         top: 10%;
         left: 25%;
@@ -3176,7 +3176,7 @@
         height: 45%;
         border-radius: 70% 70% 60% 60%;
     }
-    
+
     .penguin-bottom {
         top: 40%;
         left: 23.5%;
@@ -3185,7 +3185,7 @@
         height: 45%;
         border-radius: 70% 70% 100% 100%;
     }
-    
+
     .right-hand {
         top: 5%;
         left: 25%;
@@ -3201,7 +3201,7 @@
         transform-origin:0% 0%;
         animation-timing-function: linear;
     }
-    
+
     @keyframes wave {
         10% {
             transform: rotate(110deg);
@@ -3211,12 +3211,12 @@
         }
         30% {
             transform: rotate(110deg);
-        } 
+        }
         40% {
             transform: rotate(130deg);
-        }  
         }
-    
+        }
+
     .left-hand {
         top: 0%;
         left: 75%;
@@ -3227,7 +3227,7 @@
         transform: rotate(-45deg);
         z-index: -1;
     }
-    
+
     .right-feet {
         top: 85%;
         left: 60%;
@@ -3238,7 +3238,7 @@
         transform: rotate(-80deg);
         z-index: -2222;
     }
-    
+
     .left-feet {
         top: 85%;
         left: 25%;
@@ -3249,7 +3249,7 @@
         transform: rotate(80deg);
         z-index: -2222;
     }
-    
+
     .right-eye {
         top: 45%;
         left: 60%;
@@ -3258,7 +3258,7 @@
         height: 17%;
         border-radius: 50%;
     }
-    
+
     .left-eye {
         top: 45%;
         left: 25%;
@@ -3267,7 +3267,7 @@
         height: 17%;
         border-radius: 50%;
     }
-    
+
     .sparkle {
         top: 25%;
         left:-23%;
@@ -3276,7 +3276,7 @@
         height: 100%;
         border-radius: 50%;
     }
-    
+
     .blush-right {
         top: 65%;
         left: 15%;
@@ -3285,7 +3285,7 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     .blush-left {
         top: 65%;
         left: 70%;
@@ -3294,7 +3294,7 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     .beak-top {
         top: 60%;
         left: 40%;
@@ -3303,7 +3303,7 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     .beak-bottom {
         top: 65%;
         left: 42%;
@@ -3312,11 +3312,11 @@
         height: 10%;
         border-radius: 50%;
     }
-    
+
     body {
         background:#c6faf1;
     }
-    
+
     .penguin * {
         position: absolute;
     }
@@ -3357,7 +3357,7 @@
     }
     .links {
         margin-right: 20px;
-        
+
     }
     .fullCard {
         border: 1px solid #ccc;
@@ -3750,20 +3750,218 @@
         </div>
     </div>
     ```
-1. [Add a box-shadow to a Card-like Element]()
+1. [Add a box-shadow to a Card-like Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/add-a-box-shadow-to-a-card-like-element)
     ```html
+    <style>
+        h4 {
+        text-align: center;
+        background-color: rgba(45, 45, 45, 0.1);
+        padding: 10px;
+        font-size: 27px;
+        }
+        p {
+        text-align: justify;
+        }
+        .links {
+        text-align: left;
+        color: black;
+        }
+        #thumbnail {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+
+
+        .fullCard {
+        width: 245px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 4px;
+        }
+        .cardContent {
+        padding: 10px;
+        }
+        .cardText {
+        margin-bottom: 30px;
+        }
+    </style>
+    <div class="fullCard" id="thumbnail">
+        <div class="cardContent">
+        <div class="cardText">
+            <h4>Alphabet</h4>
+            <hr>
+            <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+        </div>
+        <div class="cardLinks">
+            <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+            <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+        </div>
+        </div>
+    </div>
     ```
-1. [Decrease the Opacity of an Element]()
+1. [Decrease the Opacity of an Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/decrease-the-opacity-of-an-element)
     ```html
+    <style>
+        h4 {
+        text-align: center;
+        background-color: rgba(45, 45, 45, 0.1);
+        padding: 10px;
+        font-size: 27px;
+        }
+        p {
+        text-align: justify;
+        }
+        .links {
+        text-align: left;
+        color: black;
+
+        }
+        #thumbnail {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .fullCard {
+        width: 245px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 4px;
+        }
+        .cardContent {
+        padding: 10px;
+        }
+        .cardText {
+        margin-bottom: 30px;
+        }
+        .links {
+        opacity: 0.7;
+        }
+    </style>
+    <div class="fullCard" id="thumbnail">
+        <div class="cardContent">
+        <div class="cardText">
+            <h4>Alphabet</h4>
+            <hr>
+            <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+        </div>
+        <div class="cardLinks">
+            <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+            <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+        </div>
+        </div>
+    </div>
     ```
 1. [Use the text-transform Property to Make Text Uppercase]()
     ```html
+    <style>
+        h4 {
+        text-align: center;
+        background-color: rgba(45, 45, 45, 0.1);
+        padding: 10px;
+        font-size: 27px;
+        text-transform: uppercase;
+        }
+        p {
+        text-align: justify;
+        }
+        .links {
+        text-align: left;
+        color: black;
+        opacity: 0.7;
+        }
+        #thumbnail {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .fullCard {
+        width: 245px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 4px;
+        }
+        .cardContent {
+        padding: 10px;
+        }
+        .cardText {
+        margin-bottom: 30px;
+        }
+    </style>
+    <div class="fullCard" id="thumbnail">
+        <div class="cardContent">
+        <div class="cardText">
+            <h4>Alphabet</h4>
+            <hr>
+            <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+        </div>
+        <div class="cardLinks">
+            <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+            <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+        </div>
+        </div>
+    </div>
     ```
-1. [Set the font-size for Multiple Heading Elements]()
+1. [Set the font-size for Multiple Heading Elements](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-for-multiple-heading-elements)
     ```html
+    <style>
+    h1 {
+        font-size: 68px;
+    }
+    h2 {
+        font-size: 52px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    h4 {
+        font-size: 32px;
+    }
+    h5 {
+        font-size: 21px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    </style>
+    <h1>This is h1 text</h1>
+    <h2>This is h2 text</h2>
+    <h3>This is h3 text</h3>
+    <h4>This is h4 text</h4>
+    <h5>This is h5 text</h5>
+    <h6>This is h6 text</h6>
     ```
-1. [Set the font-weight for Multiple Heading Elements]()
+1. [Set the font-weight for Multiple Heading Elements](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-weight-for-multiple-heading-elements)
     ```html
+    <style>
+    h1 {
+        font-size: 68px;
+        font-weight: 800;
+    }
+    h2 {
+        font-size: 52px;
+        font-weight: 600;
+    }
+    h3 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 32px;
+        font-weight: 400;
+    }
+    h5 {
+        font-size: 21px;
+        font-weight: 300;
+    }
+    h6 {
+        font-size: 14px;
+        font-weight: 200;
+    }
+    </style>
+    <h1>This is h1 text</h1>
+    <h2>This is h2 text</h2>
+    <h3>This is h3 text</h3>
+    <h4>This is h4 text</h4>
+    <h5>This is h5 text</h5>
+    <h6>This is h6 text</h6>
     ```
 1. [Set the font-size of Paragraph Text]()
     ```html
