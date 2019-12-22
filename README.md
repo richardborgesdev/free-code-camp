@@ -1,1 +1,12 @@
 # [freecodecamp/richardborgescc](https://www.freecodecamp.org/richardborgescc)
+
+## [JavaScript Algorithms and Data Structures Certification](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification)
+### [Basic JavaScript](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#basic-javascript)
+### [ES6](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#es6)
+### [Regular Expressions](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#regular-expressions)
+### [Debugging](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#debugging)
+### [Basic Data Structures](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#basic-data-structures)
+### [Basic Algorithm Scripting](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#basic-algorithm-scripting)
+### [Object Oriented Programming](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#object-oriented-programming)
+### [Functional Programming](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#functional-programming)
+### [Intermediate Algorithm Scripting](https://github.com/richardborgescc/myfreecodecamp/tree/master/2.Javascript_Algorithms_And_Data_Structures_Certification#intermediate-algorithm-scripting)
