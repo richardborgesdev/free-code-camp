@@ -3961,20 +3961,71 @@
     <h5>This is h5 text</h5>
     <h6>This is h6 text</h6>
     ```
-1. [Set the font-size of Paragraph Text]()
+1. [Set the font-size of Paragraph Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-of-paragraph-text)
     ```html
+    <style>
+    p {
+        font-size: 16px;
+    }
+    </style>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
     ```
-1. [Set the line-height of Paragraphs]()
+1. [Set the line-height of Paragraphs](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-line-height-of-paragraphs)
     ```html
+    <style>
+        p {
+        font-size: 16px;
+        line-height: 25px;
+        }
+    </style>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
     ```
-1. [Adjust the Hover State of an Anchor Tag]()
+1. [Adjust the Hover State of an Anchor Tag](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hover-state-of-an-anchor-tag)
     ```html
+    <style>
+        a {
+        color: #000;
+        }
+        a:hover {
+        color: blue;
+        }
+    </style>
+    <a href="http://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
     ```
-1. [Change an Element's Relative Position]()
+1. [Change an Element's Relative Position](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-an-elements-relative-position)
     ```html
+    <style>
+    h2 {
+        position: relative;
+        top: 15px;
+    }
+    </style>
+    <body>
+    <h1>On Being Well-Positioned</h1>
+    <h2>Move me!</h2>
+    <p>I still think the h2 is where it normally sits.</p>
+    </body>
     ```
-1. [Move a Relatively Positioned Element with CSS Offsets]()
+1. [Move a Relatively Positioned Element with CSS Offsets](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/move-a-relatively-positioned-element-with-css-offsets)
     ```html
+    <head>
+    <style>
+    h2 {
+        position: relative;
+        left: 15px;
+        bottom: 10px;
+    }
+    </style>
+    </head>
+    <body>
+    <h1>On Being Well-Positioned</h1>
+    <h2>Move me!</h2>
+    <p>I still think the h2 is where it normally sits.</p>
+    </body>
     ```
 1. [Lock an Element to its Parent with Absolute Positioning]()
     ```html
