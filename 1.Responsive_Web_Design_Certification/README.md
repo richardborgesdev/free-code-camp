@@ -4027,20 +4027,133 @@
     <p>I still think the h2 is where it normally sits.</p>
     </body>
     ```
-1. [Lock an Element to its Parent with Absolute Positioning]()
+1. [Lock an Element to its Parent with Absolute Positioning](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-its-parent-with-absolute-positioning)
     ```html
+    <style>
+    #searchbar {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+    section {
+        position: relative;
+    }
+    </style>
+    <body>
+    <h1>Welcome!</h1>
+    <section>
+        <form id="searchbar">
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search">
+        <input type="submit" name="submit" value="Go!">
+        </form>
+    </section>
+    </body>
     ```
-1. [Lock an Element to the Browser Window with Fixed Positioning]()
+1. [Lock an Element to the Browser Window with Fixed Positioning](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-the-browser-window-with-fixed-positioning)
     ```html
+    <style>
+    #navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: #767676;
+    }
+    nav ul {
+        margin: 0px;
+        padding: 5px 0px 5px 30px;
+    }
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    }
+    a {
+        text-decoration: none;
+    }
+    </style>
+    <body>
+    <header>
+        <h1>Welcome!</h1>
+        <nav id="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+    <p>I shift up when the #navbar is fixed to the browser window.</p>
+    </body>
     ```
-1. [Push Elements Left or Right with the float Property]()
+1. [Push Elements Left or Right with the float Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/push-elements-left-or-right-with-the-float-property)
     ```html
+    <head>
+    <style>
+    #left {
+        float: left;
+        width: 50%;
+    }
+    #right {
+        float: right;
+        width: 40%;
+    }
+    aside, section {
+        padding: 2px;
+        background-color: #ccc;
+    }
+    </style>
+    </head>
+    <body>
+    <header>
+        <h1>Welcome!</h1>
+    </header>
+    <section id="left">
+        <h2>Content</h2>
+        <p>Good stuff</p>
+    </section>
+    <aside id="right">
+        <h2>Sidebar</h2>
+        <p>Links</p>
+    </aside>
+    </body>
     ```
-1. [Change the Position of Overlapping Elements with the z-index Property]()
+1. [Change the Position of Overlapping Elements with the z-index Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-the-position-of-overlapping-elements-with-the-z-index-property)
     ```html
+    <style>
+    div {
+        width: 60%;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .first {
+        background-color: red;
+        position: absolute;
+        z-index: 2;
+    }
+    .second {
+        background-color: blue;
+        position: absolute;
+        left: 40px;
+        top: 50px;
+        z-index: 1;
+    }
+    </style>
+
+    <div class="first"></div>
+    <div class="second"></div>
     ```
-1. [Center an Element Horizontally Using the margin Property]()
+1. [Center an Element Horizontally Using the margin Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/center-an-element-horizontally-using-the-margin-property)
     ```html
+    <style>
+        div {
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        }
+    </style>
+    <div></div>
     ```
 1. [Learn about Complementary Colors]()
     ```html
