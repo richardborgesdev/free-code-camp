@@ -4155,20 +4155,171 @@
     </style>
     <div></div>
     ```
-1. [Learn about Complementary Colors]()
+1. [Learn about Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-complementary-colors)
     ```html
+    <style>
+        body {
+        background-color: #FFFFFF;
+        }
+        .blue {
+        background-color: blue;
+        }
+        .yellow {
+        background-color: yellow;
+        }
+        div {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        }
+    </style>
+    <div class="blue"></div>
+    <div class="yellow"></div>
     ```
-1. [Learn about Tertiary Colors]()
+1. [Learn about Tertiary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-tertiary-colors)
     ```html
+    <style>
+    body {
+        background-color: #FFFFFF;
+    }
+
+    .orange {
+        background-color: #FF7F00;
+    }
+
+    .cyan {
+        background-color: #00FFFF;
+    }
+
+    .raspberry {
+        background-color: #FF007F;
+    }
+
+    div {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 5px;
+    }
+    </style>
+
+    <div class="orange"></div>
+    <div class="cyan"></div>
+    <div class="raspberry"></div>
     ```
-1. [Adjust the Color of Various Elements to Complementary Colors]()
+1. [Adjust the Color of Various Elements to Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-color-of-various-elements-to-complementary-colors)
     ```html
+    <style>
+        body {
+        background-color: white;
+        }
+        header {
+        background-color: #09A7A1;
+        color: white;
+        padding: 0.25em;
+        }
+        h2 {
+        color: #09A7A1;
+        }
+        button {
+        background-color: #FF790E;
+        }
+        footer {
+        background-color: #09A7A1;
+        color: white;
+        padding: 0.5em;
+        }
+    </style>
+    <header>
+        <h1>Cooking with FCC!</h1>
+    </header>
+    <main>
+        <article>
+        <h2>Machine Learning in the Kitchen</h2>
+        <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>
+        <button>Sign Up</button>
+        </article>
+        <article>
+        <h2>Bisection Vegetable Chopping</h2>
+        <p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>
+        <button>Sign Up</button>
+        </article>
+    </main>
+    <br>
+    <footer>&copy; 2018 FCC Kitchen</footer>
     ```
-1. [Adjust the Hue of a Color]()
+1. [Adjust the Hue of a Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hue-of-a-color)
     ```html
+    <style>
+        body {
+        background-color: #FFFFFF;
+        }
+
+        .green {
+            background-color: hsl(120, 100%, 50%);
+        }
+
+        .cyan {
+        background-color: hsl(180, 100%, 50%)
+        }
+
+        .blue {
+        background-color: hsl(240, 100%, 50%);
+        }
+
+        div {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        }
+    </style>
+
+    <div class="green"></div>
+    <div class="cyan"></div>
+    <div class="blue"></div>
     ```
-1. [Adjust the Tone of a Color]()
+1. [Adjust the Tone of a Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-tone-of-a-color)
     ```html
+    <style>
+        header {
+        background-color: hsl(180, 90%, 35%);
+        color: #FFFFFF;
+        }
+
+        nav {
+        background-color: hsl(180, 80%, 25%);
+        }
+
+        h1 {
+        text-indent: 10px;
+        padding-top: 10px;
+        }
+
+        nav ul {
+        margin: 0px;
+        padding: 5px 0px 5px 30px;
+        }
+
+        nav li {
+        display: inline;
+        margin-right: 20px;
+        }
+
+        a {
+        text-decoration: none;
+        color: inherit;
+        }
+    </style>
+
+    <header>
+        <h1>Cooking with FCC!</h1>
+        <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Classes</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
     ```
 1. [Create a Gradual CSS Linear Gradient]()
     ```html
