@@ -4321,20 +4321,101 @@
         </nav>
     </header>
     ```
-1. [Create a Gradual CSS Linear Gradient]()
+1. [Create a Gradual CSS Linear Gradient](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-gradual-css-linear-gradient)
     ```html
+    <style>
+        div{
+        border-radius: 20px;
+        width: 70%;
+        height: 400px;
+        margin: 50px auto;
+        background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+        }
+
+    </style>
+
+    <div></div>
     ```
-1. [Use a CSS Linear Gradient to Create a Striped Element]()
+1. [Use a CSS Linear Gradient to Create a Striped Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element)
     ```html
+    <style>
+        div{
+        border-radius: 20px;
+        width: 70%;
+        height: 400px;
+        margin:  50 auto;
+        background: repeating-linear-gradient(
+            45deg,
+            yellow 0px,
+            yellow 40px,
+            black 40px,
+            black 80px
+        );
+        }
+
+    </style>
+
+    <div></div>
     ```
-1. [Create Texture by Adding a Subtle Pattern as a Background Image]()
+1. [Create Texture by Adding a Subtle Pattern as a Background Image](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-texture-by-adding-a-subtle-pattern-as-a-background-image)
     ```html
+    <style>
+        body {
+        background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+        }
+    </style>
     ```
-1. [Use the CSS Transform scale Property to Change the Size of an Element]()
+1. [Use the CSS Transform scale Property to Change the Size of an Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-change-the-size-of-an-element)
     ```html
+    <style>
+        .ball {
+        width: 40px;
+        height: 40px;
+        margin: 50 auto;
+        position: fixed;
+        background: linear-gradient(
+            35deg,
+            #ccffff,
+            #ffcccc
+        );
+        border-radius: 50%;
+        }
+        #ball1 {
+        left: 20%;
+        }
+        #ball2 {
+        left: 65%;
+        transform: scale(1.5);
+        }
+
+
+    </style>
+
+    <div class="ball" id= "ball1"></div>
+    <div class="ball" id= "ball2"></div>
     ```
-1. [Use the CSS Transform scale Property to Scale an Element on Hover]()
+1. [Use the CSS Transform scale Property to Scale an Element on Hover](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-scale-an-element-on-hover)
     ```html
+    <style>
+        div {
+        width: 70%;
+        height: 100px;
+        margin:  50px auto;
+        background: linear-gradient(
+            53deg,
+            #ccfffc,
+            #ffcccf
+        );
+        }
+
+        div:hover {
+        transform: scale(1.1);
+        }
+
+
+    </style>
+
+    <div></div>
     ```
 1. [Use the CSS Transform Property skewX to Skew an Element Along the X-Axis]()
     ```html
