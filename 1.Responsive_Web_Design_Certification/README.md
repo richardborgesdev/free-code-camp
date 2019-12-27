@@ -4417,20 +4417,135 @@
 
     <div></div>
     ```
-1. [Use the CSS Transform Property skewX to Skew an Element Along the X-Axis]()
+1. [Use the CSS Transform Property skewX to Skew an Element Along the X-Axis](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewx-to-skew-an-element-along-the-x-axis)
     ```html
+    <style>
+        div {
+        width: 70%;
+        height: 100px;
+        margin:  50px auto;
+        }
+        #top {
+        background-color: red;
+        }
+        #bottom {
+        background-color: blue;
+        transform: skewX(24deg);
+        }
+    </style>
+
+    <div id="top"></div>
+    <div id="bottom"></div>
     ```
-1. [Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis]()
+1. [Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewy-to-skew-an-element-along-the-y-axis)
     ```html
+    <style>
+        div {
+        width: 70%;
+        height: 100px;
+        margin: 50px auto;
+        }
+        #top {
+        background-color: red;
+        transform: skewY(-10deg);
+        }
+        #bottom {
+        background-color: blue;
+        transform: skewX(24deg);
+        }
+    </style>
+
+    <div id="top"></div>
+    <div id="bottom"></div>
     ```
-1. [Create a Graphic Using CSS]()
+1. [Create a Graphic Using CSS](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-graphic-using-css)
     ```html
+    <style>
+        .center
+        {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        box-shadow: 25px 10px 0px 0px blue;
+        border-radius: 50%;
+        }
+
+        </style>
+        <div class="center"></div>
     ```
-1. [Create a More Complex Shape Using CSS and HTML]()
+1. [Create a More Complex Shape Using CSS and HTML](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-more-complex-shape-using-css-and-html)
     ```html
+    <style>
+        .heart {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: pink;
+        height: 50px;
+        width: 50px;
+        transform: rotate(-45deg);
+        }
+        .heart::after {
+        background-color: pink;
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0px;
+        left: 25px;
+        }
+        .heart::before {
+        content: '';
+        background-color: pink;
+        border-radius: 50%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 0px;
+        }
+        </style>
+        <div class = "heart"></div>
     ```
-1. [Learn How the CSS @keyframes and animation Properties Work]()
+1. [Learn How the CSS @keyframes and animation Properties Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-the-css-keyframes-and-animation-properties-work)
     ```html
+    <style>
+    div {
+        height: 40px;
+        width: 70%;
+        background: black;
+        margin: 50px auto;
+        border-radius: 5px;
+    }
+
+    #rect {
+        animation-name: rainbow;
+        animation-duration: 4s;
+    }
+
+    @keyframes rainbow {
+        0% {
+        background-color: blue;
+        }
+        50% {
+        background-color: green;
+        }
+        100% {
+        background-color: yellow;
+        }
+    }
+    </style>
+    <div id="rect"></div>
     ```
 1. [Use CSS Animation to Change the Hover State of a Button]()
     ```html
