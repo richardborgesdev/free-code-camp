@@ -4594,8 +4594,43 @@
     </style>
     <button>Register</button>
     ```
-1. [Create Movement Using CSS Animation]()
+1. [Create Movement Using CSS Animation](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-movement-using-css-animation)
     ```html
+    <style>
+    div {
+        height: 40px;
+        width: 70%;
+        background: black;
+        margin: 50px auto;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    }
+
+    @keyframes rainbow {
+    0% {
+        background-color: blue;
+        top: 0px;
+        left: 0px;
+    }
+    50% {
+        background-color: green;
+        top: 50px;
+        left: 25px;
+    }
+    100% {
+        background-color: yellow;
+        top: 0px;
+        left: -25px;
+    }
+    }
+    </style>
+
+    <div id="rect"></div>
     ```
 1. [Create Visual Direction by Fading an Element from Left to Right]()
     ```html
