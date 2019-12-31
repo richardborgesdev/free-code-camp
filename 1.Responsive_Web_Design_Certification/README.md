@@ -4632,8 +4632,35 @@
 
     <div id="rect"></div>
     ```
-1. [Create Visual Direction by Fading an Element from Left to Right]()
+1. [Create Visual Direction by Fading an Element from Left to Right](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-direction-by-fading-an-element-from-left-to-right)
     ```html
+    <style>
+    #ball {
+        width: 70px;
+        height: 70px;
+        margin: 50px auto;
+        position: fixed;
+        left: 20%;
+        border-radius: 50%;
+        background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+        );
+        animation-name: fade;
+        animation-duration: 3s;
+    }
+
+    @keyframes fade {
+        50% {
+        left: 60%;
+        opacity: 0.1;
+        }
+    }
+
+    </style>
+
+    <div id="ball"></div>
     ```
 1. [Animate Elements Continually Using an Infinite Animation Count]()
     ```html
