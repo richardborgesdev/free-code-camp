@@ -4824,20 +4824,217 @@
     <div class="star-1 stars"></div>
     <div class="star-2 stars"></div>
     ```
-1. [Animate Multiple Elements at Variable Rates]()
+1. [Animate Multiple Elements at Variable Rates](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-multiple-elements-at-variable-rates)
     ```html
+    <style>
+        .stars {
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        animation-iteration-count: infinite;
+        }
+
+        .star-1 {
+        margin-top: 15%;
+        margin-left: 60%;
+        animation-duration: 1s;
+        animation-name: twinkle;
+        }
+
+        .star-2 {
+        margin-top: 25%;
+        margin-left: 25%;
+        animation-duration: 0.9s;
+        animation-name: twinkle;
+        }
+
+        .star-3 {
+        margin-top: 10%;
+        margin-left: 50%;
+        animation-duration: 1.1s;
+        animation-name: twinkle;
+        }
+
+        @keyframes twinkle {
+        20% {
+            transform: scale(0.5);
+            opacity: 0.5;
+        }
+        }
+
+        #back {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+        }
+    </style>
+
+    <div id="back"></div>
+    <div class="star-1 stars"></div>
+    <div class="star-2 stars"></div>
+    <div class="star-3 stars"></div>
     ```
-1. [Change Animation Timing with Keywords]()
+1. [Change Animation Timing with Keywords](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-animation-timing-with-keywords)
     ```html
+    <style>
+    .balls {
+        border-radius: 50%;
+        background: linear-gradient(
+            35deg,
+            #ccffff,
+            #ffcccc
+        );
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    #ball1 {
+        left:27%;
+        animation-timing-function: linear;
+    }
+    #ball2 {
+        left:56%;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes bounce {
+        0% {
+            top: 0px;
+        }
+        100% {
+            top: 249px;
+        }
+    }
+
+    </style>
+
+    <div class="balls" id="ball1"></div>
+    <div class="balls" id="ball2"></div>
     ```
-1. [Learn How Bezier Curves Work]()
+1. [Learn How Bezier Curves Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work)
     ```html
+    <style>
+        .balls{
+        border-radius: 50%;
+        background: linear-gradient(
+            35deg,
+            #ccffff,
+            #ffcccc
+        );
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        }
+        #ball1 {
+        left: 27%;
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+        }
+        #ball2 {
+        left: 56%;
+        animation-timing-function: ease-out;
+        }
+
+    @keyframes bounce {
+        0% {
+        top: 0px;
+        }
+        100% {
+        top: 249px;
+        }
+    }
+
+    </style>
+
+    <div class="balls" id="ball1"></div>
+    <div class="balls" id="ball2"></div>
     ```
-1. [Use a Bezier Curve to Move a Graphic]()
+1. [Use a Bezier Curve to Move a Graphic](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-bezier-curve-to-move-a-graphic)
     ```html
+    <style>
+        .balls{
+        border-radius: 50%;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        }
+        #red {
+        background: red;
+        left: 27%;
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+        }
+        #blue {
+        background: blue;
+        left: 56%;
+        animation-timing-function: ease-out;
+        }
+        @keyframes bounce {
+        0% {
+            top: 0px;
+        }
+        100% {
+            top: 249px;
+        }
+        }
+    </style>
+    <div class="balls" id= "red"></div>
+    <div class="balls" id= "blue"></div>
     ```
-1. [Make Motion More Natural Using a Bezier Curve]()
+1. [Make Motion More Natural Using a Bezier Curve](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve)
     ```html
+    <style>
+        .balls {
+        border-radius: 50%;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        top: 60%;
+        animation-name: jump;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        }
+        #red {
+        background: red;
+        left: 25%;
+        animation-timing-function: linear;
+        }
+        #blue {
+        background: blue;
+        left: 50%;
+        animation-timing-function: ease-out;
+        }
+        #green {
+        background: green;
+        left: 75%;
+        animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);
+        }
+
+        @keyframes jump {
+        50% {
+            top: 10%;
+        }
+        }
+    </style>
+    <div class="balls" id="red"></div>
+    <div class="balls" id="blue"></div>
+    <div class="balls" id="green"></div>
     ```
 ## Applied Accessibility
 ## Responsive Web Design Principles
