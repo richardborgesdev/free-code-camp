@@ -5036,7 +5036,73 @@
     <div class="balls" id="blue"></div>
     <div class="balls" id="green"></div>
     ```
-## Applied Accessibility
+## [Applied Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/)
+1. [Add a Text Alternative to Images for Visually Impaired Accessibility]()
+    ```html
+    ```
+1. [Know When Alt Text Should be Left Blank]()
+    ```html
+    ```
+1. [Use Headings to Show Hierarchical Relationships of Content]()
+    ```html
+    ```
+1. [Jump Straight to the Content Using the main Element]()
+    ```html
+    ```
+1. [Wrap Content in the article Element]()
+    ```html
+    ```
+1. [Make Screen Reader Navigation Easier with the header Landmark]()
+    ```html
+    ```
+1. [Make Screen Reader Navigation Easier with the nav Landmark]()
+    ```html
+    ```
+1. [Make Screen Reader Navigation Easier with the footer Landmark]()
+    ```html
+    ```
+1. [Improve Accessibility of Audio Content with the audio Element]()
+    ```html
+    ```
+1. [Improve Chart Accessibility with the figure Element]()
+    ```html
+    ```
+1. [Improve Form Field Accessibility with the label Element]()
+    ```html
+    ```
+1. [Wrap Radio Buttons in a fieldset Element for Better Accessibility]()
+    ```html
+    ```
+1. [Add an Accessible Date Picker]()
+    ```html
+    ```
+1. [Standardize Times with the HTML5 datetime Attribute]()
+    ```html
+    ```
+1. [Make Elements Only Visible to a Screen Reader by Using Custom CSS]()
+    ```html
+    ```
+1. [Improve Readability with High Contrast Text]()
+    ```html
+    ```
+1. [Avoid Colorblindness Issues by Using Sufficient Contrast]()
+    ```html
+    ```
+1. [Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information]()
+    ```html
+    ```
+1. [Give Links Meaning by Using Descriptive Link Text]()
+    ```html
+    ```
+1. [Make Links Navigable with HTML Access Keys]()
+    ```html
+    ```
+1. [Use tabindex to Add Keyboard Focus to an Element]()
+    ```html
+    ```
+1. [Use tabindex to Specify the Order of Keyboard Focus for Several Elements]()
+    ```html
+    ```
 ## Responsive Web Design Principles
 ## CSS Flexbox
 ## CSS Grid
