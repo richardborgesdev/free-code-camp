@@ -5037,20 +5037,74 @@
     <div class="balls" id="green"></div>
     ```
 ## [Applied Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/)
-1. [Add a Text Alternative to Images for Visually Impaired Accessibility]()
+1. [Add a Text Alternative to Images for Visually Impaired Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility)
     ```html
+    <img src="doingKarateWow.jpeg" alt="image alt">
     ```
-1. [Know When Alt Text Should be Left Blank]()
+1. [Know When Alt Text Should be Left Blank](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/know-when-alt-text-should-be-left-blank)
     ```html
+    <h1>Deep Thoughts with Master Camper Cat</h1>
+    <article>
+    <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+    <p>To Come...</p>
+    </article>
+
+    <img src="samuraiSwords.jpeg" alt="">
+
+    <article>
+    <h2>Is Chuck Norris a Cat Person?</h2>
+    <p>To Come...</p>
+    </article>
     ```
-1. [Use Headings to Show Hierarchical Relationships of Content]()
+1. [Use Headings to Show Hierarchical Relationships of Content](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/use-headings-to-show-hierarchical-relationships-of-content)
     ```html
+    <h1>How to Become a Ninja</h1>
+    <main>
+    <h2>Learn the Art of Moving Stealthily</h2>
+    <h3>How to Hide in Plain Sight</h3>
+    <h3>How to Climb a Wall</h3>
+
+    <h2>Learn the Art of Battle</h2>
+    <h3>How to Strengthen your Body</h3>
+    <h3>How to Fight like a Ninja</h3>
+
+    <h2>Learn the Art of Living with Honor</h2>
+    <h3>How to Breathe Properly</h3>
+    <h3>How to Simplify your Life</h3>
+    </main>
     ```
-1. [Jump Straight to the Content Using the main Element]()
+1. [Jump Straight to the Content Using the main Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/jump-straight-to-the-content-using-the-main-element)
     ```html
+    <header>
+        <h1>Weapons of the Ninja</h1>
+    </header>
+    <main>
+    </main>
+    <footer></footer>
     ```
-1. [Wrap Content in the article Element]()
+1. [Wrap Content in the article Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/wrap-content-in-the-article-element)
     ```html
+    <h1>Deep Thoughts with Master Camper Cat</h1>
+    <main>
+    <article>
+        <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
+        <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    </article>
+
+    <img src="samuraiSwords.jpeg" alt="">
+
+    <article>
+        <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+        <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    </article>
+
+    <img src="samuraiSwords.jpeg" alt="">
+
+    <article>
+        <h2>Is Chuck Norris a Cat Person?</h2>
+        <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    </article>
+    </main>
     ```
 1. [Make Screen Reader Navigation Easier with the header Landmark]()
     ```html
