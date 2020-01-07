@@ -5106,20 +5106,162 @@
     </article>
     </main>
     ```
-1. [Make Screen Reader Navigation Easier with the header Landmark]()
+1. [Make Screen Reader Navigation Easier with the header Landmark](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/make-screen-reader-navigation-easier-with-the-header-landmark)
     ```html
+    <body>
+
+        <header>
+        <h1>Training with Camper Cat</h1>
+        </header>
+
+
+        <main>
+        <section id="stealth">
+            <h2>Stealth &amp; Agility Training</h2>
+            <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+            <article><h3>No training is NP-complete without parkour</h3></article>
+        </section>
+        <section id="combat">
+            <h2>Combat Training</h2>
+            <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+            <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+        </section>
+        <section id="weapons">
+            <h2>Weapons Training</h2>
+            <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+            <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+        </section>
+        </main>
+    </body>
     ```
-1. [Make Screen Reader Navigation Easier with the nav Landmark]()
+1. [Make Screen Reader Navigation Easier with the nav Landmark](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/make-screen-reader-navigation-easier-with-the-nav-landmark)
     ```html
+    <body>
+        <header>
+        <h1>Training with Camper Cat</h1>
+
+        <nav>
+            <ul>
+            <li><a href="#stealth">Stealth &amp; Agility</a></li>
+            <li><a href="#combat">Combat</a></li>
+            <li><a href="#weapons">Weapons</a></li>
+            </ul>
+        </nav>
+
+        </header>
+        <main>
+        <section id="stealth">
+            <h2>Stealth &amp; Agility Training</h2>
+            <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+            <article><h3>No training is NP-complete without parkour</h3></article>
+        </section>
+        <section id="combat">
+            <h2>Combat Training</h2>
+            <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+            <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+        </section>
+        <section id="weapons">
+            <h2>Weapons Training</h2>
+            <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+            <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+        </section>
+        </main>
+    </body>
     ```
-1. [Make Screen Reader Navigation Easier with the footer Landmark]()
+1. [Make Screen Reader Navigation Easier with the footer Landmark](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/make-screen-reader-navigation-easier-with-the-footer-landmark)
     ```html
+    <body>
+        <header>
+        <h1>Training</h1>
+        <nav>
+            <ul>
+            <li><a href="#stealth">Stealth &amp; Agility</a></li>
+            <li><a href="#combat">Combat</a></li>
+            <li><a href="#weapons">Weapons</a></li>
+            </ul>
+        </nav>
+        </header>
+        <main>
+        <section id="stealth">
+            <h2>Stealth &amp; Agility Training</h2>
+            <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+            <article><h3>No training is NP-complete without parkour</h3></article>
+        </section>
+        <section id="combat">
+            <h2>Combat Training</h2>
+            <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+            <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+        </section>
+        <section id="weapons">
+            <h2>Weapons Training</h2>
+            <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+            <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+        </section>
+        </main>
+
+
+        <footer>&copy; 2018 Camper Cat</footer>
+
+
+    </body>
     ```
-1. [Improve Accessibility of Audio Content with the audio Element]()
+1. [Improve Accessibility of Audio Content with the audio Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/improve-accessibility-of-audio-content-with-the-audio-element)
     ```html
+    <body>
+    <header>
+        <h1>Real Coding Ninjas</h1>
+    </header>
+    <main>
+        <p>A sound clip of Zersiax's screen reader in action.</p>
+        <audio controls>
+        <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg"/>
+        </audio>  
+    </main>
+    </body>
     ```
-1. [Improve Chart Accessibility with the figure Element]()
+1. [Improve Chart Accessibility with the figure Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/improve-chart-accessibility-with-the-figure-element)
     ```html
+    <body>
+    <header>
+        <h1>Training</h1>
+        <nav>
+        <ul>
+            <li><a href="#stealth">Stealth &amp; Agility</a></li>
+            <li><a href="#combat">Combat</a></li>
+            <li><a href="#weapons">Weapons</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+        
+        <!-- Add your code below this line -->
+        <figure>
+            <!-- Stacked bar chart will go here -->
+            <br>
+            <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
+        </figure>
+        <!-- Add your code above this line -->
+        
+        </section>
+        <section id="stealth">
+        <h2>Stealth &amp; Agility Training</h2>
+        <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+        <article><h3>No training is NP-complete without parkour</h3></article>
+        </section>
+        <section id="combat">
+        <h2>Combat Training</h2>
+        <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+        <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+        </section>
+        <section id="weapons">
+        <h2>Weapons Training</h2>
+        <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+        <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+        </section>
+    </main>
+    <footer>&copy; 2018 Camper Cat</footer>
+    </body>
     ```
 1. [Improve Form Field Accessibility with the label Element]()
     ```html
