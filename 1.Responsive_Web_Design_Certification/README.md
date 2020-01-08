@@ -5263,20 +5263,231 @@
     <footer>&copy; 2018 Camper Cat</footer>
     </body>
     ```
-1. [Improve Form Field Accessibility with the label Element]()
+1. [Improve Form Field Accessibility with the label Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/improve-form-field-accessibility-with-the-label-element)
     ```html
+    <body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+    <section>
+        <form>
+        <p>Sign up to receive Camper Cat's blog posts by email here!</p>
+        
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        
+        
+        <input type="submit" name="submit" value="Submit">
+        </form>
+    </section>
+    <article>
+        <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
+        <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    </article>
+    <img src="samuraiSwords.jpeg" alt="">
+    <article>
+        <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+        <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    </article>
+    <img src="samuraiSwords.jpeg" alt="">
+    <article>
+        <h2>Is Chuck Norris a Cat Person?</h2>
+        <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    </article>
+    <footer>&copy; 2018 Camper Cat</footer>
+    </body>
     ```
-1. [Wrap Radio Buttons in a fieldset Element for Better Accessibility]()
+1. [Wrap Radio Buttons in a fieldset Element for Better Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility)
     ```html
+    <body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+    <section>
+        <form>
+        <p>Sign up to receive Camper Cat's blog posts by email here!</p>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        
+        
+        <!-- Add your code below this line -->
+        <fieldset>
+            <legend>What level ninja are you?</legend>
+            <input id="newbie" type="radio" name="levels" value="newbie">
+            <label for="newbie">Newbie Kitten</label><br>
+            <input id="intermediate" type="radio" name="levels" value="intermediate">
+            <label for="intermediate">Developing Student</label><br>
+            <input id="master" type="radio" name="levels" value="master">
+            <label for="master">Master</label>
+        </fieldset>
+        <!-- Add your code above this line -->
+        
+        
+        <input type="submit" name="submit" value="Submit">
+        </form>
+    </section>
+    <article>
+        <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
+        <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    </article>
+    <img src="samuraiSwords.jpeg" alt="">
+    <article>
+        <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+        <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    </article>
+    <img src="samuraiSwords.jpeg" alt="">
+    <article>
+        <h2>Is Chuck Norris a Cat Person?</h2>
+        <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    </article>
+    <footer>&copy; 2018 Camper Cat</footer>
+    </body>
     ```
-1. [Add an Accessible Date Picker]()
+1. [Add an Accessible Date Picker](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-an-accessible-date-picker)
     ```html
+    <body>
+    <header>
+        <h1>Tournaments</h1>
+    </header>
+    <main>
+        <section>
+        <h2>Mortal Kombat Tournament Survey</h2>
+        <form>
+            <p>Tell us the best date for the competition</p>
+            <label for="pickdate">Preferred Date:</label>
+            
+            <!-- Add your code below this line -->
+            <input type="date" id="pickdate" name="date">       
+            <!-- Add your code above this line -->
+            
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        </section>
+    </main>
+    <footer>&copy; 2018 Camper Cat</footer>
+    </body>
     ```
-1. [Standardize Times with the HTML5 datetime Attribute]()
+1. [Standardize Times with the HTML5 datetime Attribute](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/standardize-times-with-the-html5-datetime-attribute)
     ```html
+    <body>
+    <header>
+        <h1>Tournaments</h1>
+    </header>
+    <article>
+        <h2>Mortal Kombat Tournament Survey Results</h2>
+        
+        <!-- Add your code below this line -->
+        
+        <p>Thank you to everyone for responding to Master Camper Cat's survey. The best day to host the vaunted Mortal Kombat tournament is <time datetime="2016-09-15"> Thursday, September 15<sup>th</sup></time>. May the best ninja win!</p>
+        
+        <!-- Add your code above this line -->
+        
+        <section>
+        <h3>Comments:</h3>
+        <article>
+            <p>Posted by: Sub-Zero on <time datetime="2016-08-13T20:01Z">August 13<sup>th</sup></time></p>
+            <p>Johnny Cage better be there, I'll finish him!</p>
+        </article>
+        <article>
+            <p>Posted by: Doge on <time datetime="2016-08-15T08:12Z">August 15<sup>th</sup></time></p>
+            <p>Wow, much combat, so mortal.</p>
+        </article>
+        <article>
+            <p>Posted by: The Grim Reaper on <time datetime="2016-08-16T00:00Z">August 16<sup>th</sup></time></p>
+            <p>Looks like I'll be busy that day.</p>
+        </article>
+        </section>
+    </article>
+    <footer>&copy; 2018 Camper Cat</footer>
+    </body>
     ```
-1. [Make Elements Only Visible to a Screen Reader by Using Custom CSS]()
+1. [Make Elements Only Visible to a Screen Reader by Using Custom CSS](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/make-elements-only-visible-to-a-screen-reader-by-using-custom-css)
     ```html
+    <head>
+        <style>
+        .sr-only {
+        position: absolute;
+        left: -10000;
+        width: 1px;
+        height: 1px;
+        top: auto;
+        overflow: hidden;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1>Training</h1>
+        <nav>
+            <ul>
+            <li><a href="#stealth">Stealth &amp; Agility</a></li>
+            <li><a href="#combat">Combat</a></li>
+            <li><a href="#weapons">Weapons</a></li>
+            </ul>
+        </nav>
+        </header>
+        <section>
+        <h2>Master Camper Cat's Beginner Three Week Training Program</h2>
+        <figure>
+            <!-- Stacked bar chart of weekly training-->
+            <p>[Stacked bar chart]</p>
+            <br />
+            <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
+        </figure>
+        <table class="sr-only">
+            <caption>Hours of Weekly Training in Stealth, Combat, and Weapons</caption>
+            <thead>
+            <tr>
+                <th></th>
+                <th scope="col">Stealth &amp; Agility</th>
+                <th scope="col">Combat</th>
+                <th scope="col">Weapons</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Week One</th>
+                <td>3</td>
+                <td>5</td>
+                <td>2</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th scope="row">Week Two</th>
+                <td>4</td>
+                <td>5</td>
+                <td>3</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <th scope="row">Week Three</th>
+                <td>4</td>
+                <td>6</td>
+                <td>3</td>
+                <td>13</td>
+            </tr>
+            </tbody>
+        </table>
+        </section>
+        <section id="stealth">
+        <h2>Stealth &amp; Agility Training</h2>
+        <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+        <article><h3>No training is NP-complete without parkour</h3></article>
+        </section>
+        <section id="combat">
+        <h2>Combat Training</h2>
+        <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+        <article><h3>Goodbye, world: 5 proven ways to knock out an opponent</h3></article>
+        </section>
+        <section id="weapons">
+        <h2>Weapons Training</h2>
+        <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+        <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+        </section>
+        <footer>&copy; 2018 Camper Cat</footer>
+    </body>
     ```
 1. [Improve Readability with High Contrast Text]()
     ```html
