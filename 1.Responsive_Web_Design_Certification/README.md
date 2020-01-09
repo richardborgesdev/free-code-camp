@@ -5489,20 +5489,103 @@
         <footer>&copy; 2018 Camper Cat</footer>
     </body>
     ```
-1. [Improve Readability with High Contrast Text]()
+1. [Improve Readability with High Contrast Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/improve-readability-with-high-contrast-text)
     ```html
+    <head>
+        <style>
+        body {
+        color: #636363;
+        background-color: #FFF;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+        </header>
+        <article>
+        <h2>A Word on the Recent Catnip Doping Scandal</h2>
+        <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>
+        <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>
+        </article>
+    </body>
     ```
-1. [Avoid Colorblindness Issues by Using Sufficient Contrast]()
+1. [Avoid Colorblindness Issues by Using Sufficient Contrast](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/avoid-colorblindness-issues-by-using-sufficient-contrast)
     ```html
+    <head>
+        <style>
+        body {
+        color: hsl(0, 55%, 15%);
+        background-color: hsl(120, 25%, 55%);
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+        </header>
+        <article>
+        <h2>A Word on the Recent Catnip Doping Scandal</h2>
+        <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>
+        <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>
+        </article>
+    </body>
     ```
-1. [Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information]()
+1. [Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/avoid-colorblindness-issues-by-carefully-choosing-colors-that-convey-information)
     ```html
+    <head>
+        <style>
+        button {
+        color: #003366;
+        background-color: #FFFF33;
+        font-size: 14px;
+        padding: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1>Danger!</h1>
+        </header>
+        <button>Delete Internet</button>
+    </body>
     ```
-1. [Give Links Meaning by Using Descriptive Link Text]()
+1. [Give Links Meaning by Using Descriptive Link Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/give-links-meaning-by-using-descriptive-link-text)
     ```html
+    <body>
+        <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+        </header>
+        <article>
+        <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+        <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near. Click here for <a href="">information about batteries</a></p>
+        </article>
+    </body>
     ```
-1. [Make Links Navigable with HTML Access Keys]()
+1. [Make Links Navigable with HTML Access Keys](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/make-links-navigable-with-html-access-keys)
     ```html
+    <body>
+        <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+        </header>
+        <article>
+
+
+        <h2><a id="first" href="" accesskey="g">The Garfield Files: Lasagna as Training Fuel?</a></h2>
+
+
+        <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+        </article>
+        <article>
+
+
+        <h2><a id="second" href=""  accesskey="c">Is Chuck Norris a Cat Person?</a></h2>
+
+
+        <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+        </article>
+        <footer>&copy; 2018 Camper Cat</footer>
+    </body>
     ```
 1. [Use tabindex to Add Keyboard Focus to an Element]()
     ```html
