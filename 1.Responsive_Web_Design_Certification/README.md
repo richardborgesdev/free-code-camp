@@ -5215,7 +5215,7 @@
         <p>A sound clip of Zersiax's screen reader in action.</p>
         <audio controls>
         <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg"/>
-        </audio>  
+        </audio>
     </main>
     </body>
     ```
@@ -5234,7 +5234,7 @@
     </header>
     <main>
         <section>
-        
+
         <!-- Add your code below this line -->
         <figure>
             <!-- Stacked bar chart will go here -->
@@ -5242,7 +5242,7 @@
             <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
         </figure>
         <!-- Add your code above this line -->
-        
+
         </section>
         <section id="stealth">
         <h2>Stealth &amp; Agility Training</h2>
@@ -5272,12 +5272,12 @@
     <section>
         <form>
         <p>Sign up to receive Camper Cat's blog posts by email here!</p>
-        
-        
+
+
         <label for="email">Email:</label>
         <input type="text" id="email" name="email">
-        
-        
+
+
         <input type="submit" name="submit" value="Submit">
         </form>
     </section>
@@ -5309,8 +5309,8 @@
         <p>Sign up to receive Camper Cat's blog posts by email here!</p>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email">
-        
-        
+
+
         <!-- Add your code below this line -->
         <fieldset>
             <legend>What level ninja are you?</legend>
@@ -5322,8 +5322,8 @@
             <label for="master">Master</label>
         </fieldset>
         <!-- Add your code above this line -->
-        
-        
+
+
         <input type="submit" name="submit" value="Submit">
         </form>
     </section>
@@ -5356,11 +5356,11 @@
         <form>
             <p>Tell us the best date for the competition</p>
             <label for="pickdate">Preferred Date:</label>
-            
+
             <!-- Add your code below this line -->
-            <input type="date" id="pickdate" name="date">       
+            <input type="date" id="pickdate" name="date">
             <!-- Add your code above this line -->
-            
+
             <input type="submit" name="submit" value="Submit">
         </form>
         </section>
@@ -5376,13 +5376,13 @@
     </header>
     <article>
         <h2>Mortal Kombat Tournament Survey Results</h2>
-        
+
         <!-- Add your code below this line -->
-        
+
         <p>Thank you to everyone for responding to Master Camper Cat's survey. The best day to host the vaunted Mortal Kombat tournament is <time datetime="2016-09-15"> Thursday, September 15<sup>th</sup></time>. May the best ninja win!</p>
-        
+
         <!-- Add your code above this line -->
-        
+
         <section>
         <h3>Comments:</h3>
         <article>
@@ -5671,7 +5671,19 @@
         <footer>&copy; 2018 Camper Cat</footer>
     </body>
     ```
-## Responsive Web Design Principles
+## [Responsive Web Design Principles](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/)
+1. [Create a Media Query]()
+    ```html
+    ```
+1. [Make an Image Responsive]()
+    ```html
+    ```
+1. [Use a Retina Image for Higher Resolution Displays]()
+    ```html
+    ```
+1. [Make Typography Responsive]()
+    ```html
+    ```
 ## CSS Flexbox
 ## CSS Grid
 ## Responsive Web Design Projects
