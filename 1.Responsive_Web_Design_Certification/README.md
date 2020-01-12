@@ -5672,17 +5672,59 @@
     </body>
     ```
 ## [Responsive Web Design Principles](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/)
-1. [Create a Media Query]()
+1. [Create a Media Query](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query)
     ```html
+    <style>
+        p {
+            font-size: 20px;
+        }
+
+        /* Add media query below */
+        @media (max-height: 800px) {
+        p {
+            font-size: 10px;
+        }
+        }
+    </style>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
     ```
-1. [Make an Image Responsive]()
+1. [Make an Image Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-an-image-responsive)
     ```html
+    <style>
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
     ```
-1. [Use a Retina Image for Higher Resolution Displays]()
+1. [Use a Retina Image for Higher Resolution Displays](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/use-a-retina-image-for-higher-resolution-displays)
     ```html
+    <style>
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+    <img src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg" alt="freeCodeCamp sticker that says 'Because CamperBot Cares'">
     ```
-1. [Make Typography Responsive]()
+1. [Make Typography Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-typography-responsive)
     ```html
+    <style>
+    h2 {
+        width: 80vw;
+    }
+    p {
+        width: 75vmin;
+    }
+    </style>
+
+    <h2>Importantus Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
     ```
 ## CSS Flexbox
 ## CSS Grid
