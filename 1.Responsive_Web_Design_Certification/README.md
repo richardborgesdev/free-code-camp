@@ -5726,6 +5726,58 @@
     <h2>Importantus Ipsum</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
     ```
-## CSS Flexbox
+## [CSS Flexbox](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/)
+
+1. [Use display: flex to Position Two Boxes]()
+    ```html
+    ```
+1. [Add Flex Superpowers to the Tweet Embed]()
+    ```html
+    ```
+1. [Use the flex-direction Property to Make a Row]()
+    ```html
+    ```
+1. [Apply the flex-direction Property to Create Rows in the Tweet Embed]()
+    ```html
+    ```
+1. [Use the flex-direction Property to Make a Column]()
+    ```html
+    ```
+1. [Apply the flex-direction Property to Create a Column in the Tweet Embed]()
+    ```html
+    ```
+1. [Align Elements Using the justify-content Property]()
+    ```html
+    ```
+1. [Use the justify-content Property in the Tweet Embed]()
+    ```html
+    ```
+1. [Align Elements Using the align-items Property]()
+    ```html
+    ```
+1. [Use the align-items Property in the Tweet Embed]()
+    ```html
+    ```
+1. [Use the flex-wrap Property to Wrap a Row or Column]()
+    ```html
+    ```
+1. [Use the flex-shrink Property to Shrink Items]()
+    ```html
+    ```
+1. [Use the flex-grow Property to Expand Items]()
+    ```html
+    ```
+1. [Use the flex-basis Property to Set the Initial Size of an Item]()
+    ```html
+    ```
+1. [Use the flex Shorthand Property]()
+    ```html
+    ```
+1. [Use the order Property to Rearrange Items]()
+    ```html
+    ```
+1. [Use the align-self Property]()
+    ```html
+    ```
 ## CSS Grid
 ## Responsive Web Design Projects
