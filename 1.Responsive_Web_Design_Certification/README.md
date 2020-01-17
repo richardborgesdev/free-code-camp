@@ -6324,20 +6324,160 @@
         </div>
     </footer>
     ```
-1. [Use the flex-wrap Property to Wrap a Row or Column]()
+1. [Use the flex-wrap Property to Wrap a Row or Column](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-wrap-property-to-wrap-a-row-or-column)
     ```html
+    <style>
+        #box-container {
+        background: gray;
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        }
+        #box-1 {
+        background-color: dodgerblue;
+        width: 25%;
+        height: 50%;
+        }
+
+        #box-2 {
+        background-color: orangered;
+        width: 25%;
+        height: 50%;
+        }
+        #box-3 {
+        background-color: violet;
+        width: 25%;
+        height: 50%;
+        }
+        #box-4 {
+        background-color: yellow;
+        width: 25%;
+        height: 50%;
+        }
+        #box-5 {
+        background-color: green;
+        width: 25%;
+        height: 50%;
+        }
+        #box-6 {
+        background-color: black;
+        width: 25%;
+        height: 50%;
+        }
+    </style>
+
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+        <div id="box-3"></div>
+        <div id="box-4"></div>
+        <div id="box-5"></div>
+        <div id="box-6"></div>
+    </div>
     ```
-1. [Use the flex-shrink Property to Shrink Items]()
+1. [Use the flex-shrink Property to Shrink Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shrink-property-to-shrink-items)
     ```html
+    <style>
+        #box-container {
+        display: flex;
+        height: 500px;
+        }
+        #box-1 {
+        background-color: dodgerblue;
+        width: 100%;
+        height: 200px;
+        flex-shrink: 1;
+        }
+
+        #box-2 {
+        background-color: orangered;
+        width: 100%;
+        height: 200px;
+        flex-shrink: 2;
+        }
+    </style>
+
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+    </div>
     ```
-1. [Use the flex-grow Property to Expand Items]()
+1. [Use the flex-grow Property to Expand Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-grow-property-to-expand-items)
     ```html
+    <style>
+        #box-container {
+        display: flex;
+        height: 500px;
+        }
+
+        #box-1 {
+        background-color: dodgerblue;
+        height: 200px;
+        flex-grow: 1;
+        }
+
+        #box-2 {
+        background-color: orangered;
+        height: 200px;
+        flex-grow: 2;
+        }
+    </style>
+
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+    </div>
     ```
 1. [Use the flex-basis Property to Set the Initial Size of an Item]()
     ```html
+    <style>
+        #box-container {
+        display: flex;
+        height: 500px;
+        }
+
+        #box-1 {
+        background-color: dodgerblue;
+        height: 200px;
+        flex-basis: 10em;
+        }
+
+        #box-2 {
+        background-color: orangered;
+        height: 200px;
+        flex-basis: 20em;
+        }
+    </style>
+
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+    </div>
     ```
-1. [Use the flex Shorthand Property]()
+1. [Use the flex Shorthand Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shorthand-property)
     ```html
+    <style>
+        #box-container {
+        display: flex;
+        height: 500px;
+        }
+        #box-1 {
+        background-color: dodgerblue;
+        flex: 2 2 150px;
+        height: 200px;
+        }
+
+        #box-2 {
+        background-color: orangered;
+        flex: 1 1 150px;
+        height: 200px;
+        }
+    </style>
+
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+    </div>
     ```
 1. [Use the order Property to Rearrange Items]()
     ```html
