@@ -6479,11 +6479,59 @@
         <div id="box-2"></div>
     </div>
     ```
-1. [Use the order Property to Rearrange Items]()
+1. [Use the order Property to Rearrange Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-order-property-to-rearrange-items)
     ```html
+    <style>
+    #box-container {
+        display: flex;
+        height: 500px;
+    }
+    #box-1 {
+        background-color: dodgerblue;
+        order: 2;
+        height: 200px;
+        width: 200px;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        order: 1;
+        height: 200px;
+        width: 200px;
+    }
+    </style>
+
+    <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+    </div>
     ```
-1. [Use the align-self Property]()
+1. [Use the align-self Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-self-property)
     ```html
+    <style>
+    #box-container {
+        display: flex;
+        height: 500px;
+    }
+    #box-1 {
+        background-color: dodgerblue;
+        align-self: center;
+        height: 200px;
+        width: 200px;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        align-self: flex-end;
+        height: 200px;
+        width: 200px;
+    }
+    </style>
+
+    <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+    </div>
     ```
 ## CSS Grid
 ## Responsive Web Design Projects
