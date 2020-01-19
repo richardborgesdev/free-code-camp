@@ -6533,5 +6533,71 @@
     <div id="box-2"></div>
     </div>
     ```
-## CSS Grid
+## [CSS Grid](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/)
+1. [Create Your First CSS Grid]()
+    ```html
+    ```
+1. [Add Columns with grid-template-columns]()
+    ```html
+    ```
+1. [Add Rows with grid-template-rows]()
+    ```html
+    ```
+1. [Use CSS Grid units to Change the Size of Columns and Rows]()
+    ```html
+    ```
+1. [Create a Column Gap Using grid-column-gap]()
+    ```html
+    ```
+1. [Create a Row Gap using grid-row-gap]()
+    ```html
+    ```
+1. [Add Gaps Faster with grid-gap]()
+    ```html
+    ```
+1. [Use grid-column to Control Spacing]()
+    ```html
+    ```
+1. [Use grid-row to Control Spacing]()
+    ```html
+    ```
+1. [Align an Item Horizontally using justify-self]()
+    ```html
+    ```
+1. [Align an Item Vertically using align-self]()
+    ```html
+    ```
+1. [Align All Items Horizontally using justify-items]()
+    ```html
+    ```
+1. [Align All Items Vertically using align-items]()
+    ```html
+    ```
+1. [Divide the Grid Into an Area Template]()
+    ```html
+    ```
+1. [Place Items in Grid Areas Using the grid-area Property]()
+    ```html
+    ```
+1. [Use grid-area Without Creating an Areas Template]()
+    ```html
+    ```
+1. [Reduce Repetition Using the repeat Function]()
+    ```html
+    ```
+1. [Limit Item Size Using the minmax Function]()
+    ```html
+    ```
+1. [Create Flexible Layouts Using auto-fill]()
+    ```html
+    ```
+1. [Create Flexible Layouts Using auto-fit]()
+    ```html
+    ```
+1. [Use Media Queries to Create Responsive Layouts]()
+    ```html
+    ```
+1. [Create Grids within Grids]()
+    ```html
+    ```
 ## Responsive Web Design Projects
