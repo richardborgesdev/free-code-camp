@@ -6534,20 +6534,149 @@
     </div>
     ```
 ## [CSS Grid](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/)
-1. [Create Your First CSS Grid]()
+1. [Create Your First CSS Grid](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-your-first-css-grid)
     ```html
+    <style>
+    .d1{background:LightSkyBlue;}
+    .d2{background:LightSalmon;}
+    .d3{background:PaleTurquoise;}
+    .d4{background:LightPink;}
+    .d5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        /* add your code below this line */
+        display: grid;
+        /* add your code above this line */
+    }
+    </style>
+    
+    <div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    </div>
     ```
-1. [Add Columns with grid-template-columns]()
+1. [Add Columns with grid-template-columns](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-columns-with-grid-template-columns)
     ```html
+    <style>
+    .d1{background:LightSkyBlue;}
+    .d2{background:LightSalmon;}
+    .d3{background:PaleTurquoise;}
+    .d4{background:LightPink;}
+    .d5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* add your code below this line */
+        grid-template-columns: 100px 100px 100px;
+        /* add your code above this line */
+    }
+    </style>
+    
+    <div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    </div>
     ```
-1. [Add Rows with grid-template-rows]()
+1. [Add Rows with grid-template-rows](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-rows-with-grid-template-rows)
     ```html
+    <style>
+    .d1{background:LightSkyBlue;}
+    .d2{background:LightSalmon;}
+    .d3{background:PaleTurquoise;}
+    .d4{background:LightPink;}
+    .d5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        /* add your code below this line */
+        grid-template-rows: 50px 50px;
+        /* add your code above this line */
+    }
+    </style>
+    
+    <div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    </div>
     ```
 1. [Use CSS Grid units to Change the Size of Columns and Rows]()
     ```html
+    <style>
+    .d1{background:LightSkyBlue;}
+    .d2{background:LightSalmon;}
+    .d3{background:PaleTurquoise;}
+    .d4{background:LightPink;}
+    .d5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* modify the code below this line */
+        grid-template-columns: 1fr 100px 2fr;
+        /* modify the code above this line */
+        grid-template-rows: 50px 50px;
+    }
+    </style>
+    
+    <div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    </div>
     ```
-1. [Create a Column Gap Using grid-column-gap]()
+1. [Create a Column Gap Using grid-column-gap](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-column-gap-using-grid-column-gap)
     ```html
+    <style>
+    .d1{background:LightSkyBlue;}
+    .d2{background:LightSalmon;}
+    .d3{background:PaleTurquoise;}
+    .d4{background:LightPink;}
+    .d5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* add your code below this line */
+        grid-column-gap: 20px;    
+        /* add your code above this line */
+    }
+    </style>
+    
+    <div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    </div>
     ```
 1. [Create a Row Gap using grid-row-gap]()
     ```html
