@@ -6846,20 +6846,179 @@
     <div class="item5">5</div>
     </div>
     ```
-1. [Align an Item Vertically using align-self]()
+1. [Align an Item Vertically using align-self](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-vertically-using-align-self)
     ```html
+    <style>
+    .item1{background:LightSkyBlue;}
+    .item2{background:LightSalmon;}
+    
+    .item3 {
+        background: PaleTurquoise;
+        /* add your code below this line */
+        align-self: end;    
+        /* add your code above this line */
+    }
+    
+    .item4{background:LightPink;}
+    .item5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+    </style>
+    
+    <div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    </div>
     ```
-1. [Align All Items Horizontally using justify-items]()
+1. [Align All Items Horizontally using justify-items](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-all-items-horizontally-using-justify-items)
     ```html
+    <style>
+    .item1{background:LightSkyBlue;}
+    .item2{background:LightSalmon;}
+    .item3{background:PaleTurquoise;}
+    .item4{background:LightPink;}
+    .item5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        /* add your code below this line */
+        justify-items: center;    
+        /* add your code above this line */
+    }
+    </style>
+    
+    <div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    </div>
     ```
-1. [Align All Items Vertically using align-items]()
+1. [Align All Items Vertically using align-items](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-all-items-vertically-using-align-items)
     ```html
+    <style>
+    .item1{background:LightSkyBlue;}
+    .item2{background:LightSalmon;}
+    .item3{background:PaleTurquoise;}
+    .item4{background:LightPink;}
+    .item5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        /* add your code below this line */
+        align-items: end;    
+        /* add your code above this line */
+    }
+    </style>
+    
+    <div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    </div>
     ```
-1. [Divide the Grid Into an Area Template]()
+1. [Divide the Grid Into an Area Template](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/divide-the-grid-into-an-area-template)
     ```html
+    <style>
+    .item1{background:LightSkyBlue;}
+    .item2{background:LightSalmon;}
+    .item3{background:PaleTurquoise;}
+    .item4{background:LightPink;}
+    .item5{background:PaleGreen;}
+    
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        /* change code below this line */
+        grid-template-areas:
+        "header header header"
+        ". content content"
+        "footer footer footer";
+        /* change code above this line */
+    }
+    </style>
+    
+    <div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    </div>
     ```
-1. [Place Items in Grid Areas Using the grid-area Property]()
+1. [Place Items in Grid Areas Using the grid-area Property](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/place-items-in-grid-areas-using-the-grid-area-property)
     ```html
+    <style>
+    .item1{background:LightSkyBlue;}
+    .item2{background:LightSalmon;}
+    .item3{background:PaleTurquoise;}
+    .item4{background:LightPink;}
+    
+    .item5 {
+        background: PaleGreen;
+        /* add your code below this line */
+        grid-area: footer;    
+        /* add your code above this line */
+    }
+    
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "header header header"
+        "advert content content"
+        "footer footer footer";
+    }
+    </style>
+    
+    <div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    </div>
     ```
 1. [Use grid-area Without Creating an Areas Template]()
     ```html
