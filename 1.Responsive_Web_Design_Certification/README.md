@@ -6542,7 +6542,7 @@
     .d3{background:PaleTurquoise;}
     .d4{background:LightPink;}
     .d5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         width: 100%;
@@ -6552,7 +6552,7 @@
         /* add your code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="d1">1</div>
     <div class="d2">2</div>
@@ -6569,7 +6569,7 @@
     .d3{background:PaleTurquoise;}
     .d4{background:LightPink;}
     .d5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         width: 100%;
@@ -6580,7 +6580,7 @@
         /* add your code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="d1">1</div>
     <div class="d2">2</div>
@@ -6597,7 +6597,7 @@
     .d3{background:PaleTurquoise;}
     .d4{background:LightPink;}
     .d5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         width: 100%;
@@ -6609,7 +6609,7 @@
         /* add your code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="d1">1</div>
     <div class="d2">2</div>
@@ -6626,7 +6626,7 @@
     .d3{background:PaleTurquoise;}
     .d4{background:LightPink;}
     .d5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         width: 100%;
@@ -6638,7 +6638,7 @@
         grid-template-rows: 50px 50px;
     }
     </style>
-    
+
     <div class="container">
     <div class="d1">1</div>
     <div class="d2">2</div>
@@ -6655,7 +6655,7 @@
     .d3{background:PaleTurquoise;}
     .d4{background:LightPink;}
     .d5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6665,11 +6665,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         /* add your code below this line */
-        grid-column-gap: 20px;    
+        grid-column-gap: 20px;
         /* add your code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="d1">1</div>
     <div class="d2">2</div>
@@ -6686,7 +6686,7 @@
     .d3{background:PaleTurquoise;}
     .d4{background:LightPink;}
     .d5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6696,11 +6696,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         /* add your code below this line */
-        grid-row-gap: 5px;    
+        grid-row-gap: 5px;
         /* add your code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="d1">1</div>
     <div class="d2">2</div>
@@ -6717,7 +6717,7 @@
     .d3{background:PaleTurquoise;}
     .d4{background:LightPink;}
     .d5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6727,7 +6727,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         /* add your code below this line */
-        grid-gap: 10px 20px;    
+        grid-gap: 10px 20px;
         /* add your code above this line */
     }
     </style>
@@ -6746,14 +6746,14 @@
     .item2{background:LightSalmon;}
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
-    
+
     .item5 {
         background: PaleGreen;
         /* add your code below this line */
-        grid-column: 2 / 4;    
+        grid-column: 2 / 4;
         /* add your code above this line */
     }
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6765,7 +6765,7 @@
         grid-gap: 10px;
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -6781,15 +6781,15 @@
     .item2{background:LightSalmon;}
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
-    
+
     .item5 {
         background: PaleGreen;
         grid-column: 2 / 4;
         /* add your code below this line */
-        grid-row:  2 / 4;    
+        grid-row:  2 / 4;
         /* add your code above this line */
     }
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6801,7 +6801,7 @@
         grid-gap: 10px;
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -6814,18 +6814,18 @@
     ```html
     <style>
     .item1{background: LightSkyBlue;}
-    
+
     .item2 {
         background: LightSalmon;
         /* add your code below this line */
-        justify-self: center;    
+        justify-self: center;
         /* add your code above this line */
     }
-    
+
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
     .item5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6837,7 +6837,7 @@
         grid-gap: 10px;
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -6851,17 +6851,17 @@
     <style>
     .item1{background:LightSkyBlue;}
     .item2{background:LightSalmon;}
-    
+
     .item3 {
         background: PaleTurquoise;
         /* add your code below this line */
-        align-self: end;    
+        align-self: end;
         /* add your code above this line */
     }
-    
+
     .item4{background:LightPink;}
     .item5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6873,7 +6873,7 @@
         grid-gap: 10px;
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -6890,7 +6890,7 @@
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
     .item5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6901,11 +6901,11 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-gap: 10px;
         /* add your code below this line */
-        justify-items: center;    
+        justify-items: center;
         /* add your code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -6922,7 +6922,7 @@
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
     .item5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6933,11 +6933,11 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-gap: 10px;
         /* add your code below this line */
-        align-items: end;    
+        align-items: end;
         /* add your code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -6954,7 +6954,7 @@
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
     .item5{background:PaleGreen;}
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -6972,7 +6972,7 @@
         /* change code above this line */
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -6988,14 +6988,14 @@
     .item2{background:LightSalmon;}
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
-    
+
     .item5 {
         background: PaleGreen;
         /* add your code below this line */
-        grid-area: footer;    
+        grid-area: footer;
         /* add your code above this line */
     }
-    
+
     .container {
         font-size: 40px;
         min-height: 300px;
@@ -7005,13 +7005,13 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-gap: 10px;
-        grid-template-areas: 
+        grid-template-areas:
         "header header header"
         "advert content content"
         "footer footer footer";
     }
     </style>
-    
+
     <div class="container">
     <div class="item1">1</div>
     <div class="item2">2</div>
@@ -7026,26 +7026,26 @@
         .item1 {
             background: LightSkyBlue;
         }
-        
+
         .item2 {
             background: LightSalmon;
         }
-        
+
         .item3 {
             background: PaleTurquoise;
         }
-        
+
         .item4 {
             background: LightPink;
         }
-        
+
         .item5 {
             background: PaleGreen;
             /* add your code below this line */
             grid-area: 3/1/4/4;
             /* add your code above this line */
         }
-        
+
         .container {
             font-size: 40px;
             min-height: 300px;
@@ -7072,23 +7072,23 @@
         .item1 {
             background: LightSkyBlue;
         }
-        
+
         .item2 {
             background: LightSalmon;
         }
-        
+
         .item3 {
             background: PaleTurquoise;
         }
-        
+
         .item4 {
             background: LightPink;
         }
-        
+
         .item5 {
             background: PaleGreen;
         }
-        
+
         .container {
             font-size: 40px;
             min-height: 300px;
@@ -7111,8 +7111,50 @@
         <div class="item5">5</div>
     </div>
     ```
-1. [Limit Item Size Using the minmax Function]()
+1. [Limit Item Size Using the minmax Function](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/limit-item-size-using-the-minmax-function)
     ```html
+    <style>
+        .item1 {
+            background: LightSkyBlue;
+        }
+
+        .item2 {
+            background: LightSalmon;
+        }
+
+        .item3 {
+            background: PaleTurquoise;
+        }
+
+        .item4 {
+            background: LightPink;
+        }
+
+        .item5 {
+            background: PaleGreen;
+        }
+
+        .container {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            /* change the code below this line */
+            grid-template-columns: repeat(3, minmax(90px, 1fr));
+            /* change the code above this line */
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
     ```
 1. [Create Flexible Layouts Using auto-fill]()
     ```html
