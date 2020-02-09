@@ -996,8 +996,80 @@
     </form>
     </div>
     ```
-1. [Style Text Inputs as Form Controls]()
+1. [Style Text Inputs as Form Controls](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/style-text-inputs-as-form-controls)
     ```html
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <style>
+    h2 {
+        font-family: Lobster, Monospace;
+    }
+
+    .thick-green-border {
+        border-color: green;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 50%;
+    }
+
+    </style>
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-8">
+        <h2 class="text-primary text-center">CatPhotoApp</h2>
+        </div>
+        <div class="col-xs-4">
+        <a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        </div>
+    </div>
+    <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
+    <div class="row">
+        <div class="col-xs-4">
+        <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i> Like</button>
+        </div>
+        <div class="col-xs-4">
+        <button class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Info</button>
+        </div>
+        <div class="col-xs-4">
+        <button class="btn btn-block btn-danger"><i class="fa fa-trash"></i> Delete</button>
+        </div>
+    </div>
+    <p>Things cats <span class="text-danger">love:</span></p>
+    <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+    </ol>
+    <form action="/submit-cat-photo">
+        <div class="row">
+        <div class="col-xs-6">
+            <label><input type="radio" name="indoor-outdoor" class="form-control"> Indoor</label>
+        </div>
+        <div class="col-xs-6">
+            <label><input type="radio" name="indoor-outdoor" class="form-control"> Outdoor</label>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-4">
+            <label><input type="checkbox" name="personality" class="form-control"> Loving</label>
+        </div>
+        <div class="col-xs-4">
+            <label><input type="checkbox" name="personality" class="form-control"> Lazy</label>
+        </div>
+        <div class="col-xs-4">
+            <label><input type="checkbox" name="personality" class="form-control"> Crazy</label>
+        </div>
+        </div>
+        <input type="text" placeholder="cat photo URL" class="form-control" required>
+        <button class="btn btn-primary " type="submit">Submit <i class="fa fa-paper-plane"></i></button>
+    </form>
+    </div>
     ```
 1. [Line up Form Elements Responsively with Bootstrap]()
     ```html
