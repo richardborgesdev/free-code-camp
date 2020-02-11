@@ -1162,20 +1162,85 @@
         <h3 class="text-primary text-center">jQuery Playground</h3>
     </div>
     ```
-1. [Create a Bootstrap Row]()
+1. [Create a Bootstrap Row](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/create-a-bootstrap-row)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+        </div>
+    </div>
     ```
-1. [Split Your Bootstrap Row]()
+1. [Split Your Bootstrap Row](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/split-your-bootstrap-row)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+        <div class="col-xs-6">
+        </div>
+        <div class="col-xs-6">
+        </div>
+        </div>
+    </div>
     ```
-1. [Create Bootstrap Wells]()
+1. [Create Bootstrap Wells](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/create-bootstrap-wells)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+        <div class="col-xs-6">
+            <div class="well">
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="well">
+            </div>
+        </div>
+        </div>
+    </div>
     ```
-1. [Add Elements within Your Bootstrap Wells]()
+1. [Add Elements within Your Bootstrap Wells](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/add-elements-within-your-bootstrap-wells)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="well">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="well">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Apply the Default Bootstrap Button Style]()
+1. [Apply the Default Bootstrap Button Style](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/apply-the-default-bootstrap-button-style)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="well">
+                    <button class="btn btn-default"></button>
+                    <button class="btn btn-default"></button>
+                    <button class="btn btn-default"></button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="well">
+                    <button class="btn btn-default"></button>
+                    <button class="btn btn-default"></button>
+                    <button class="btn btn-default"></button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
 1. [Create a Class to Target with jQuery Selectors]()
     ```html
