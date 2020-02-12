@@ -1242,23 +1242,158 @@
         </div>
     </div>
     ```
-1. [Create a Class to Target with jQuery Selectors]()
+1. [Create a Class to Target with jQuery Selectors](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/create-a-class-to-target-with-jquery-selectors)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="well">
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="well">
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Add id Attributes to Bootstrap Elements]()
+1. [Add id Attributes to Bootstrap Elements](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/add-id-attributes-to-bootstrap-elements)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <div id="left-well" class="well">
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div id="right-well" class="well">
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Label Bootstrap Wells]()
+1. [Label Bootstrap Wells](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/label-bootstrap-wells)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                </div>
+                </div>
+                <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                    <button class="btn btn-default target"></button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Give Each Element a Unique id]()
+1. [Give Each Element a Unique id](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/give-each-element-a-unique-id)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button id="target1" class="btn btn-default target"></button>
+                    <button id="target2" class="btn btn-default target"></button>
+                    <button id="target3" class="btn btn-default target"></button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button id="target4" class="btn btn-default target"></button>
+                    <button id="target5" class="btn btn-default target"></button>
+                    <button id="target6" class="btn btn-default target"></button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Label Bootstrap Buttons]()
+1. [Label Bootstrap Buttons](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/label-bootstrap-buttons)
     ```html
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">
+                        #target1
+                    </button>
+                    <button class="btn btn-default target" id="target2">
+                        #target2
+                    </button>
+                    <button class="btn btn-default target" id="target3">
+                        #target3
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">
+                        #target4
+                    </button>
+                    <button class="btn btn-default target" id="target5">
+                        #target5
+                    </button>
+                    <button class="btn btn-default target" id="target6">
+                        #target6
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Use Comments to Clarify Code]()
+1. [Use Comments to Clarify Code](https://www.freecodecamp.org/learn/front-end-libraries/bootstrap/use-comments-to-clarify-code)
     ```html
+    <!-- Only change code above this line -->
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
 ## [jQuery]()
 ## [Sass]()
