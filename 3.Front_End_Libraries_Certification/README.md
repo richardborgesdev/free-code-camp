@@ -1395,7 +1395,61 @@
         </div>
     </div>
     ```
-## [jQuery]()
+## [jQuery](https://www.freecodecamp.org/learn/front-end-libraries/jquery/)
+1. [Learn How Script Tags and Document Ready Work]()
+    ```html
+    ```
+1. [Target HTML Elements with Selectors Using jQuery]()
+    ```html
+    ```
+1. [Target Elements by Class Using jQuery]()
+    ```html
+    ```
+1. [Target Elements by id Using jQuery]()
+    ```html
+    ```
+1. [Delete Your jQuery Functions]()
+    ```html
+    ```
+1. [Target the Same Element with Multiple jQuery Selectors]()
+    ```html
+    ```
+1. [Remove Classes from an Element with jQuery]()
+    ```html
+    ```
+1. [Change the CSS of an Element Using jQuery]()
+    ```html
+    ```
+1. [Disable an Element Using jQuery]()
+    ```html
+    ```
+1. [Change Text Inside an Element Using jQuery]()
+    ```html
+    ```
+1. [Remove an Element Using jQuery]()
+    ```html
+    ```
+1. [Use appendTo to Move Elements with jQuery]()
+    ```html
+    ```
+1. [Clone an Element Using jQuery]()
+    ```html
+    ```
+1. [Target the Parent of an Element Using jQuery]()
+    ```html
+    ```
+1. [Target the Children of an Element Using jQuery]()
+    ```html
+    ```
+1. [Target a Specific Child of an Element Using jQuery]()
+    ```html
+    ```
+1. [Target Even Elements Using jQuery]()
+    ```html
+    ```
+1. [Use jQuery to Modify the Entire Page]()
+    ```html
+    ```
 ## [Sass]()
 ## [React]()
 ## [Redux]()
