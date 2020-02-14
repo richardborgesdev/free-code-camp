@@ -1396,20 +1396,168 @@
     </div>
     ```
 ## [jQuery](https://www.freecodecamp.org/learn/front-end-libraries/jquery/)
-1. [Learn How Script Tags and Document Ready Work]()
+1. [Learn How Script Tags and Document Ready Work](https://www.freecodecamp.org/learn/front-end-libraries/jquery/learn-how-script-tags-and-document-ready-work)
     ```html
+    <!-- Only change code above this line. -->
+
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(document).ready(
+        function() {
+
+        }
+    );
+    </script>
     ```
-1. [Target HTML Elements with Selectors Using jQuery]()
+1. [Target HTML Elements with Selectors Using jQuery](https://www.freecodecamp.org/learn/front-end-libraries/jquery/target-html-elements-with-selectors-using-jquery)
     ```html
+    <script>
+        $(document).ready(function() {
+            $("button").addClass("animated bounce");
+        });
+    </script>
+
+    <!-- Only change code above this line. -->
+
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Target Elements by Class Using jQuery]()
+1. [Target Elements by Class Using jQuery](https://www.freecodecamp.org/learn/front-end-libraries/jquery/target-elements-by-class-using-jquery)
     ```html
+    <script>
+        $(document).ready(function() {
+            $("button").addClass("animated bounce");
+            $(".well").addClass("animated shake");
+        });
+    </script>
+
+    <!-- Only change code above this line. -->
+
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Target Elements by id Using jQuery]()
+1. [Target Elements by id Using jQuery](https://www.freecodecamp.org/learn/front-end-libraries/jquery/target-elements-by-id-using-jquery)
     ```html
+    <script>
+    $(document).ready(function() {
+        $("button").addClass("animated bounce");
+        $(".well").addClass("animated shake");
+        $("#target3").addClass("animated fadeOut");
+    });
+    </script>
+
+    <!-- Only change code above this line. -->
+
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+                </div>
+            </div>
+                <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
-1. [Delete Your jQuery Functions]()
+1. [Delete Your jQuery Functions](https://www.freecodecamp.org/learn/front-end-libraries/jquery/delete-your-jquery-functions)
     ```html
+    <script>
+    $(document).ready(function() {
+    });
+    </script>
+
+    <!-- Only change code above this line. -->
+
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
     ```
 1. [Target the Same Element with Multiple jQuery Selectors]()
     ```html
