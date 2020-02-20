@@ -2033,7 +2033,34 @@
         </div>
     </div>
     ```
-## [Sass]()
+## [Sass](https://www.freecodecamp.org/learn/front-end-libraries/sass/)
+1. [Store Data with Sass Variables]()
+    ```html
+    ```
+1. [Nest CSS with Sass]()
+    ```html
+    ```
+1. [Create Reusable CSS with Mixins]()
+    ```html
+    ```
+1. [Use @if and @else to Add Logic To Your Styles]()
+    ```html
+    ```
+1. [Use @for to Create a Sass Loop]()
+    ```html
+    ```
+1. [Use @each to Map Over Items in a List]()
+    ```html
+    ```
+1. [Apply a Style Until a Condition is Met with @while]()
+    ```html
+    ```
+1. [Split Your Styles into Smaller Chunks with Partials]()
+    ```html
+    ```
+1. [Extend One Set of CSS Styles to Another Element]()
+    ```html
+    ```
 ## [React]()
 ## [Redux]()
 ## [React and Redux]()
