@@ -2034,20 +2034,112 @@
     </div>
     ```
 ## [Sass](https://www.freecodecamp.org/learn/front-end-libraries/sass/)
-1. [Store Data with Sass Variables]()
+1. [Store Data with Sass Variables](https://www.freecodecamp.org/learn/front-end-libraries/sass/store-data-with-sass-variables)
     ```html
+    <style type='text/sass'>
+    $text-color: red;
+    
+    .header{
+        text-align: center;
+    }
+    .blog-post, h2 {
+        color: $text-color;
+    }
+    </style>
+
+    <h1 class="header">Learn Sass</h1>
+    <div class="blog-post">
+        <h2>Some random title</h2>
+        <p>This is a paragraph with some random text in it</p>
+    </div>
+    <div class="blog-post">
+        <h2>Header #2</h2>
+        <p>Here is some more random text.</p>
+    </div>
+    <div class="blog-post">
+        <h2>Here is another header</h2>
+        <p>Even more random text within a paragraph</p>
+    </div>
     ```
-1. [Nest CSS with Sass]()
+1. [Nest CSS with Sass](https://www.freecodecamp.org/learn/front-end-libraries/sass/nest-css-with-sass)
     ```html
+    <style type='text/sass'>
+    .blog-post {
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    </style>
+
+    <div class="blog-post">
+        <h1>Blog Title</h1>
+        <p>This is a paragraph</p>
+    </div>
     ```
-1. [Create Reusable CSS with Mixins]()
+1. [Create Reusable CSS with Mixins](https://www.freecodecamp.org/learn/front-end-libraries/sass/create-reusable-css-with-mixins)
     ```html
+    <style type='text/sass'>
+    @mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
+    }
+    
+    #awesome {
+        width: 150px;
+        height: 150px;
+        background-color: green;
+        @include border-radius(15px);
+    }
+    </style>
+
+    <div id="awesome"></div>
     ```
-1. [Use @if and @else to Add Logic To Your Styles]()
+1. [Use @if and @else to Add Logic To Your Styles](https://www.freecodecamp.org/learn/front-end-libraries/sass/use-if-and-else-to-add-logic-to-your-styles)
     ```html
+    <style type='text/sass'>
+    @mixin border-stroke($val) {
+        @if $val == light {
+            border: 1px solid black;
+        } @else if $val == medium {
+            border: 3px solid black;
+        } @else if $val == heavy {
+            border: 6px solid black;
+        } @else {
+            border: none;
+        }
+    }
+    
+    #box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        @include border-stroke(medium);
+    }  
+    </style>
+
+    <div id="box"></div>
     ```
-1. [Use @for to Create a Sass Loop]()
+1. [Use @for to Create a Sass Loop](https://www.freecodecamp.org/learn/front-end-libraries/sass/use-for-to-create-a-sass-loop)
     ```html
+    <style type='text/sass'>
+    @for $j from 1 through 6 {
+        .text-#{$j} {
+            font-size: 15 * $j;
+        }
+    }
+    </style>
+
+    <p class="text-1">Hello</p>
+    <p class="text-2">Hello</p>
+    <p class="text-3">Hello</p>
+    <p class="text-4">Hello</p>
+    <p class="text-5">Hello</p>
     ```
 1. [Use @each to Map Over Items in a List]()
     ```html
