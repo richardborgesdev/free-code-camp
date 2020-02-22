@@ -2038,7 +2038,7 @@
     ```html
     <style type='text/sass'>
     $text-color: red;
-    
+
     .header{
         text-align: center;
     }
@@ -2089,7 +2089,7 @@
         -ms-border-radius: $radius;
         border-radius: $radius;
     }
-    
+
     #awesome {
         width: 150px;
         height: 150px;
@@ -2114,13 +2114,13 @@
             border: none;
         }
     }
-    
+
     #box {
         width: 150px;
         height: 150px;
         background-color: red;
         @include border-stroke(medium);
-    }  
+    }
     </style>
 
     <div id="box"></div>
@@ -2141,17 +2141,79 @@
     <p class="text-4">Hello</p>
     <p class="text-5">Hello</p>
     ```
-1. [Use @each to Map Over Items in a List]()
+1. [Use @each to Map Over Items in a List](https://www.freecodecamp.org/learn/front-end-libraries/sass/use-each-to-map-over-items-in-a-list)
     ```html
+    <style type='text/sass'>
+    $colors: (1: blue, 2: black, 3: red);
+
+    @each $key, $color in $colors {
+        .#{$color}-bg {
+        background-color: $color;
+        }
+    }
+
+    div {
+        height: 200px;
+        width: 200px;
+    }
+    </style>
+
+    <div class="blue-bg"></div>
+    <div class="black-bg"></div>
+    <div class="red-bg"></div>
     ```
-1. [Apply a Style Until a Condition is Met with @while]()
+1. [Apply a Style Until a Condition is Met with @while](https://www.freecodecamp.org/learn/front-end-libraries/sass/apply-a-style-until-a-condition-is-met-with-while)
     ```html
+    <style type='text/sass'>
+    $x: 1;
+    @while $x < 11 {
+    .text-#{$x} {
+        font-size: 15 * $x;
+    }
+    $x: $x + 1;
+    }
+    </style>
+
+    <p class="text-1">Hello</p>
+    <p class="text-2">Hello</p>
+    <p class="text-3">Hello</p>
+    <p class="text-4">Hello</p>
+    <p class="text-5">Hello</p>
+    <p class="text-6">Hello</p>
+    <p class="text-7">Hello</p>
+    <p class="text-8">Hello</p>
+    <p class="text-9">Hello</p>
+    <p class="text-10">Hello</p>
     ```
-1. [Split Your Styles into Smaller Chunks with Partials]()
-    ```html
+1. [Split Your Styles into Smaller Chunks with Partials](https://www.freecodecamp.org/learn/front-end-libraries/sass/split-your-styles-into-smaller-chunks-with-partials)
+    ```scss
+    // The main.scss file
+    @import 'variables'
     ```
-1. [Extend One Set of CSS Styles to Another Element]()
+1. [Extend One Set of CSS Styles to Another Element](https://www.freecodecamp.org/learn/front-end-libraries/sass/extend-one-set-of-css-styles-to-another-element)
     ```html
+    <style type='text/sass'>
+    h3{
+        text-align: center;
+    }
+    .info{
+        width: 200px;
+        border: 1px solid black;
+        margin: 0 auto;
+    }
+    .info-important {
+        @extend .info;
+        background-color: magenta;
+    }
+    </style>
+    <h3>Posts</h3>
+    <div class="info-important">
+        <p>This is an important post. It should extend the class ".info" and have its own CSS styles.</p>
+    </div>
+
+    <div class="info">
+        <p>This is a simple post. It has basic styling and can be extended for other uses.</p>
+    </div>
     ```
 ## [React]()
 ## [Redux]()
