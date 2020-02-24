@@ -1,1 +1,0 @@
-{"index.jsx":"const JSX = (\n  <div>\n    {/*My first comment in react*/}\n    <h1>This is a block of JSX</h1>\n    <p>Here's a subtitle</p>\n  </div>\n);"}

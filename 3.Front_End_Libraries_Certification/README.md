@@ -2216,20 +2216,51 @@
     </div>
     ```
 ## [React](https://www.freecodecamp.org/learn/front-end-libraries/react/)
-1. [Create a Simple JSX Element]()
-    ```html
+1. [Create a Simple JSX Element](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-simple-jsx-element)
+    ```jsx
+    const JSX = <h1>Hello JSX!</h1>;
     ```
-1. [Create a Complex JSX Element]()
-    ```html
+1. [Create a Complex JSX Element](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-complex-jsx-element)
+    ```jsx
+    // write your code here
+    const JSX = <div>
+        <h1>h1</h1>
+        <p>Paragraph</p>
+        <ul>
+            <li>li1</li>
+            <li>li2</li>
+            <li>li3</li>
+        </ul>
+    </div>
     ```
-1. [Add Comments in JSX]()
-    ```html
+1. [Add Comments in JSX](https://www.freecodecamp.org/learn/front-end-libraries/react/add-comments-in-jsx)
+    ```jsx
+    const JSX = (
+        <div>
+            {/* comment */}
+            <h1>This is a block of JSX</h1>
+            <p>Here's a subtitle</p>
+        </div>
+    );
     ```
-1. [Render HTML Elements to the DOM]()
-    ```html
+1. [Render HTML Elements to the DOM](https://www.freecodecamp.org/learn/front-end-libraries/react/render-html-elements-to-the-dom)
+    ```jsx
+    const JSX = (
+        <div>
+            <h1>Hello World</h1>
+            <p>Lets render this to the DOM</p>
+        </div>
+    );
+    // change code below this line
+    ReactDOM.render(JSX, document.getElementById("challenge-node"))
     ```
-1. [Define an HTML Class in JSX]()
-    ```html
+1. [Define an HTML Class in JSX](https://www.freecodecamp.org/learn/front-end-libraries/react/define-an-html-class-in-jsx)
+    ```jsx
+    const JSX = (
+        <div className="myDiv">
+            <h1>Add a class to this div</h1>
+        </div>
+    );
     ```
 1. [Learn About Self-Closing JSX Tags]()
     ```html
