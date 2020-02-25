@@ -2262,20 +2262,109 @@
         </div>
     );
     ```
-1. [Learn About Self-Closing JSX Tags]()
-    ```html
+1. [Learn About Self-Closing JSX Tags](https://www.freecodecamp.org/learn/front-end-libraries/react/learn-about-self-closing-jsx-tags)
+    ```jsx
+    const JSX = (
+        <div>
+            <h2>Welcome to React!</h2> <br />
+            <p>Be sure to close all tags!</p>
+            <hr />
+        </div>
+    );
     ```
-1. [Create a Stateless Functional Component]()
-    ```html
+1. [Create a Stateless Functional Component](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-stateless-functional-component)
+    ```jsx
+    const MyComponent = function() {
+        // change code below this line
+        return (
+            <div>
+                string of text
+            </div>
+        );
+        // change code above this line
+    }
     ```
-1. [Create a React Component]()
-    ```html
+1. [Create a React Component](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-react-component)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+
+        render() {
+            // change code below this line
+            return (
+                <div>
+                    <h1>Hello React!</h1>
+                </div>
+            );
+            // change code above this line
+        }
+    };
     ```
-1. [Create a Component with Composition]()
-    ```html
+1. [Create a Component with Composition](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-component-with-composition)
+    ```jsx
+    const ChildComponent = () => {
+        return (
+            <div>
+                <p>I am the child</p>
+            </div>
+        );
+    };
+
+    class ParentComponent extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+
+        render() {
+            return (
+                <div>
+                    <h1>I am the parent</h1>
+                    <ChildComponent />
+                </div>
+            );
+        }
+    };
     ```
-1. [Use React to Render Nested Components]()
-    ```html
+1. [Use React to Render Nested Components](https://www.freecodecamp.org/learn/front-end-libraries/react/use-react-to-render-nested-components)
+    ```jsx
+    const TypesOfFruit = () => {
+        return (
+            <div>
+                <h2>Fruits:</h2>
+                <ul>
+                    <li>Apples</li>
+                    <li>Blueberries</li>
+                    <li>Strawberries</li>
+                    <li>Bananas</li>
+                </ul>
+            </div>
+        );
+    };
+
+    const Fruits = () => {
+        return (
+            <div>
+            <TypesOfFruit />
+            </div>
+        );
+    };
+
+    class TypesOfFood extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+
+        render() {
+            return (
+            <div>
+                <h1>Types of Food:</h1>
+                <Fruits />
+            </div>
+            );
+        }
+    };
     ```
 1. [Compose React Components]()
     ```html
