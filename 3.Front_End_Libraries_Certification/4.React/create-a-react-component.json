@@ -1,1 +1,0 @@
-{"index.jsx":"\nclass MyComponent extends React.Component {\n  constructor(props) {\n    super(props);\n  }\n  render() {\n    return (\n      <div>\n        <h1>Hello React!</h1>\n      </div>\n    );\n  }\n};"}
