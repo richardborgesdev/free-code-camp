@@ -2167,10 +2167,10 @@
     <style type='text/sass'>
     $x: 1;
     @while $x < 11 {
-    .text-#{$x} {
-        font-size: 15 * $x;
-    }
-    $x: $x + 1;
+        .text-#{$x} {
+            font-size: 15 * $x;
+        }
+        $x: $x + 1;
     }
     </style>
 
@@ -2366,14 +2366,82 @@
         }
     };
     ```
-1. [Compose React Components]()
-    ```html
+1. [Compose React Components](https://www.freecodecamp.org/learn/front-end-libraries/react/compose-react-components)
+    ```jsx
+    class Fruits extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+            <div>
+                <h2>Fruits:</h2>
+                <NonCitrus />
+                <Citrus />
+            </div>
+            );
+        }
+    };
+
+    class TypesOfFood extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+            <div>
+                <h1>Types of Food:</h1>
+                <Fruits />
+                <Vegetables />
+            </div>
+            );
+        }
+    };
     ```
-1. [Render a Class Component to the DOM]()
-    ```html
+1. [Render a Class Component to the DOM](https://www.freecodecamp.org/learn/front-end-libraries/react/render-a-class-component-to-the-dom)
+    ```jsx
+    class TypesOfFood extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+            <div>
+                <h1>Types of Food:</h1>
+                <Fruits />
+                <Vegetables />
+            </div>
+            );
+        }
+    };
+
+
+    // change code below this line
+    ReactDOM.render(
+        <TypesOfFood />, 
+        document.getElementById('challenge-node')
+    );
     ```
-1. [Write a React Component from Scratch]()
-    ```html
+1. [Write a React Component from Scratch](https://www.freecodecamp.org/learn/front-end-libraries/react/write-a-react-component-from-scratch)
+    ```jsx
+    // change code below this line
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+            <div>
+                <h1>My First React Component!</h1>
+            </div>
+            );
+        }
+    };
+
+    ReactDOM.render(
+        <MyComponent />, 
+        document.getElementById('challenge-node')
+    );
     ```
 1. [Pass Props to a Stateless Functional Component]()
     ```html
