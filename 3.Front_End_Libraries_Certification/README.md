@@ -2443,11 +2443,61 @@
         document.getElementById('challenge-node')
     );
     ```
-1. [Pass Props to a Stateless Functional Component]()
-    ```html
+1. [Pass Props to a Stateless Functional Component](https://www.freecodecamp.org/learn/front-end-libraries/react/pass-props-to-a-stateless-functional-component)
+    ```jsx
+    const CurrentDate = (props) => {
+        return (
+            <div>
+            { /* change code below this line */ }
+            <p>The current date is: {props.date}</p>
+            { /* change code above this line */ }
+            </div>
+        );
+    };
+
+    class Calendar extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <div>
+                    <h3>What date is it?</h3>
+                    { /* change code below this line */ }
+                    <CurrentDate date={Date()}/>
+                    { /* change code above this line */ }
+                </div>
+            );
+        }
+    };
+
     ```
-1. [Pass an Array as Props]()
-    ```html
+1. [Pass an Array as Props](https://www.freecodecamp.org/learn/front-end-libraries/react/pass-an-array-as-props)
+    ```jsx
+    const List = (props) => {
+        { /* change code below this line */ }
+        return <p>{props.tasks.join(', ')}</p>
+        { /* change code above this line */ }
+    };
+
+    class ToDo extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <div>
+                    <h1>To Do Lists</h1>
+                    <h2>Today</h2>
+                    { /* change code below this line */ }
+                    <List tasks={["green", "blue", "red"]} />
+                    <h2>Tomorrow</h2>
+                    <List tasks={["green", "blue", "red"]} />
+                    { /* change code above this line */ }
+                </div>
+            );
+        }
+    };
     ```
 1. [Use Default Props]()
     ```html
