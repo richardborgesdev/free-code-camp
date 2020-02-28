@@ -2499,20 +2499,144 @@
         }
     };
     ```
-1. [Use Default Props]()
-    ```html
+1. [Use Default Props](https://www.freecodecamp.org/learn/front-end-libraries/react/use-default-props)
+    ```jsx
+    const ShoppingCart = (props) => {
+        return (
+            <div>
+                <h1>Shopping Cart Component</h1>
+            </div>
+        )
+    };
+    // change code below this line
+    ShoppingCart.defaultProps = {
+        items: 0
+    }
     ```
-1. [Override Default Props]()
-    ```html
+1. [Override Default Props](https://www.freecodecamp.org/learn/front-end-libraries/react/override-default-props)
+    ```jsx
+    const Items = (props) => {
+        return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+    }
+
+    Items.defaultProps = {
+        quantity: 0
+    }
+
+    class ShoppingCart extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            { /* change code below this line */ }
+            return <Items quantity={10}/>
+            { /* change code above this line */ }
+        }
+    };
     ```
-1. [Use PropTypes to Define the Props You Expect]()
-    ```html
+1. [Use PropTypes to Define the Props You Expect](https://www.freecodecamp.org/learn/front-end-libraries/react/use-proptypes-to-define-the-props-you-expect)
+    ```jsx
+    const Items = (props) => {
+        return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+    };
+
+    // change code below this line
+    Items.propTypes = { 
+        quantity: PropTypes.number.isRequired
+    }
+    // change code above this line
+
+    Items.defaultProps = {
+        quantity: 0
+    };
+
+    class ShoppingCart extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return <Items />
+        }
+    };
     ```
-1. [Access Props Using this.props]()
-    ```html
+1. [Access Props Using this.props](https://www.freecodecamp.org/learn/front-end-libraries/react/access-props-using-this.props)
+    ```jsx
+    class ReturnTempPassword extends React.Component {
+        constructor(props) {
+            super(props);
+
+        }
+        render() {
+            return (
+                <div>
+                    { /* change code below this line */ }
+                    <p>
+                        Your temporary password is: 
+                        <strong>{this.props.tempPassword}</strong>
+                    </p>
+                    { /* change code above this line */ }
+                </div>
+            );
+        }
+    };
+
+    class ResetPassword extends React.Component {
+        constructor(props) {
+            super(props);
+
+        }
+        render() {
+            return (
+                <div>
+                    <h2>Reset Password</h2>
+                    <h3>We've generated a new temporary password for you.</h3>
+                    <h3>Please reset this password from your account settings ASAP.</h3>
+                    { /* change code below this line */ }
+                    <ReturnTempPassword tempPassword="11111111"/>
+                    { /* change code above this line */ }
+                </div>
+            );
+        }
+    };
     ```
-1. [Review Using Props with Stateless Functional Components]()
-    ```html
+1. [Review Using Props with Stateless Functional Components](https://www.freecodecamp.org/learn/front-end-libraries/react/review-using-props-with-stateless-functional-components)
+    ```jsx
+    class CampSite extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <div>
+                    <Camper/>
+                </div>
+            );
+        }
+    };
+
+    // change code below this line
+    class Camper extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+            <div>
+                <p>
+                    {this.props.name}
+                </p>
+            </div>
+            );
+        }
+    };
+
+    Camper.defaultProps = {
+        name: 'CamperBot'
+    };
+
+    Camper.propTypes = {
+        name: PropTypes.string.isRequired
+    }
     ```
 1. [Create a Stateful Component]()
     ```html
