@@ -2418,7 +2418,7 @@
 
     // change code below this line
     ReactDOM.render(
-        <TypesOfFood />, 
+        <TypesOfFood />,
         document.getElementById('challenge-node')
     );
     ```
@@ -2439,7 +2439,7 @@
     };
 
     ReactDOM.render(
-        <MyComponent />, 
+        <MyComponent />,
         document.getElementById('challenge-node')
     );
     ```
@@ -2541,7 +2541,7 @@
     };
 
     // change code below this line
-    Items.propTypes = { 
+    Items.propTypes = {
         quantity: PropTypes.number.isRequired
     }
     // change code above this line
@@ -2571,7 +2571,7 @@
                 <div>
                     { /* change code below this line */ }
                     <p>
-                        Your temporary password is: 
+                        Your temporary password is:
                         <strong>{this.props.tempPassword}</strong>
                     </p>
                     { /* change code above this line */ }
@@ -2638,11 +2638,45 @@
         name: PropTypes.string.isRequired
     }
     ```
-1. [Create a Stateful Component]()
-    ```html
+1. [Create a Stateful Component](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-stateful-component)
+    ```jsx
+    class StatefulComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            // initialize state here
+            this.state = {
+                name: 'name'
+            };
+        }
+        render() {
+            return (
+                <div>
+                <h1>{this.state.name}</h1>
+                </div>
+            );
+        }
+    };
+
     ```
-1. [Render State in the User Interface]()
-    ```html
+1. [Render State in the User Interface](https://www.freecodecamp.org/learn/front-end-libraries/react/render-state-in-the-user-interface)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                name: 'freeCodeCamp'
+            }
+        }
+        render() {
+            return (
+            <div>
+                { /* change code below this line */ }
+                <h1>{this.state.name}</h1>
+                { /* change code above this line */ }
+            </div>
+            );
+        }
+    };
     ```
 1. [Render State in the User Interface Another Way]()
     ```html
