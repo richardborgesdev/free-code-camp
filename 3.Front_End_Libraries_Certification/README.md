@@ -2678,11 +2678,55 @@
         }
     };
     ```
-1. [Render State in the User Interface Another Way]()
-    ```html
+1. [Render State in the User Interface Another Way](https://www.freecodecamp.org/learn/front-end-libraries/react/render-state-in-the-user-interface-another-way)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                name: 'freeCodeCamp'
+            }
+        }
+        render() {
+            // change code below this line
+            const name = this.state.name;
+            // change code above this line
+            return (
+                <div>
+                    { /* change code below this line */ }
+                    <h1>{name}</h1>
+                    { /* change code above this line */ }
+                </div>
+            );
+        }
+    };
     ```
-1. [Set State with this.setState]()
-    ```html
+1. [Set State with this.setState](https://www.freecodecamp.org/learn/front-end-libraries/react/set-state-with-this.setstate)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                name: 'Initial State'
+            };
+            this.handleClick = this.handleClick.bind(this);
+        }
+        handleClick() {
+            // change code below this line
+            this.setState({
+                name: 'React Rocks!'
+            });
+            // change code above this line
+        }
+        render() {
+            return (
+                <div>
+                    <button onClick={this.handleClick}>Click Me</button>
+                    <h1>{this.state.name}</h1>
+                </div>
+            );
+        }
+    };
     ```
 1. [Bind 'this' to a Class Method]()
     ```html
