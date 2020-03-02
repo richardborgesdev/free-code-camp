@@ -2728,11 +2728,71 @@
         }
     };
     ```
-1. [Bind 'this' to a Class Method]()
-    ```html
+1. [Bind 'this' to a Class Method](https://www.freecodecamp.org/learn/front-end-libraries/react/bind-this-to-a-class-method)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                text: "Hello"
+            };
+            // change code below this line
+            this.handleClick = this.handleClick.bind(this);
+            // change code above this line
+        }
+        handleClick() {
+            this.setState({
+            text: "You clicked!"
+            });
+        }
+        render() {
+            return (
+                <div>
+                    { /* change code below this line */ }
+                    <button onClick={this.handleClick}>Click Me</button>
+                    { /* change code above this line */ }
+                    <h1>{this.state.text}</h1>
+                </div>
+            );
+        }
+    };
     ```
-1. [Use State to Toggle an Element]()
-    ```html
+1. [Use State to Toggle an Element](https://www.freecodecamp.org/learn/front-end-libraries/react/use-state-to-toggle-an-element)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                visibility: false
+            };
+            // change code below this line
+            this.toggleVisibility = this.toggleVisibility.bind(this);
+            // change code above this line
+        }
+        // change code below this line
+        toggleVisibility() {
+            this.setState(state => ({
+                visibility: !state.visibility
+            }));
+        }
+        // change code above this line
+        render() {
+            if (this.state.visibility) {
+                return (
+                    <div>
+                        <button onClick={this.toggleVisibility}>Click Me</button>
+                        <h1>Now you see me!</h1>
+                    </div>
+                );
+            } else {
+                return (
+                    <div>
+                        <button onClick={this.toggleVisibility}>Click Me</button>
+                    </div>
+                );
+            }
+        }
+    };
     ```
 1. [Write a Simple Counter]()
     ```html
