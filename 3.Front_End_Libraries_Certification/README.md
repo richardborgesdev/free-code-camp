@@ -2794,17 +2794,153 @@
         }
     };
     ```
-1. [Write a Simple Counter]()
-    ```html
+1. [Write a Simple Counter](https://www.freecodecamp.org/learn/front-end-libraries/react/write-a-simple-counter)
+    ```jsx
+    class Counter extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                count: 0
+            };
+            // change code below this line
+            this.increment = this.increment.bind(this);
+            this.decrement = this.decrement.bind(this);
+            this.reset = this.reset.bind(this);
+            // change code above this line
+        }
+        // change code below this line
+        reset() {
+            this.setState({
+                count: 0
+            });
+        }
+        increment() {
+            this.setState(state => ({
+                count: state.count + 1
+            }));
+        }
+        decrement() {
+            this.setState(state => ({
+                count: state.count - 1
+            }));
+        }
+        // change code above this line
+        render() {
+            return (
+            <div>
+                <button className='inc' onClick={this.increment}>Increment!</button>
+                <button className='dec' onClick={this.decrement}>Decrement!</button>
+                <button className='reset' onClick={this.reset}>Reset</button>
+                <h1>Current Count: {this.state.count}</h1>
+            </div>
+            );
+        }
+    };
     ```
-1. [Create a Controlled Input]()
-    ```html
+1. [Create a Controlled Input](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-controlled-input)
+    ```jsx
+    class ControlledInput extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                input: ''
+            };
+            // change code below this line
+            this.handleChange = this.handleChange.bind(this);
+            // change code above this line
+        }
+        // change code below this line
+        handleChange(event) {
+            this.setState({
+                input: event.target.value
+            });
+        }
+        // change code above this line
+        render() {
+            return (
+            <div>
+                { /* change code below this line */}
+                <input value={this.state.input} onChange={this.handleChange}/>
+                { /* change code above this line */}
+                <h4>Controlled Input:</h4>
+                <p>{this.state.input}</p>
+            </div>
+            );
+        }
+    };
     ```
-1. [Create a Controlled Form]()
-    ```html
+1. [Create a Controlled Form](https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-controlled-form)
+    ```jsx
+    class MyForm extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                input: '',
+                submit: ''
+            };
+            this.handleChange = this.handleChange.bind(this);
+            this.handleSubmit = this.handleSubmit.bind(this);
+        }
+        handleChange(event) {
+            this.setState({
+                input: event.target.value
+            });
+        }
+        handleSubmit(event) {
+            // change code below this line
+            {event.preventDefault()}
+            this.setState({
+                submit: this.state.input
+            });
+            // change code above this line
+        }
+        render() {
+            return (
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                { /* change code below this line */ }
+                <input value={this.state.input} onChange={this.handleChange}/>
+                { /* change code above this line */ }
+                <button type='submit'>Submit!</button>
+                </form>
+                { /* change code below this line */ }
+                <h1>{this.state.submit}</h1>
+                { /* change code above this line */ }
+            </div>
+            );
+        }
+    };
     ```
-1. [Pass State as Props to Child Components]()
-    ```html
+1. [Pass State as Props to Child Components](https://www.freecodecamp.org/learn/front-end-libraries/react/pass-state-as-props-to-child-components)
+    ```jsx
+    class MyApp extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                name: 'CamperBot'
+            }
+        }
+        render() {
+            return (
+                <div>
+                    <Navbar name={this.state.name} />
+                </div>
+            );
+        }
+    };
+
+    class Navbar extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <div>
+                    <h1>Hello, my name is: {this.props.name} </h1>
+                </div>
+            );
+        }
+    };
     ```
 1. [Pass a Callback as Props]()
     ```html
