@@ -2942,11 +2942,74 @@
         }
     };
     ```
-1. [Pass a Callback as Props]()
-    ```html
+1. [Pass a Callback as Props](https://www.freecodecamp.org/learn/front-end-libraries/react/pass-a-callback-as-props)
+    ```jsx
+    class MyApp extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                inputValue: ''
+            }
+            this.handleChange = this.handleChange.bind(this);
+        }
+        handleChange(event) {
+            this.setState({
+                inputValue: event.target.value
+            });
+        }
+        render() {
+            return (
+                <div>
+                    <GetInput input={this.state.inputValue} handleChange={this.handleChange}/>
+                    <RenderInput input={this.state.inputValue} />
+                </div>
+            );
+        }
+    };
+
+    class GetInput extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <div>
+                    <h3>Get Input:</h3>
+                    <input
+                        value={this.props.input}
+                    onChange={this.props.handleChange}/>
+                </div>
+            );
+        }
+    };
+
+    class RenderInput extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <div>
+                    <h3>Input Render:</h3>
+                    <p>{this.props.input}</p>
+                </div>
+            );
+        }
+    };
     ```
-1. [Use the Lifecycle Method componentWillMount]()
-    ```html
+1. [Use the Lifecycle Method componentWillMount](https://www.freecodecamp.org/learn/front-end-libraries/react/use-the-lifecycle-method-componentwillmount)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        componentWillMount() {
+            console.log("will mount!!");
+        }
+        render() {
+            return <div />
+        }
+    };
     ```
 1. [Use the Lifecycle Method componentDidMount]()
     ```html
