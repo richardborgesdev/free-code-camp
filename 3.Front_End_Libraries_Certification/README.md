@@ -3011,11 +3011,74 @@
         }
     };
     ```
-1. [Use the Lifecycle Method componentDidMount]()
-    ```html
+1. [Use the Lifecycle Method componentDidMount](https://www.freecodecamp.org/learn/front-end-libraries/react/use-the-lifecycle-method-componentdidmount)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+            activeUsers: null
+            };
+        }
+        componentDidMount() {
+            setTimeout( () => {
+                this.setState({
+                    activeUsers: 1273
+                });
+            }, 2500);
+        }
+        render() {
+            return (
+                <div>
+                    <h1>Active Users: {this.state.activeUsers}</h1>
+                </div>
+            );
+        }
+    };
     ```
-1. [Add Event Listeners]()
-    ```html
+1. [Add Event Listeners](https://www.freecodecamp.org/learn/front-end-libraries/react/add-event-listeners)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                message: ''
+            };
+            this.handleEnter = this.handleEnter.bind(this);
+            this.handleKeyPress = this.handleKeyPress.bind(this);
+        }
+        // change code below this line
+        componentDidMount() {
+            document.addEventListener(
+            "keydown", 
+            this.handleKeyPress
+            );
+        }
+        componentWillUnmount() {
+            document.removeEventListener(
+            "keydown",
+            this.handleKeyPress
+            )
+        }
+        // change code above this line
+        handleEnter() {
+            this.setState(state => ({
+                message: state.message + 'You pressed the enter key! '
+            }));
+        }
+        handleKeyPress(event) {
+            if (event.keyCode === 13) {
+                this.handleEnter();
+            }
+        }
+        render() {
+            return (
+                <div>
+                    <h1>{this.state.message}</h1>
+                </div>
+            );
+        }
+    };
     ```
 1. [Optimize Re-Renders with shouldComponentUpdate]()
     ```html
