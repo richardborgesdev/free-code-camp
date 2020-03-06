@@ -3080,11 +3080,72 @@
         }
     };
     ```
-1. [Optimize Re-Renders with shouldComponentUpdate]()
-    ```html
+1. [Optimize Re-Renders with shouldComponentUpdate](https://www.freecodecamp.org/learn/front-end-libraries/react/optimize-re-renders-with-shouldcomponentupdate)
+    ```jsx
+    class OnlyEvens extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        shouldComponentUpdate(nextProps, nextState) {
+            console.log('Should I update?');
+            // change code below this line
+            if (nextProps.value % 2 == 0) {
+                return true;
+            }
+                return false;
+            // change code above this line
+        }
+        componentWillReceiveProps(nextProps) {
+            console.log('Receiving new props...');
+        }
+        componentDidUpdate() {
+            console.log('Component re-rendered.');
+        }
+        render() {
+            return <h1>{this.props.value}</h1>
+        }
+    };
+
+    class Controller extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                value: 0
+            };
+            this.addValue = this.addValue.bind(this);
+        }
+        addValue() {
+            this.setState({
+                value: this.state.value + 1
+            });
+        }
+        render() {
+            return (
+                <div>
+                    <button onClick={this.addValue}>Add</button>
+                    <OnlyEvens value={this.state.value}/>
+                </div>
+            );
+        }
+    };
     ```
-1. [Introducing Inline Styles]()
-    ```html
+1. [Introducing Inline Styles](https://www.freecodecamp.org/learn/front-end-libraries/react/introducing-inline-styles)
+    ```jsx
+    class Colorful extends React.Component {
+        render() {
+            return (
+                <div
+                    style={{
+                        color: 'red',
+                        fontSize: '72px'
+                    }}
+                >
+                    Big Red
+                </div>
+            );
+        }
+    };
+
     ```
 1. [Add Inline Styles in React]()
     ```html
