@@ -3050,7 +3050,7 @@
         // change code below this line
         componentDidMount() {
             document.addEventListener(
-            "keydown", 
+            "keydown",
             this.handleKeyPress
             );
         }
@@ -3147,8 +3147,23 @@
     };
 
     ```
-1. [Add Inline Styles in React]()
-    ```html
+1. [Add Inline Styles in React](https://www.freecodecamp.org/learn/front-end-libraries/react/add-inline-styles-in-react)
+    ```jsx
+    const styles = {
+        color: "purple",
+        fontSize: 40,
+        border: "2px solid purple"
+    };
+    // change code above this line
+    class Colorful extends React.Component {
+        render() {
+            // change code below this line
+            return (
+                <div style={styles}>Style Me!</div>
+            );
+            // change code above this line
+        }
+    };
     ```
 1. [Use Advanced JavaScript in React Render Method]()
     ```html
