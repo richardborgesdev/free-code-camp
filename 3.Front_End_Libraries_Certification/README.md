@@ -3351,17 +3351,167 @@
         }
     };
     ```
-1. [Render Conditionally from Props]()
-    ```html
+1. [Render Conditionally from Props](https://www.freecodecamp.org/learn/front-end-libraries/react/render-conditionally-from-props)
+    ```jsx
+    class Results extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <h1>
+                {
+                    this.props.fiftyFifty > .5
+                        ? "You Win!"
+                        : "You lose!"
+                }
+                </h1>
+            )
+        };
+    };
+
+    class GameOfChance extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                counter: 1
+            }
+            this.handleClick = this.handleClick.bind(this);
+        }
+        handleClick() {
+            this.setState({
+                counter: this.state.counter + 1 // change code here
+            });
+        }
+        render() {
+            let expression = Math.random() > .5; // change code here
+            return (
+                <div>
+                    <button onClick={this.handleClick}>Play Again</button>
+                    <Results fiftyFifty={expression}/>
+                    <p>{'Turn: ' + this.state.counter}</p>
+                </div>
+            );
+        }
+    }
     ```
-1. [Change Inline CSS Conditionally Based on Component State]()
-    ```html
+1. [Change Inline CSS Conditionally Based on Component State](https://www.freecodecamp.org/learn/front-end-libraries/react/change-inline-css-conditionally-based-on-component-state)
+    ```jsx
+    class GateKeeper extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                input: ''
+            };
+            this.handleChange = this.handleChange.bind(this);
+        }
+        handleChange(event) {
+            this.setState({ input: event.target.value })
+        }
+        render() {
+            let inputStyle = {
+                border: '1px solid black'
+            };
+            // change code below this line
+            if (this.state.input.length > 15) {
+                inputStyle = {
+                    border: '3px solid red'
+                };
+            }
+
+            // change code above this line
+            return (
+                <div>
+                    <h3>Don't Type Too Much:</h3>
+                    <input
+                    type="text"
+                    style={inputStyle}
+                    value={this.state.input}
+                    onChange={this.handleChange} />
+                </div>
+            );
+        }
+    };
     ```
-1. [Use Array.map() to Dynamically Render Elements]()
-    ```html
+1. [Use Array.map() to Dynamically Render Elements](https://www.freecodecamp.org/learn/front-end-libraries/react/use-array.map-to-dynamically-render-elements)
+    ```jsx
+    const textAreaStyles = {
+        width: 235,
+        margin: 5
+    };
+
+    class MyToDoList extends React.Component {
+        constructor(props) {
+            super(props);
+            // change code below this line
+            this.state = {
+                userInput: '',
+                toDoList: []
+            }
+            // change code above this line
+            this.handleSubmit = this.handleSubmit.bind(this);
+            this.handleChange = this.handleChange.bind(this);
+        }
+        handleSubmit() {
+            const itemsArray = this.state.userInput.split(',');
+            this.setState({
+                toDoList: itemsArray
+            });
+        }
+        handleChange(e) {
+            this.setState({
+                userInput: e.target.value
+            });
+        }
+        render() {
+            const items = this.state.toDoList.map(
+                function(i) {
+                    return <li>{i}</li>;
+                }
+            ); // change code here
+            return (
+                <div>
+                    <textarea
+                    onChange={this.handleChange}
+                    value={this.state.userInput}
+                    style={textAreaStyles}
+                    placeholder="Separate Items With Commas" /><br />
+                    <button onClick={this.handleSubmit}>Create List</button>
+                    <h1>My "To Do" List:</h1>
+                    <ul>
+                        {items}
+                    </ul>
+                </div>
+            );
+        }
+    };
     ```
-1. [Give Sibling Elements a Unique Key Attribute]()
-    ```html
+1. [Give Sibling Elements a Unique Key Attribute](https://www.freecodecamp.org/learn/front-end-libraries/react/give-sibling-elements-a-unique-key-attribute)
+    ```jsx
+    const frontEndFrameworks = [
+        'React',
+        'Angular',
+        'Ember',
+        'Knockout',
+        'Backbone',
+        'Vue'
+    ];
+
+    function Frameworks() {
+        const renderFrameworks = frontEndFrameworks.map(
+            function(fw, key) {
+                return <li key={key}>{fw}</li>
+            }
+        ); // change code here
+        return (
+            <div>
+            <h1>Popular Front End JavaScript Frameworks</h1>
+            <ul>
+                {renderFrameworks}
+            </ul>
+            </div>
+        );
+    };
     ```
 1. [Use Array.filter() to Dynamically Filter an Array]()
     ```html
