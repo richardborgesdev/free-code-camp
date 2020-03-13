@@ -3513,11 +3513,73 @@
         );
     };
     ```
-1. [Use Array.filter() to Dynamically Filter an Array]()
-    ```html
+1. [Use Array.filter() to Dynamically Filter an Array](https://www.freecodecamp.org/learn/front-end-libraries/react/use-array.filter-to-dynamically-filter-an-array)
+    ```jsx
+    class MyComponent extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                users: [
+                    {
+                        username: 'Jeff',
+                        online: true
+                    },
+                    {
+                        username: 'Alan',
+                        online: false
+                    },
+                    {
+                        username: 'Mary',
+                        online: true
+                    },
+                    {
+                        username: 'Jim',
+                        online: false
+                    },
+                    {
+                        username: 'Sara',
+                        online: true
+                    },
+                    {
+                        username: 'Laura',
+                        online: true
+                    }
+                ]
+            }
+        }
+        render() {
+            const usersOnline = this.state.users.filter(
+                user => user.online
+            ); // change code here
+            const renderOnline = usersOnline.map(
+                function(user, key) {
+                    return <li key={key}>{user.username}</li>
+                }
+            ); // change code here
+            return (
+            <div>
+                <h1>Current Online Users:</h1>
+                <ul>
+                    {renderOnline}
+                </ul>
+            </div>
+            );
+        }
+    };
     ```
-1. [Render React on the Server with renderToString]()
-    ```html
+1. [Render React on the Server with renderToString](https://www.freecodecamp.org/learn/front-end-libraries/react/render-react-on-the-server-with-rendertostring)
+    ```jsx
+    class App extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return <div>renderToString</div>
+        }
+    };
+
+    // change code below this line
+    ReactDOMServer.renderToString(<App/>);
     ```
 ## [Redux]()
 ## [React and Redux]()
