@@ -1,4 +1,3 @@
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -8,5 +7,5 @@ class App extends React.Component {
   }
 };
 
-ReactDOMServer.renderToString(<App/>);
 // change code below this line
+ReactDOMServer.renderToString(<App/>);
