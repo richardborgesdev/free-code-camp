@@ -3581,6 +3581,57 @@
     // change code below this line
     ReactDOMServer.renderToString(<App/>);
     ```
-## [Redux]()
+## [Redux](https://www.freecodecamp.org/learn/front-end-libraries/redux/)
+1. [Create a Redux Store]()
+    ```jsx
+    ```
+1. [Get State from the Redux Store]()
+    ```jsx
+    ```
+1. [Define a Redux Action]()
+    ```jsx
+    ```
+1. [Define an Action Creator]()
+    ```jsx
+    ```
+1. [Dispatch an Action Event]()
+    ```jsx
+    ```
+1. [Handle an Action in the Store]()
+    ```jsx
+    ```
+1. [Use a Switch Statement to Handle Multiple Actions]()
+    ```jsx
+    ```
+1. [Use const for Action Types]()
+    ```jsx
+    ```
+1. [Register a Store Listener]()
+    ```jsx
+    ```
+1. [Combine Multiple Reducers]()
+    ```jsx
+    ```
+1. [Send Action Data to the Store]()
+    ```jsx
+    ```
+1. [Use Middleware to Handle Asynchronous Actions]()
+    ```jsx
+    ```
+1. [Write a Counter with Redux]()
+    ```jsx
+    ```
+1. [Never Mutate State]()
+    ```jsx
+    ```
+1. [Use the Spread Operator on Arrays]()
+    ```jsx
+    ```
+1. [Remove an Item from an Array]()
+    ```jsx
+    ```
+1. [Copy an Object with Object.assign]()
+    ```jsx
+    ```
 ## [React and Redux]()
 ## [Front End Libraries Projects]()
