@@ -3582,8 +3582,17 @@
     ReactDOMServer.renderToString(<App/>);
     ```
 ## [Redux](https://www.freecodecamp.org/learn/front-end-libraries/redux/)
-1. [Create a Redux Store]()
+1. [Create a Redux Store](https://www.freecodecamp.org/learn/front-end-libraries/redux/create-a-redux-store)
     ```jsx
+    const reducer = (state = 5) => {
+        return state;
+    }
+
+    // Redux methods are available from a Redux object
+    // For example: Redux.createStore()
+    // Define the store here:
+    var store = Redux.createStore(reducer);
+
     ```
 1. [Get State from the Redux Store]()
     ```jsx
