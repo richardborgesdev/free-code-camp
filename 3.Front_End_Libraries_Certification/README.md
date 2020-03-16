@@ -3594,17 +3594,44 @@
     var store = Redux.createStore(reducer);
 
     ```
-1. [Get State from the Redux Store]()
+1. [Get State from the Redux Store](https://www.freecodecamp.org/learn/front-end-libraries/redux/get-state-from-the-redux-store)
     ```jsx
+    const store = Redux.createStore(
+        (state = 5) => state
+    );
+
+    // change code below this line
+    var currentState = store.getState();
     ```
-1. [Define a Redux Action]()
+1. [Define a Redux Action](https://www.freecodecamp.org/learn/front-end-libraries/redux/define-a-redux-action)
     ```jsx
+    // Define an action here:
+    var action = {type: 'LOGIN'};
     ```
-1. [Define an Action Creator]()
+1. [Define an Action Creator](https://www.freecodecamp.org/learn/front-end-libraries/redux/define-an-action-creator)
     ```jsx
+    const action = {
+        type: 'LOGIN'
+    }
+    // Define an action creator here:
+    function actionCreator() {
+        return action;
+    }
     ```
-1. [Dispatch an Action Event]()
+1. [Dispatch an Action Event](https://www.freecodecamp.org/learn/front-end-libraries/redux/dispatch-an-action-event)
     ```jsx
+    const store = Redux.createStore(
+        (state = {login: false}) => state
+    );
+
+    const loginAction = () => {
+        return {
+        type: 'LOGIN'
+        }
+    };
+
+    // Dispatch the action here:
+    store.dispatch(loginAction());
     ```
 1. [Handle an Action in the Store]()
     ```jsx
