@@ -3633,20 +3633,183 @@
     // Dispatch the action here:
     store.dispatch(loginAction());
     ```
-1. [Handle an Action in the Store]()
+1. [Handle an Action in the Store](https://www.freecodecamp.org/learn/front-end-libraries/redux/handle-an-action-in-the-store)
     ```jsx
+    const defaultState = {
+        login: false
+    };
+
+    const reducer = (state = defaultState, action) => {
+        // change code below this line
+        if (action.type == 'LOGIN') {
+            return {
+                login: true
+            }
+        } else {
+            return state;
+        }
+        // change code above this line
+    };
+
+    const store = Redux.createStore(reducer);
+
+    const loginAction = () => {
+        return {
+            type: 'LOGIN'
+        }
+    };
     ```
-1. [Use a Switch Statement to Handle Multiple Actions]()
+1. [Use a Switch Statement to Handle Multiple Actions](https://www.freecodecamp.org/learn/front-end-libraries/redux/use-a-switch-statement-to-handle-multiple-actions)
     ```jsx
+    const defaultState = {
+        authenticated: false
+    };
+
+    const authReducer = (state = defaultState, action) => {
+        // change code below this line
+        switch (action.type) {
+            case 'LOGIN':
+                return {
+                authenticated: true
+                }
+            case 'LOGOUT':
+                return {
+                authenticated: false
+                }
+            default:
+                return state
+        }
+        // change code above this line
+    };
+
+    const store = Redux.createStore(authReducer);
+
+    const loginUser = () => {
+        return {
+            type: 'LOGIN'
+        }
+    };
+
+    const logoutUser = () => {
+        return {
+            type: 'LOGOUT'
+        }
+    };
     ```
-1. [Use const for Action Types]()
+1. [Use const for Action Types](https://www.freecodecamp.org/learn/front-end-libraries/redux/use-const-for-action-types)
     ```jsx
+    // change code below this line
+    const LOGIN = 'LOGIN';
+    const LOGOUT = 'LOGOUT';
+    // change code above this line
+
+    const defaultState = {
+        authenticated: false
+    };
+
+    const authReducer = (state = defaultState, action) => {
+        switch (action.type) {
+            case LOGIN:
+            return {
+                authenticated: true
+            }
+
+            case LOGOUT:
+            return {
+                authenticated: false
+            }
+
+            default:
+            return state;
+        }
+    };
+
+    const store = Redux.createStore(authReducer);
+
+    const loginUser = () => {
+        return {
+            type: LOGIN
+        }
+    };
+
+    const logoutUser = () => {
+        return {
+            type: LOGOUT
+        }
+    };
     ```
-1. [Register a Store Listener]()
+1. [Register a Store Listener](https://www.freecodecamp.org/learn/front-end-libraries/redux/register-a-store-listener)
     ```jsx
+    const ADD = 'ADD';
+
+    const reducer = (state = 0, action) => {
+        switch(action.type) {
+            case ADD:
+            return state + 1;
+            default:
+            return state;
+        }
+    };
+
+    const store = Redux.createStore(reducer);
+
+    // global count variable:
+    let count = 0;
+
+    // change code below this line
+    const increaseCount = () => {
+        count++;
+    }
+    store.subscribe(increaseCount);
+    // change code above this line
+
+    store.dispatch({type: ADD});
+    console.log(count);
+    store.dispatch({type: ADD});
+    console.log(count);
+    store.dispatch({type: ADD});
+    console.log(count);
     ```
-1. [Combine Multiple Reducers]()
+1. [Combine Multiple Reducers](https://www.freecodecamp.org/learn/front-end-libraries/redux/combine-multiple-reducers)
     ```jsx
+    const INCREMENT = 'INCREMENT';
+    const DECREMENT = 'DECREMENT';
+
+    const counterReducer = (state = 0, action) => {
+        switch(action.type) {
+            case INCREMENT:
+                return state + 1;
+            case DECREMENT:
+                return state - 1;
+            default:
+                return state;
+        }
+    };
+
+    const LOGIN = 'LOGIN';
+    const LOGOUT = 'LOGOUT';
+
+    const authReducer = (state = {authenticated: false}, action) => {
+        switch(action.type) {
+            case LOGIN:
+                return {
+                    authenticated: true
+                }
+            case LOGOUT:
+                return {
+                    authenticated: false
+                }
+            default:
+                return state;
+        }
+    };
+
+    const rootReducer = Redux.combineReducers({
+        count: counterReducer,
+        auth: authReducer
+    });// define the root reducer here
+
+    const store = Redux.createStore(rootReducer);
     ```
 1. [Send Action Data to the Store]()
     ```jsx
