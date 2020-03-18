@@ -3811,7 +3811,7 @@
 
     const store = Redux.createStore(rootReducer);
     ```
-1. [Send Action Data to the Store]()
+1. [Send Action Data to the Store](https://www.freecodecamp.org/learn/front-end-libraries/redux/send-action-data-to-the-store)
     ```jsx
     const ADD_NOTE = 'ADD_NOTE';
 
