@@ -3978,11 +3978,58 @@
 
     const store = Redux.createStore(immutableReducer);
     ```
-1. [Remove an Item from an Array]()
+1. [Remove an Item from an Array](https://www.freecodecamp.org/learn/front-end-libraries/redux/remove-an-item-from-an-array)
     ```jsx
+    const immutableReducer = (state = [0,1,2,3,4,5], action) => {
+        switch(action.type) {
+            case 'REMOVE_ITEM':
+                // don't mutate state here or the tests will fail
+                return [...state.slice(0, action.index), ...state.slice(action.index + 1)];
+            default:
+                return state;
+        }
+    };
+
+    const removeItem = (index) => {
+        return {
+            type: 'REMOVE_ITEM',
+            index
+        }
+    }
+
+    const store = Redux.createStore(immutableReducer);
     ```
-1. [Copy an Object with Object.assign]()
+1. [Copy an Object with Object.assign](https://www.freecodecamp.org/learn/front-end-libraries/redux/copy-an-object-with-object.assign)
     ```jsx
+    const defaultState = {
+        user: 'CamperBot',
+        status: 'offline',
+        friends: '732,982',
+        community: 'freeCodeCamp'
+    };
+
+    const immutableReducer = (state = defaultState, action) => {
+        console.log(state);
+        switch(action.type) {
+            case 'ONLINE':
+                // don't mutate state here or the tests will fail
+                return Object.assign(
+                    {}, 
+                    state,
+                    {status: 'online'}
+                );
+            default:
+                return state;
+        }
+    };
+
+    const wakeUp = () => {
+        return {
+            type: 'ONLINE'
+        }
+    };
+
+    const store = Redux.createStore(immutableReducer);
     ```
 ## [React and Redux]()
 ## [Front End Libraries Projects]()
