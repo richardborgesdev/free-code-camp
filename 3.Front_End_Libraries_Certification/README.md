@@ -3937,7 +3937,7 @@
     ];
 
     const immutableReducer = (state = todos, action) => {
-        
+
         switch(action.type) {
             case ADD_TO_DO:
                 // don't mutate state here or the tests will fail
@@ -4014,7 +4014,7 @@
             case 'ONLINE':
                 // don't mutate state here or the tests will fail
                 return Object.assign(
-                    {}, 
+                    {},
                     state,
                     {status: 'online'}
                 );
@@ -4031,5 +4031,35 @@
 
     const store = Redux.createStore(immutableReducer);
     ```
-## [React and Redux]()
+## [React and Redux](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/)
+1. [Getting Started with React Redux]()
+    ```jsx
+    ```
+1. [Manage State Locally First]()
+    ```jsx
+    ```
+1. [Extract State Logic to Redux]()
+    ```jsx
+    ```
+1. [Use Provider to Connect Redux to React]()
+    ```jsx
+    ```
+1. [Map State to Props]()
+    ```jsx
+    ```
+1. [Map Dispatch to Props]()
+    ```jsx
+    ```
+1. [Connect Redux to React]()
+    ```jsx
+    ```
+1. [Connect Redux to the Messages App]()
+    ```jsx
+    ```
+1. [Extract Local State into Redux]()
+    ```jsx
+    ```
+1. [Moving Forward From Here]()
+    ```jsx
+    ```
 ## [Front End Libraries Projects]()
