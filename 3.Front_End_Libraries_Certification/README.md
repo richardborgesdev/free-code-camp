@@ -4032,20 +4032,193 @@
     const store = Redux.createStore(immutableReducer);
     ```
 ## [React and Redux](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/)
-1. [Getting Started with React Redux]()
+1. [Getting Started with React Redux](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/getting-started-with-react-redux)
     ```jsx
+    class DisplayMessages extends React.Component {
+        // change code below this line
+        constructor(props) {
+            super(props);
+            this.state = {
+                input: '',
+                messages: []
+            }
+        }
+        // change code above this line
+        render() {
+            return <div />
+        }
+    };
     ```
-1. [Manage State Locally First]()
+1. [Manage State Locally First](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/manage-state-locally-first)
     ```jsx
+    class DisplayMessages extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+            input: '',
+                messages: []
+            }
+            this.handleChange = this.handleChange.bind(this);
+            this.submitMessage = this.submitMessage.bind(this);
+        }
+        // add handleChange() and submitMessage() methods here
+        handleChange(event) {
+            this.setState({
+                input: event.target.value
+            });
+        }
+        submitMessage(event) {
+            {event.preventDefault()}
+
+            this.setState({
+                input: '',
+                messages: [...this.state.messages,...[this.state.input]]
+            });
+        }
+
+        render() {
+            return (
+            <div>
+                <h2>Type in a new Message:</h2>
+                { /* render an input, button, and ul here */ }
+                <input value={this.state.input} onChange={this.handleChange}/>
+                <button onClick={this.submitMessage}>Submit!</button>
+                { /* change code above this line */ }
+                <ul>
+                    {this.state.messages.map((x, i)=>{
+                        return <li key={i}>{x}</li>
+                    })}
+                </ul>
+            </div>
+            );
+        }
+    };
     ```
-1. [Extract State Logic to Redux]()
+1. [Extract State Logic to Redux](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/extract-state-logic-to-redux)
     ```jsx
+    // define ADD, addMessage(), messageReducer(), and store here:
+    const ADD = 'ADD';
+    const defaultState = {
+        messages: []
+    };
+
+    const messageReducer = (
+            state = defaultState.messages,
+            action
+        ) => {
+            switch(action.type) {
+                case ADD:
+                    // don't mutate state here or the tests will fail
+                    return [...state, action.message];
+                default:
+                    return state;
+        }
+    };
+
+    const addMessage = (message) => {
+        return {
+            type: ADD,
+            message
+        }
+    }
+
+    const store = Redux.createStore(messageReducer);
+    store.subscribe(addMessage);
     ```
-1. [Use Provider to Connect Redux to React]()
+1. [Use Provider to Connect Redux to React](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/use-provider-to-connect-redux-to-react)
     ```jsx
+    // Redux Code:
+    const ADD = 'ADD';
+
+    const addMessage = (message) => {
+        return {
+            type: ADD,
+            message
+        }
+    };
+
+    const messageReducer = (state = [], action) => {
+        switch (action.type) {
+            case ADD:
+                return [
+                    ...state,
+                    action.message
+                ];
+            default:
+                return state;
+        }
+    };
+
+    const store = Redux.createStore(messageReducer);
+
+    // React Code:
+    class DisplayMessages extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                input: '',
+                messages: []
+            }
+            this.handleChange = this.handleChange.bind(this);
+            this.submitMessage = this.submitMessage.bind(this);
+        }
+        handleChange(event) {
+            this.setState({
+                input: event.target.value
+            });
+        }
+        submitMessage() {
+            const currentMessage = this.state.input;
+            this.setState({
+                input: '',
+                messages: this.state.messages.concat(currentMessage)
+            });
+        }
+        render() {
+            return (
+            <div>
+                <h2>Type in a new Message:</h2>
+                <input
+                value={this.state.input}
+                onChange={this.handleChange}/><br/>
+                <button onClick={this.submitMessage}>Submit</button>
+                <ul>
+                {this.state.messages.map( (message, idx) => {
+                    return (
+                        <li key={idx}>{message}</li>
+                    )
+                    })
+                }
+                </ul>
+            </div>
+            );
+        }
+    };
+
+    const Provider = ReactRedux.Provider;
+
+    class AppWrapper extends React.Component {
+        // render the Provider here
+        render() {
+            return (
+                <Provider store = {store}>
+                <DisplayMessages />
+                </Provider>
+            );
+        }
+        // change code above this line
+    };
     ```
-1. [Map State to Props]()
+1. [Map State to Props](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/map-state-to-props)
     ```jsx
+    const state = [];
+
+    // change code below this line
+    const mapStateToProps = (state) => {
+        return {
+            messages: state
+        }
+    }
     ```
 1. [Map Dispatch to Props]()
     ```jsx
