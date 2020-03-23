@@ -4220,8 +4220,23 @@
         }
     }
     ```
-1. [Map Dispatch to Props]()
+1. [Map Dispatch to Props](https://www.freecodecamp.org/learn/front-end-libraries/react-and-redux/map-dispatch-to-props)
     ```jsx
+    const addMessage = (message) => {
+        return {
+            type: 'ADD',
+            message: message
+        }
+    };
+
+    // change code below this line
+    const mapDispatchToProps = (dispatch) => {
+        return {
+            submitNewMessage: (message) => {
+                dispatch(addMessage(message));
+            }
+        }
+    }
     ```
 1. [Connect Redux to React]()
     ```jsx
