@@ -1,8 +1,17 @@
 # Data Visualization Certification
 ## [Data Visualization with D3](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/)
 
-1. [Add Document Elements with D3]()
+1. [Add Document Elements with D3](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/add-document-elements-with-d3)
     ```html
+    <body>
+        <script>
+        // Add your code below this line
+        d3.select('body')
+        .append('h1')
+        .text('Learning D3');
+        // Add your code above this line
+        </script>
+    </body>
     ```
 1. [Select a Group of Elements with D3]()
     ```html
