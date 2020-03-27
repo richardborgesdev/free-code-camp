@@ -13,8 +13,21 @@
         </script>
     </body>
     ```
-1. [Select a Group of Elements with D3]()
+1. [Select a Group of Elements with D3](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/select-a-group-of-elements-with-d3)
     ```html
+    <body>
+        <ul>
+            <li>Example</li>
+            <li>Example</li>
+            <li>Example</li>
+        </ul>
+        <script>
+        // Add your code below this line
+        d3.selectAll('li')
+            .text('list item');
+        // Add your code above this line
+        </script>
+    </body>
     ```
 1. [Work with Data in D3]()
     ```html
