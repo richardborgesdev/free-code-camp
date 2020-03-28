@@ -29,8 +29,21 @@
         </script>
     </body>
     ```
-1. [Work with Data in D3]()
+1. [Work with Data in D3](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/work-with-data-in-d3)
     ```html
+    <body>
+        <script>
+        const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+        // Add your code below this line
+        d3.select('body')
+            .selectAll('h2')
+            .data(dataset)
+            .enter()
+            .append('h2')
+            .text('New Title')
+        // Add your code above this line
+        </script>
+    </body>
     ```
 1. [Work with Dynamic Data in D3]()
     ```html
