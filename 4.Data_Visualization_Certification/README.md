@@ -45,8 +45,21 @@
         </script>
     </body>
     ```
-1. [Work with Dynamic Data in D3]()
+1. [Work with Dynamic Data in D3](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/work-with-dynamic-data-in-d3)
     ```html
+    <body>
+    <script>
+        const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+        d3.select("body").selectAll("h2")
+            .data(dataset)
+            .enter()
+            .append("h2")
+            // Add your code below this line
+            .text((d) => d + ' USD');
+            // Add your code above this line
+    </script>
+    </body>
     ```
 1. [Add Inline Styling to Elements]()
     ```html
