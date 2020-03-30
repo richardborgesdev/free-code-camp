@@ -61,8 +61,22 @@
     </script>
     </body>
     ```
-1. [Add Inline Styling to Elements]()
+1. [Add Inline Styling to Elements](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/add-inline-styling-to-elements)
     ```html
+    <body>
+        <script>
+        const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+        d3.select("body").selectAll("h2")
+            .data(dataset)
+            .enter()
+            .append("h2")
+            .text((d) => (d + " USD"))
+            // Add your code below this line
+            .style('font-family', 'verdana');
+            // Add your code above this line
+        </script>
+    </body>
     ```
 1. [Change Styles Based on Data]()
     ```html
