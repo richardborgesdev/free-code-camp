@@ -100,8 +100,29 @@
         </script>
     </body>
     ```
-1. [Add Classes with D3]()
+1. [Add Classes with D3](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/add-classes-with-d3)
     ```html
+    <style>
+    .bar {
+        width: 25px;
+        height: 100px;
+        display: inline-block;
+        background-color: blue;
+    }
+    </style>
+    <body>
+        <script>
+        const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+        d3.select("body").selectAll("div")
+            .data(dataset)
+            .enter()
+            .append("div")
+            // Add your code below this line
+            .attr('class', 'bar');
+            // Add your code above this line
+        </script>
+    </body>
     ```
 1. [Update the Height of an Element Dynamically]()
     ```html
