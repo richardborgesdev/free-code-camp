@@ -124,8 +124,30 @@
         </script>
     </body>
     ```
-1. [Update the Height of an Element Dynamically]()
+1. [Update the Height of an Element Dynamically](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/update-the-height-of-an-element-dynamically)
     ```html
+    <style>
+    .bar {
+        width: 25px;
+        height: 100px;
+        display: inline-block;
+        background-color: blue;
+    }
+    </style>
+    <body>
+        <script>
+        const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+        d3.select("body").selectAll("div")
+            .data(dataset)
+            .enter()
+            .append("div")
+            .attr("class", "bar")
+            // Add your code below this line
+            .style('height', (d) => { return d + 'px'});
+            // Add your code above this line
+        </script>
+    </body>
     ```
 1. [Change the Presentation of a Bar Chart]()
     ```html
