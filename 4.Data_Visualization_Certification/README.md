@@ -401,8 +401,43 @@
     </script>
     <body>
     ```
-1. [Style D3 Labels]()
+1. [Style D3 Labels](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/style-d3-labels)
     ```html
+    <body>
+        <script>
+            const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+            const w = 500;
+            const h = 100;
+
+            const svg = d3.select("body")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+
+            svg.selectAll("rect")
+            .data(dataset)
+            .enter()
+            .append("rect")
+            .attr("x", (d, i) => i * 30)
+            .attr("y", (d, i) => h - 3 * d)
+            .attr("width", 25)
+            .attr("height", (d, i) => d * 3)
+            .attr("fill", "navy");
+
+            svg.selectAll("text")
+            .data(dataset)
+            .enter()
+            .append("text")
+            .text((d) => d)
+            .attr("x", (d, i) => i * 30)
+            .attr("y", (d, i) => h - (3 * d) - 3)
+            // Add your code below this line
+            .style('font-size', '25px')
+            .attr('fill', 'red');
+            // Add your code above this line
+        </script>
+    </body>
     ```
 1. [Add a Hover Effect to a D3 Element]()
     ```html
