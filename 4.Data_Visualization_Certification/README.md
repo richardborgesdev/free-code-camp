@@ -563,8 +563,44 @@
         </script>
     </body>
     ```
-1. [Add Attributes to the Circle Elements]()
+1. [Add Attributes to the Circle Elements](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/add-attributes-to-the-circle-elements)
     ```html
+    <body>
+        <script>
+        const dataset = [
+                        [ 34,    78 ],
+                        [ 109,   280 ],
+                        [ 310,   120 ],
+                        [ 79,    411 ],
+                        [ 420,   220 ],
+                        [ 233,   145 ],
+                        [ 333,   96 ],
+                        [ 222,   333 ],
+                        [ 78,    320 ],
+                        [ 21,    123 ]
+                    ];
+
+
+        const w = 500;
+        const h = 500;
+
+        const svg = d3.select("body")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+
+        svg.selectAll("circle")
+            .data(dataset)
+            .enter()
+            .append("circle")
+            // Add your code below this line
+            .attr('cx', (d) => d[0])
+            .attr('cy', (d) => h - d[1])
+            .attr('r', 5);
+            // Add your code above this line
+
+        </script>
+    </body>
     ```
 1. [Add Labels to Scatter Plot Circles]()
     ```html
