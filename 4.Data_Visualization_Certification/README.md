@@ -449,15 +449,15 @@
     <body>
         <script>
             const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
-            
+
             const w = 500;
             const h = 100;
-            
+
             const svg = d3.select("body")
                         .append("svg")
                         .attr("width", w)
                         .attr("height", h);
-            
+
             svg.selectAll("rect")
             .data(dataset)
             .enter()
@@ -470,7 +470,7 @@
             // Add your code below this line
             .attr("class", "bar");
             // Add your code above this line
-            
+
             svg.selectAll("text")
             .data(dataset)
             .enter()
@@ -478,7 +478,7 @@
             .text((d) => d)
             .attr("x", (d, i) => i * 30)
             .attr("y", (d, i) => h - (3 * d) - 3);
-            
+
         </script>
     </body>
     ```
@@ -492,15 +492,15 @@
     <body>
         <script>
             const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
-            
+
             const w = 500;
             const h = 100;
-            
+
             const svg = d3.select("body")
                         .append("svg")
                         .attr("width", w)
                         .attr("height", h);
-            
+
             svg.selectAll("rect")
             .data(dataset)
             .enter()
@@ -515,15 +515,15 @@
             .append('title')
             .text((d) => d);
             // Add your code above this line
-            
+
             svg.selectAll("text")
             .data(dataset)
             .enter()
             .append("text")
             .text((d) => d)
             .attr("x", (d, i) => i * 30)
-            .attr("y", (d, i) => h - (d * 3 + 3))   
-            
+            .attr("y", (d, i) => h - (d * 3 + 3))
+
         </script>
     </body>
     ```
@@ -543,23 +543,23 @@
                         [ 78,    320 ],
                         [ 21,    123 ]
                         ];
-            
-            
+
+
             const w = 500;
             const h = 500;
-            
+
             const svg = d3.select("body")
                         .append("svg")
                         .attr("width", w)
                         .attr("height", h);
-            
+
             svg.selectAll("circle")
             // Add your code below this line
             .data(dataset)
             .enter()
             .append("circle")
             // Add your code above this line
-        
+
         </script>
     </body>
     ```
@@ -648,8 +648,23 @@
         </script>
     </body>
     ```
-1. [Create a Linear Scale with D3]()
+1. [Create a Linear Scale with D3](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/create-a-linear-scale-with-d3)
     ```html
+    <body>
+        <script>
+        // Add your code below this line
+
+        const scale = d3.scaleLinear(); // Create the scale here
+        const output = scale(50); // Call the scale with an argument here
+
+        // Add your code above this line
+
+        d3.select("body")
+            .append("h2")
+            .text(output);
+
+        </script>
+    </body>
     ```
 1. [Set a Domain and a Range on a Scale]()
     ```html
