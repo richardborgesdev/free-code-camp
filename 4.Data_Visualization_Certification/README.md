@@ -666,8 +666,21 @@
         </script>
     </body>
     ```
-1. [Set a Domain and a Range on a Scale]()
+1. [Set a Domain and a Range on a Scale](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/set-a-domain-and-a-range-on-a-scale)
     ```html
+    <body>
+        <script>
+        // Add your code below this line
+        const scale = d3.scaleLinear();
+        scale.domain([250, 500])
+            .range([10, 150]);
+        // Add your code above this line
+        const output = scale(50);
+        d3.select("body")
+            .append("h2")
+            .text(output);
+        </script>
+    </body>
     ```
 1. [Use the d3.max and d3.min Functions to Find Minimum and Maximum Values in a Dataset]()
     ```html
