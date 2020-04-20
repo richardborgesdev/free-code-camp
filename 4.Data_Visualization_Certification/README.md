@@ -682,8 +682,20 @@
         </script>
     </body>
     ```
-1. [Use the d3.max and d3.min Functions to Find Minimum and Maximum Values in a Dataset]()
+1. [Use the d3.max and d3.min Functions to Find Minimum and Maximum Values in a Dataset](https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3/use-the-d3.max-and-d3.min-functions-to-find-minimum-and-maximum-values-in-a-dataset)
     ```html
+    <body>
+        <script>
+        const positionData = [[1, 7, -4],[6, 3, 8],[2, 8, 3]]
+        // Add your code below this line
+        const output = d3.max(positionData, (d) => d[2]); // Change this line
+        // Add your code above this line
+
+        d3.select("body")
+            .append("h2")
+            .text(output)
+        </script>
+    </body>
     ```
 1. [Use Dynamic Scales]()
     ```html
