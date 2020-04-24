@@ -865,4 +865,34 @@
         </script>
     </body>
     ```
-## [JSON APIs and Ajax]()
+## [JSON APIs and Ajax](https://www.freecodecamp.org/learn/data-visualization/json-apis-and-ajax/)
+1. [Handle Click Events with JavaScript using the onclick property]()
+    ```html
+    ```
+1. [Change Text with click Events]()
+    ```html
+    ```
+1. [Get JSON with the JavaScript XMLHttpRequest Method]()
+    ```html
+    ```
+1. [Get JSON with the JavaScript fetch method]()
+    ```html
+    ```
+1. [Access the JSON Data from an API]()
+    ```html
+    ```
+1. [Convert JSON Data to HTML]()
+    ```html
+    ```
+1. [Render Images from Data Sources]()
+    ```html
+    ```
+1. [Pre-filter JSON to Get the Data You Need]()
+    ```html
+    ```
+1. [Get Geolocation Data to Find A User's GPS Coordinates]()
+    ```html
+    ```
+1. [Post Data with the JavaScript XMLHttpRequest Method]()
+    ```html
+    ```
