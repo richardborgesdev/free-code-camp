@@ -4,15 +4,19 @@
     
       var userName=document.getElementById('name').value;
       // Add your code below this line
-      req=new XMLHttpRequest();
-      req.open("POST",url,true);
-      req.setRequestHeader('Content-Type','text/plain');
-      req.onreadystatechange=function(){
-        if(req.readyState==4 && req.status==200){
-          document.getElementsByClassName('message')[0].innerHTML=req.responseText;
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url, true);
+      xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 201){
+          const serverResponse = JSON.parse(xhr.response);
+          document
+            .getElementsByClassName('message')[0]
+            .textContent = serverResponse.userName + serverResponse.suffix;
         }
       };
-      req.send(userName);
+      const body = JSON.stringify({ userName: userName, suffix: ' loves cats!' });
+      xhr.send(body);
       // Add your code above this line
     };
   });
