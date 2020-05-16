@@ -3,6 +3,20 @@
   <head>
     <title>Build a Tribute Page</title>
     <meta charset="UTF-8" />
+    <style>
+      .responsive-img {
+        /*
+        User Story #8: The img element should responsively resize, 
+        relative to the width of its parent element, 
+        without exceeding its original size.
+        */
+        max-width: 150px;
+        display: block;
+        /*
+        User Story #9: The img element should be centered within its parent element.
+        */
+      }
+    </style>
   </head>
 
   <body>
@@ -30,6 +44,7 @@
           -->
         <img
           id="image"
+          class="responsive-img"
           src="https://cdn.freecodecamp.org/platform/universal/fcc-twitter-1120X600-social-green.png"
           width="100"
         />
@@ -58,14 +73,6 @@
         to open in a new tab (i.e. target="_blank").
         -->
       <a id="tribute-link" href="" target="_blank">aditional info</a>
-      <!--
-        User Story #8: The img element should responsively resize, 
-        relative to the width of its parent element, 
-        without exceeding its original size.
-        -->
-      <!--
-        User Story #9: The img element should be centered within its parent element.
-      -->
     </header>
   </body>
 </html>
