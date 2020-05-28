@@ -68,27 +68,44 @@
         <option value="mercedes">Mercedes</option>
         <option value="audi">Audi</option>
       </select>
-    </form>
 
-    <!--
-      User Story #13: Inside the form element, 
-      I can select a field from one or more groups of radio buttons. 
-      Each group should be grouped using the name attribute.
-    -->
-    <!--
-      User Story #14: Inside the form element, 
-      I can select several fields from a series of checkboxes, 
-      each of which must have a value attribute.
-    -->
-    <!--
-      User Story #15: Inside the form element, 
-      I am presented with a textarea at the end for additional comments.
-    -->
-    <!--
-      User Story #16: Inside the form element, 
-      I am presented with a button with id="submit" to submit all my inputs.
-    -->
-    <div id="app"></div>
+      <!--
+        User Story #13: Inside the form element, 
+        I can select a field from one or more groups of radio buttons. 
+        Each group should be grouped using the name attribute.
+      -->
+      <p>Please select your age:</p>
+      <input type="radio" id="age1" name="age" value="30">
+      <label for="age1">0 - 30</label><br>
+      <input type="radio" id="age2" name="age" value="60">
+      <label for="age2">31 - 60</label><br>  
+      <input type="radio" id="age3" name="age" value="100">
+      <label for="age3">61 - 100</label><br>
+
+      <!--
+        User Story #14: Inside the form element, 
+        I can select several fields from a series of checkboxes, 
+        each of which must have a value attribute.
+      -->
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br><br>
+
+      <!--
+        User Story #15: Inside the form element, 
+        I am presented with a textarea at the end for additional comments.
+      -->
+      <textarea></textarea>
+
+      <!--
+        User Story #16: Inside the form element, 
+        I am presented with a button with id="submit" to submit all my inputs.
+      -->
+      <input id="submit" type="submit" value="Submit">
+    </form>
   </body>
 </html>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
