@@ -4,18 +4,31 @@
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
     <style>
-    /*
+      /*
     User Story #13: The navbar should always be at 
     the top of the viewport.
     */
-    
-    /*
+      nav {
+        position: fixed;
+        width: 100%;
+      }
+      /*
     User Story #14: My product landing page should 
     have at least one media query.
-
+    */
+      @media (max-width: 800px) {
+        img {
+          width: 200px;
+        }
+      }
+      /*
     User Story #15: My product landing page should 
     utilize CSS flexbox at least once.
     */
+      .use-flexbox {
+        display: flex;
+        justify-content: space-around;
+      }
     </style>
   </head>
 
@@ -33,7 +46,7 @@
       <img
         id="header-img"
         src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-        width="100px"
+        width="400px"
       />
       <!--
       User Story #3: Within the #header element I can see 
@@ -49,9 +62,11 @@
         in the nav element, I am taken to the corresponding 
         section of the landing page.
         -->
-        <a href="#section1" class="nav-link">link 1</a>
-        <a href="#section2" class="nav-link">link 2</a>
-        <a href="#section3" class="nav-link">link 3</a>
+        <div class="use-flexbox">
+          <a href="#section1" class="nav-link">link 1</a>
+          <a href="#section2" class="nav-link">link 2</a>
+          <a href="#section3" class="nav-link">link 3</a>
+        </div>
       </nav>
       <h1 id="section1">I am link 1</h1>
       <h1 id="section2">I am link 2</h1>
