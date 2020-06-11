@@ -19,9 +19,28 @@
         User Story #9: The navbar element should contain one 
         header element which contains text that describes 
         the topic of the technical documentation.
+
+        User Story #10: Additionally, the navbar should contain 
+        link (a) elements with the class of nav-link. 
+        There should be one for every element with the class 
+        main-section.
+
+        User Story #11: The header element in the navbar must 
+        come before any link (a) elements in the navbar.
+
+        User Story #12: Each element with the class of nav-link 
+        should contain text that corresponds to the header 
+        text within each section (e.g. if you have a 
+        "Hello world" section/header, your navbar should 
+        have an element which contains the text "Hello world").
       -->
       <nav id="navbar">
         <header>nav_header</header>
+        <a class="nav-link">section 1</a>
+        <a class="nav-link">section 2</a>
+        <a class="nav-link">section 3</a>
+        <a class="nav-link">section 4</a>
+        <a class="nav-link">section 5</a>
       </nav>
       <!--
         User Story #2: Within the #main-doc element, 
@@ -98,20 +117,6 @@
       </section>
     </main>
     <!--
-      User Story #10: Additionally, the navbar should contain 
-      link (a) elements with the class of nav-link. 
-      There should be one for every element with the class 
-      main-section.
-
-      User Story #11: The header element in the navbar must 
-      come before any link (a) elements in the navbar.
-
-      User Story #12: Each element with the class of nav-link 
-      should contain text that corresponds to the header 
-      text within each section (e.g. if you have a 
-      "Hello world" section/header, your navbar should 
-      have an element which contains the text "Hello world").
-
       User Story #13: When I click on a navbar element, 
       the page should navigate to the corresponding section of 
       the main-doc element (e.g. If I click on a nav-link 
