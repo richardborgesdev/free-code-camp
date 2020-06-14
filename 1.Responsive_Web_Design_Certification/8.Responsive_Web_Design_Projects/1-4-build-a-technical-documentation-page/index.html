@@ -3,6 +3,31 @@
   <head>
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
+    <style>
+      /*
+      User Story #14: On regular sized devices 
+      (laptops, desktops), the element with id="navbar" 
+      should be shown on the left side of the screen and 
+      should always be visible to the user.
+      */
+
+      /*
+      User Story #15: My Technical Documentation page should 
+      use at least one media query.
+      */
+      #navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+        width: 50%;
+      }
+      @media (min-width: 800px) {
+        #navbar {
+          display: fixed;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -48,6 +73,7 @@
         <a href="#section_3" class="nav-link">section 3</a>
         <a href="#section_4" class="nav-link">section 4</a>
         <a href="#section_5" class="nav-link">section 5</a>
+        <hr />
       </nav>
       <!--
         User Story #2: Within the #main-doc element, 
@@ -123,15 +149,6 @@
         </ol>
       </section>
     </main>
-    <!--
-      User Story #14: On regular sized devices 
-      (laptops, desktops), the element with id="navbar" 
-      should be shown on the left side of the screen and 
-      should always be visible to the user.
-
-      User Story #15: My Technical Documentation page should 
-      use at least one media query.
-    -->
   </body>
 </html>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
