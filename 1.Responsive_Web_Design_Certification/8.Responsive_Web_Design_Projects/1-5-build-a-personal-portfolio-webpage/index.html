@@ -4,7 +4,33 @@
 <head>
   <title>Parcel Sandbox</title>
   <meta charset="UTF-8" />
-  
+  <style>
+    /*
+      User Story #9: My portfolio should have at least one media query.
+    */
+    @media (min-width: 800px) {
+      #navbar {
+        display: fixed;
+      }
+    }
+    /*
+      User Story #10: The height of the welcome section should be equal to the 
+      height of the viewport.
+    */
+    #welcome-section {
+      height: 100vh;
+    }
+    /*
+      User Story #11: The navbar should always be at the top of the viewport.
+    */
+    #navbar {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background-color: white;
+      width: 50%;
+    }
+  </style>
 </head>
 
 <body>
@@ -28,8 +54,6 @@
         text.
       -->
       <h1>h1 text</h1>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </section>
     <!--
       User Story #3: My portfolio should have a projects section with an id of 
@@ -53,14 +77,6 @@
       which opens my GitHub or FCC profile in a new tab.
     -->
     <a id="profile-link" href="https://github.com/richardborgescc" target="_blank">git hub</a>
-    <!--
-      User Story #9: My portfolio should have at least one media query.
-
-      User Story #10: The height of the welcome section should be equal to the 
-      height of the viewport.
-
-      User Story #11: The navbar should always be at the top of the viewport.
-    -->
   </script>
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
