@@ -22,18 +22,35 @@ const findInCashRegister = (change, cid) => {
   return false;
 };
 
+const registerOut = (cid, changeRegister) => {
+  return { cid, changeRegister };
+};
+
 const checkCashRegister = (price, cash, cid) => {
   let change = cash - price;
   let registerFound = findInCashRegister(change, cid);
+  let changeRegister = [
+    ["PENNY", 0],
+    ["NICKEL", 0],
+    ["DIME", 0],
+    ["QUARTER", 0],
+    ["ONE", 0],
+    ["FIVE", 0],
+    ["TEN", 0],
+    ["TWENTY", 0],
+    ["ONE HUNDRED", 0]
+  ];
 
   while (registerFound) {
-    console.log(change);
     change -= registerFound.decrease;
+
+    cid[registerFound.index][1] -= registerFound.decrease;
+    changeRegister[registerFound.index][1] += registerFound.decrease;
+
     registerFound = findInCashRegister(change, cid);
-    console.log(registerFound);
   }
 
-  return change;
+  return registerOut(cid, changeRegister);
 };
 
 console.log(
