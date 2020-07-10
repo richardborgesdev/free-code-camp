@@ -23,7 +23,18 @@ const findInCashRegister = (change, cid) => {
 };
 
 const registerOut = (cid, changeRegister) => {
-  return { cid, changeRegister };
+  let change = [];
+  let status = "CLOSED";
+
+  for (let index = 0; index < cid.length; index++) {
+    if (cid[index][1] === 0) {
+      change.push(cid[index]);
+    } else if (changeRegister[index][1] > 0) {
+      change.push(changeRegister[index]);
+    }
+  }
+
+  return { status, change };
 };
 
 const checkCashRegister = (price, cash, cid) => {
