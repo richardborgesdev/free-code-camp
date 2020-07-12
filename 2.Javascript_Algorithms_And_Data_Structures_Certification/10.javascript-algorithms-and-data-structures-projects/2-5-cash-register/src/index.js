@@ -14,7 +14,7 @@ const findInCashRegister = (change, cid) => {
   for (let index = cid.length - 1; index >= 0; index--) {
     const [name, inCash] = cid[index];
 
-    if (change >= moneyName[name] && change <= inCash) {
+    if (change >= moneyName[name] && moneyName[name] <= inCash) {
       return { index: index, decrease: moneyName[name] };
     }
   }
@@ -25,19 +25,21 @@ const findInCashRegister = (change, cid) => {
 const registerOut = (cid, changeRegister) => {
   let change = [];
   let status = "CLOSED";
+  console.log(cid, changeRegister);
 
   for (let index = 0; index < cid.length; index++) {
-    if (cid[index][1] === 0) {
-      change.push(cid[index]);
-    } else if (changeRegister[index][1] > 0) {
+    if (changeRegister[index][1] > 0) {
       change.push(changeRegister[index]);
       status = "OPEN";
+    } else if (cid[index][1] === 0) {
+      change.push(cid[index]);
     } else if (cid[index][1] < 0) {
       change.push(cid[index]);
       status = "INSUFFICIENT_FUNDS";
     }
   }
 
+  change.reverse();
   return { status, change };
 };
 
@@ -57,7 +59,7 @@ const checkCashRegister = (price, cash, cid) => {
   ];
 
   while (registerFound) {
-    change -= registerFound.decrease;
+    change = parseFloat(change - registerFound.decrease).toFixed(2);
 
     cid[registerFound.index][1] -= registerFound.decrease;
     changeRegister[registerFound.index][1] += registerFound.decrease;
@@ -67,7 +69,7 @@ const checkCashRegister = (price, cash, cid) => {
 
   return registerOut(cid, changeRegister);
 };
-
+/*
 console.log(
   "1,2",
   checkCashRegister(19.5, 20, [
@@ -110,7 +112,7 @@ console.log(
     ]
   }
 );
-
+*/
 console.log(
   4,
   checkCashRegister(19.5, 20, [
@@ -126,7 +128,7 @@ console.log(
   ]),
   { status: "INSUFFICIENT_FUNDS", change: [] }
 );
-
+/*
 console.log(
   5,
   checkCashRegister(19.5, 20, [
@@ -171,3 +173,4 @@ console.log(
     ]
   }
 );
+*/
