@@ -22,25 +22,25 @@ const findInCashRegister = (change, cid) => {
   return false;
 };
 
-const registerOut = (cid, changeRegister) => {
-  let change = [];
+const registerOut = (cid, changeRegister, change) => {
+  let out = [];
   let status = "CLOSED";
-  console.log(cid, changeRegister);
 
-  for (let index = 0; index < cid.length; index++) {
-    if (changeRegister[index][1] > 0) {
-      change.push(changeRegister[index]);
-      status = "OPEN";
-    } else if (cid[index][1] === 0) {
-      change.push(cid[index]);
-    } else if (cid[index][1] < 0) {
-      change.push(cid[index]);
-      status = "INSUFFICIENT_FUNDS";
+  if (change > 0) {
+    status = "INSUFFICIENT_FUNDS";
+  } else {
+    for (let index = 0; index < cid.length; index++) {
+      if (changeRegister[index][1] > 0) {
+        out.push(changeRegister[index]);
+        status = "OPEN";
+      } else if (cid[index][1] === 0) {
+        out.push(cid[index]);
+      }
     }
   }
 
-  change.reverse();
-  return { status, change };
+  out.reverse();
+  return { status, change: out };
 };
 
 const checkCashRegister = (price, cash, cid) => {
@@ -59,6 +59,7 @@ const checkCashRegister = (price, cash, cid) => {
   ];
 
   while (registerFound) {
+    console.log(changeRegister[registerFound.index][1]);
     change = parseFloat(change - registerFound.decrease).toFixed(2);
 
     cid[registerFound.index][1] -= registerFound.decrease;
@@ -67,7 +68,7 @@ const checkCashRegister = (price, cash, cid) => {
     registerFound = findInCashRegister(change, cid);
   }
 
-  return registerOut(cid, changeRegister);
+  return registerOut(cid, changeRegister, change);
 };
 /*
 console.log(
@@ -112,7 +113,7 @@ console.log(
     ]
   }
 );
-*/
+
 console.log(
   4,
   checkCashRegister(19.5, 20, [
@@ -128,7 +129,7 @@ console.log(
   ]),
   { status: "INSUFFICIENT_FUNDS", change: [] }
 );
-/*
+
 console.log(
   5,
   checkCashRegister(19.5, 20, [
@@ -144,7 +145,7 @@ console.log(
   ]),
   { status: "INSUFFICIENT_FUNDS", change: [] }
 );
-
+*/
 console.log(
   6,
   checkCashRegister(19.5, 20, [
@@ -173,4 +174,3 @@ console.log(
     ]
   }
 );
-*/
