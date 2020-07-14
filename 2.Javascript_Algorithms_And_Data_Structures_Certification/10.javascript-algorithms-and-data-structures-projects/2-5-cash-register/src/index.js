@@ -30,17 +30,26 @@ const registerOut = (cid, changeRegister, change) => {
     status = "INSUFFICIENT_FUNDS";
   } else {
     for (let index = 0; index < cid.length; index++) {
-      if (changeRegister[index][1] > 0) {
+      if (changeRegister[index][1] > 0 && cid[index][1] > 0) {
         out.push(changeRegister[index]);
         status = "OPEN";
+      } else if (changeRegister[index][1] > 0 && cid[index][1] === 0) {
+        out.push(changeRegister[index]);
       } else if (cid[index][1] === 0) {
         out.push(cid[index]);
       }
     }
   }
 
-  out.reverse();
+  if (status === "OPEN") {
+    out.reverse();
+  }
+
   return { status, change: out };
+};
+
+const roundTo2Decimals = num => {
+  return Number(num.toFixed(2));
 };
 
 const checkCashRegister = (price, cash, cid) => {
@@ -59,18 +68,21 @@ const checkCashRegister = (price, cash, cid) => {
   ];
 
   while (registerFound) {
-    console.log(changeRegister[registerFound.index][1]);
-    change = parseFloat(change - registerFound.decrease).toFixed(2);
+    change = roundTo2Decimals(change - registerFound.decrease);
 
-    cid[registerFound.index][1] -= registerFound.decrease;
-    changeRegister[registerFound.index][1] += registerFound.decrease;
+    cid[registerFound.index][1] = roundTo2Decimals(
+      cid[registerFound.index][1] - registerFound.decrease
+    );
+    changeRegister[registerFound.index][1] = roundTo2Decimals(
+      changeRegister[registerFound.index][1] + registerFound.decrease
+    );
 
     registerFound = findInCashRegister(change, cid);
   }
 
   return registerOut(cid, changeRegister, change);
 };
-/*
+
 console.log(
   "1,2",
   checkCashRegister(19.5, 20, [
@@ -145,7 +157,7 @@ console.log(
   ]),
   { status: "INSUFFICIENT_FUNDS", change: [] }
 );
-*/
+
 console.log(
   6,
   checkCashRegister(19.5, 20, [
