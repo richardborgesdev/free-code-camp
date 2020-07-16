@@ -1,15 +1,20 @@
 <template>
-  <div>
+  <!--
+    User Story #1: I can see a wrapper element with a corresponding 
+    id="quote-box".
+  -->
+  <div id="quote-box">
     <!--
-      User Story #1: I can see a wrapper element with a corresponding 
-      id="quote-box".
-
       User Story #2: Within #quote-box, I can see an element 
       with a corresponding id="text".
-
+    -->
+    <p id="text">{{text}}</p>
+    <!--
       User Story #3: Within #quote-box, I can see an element 
       with a corresponding id="author".
-
+    -->
+    <p id="author">{{author}}</p>
+    <!--
       User Story #4: Within #quote-box, I can see a clickable 
       element with a corresponding id="new-quote".
 
@@ -46,6 +51,14 @@
 export default {
   name: "HelloWorld",
   props: {
+    author: {
+      default: "default author",
+      type: String
+    },
+    text: {
+      default: "default text",
+      type: String
+    },
     msg: String
   }
 };
