@@ -1,63 +1,44 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-        >babel</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-        >eslint</a>
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a>
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a>
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a>
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-        >vue-devtools</a>
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a>
-      </li>
-      <li>
-        <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a>
-      </li>
-    </ul>
+  <div>
+    <!--
+      User Story #1: I can see a wrapper element with a corresponding 
+      id="quote-box".
+
+      User Story #2: Within #quote-box, I can see an element 
+      with a corresponding id="text".
+
+      User Story #3: Within #quote-box, I can see an element 
+      with a corresponding id="author".
+
+      User Story #4: Within #quote-box, I can see a clickable 
+      element with a corresponding id="new-quote".
+
+      User Story #5: Within #quote-box, I can see a clickable 
+      a element with a corresponding id="tweet-quote".
+
+      User Story #6: On first load, my quote machine displays 
+      a random quote in the element with id="text".
+
+      User Story #7: On first load, my quote machine displays 
+      the random quote's author in the element with id="author".
+
+      User Story #8: When the #new-quote button is clicked, 
+      my quote machine should fetch a new quote and display 
+      it in the #text element.
+
+      User Story #9: My quote machine should fetch the new 
+      quote's author when the #new-quote button is clicked 
+      and display it in the #author element.
+
+      User Story #10: I can tweet the current quote 
+      by clicking on the #tweet-quotea element. 
+      This a element should include the "twitter.com/intent/tweet" 
+      path in its href attribute to tweet the current quote.
+
+      User Story #11: The #quote-box wrapper element should be 
+      horizontally centered. Please run tests with browser's zoom 
+      level at 100% and page maximized.
+    -->
   </div>
 </template>
 
