@@ -17,9 +17,14 @@
     <!--
       User Story #4: Within #quote-box, I can see a clickable 
       element with a corresponding id="new-quote".
-
+    -->
+    <button id="new-quote">new-quote</button>
+    <!--
       User Story #5: Within #quote-box, I can see a clickable 
       a element with a corresponding id="tweet-quote".
+    -->
+    <a id="tweet-quote">tweet-quote</a>
+    <!--
 
       User Story #6: On first load, my quote machine displays 
       a random quote in the element with id="text".
