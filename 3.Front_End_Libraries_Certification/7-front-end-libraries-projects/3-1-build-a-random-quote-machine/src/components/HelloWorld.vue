@@ -18,7 +18,7 @@
       User Story #4: Within #quote-box, I can see a clickable 
       element with a corresponding id="new-quote".
     -->
-    <button id="new-quote">new-quote</button>
+    <button id="new-quote" @click="getNewQuote()">new-quote</button>
     <!--
       User Story #5: Within #quote-box, I can see a clickable 
       a element with a corresponding id="tweet-quote".
@@ -55,16 +55,17 @@
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    author: {
-      default: "default author",
-      type: String
-    },
-    text: {
-      default: "default text",
-      type: String
-    },
-    msg: String
+  data() {
+    return {
+      author: "default author",
+      text: "default text"
+    };
+  },
+  methods: {
+    getNewQuote() {
+      this.text = "new text";
+      this.author = "new author";
+    }
   }
 };
 </script>
