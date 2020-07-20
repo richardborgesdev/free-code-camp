@@ -23,7 +23,7 @@
       User Story #5: Within #quote-box, I can see a clickable 
       a element with a corresponding id="tweet-quote".
     -->
-    <a id="tweet-quote">tweet-quote</a>
+    <a id="tweet-quote" target="_blank" href="https://twitter.com/intent/tweet">tweet-quote</a>
     <!--
 
       User Story #6: On first load, my quote machine displays 
@@ -63,6 +63,13 @@ export default {
   },
   methods: {
     getNewQuote() {
+      fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
+        .then(resp => resp.json())
+        .then(data => {
+          this.text = data[0].quote;
+          this.author = data[0].character;
+        });
+
       this.text = "new text";
       this.author = "new author";
     }
