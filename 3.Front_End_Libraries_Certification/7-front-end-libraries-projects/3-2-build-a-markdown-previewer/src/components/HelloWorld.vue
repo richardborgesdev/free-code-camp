@@ -3,10 +3,15 @@
     <!--
       User Story #1: I can see a textarea element with 
       a corresponding id="editor".
-
+    -->
+    <textarea id="editor" style="width: 100%; height: 200px;"/>
+    <!--
       User Story #2: I can see an element with 
       a corresponding id="preview".
-
+    -->
+    Preview:
+    <div id="preview" style="border: 1px solid black; width: 100%; height: 200px;"/>
+    <!--
       User Story #3: When I enter text into the 
       #editor element, the #preview element is updated as 
       I type to display the content of the textarea.
