@@ -15,7 +15,7 @@
       a corresponding id="preview".
     -->
     Preview:
-    <div id="preview" style="border: 1px solid black; width: 100%; height: 200px;">{{markdown}}</div>
+    <div id="preview" v-html="markdown"/>
     <!--
       User Story #4: When I enter GitHub flavored markdown 
       into the #editor element, the text is rendered as HTML in 
@@ -60,7 +60,7 @@ export default {
       I type to display the content of the textarea. 
     */
     convert() {
-      this.markdown = this.textToConvert;
+      this.markdown = window.marked(this.textToConvert);
     }
   }
 };
