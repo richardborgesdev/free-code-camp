@@ -4,18 +4,19 @@
       User Story #1: I can see a textarea element with 
       a corresponding id="editor".
     -->
-    <textarea id="editor" style="width: 100%; height: 200px;"/>
+    <textarea
+      id="editor"
+      style="width: 100%; height: 200px;"
+      @keyup="convert()"
+      v-model="textToConvert"
+    />
     <!--
       User Story #2: I can see an element with 
       a corresponding id="preview".
     -->
     Preview:
-    <div id="preview" style="border: 1px solid black; width: 100%; height: 200px;"/>
+    <div id="preview" style="border: 1px solid black; width: 100%; height: 200px;">{{markdown}}</div>
     <!--
-      User Story #3: When I enter text into the 
-      #editor element, the #preview element is updated as 
-      I type to display the content of the textarea.
-
       User Story #4: When I enter GitHub flavored markdown 
       into the #editor element, the text is rendered as HTML in 
       the #preview element as I type (HINT: You don't need to parse 
@@ -45,6 +46,22 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  data() {
+    return {
+      textToConvert: "",
+      markdown: ""
+    };
+  },
+  methods: {
+    /*
+      User Story #3: When I enter text into the 
+      #editor element, the #preview element is updated as 
+      I type to display the content of the textarea. 
+    */
+    convert() {
+      this.markdown = this.textToConvert;
+    }
   }
 };
 </script>
