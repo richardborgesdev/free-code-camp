@@ -19,6 +19,13 @@ export default {
       "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
     );
     document.head.appendChild(externalScript);
+
+    externalScript = document.createElement("script");
+    externalScript.setAttribute(
+      "src",
+      "https://cdnjs.cloudflare.com/ajax/libs/marked/1.1.1/marked.min.js"
+    );
+    document.head.appendChild(externalScript);
   }
 };
 </script>
