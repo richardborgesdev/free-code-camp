@@ -42,6 +42,8 @@
 </template>
 
 <script>
+import markedLib from "marked";
+
 export default {
   name: "HelloWorld",
   props: {
@@ -82,7 +84,7 @@ alert(s);
       I type to display the content of the textarea. 
     */
     convert() {
-      this.markdown = window.marked(this.textToConvert);
+      this.markdown = markedLib(this.textToConvert);
     }
   }
 };
