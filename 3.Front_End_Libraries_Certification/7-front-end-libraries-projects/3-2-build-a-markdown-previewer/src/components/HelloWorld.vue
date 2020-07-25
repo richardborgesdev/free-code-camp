@@ -7,7 +7,7 @@
     <textarea
       id="editor"
       style="width: 100%; height: 200px;"
-      @keyup="convert()"
+      @keyup.prevent="convert()"
       v-model="textToConvert"
     />
     <!--
@@ -47,9 +47,31 @@ export default {
   props: {
     msg: String
   },
+  mounted() {
+    this.convert();
+  },
   data() {
     return {
-      textToConvert: "",
+      textToConvert: `# H1
+## H2
+
+[build-a-markdown-previewer](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer)
+
+Inline \`code\` has \`back-ticks around\` it.
+
+\`\`\`javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+\`\`\`
+
+* 1
+* 2
+
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+**bold**
+      `,
       markdown: ""
     };
   },
