@@ -7,19 +7,38 @@
     <!--
       User Story #2: Within #drum-machine I can see an element with 
       a corresponding id="display".
-
-      User Story #3: Within #drum-machine I can see 9 clickable 
-      drum pad elements, each with a class name of drum-pad, a unique 
-      id that describes the audio clip the drum pad will be set up 
-      to trigger, and an inner text that corresponds to one 
-      of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. 
-      The drum pads MUST be in this order.
-
-      User Story #4: Within each .drum-pad, there should be an HTML5 
-      audio element which has a src attribute pointing to an audio clip, 
-      a class name of clip, and an id corresponding to the inner text
-       of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
-
+    -->
+    <div id="display">
+      <!--
+        User Story #3: Within #drum-machine I can see 9 clickable 
+        drum pad elements, each with a class name of drum-pad, a unique 
+        id that describes the audio clip the drum pad will be set up 
+        to trigger, and an inner text that corresponds to one 
+        of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. 
+        The drum pads MUST be in this order.
+      -->
+      <button class="drum-pad" id="pad1">
+        <span>Q</span>
+        <!--
+          User Story #4: Within each .drum-pad, there should be an HTML5 
+          audio element which has a src attribute pointing to an audio clip, 
+          a class name of clip, and an id corresponding to the inner text
+          of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
+        -->
+        <audio id="Q" class="clip">
+          <source src="horse.ogg" type="audio/ogg">
+        </audio>
+      </button>
+      <button class="drum-pad" id="pad2">W</button>
+      <button class="drum-pad" id="pad3">E</button>
+      <button class="drum-pad" id="pad4">A</button>
+      <button class="drum-pad" id="pad5">S</button>
+      <button class="drum-pad" id="pad6">D</button>
+      <button class="drum-pad" id="pad7">Z</button>
+      <button class="drum-pad" id="pad8">X</button>
+      <button class="drum-pad" id="pad9">C</button>
+    </div>
+    <!--
       User Story #5: When I click on a .drum-pad element, 
       the audio clip contained in its child audio element should
        be triggered.
