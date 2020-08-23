@@ -25,23 +25,45 @@
           a class name of clip, and an id corresponding to the inner text
           of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
         -->
-        <audio id="Q" class="clip">
-          <source src="horse.ogg" type="audio/ogg">
-        </audio>
+        <audio id="Q" class="clip" src="horse.ogg"/>
       </button>
-      <button class="drum-pad" id="pad2">W</button>
-      <button class="drum-pad" id="pad3">E</button>
-      <button class="drum-pad" id="pad4">A</button>
-      <button class="drum-pad" id="pad5">S</button>
-      <button class="drum-pad" id="pad6">D</button>
-      <button class="drum-pad" id="pad7">Z</button>
-      <button class="drum-pad" id="pad8">X</button>
-      <button class="drum-pad" id="pad9">C</button>
+      <button class="drum-pad" id="pad2">
+        <span>W</span>
+        <audio id="W" class="clip" src="horse.ogg"/>
+      </button>
+      <button class="drum-pad" id="pad3">
+        <span>E</span>
+        <audio id="E" class="clip" src="horse.ogg"/>
+      </button>
+      <button class="drum-pad" id="pad4">
+        <span>A</span>
+        <audio id="A" class="clip" src="horse.ogg"/>
+      </button>
+      <button class="drum-pad" id="pad5">
+        <span>S</span>
+        <audio id="S" class="clip" src="horse.ogg"/>
+      </button>
+      <button class="drum-pad" id="pad6">
+        <span>D</span>
+        <audio id="D" class="clip" src="horse.ogg"/>
+      </button>
+      <button class="drum-pad" id="pad7">
+        <span>Z</span>
+        <audio id="Z" class="clip" src="horse.ogg"/>
+      </button>
+      <button class="drum-pad" id="pad8">
+        <span>X</span>
+        <audio id="X" class="clip" src="horse.ogg"/>
+      </button>
+      <button class="drum-pad" id="pad9">
+        <span>C</span>
+        <audio id="C" class="clip" src="horse.ogg"/>
+      </button>
     </div>
     <!--
       User Story #5: When I click on a .drum-pad element, 
       the audio clip contained in its child audio element should
-       be triggered.
+      be triggered.
 
       User Story #6: When I press the trigger key associated with 
       each .drum-pad, the audio clip contained in its child audio 
