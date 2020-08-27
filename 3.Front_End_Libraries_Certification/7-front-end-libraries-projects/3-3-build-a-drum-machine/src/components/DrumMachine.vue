@@ -17,7 +17,7 @@
         of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. 
         The drum pads MUST be in this order.
       -->
-      <button class="drum-pad" id="pad1" @click="play('Q')">
+      <button class="drum-pad" id="padQ" @click="play('Q')">
         <span>Q</span>
         <!--
           User Story #4: Within each .drum-pad, there should be an HTML5 
@@ -32,7 +32,7 @@
           type="audio/mpeg"
         />
       </button>
-      <button class="drum-pad" id="pad2" @click="play('W')">
+      <button class="drum-pad" id="padW" @click="play('W')">
         <span>W</span>
         <audio
           id="W"
@@ -40,7 +40,7 @@
           src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/14[kb]80s-COWBELL1.aif.mp3"
         />
       </button>
-      <button class="drum-pad" id="pad3" @click="play('E')">
+      <button class="drum-pad" id="padE" @click="play('E')">
         <span>E</span>
         <audio
           id="E"
@@ -48,7 +48,7 @@
           src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/83[kb]80s-CRASH1.aif.mp3"
         />
       </button>
-      <button class="drum-pad" id="pad4" @click="play('A')">
+      <button class="drum-pad" id="padA" @click="play('A')">
         <span>A</span>
         <audio
           id="A"
@@ -56,7 +56,7 @@
           src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/7[kb]80s-HHCLOSE1.aif.mp3"
         />
       </button>
-      <button class="drum-pad" id="pad5" @click="play('S')">
+      <button class="drum-pad" id="padS" @click="play('S')">
         <span>S</span>
         <audio
           id="S"
@@ -64,7 +64,7 @@
           src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/15[kb]80s-SNARE1.aif.mp3"
         />
       </button>
-      <button class="drum-pad" id="pad6" @click="play('D')">
+      <button class="drum-pad" id="padD" @click="play('D')">
         <span>D</span>
         <audio
           id="D"
@@ -72,7 +72,7 @@
           src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/20[kb]80s-TAMB1.aif.mp3"
         />
       </button>
-      <button class="drum-pad" id="pad7" @click="play('Z')">
+      <button class="drum-pad" id="padZ" @click="play('Z')">
         <span>Z</span>
         <audio
           id="Z"
@@ -80,7 +80,7 @@
           src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/15[kb]80s-TOM1.aif.mp3"
         />
       </button>
-      <button class="drum-pad" id="pad8" @click="play('X')">
+      <button class="drum-pad" id="padX" @click="play('X')">
         <span>X</span>
         <audio
           id="X"
@@ -88,7 +88,7 @@
           src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/22[kb]80s-TOM3.aif.mp3"
         />
       </button>
-      <button class="drum-pad" id="pad9" @click="play('C')">
+      <button class="drum-pad" id="padC" @click="play('C')">
         <span>C</span>
         <audio
           id="C"
@@ -121,6 +121,16 @@ export default {
   name: "DrumMachine",
   props: {
     msg: String
+  },
+  mounted() {
+    window.addEventListener("keypress", e => {
+      const padId = `pad${String.fromCharCode(e.keyCode).toUpperCase()}`;
+      const pad = document.getElementById(padId);
+
+      if (pad) {
+        pad.click();
+      }
+    });
   },
   methods: {
     play(pad) {
