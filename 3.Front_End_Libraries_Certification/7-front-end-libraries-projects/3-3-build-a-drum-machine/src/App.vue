@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Hello Vue in CodeSandbox!"/>
+    <drum-machine msg="Hello Vue in CodeSandbox!"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import DrumMachine from "./components/DrumMachine";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    DrumMachine
   },
   mounted() {
     let externalScript = document.createElement("script");
