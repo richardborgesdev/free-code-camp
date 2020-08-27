@@ -118,7 +118,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "DrumMachine",
   props: {
     msg: String
   },
