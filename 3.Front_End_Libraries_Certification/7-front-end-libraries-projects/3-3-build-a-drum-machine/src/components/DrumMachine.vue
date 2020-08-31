@@ -100,15 +100,6 @@
         src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/15[kb]80s-TOM5.aif.mp3"
       />
     </button>
-    <!--
-
-
-
-
-      User Story #7: When a .drum-pad is triggered, a string describing
-      the associated audio clip is displayed as the inner text of 
-      the #display element (each string must be unique).
-    -->
   </div>
 </template>
 
@@ -130,6 +121,11 @@ export default {
       string "W", etc.).
     */
     window.addEventListener("keypress", e => {
+      /*
+        User Story #7: When a .drum-pad is triggered, a string describing
+        the associated audio clip is displayed as the inner text of 
+        the #display element (each string must be unique).
+      */
       const padId = `pad${String.fromCharCode(e.keyCode).toUpperCase()}`;
       const pad = document.getElementById(padId);
 
@@ -146,21 +142,3 @@ export default {
   }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
