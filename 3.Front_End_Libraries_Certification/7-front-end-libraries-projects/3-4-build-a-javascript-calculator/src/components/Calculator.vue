@@ -26,7 +26,12 @@
       each containing one of the 4 primary mathematical operators with 
       the following corresponding IDs: id="add", id="subtract", 
       id="multiply", id="divide".
-
+    -->
+    <button id="add">+</button>
+    <button id="subtract">-</button>
+    <button id="multiply">*</button>
+    <button id="divide">/</button>
+    <!--
       User Story #4: My calculator should contain a clickable element 
       containing a . (decimal point) symbol with a corresponding id="decimal".
 
