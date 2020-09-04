@@ -34,13 +34,19 @@
     <!--
       User Story #4: My calculator should contain a clickable element 
       containing a . (decimal point) symbol with a corresponding id="decimal".
-
+    -->
+    <button id="decimal">.</button>
+    <!--
       User Story #5: My calculator should contain a clickable element 
       with an id="clear".
-
+    -->
+    <button id="clear">clear</button>
+    <!--
       User Story #6: My calculator should contain an element to display 
       values with a corresponding id="display".
-
+    -->
+    <input id="display"/>
+    <!--
       User Story #7: At any time, pressing the clear button clears the input 
       and output values, and returns the calculator to its initialized state; 
       0 should be shown in the element with the id of display.
