@@ -40,16 +40,13 @@
       User Story #5: My calculator should contain a clickable element 
       with an id="clear".
     -->
-    <button id="clear">clear</button>
+    <button id="clear" @click="clear()">clear</button>
     <!--
       User Story #6: My calculator should contain an element to display 
       values with a corresponding id="display".
     -->
-    <input id="display"/>
+    <input id="display" v-model="value">
     <!--
-      User Story #7: At any time, pressing the clear button clears the input 
-      and output values, and returns the calculator to its initialized state; 
-      0 should be shown in the element with the id of display.
 
       User Story #8: As I input numbers, I should be able to see my input 
       in the element with the id of display.
@@ -100,6 +97,20 @@
 
 <script>
 export default {
-  name: "HelloWorld"
+  data() {
+    return {
+      value: 0
+    };
+  },
+  methods: {
+    /*
+      User Story #7: At any time, pressing the clear button clears the input 
+      and output values, and returns the calculator to its initialized state; 
+      0 should be shown in the element with the id of display.
+    */
+    clear() {
+      this.value = 0;
+    }
+  }
 };
 </script>
