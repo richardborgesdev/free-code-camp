@@ -11,16 +11,16 @@
       IDs: id="zero", id="one", id="two", id="three", id="four", id="five", 
       id="six", id="seven", id="eight", and id="nine".
     -->
-    <button id="zero">0</button>
-    <button id="one">1</button>
-    <button id="two">2</button>
-    <button id="three">3</button>
-    <button id="four">4</button>
-    <button id="five">5</button>
-    <button id="six">6</button>
-    <button id="seven">7</button>
-    <button id="eight">8</button>
-    <button id="nine">9</button>
+    <button id="zero" @click="addNumberToDiplay(0)">0</button>
+    <button id="one" @click="addNumberToDiplay(1)">1</button>
+    <button id="two" @click="addNumberToDiplay(2)">2</button>
+    <button id="three" @click="addNumberToDiplay(3)">3</button>
+    <button id="four" @click="addNumberToDiplay(4)">4</button>
+    <button id="five" @click="addNumberToDiplay(5)">5</button>
+    <button id="six" @click="addNumberToDiplay(6)">6</button>
+    <button id="seven" @click="addNumberToDiplay(7)">7</button>
+    <button id="eight" @click="addNumberToDiplay(8)">8</button>
+    <button id="nine" @click="addNumberToDiplay(9)">9</button>
     <!--
       User Story #3: My calculator should contain 4 clickable elements 
       each containing one of the 4 primary mathematical operators with 
@@ -47,10 +47,6 @@
     -->
     <input id="display" v-model="value">
     <!--
-
-      User Story #8: As I input numbers, I should be able to see my input 
-      in the element with the id of display.
-
       User Story #9: In any order, I should be able to add, subtract, 
       multiply and divide a chain of numbers of any length, and when I hit =, 
       the correct result should be shown in the element with the id of display.
@@ -99,7 +95,7 @@
 export default {
   data() {
     return {
-      value: 0
+      value: "0"
     };
   },
   methods: {
@@ -109,7 +105,18 @@ export default {
       0 should be shown in the element with the id of display.
     */
     clear() {
-      this.value = 0;
+      this.value = "0";
+    },
+    /*
+      User Story #8: As I input numbers, I should be able to see my input 
+      in the element with the id of display.
+    */
+    addNumberToDiplay(number) {
+      if (this.value === "0") {
+        this.value = "";
+      }
+
+      this.value += number;
     }
   }
 };
