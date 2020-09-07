@@ -4,33 +4,33 @@
       User Story #1: My calculator should contain a clickable element 
       containing an = (equal sign) with a corresponding id="equals".
     -->
-    <button id="equals">=</button>
+    <button id="equals" @click="calculate()">=</button>
     <!--
       User Story #2: My calculator should contain 10 clickable elements 
       containing one number each from 0-9, with the following corresponding 
       IDs: id="zero", id="one", id="two", id="three", id="four", id="five", 
       id="six", id="seven", id="eight", and id="nine".
     -->
-    <button id="zero" @click="addNumberToDiplay(0)">0</button>
-    <button id="one" @click="addNumberToDiplay(1)">1</button>
-    <button id="two" @click="addNumberToDiplay(2)">2</button>
-    <button id="three" @click="addNumberToDiplay(3)">3</button>
-    <button id="four" @click="addNumberToDiplay(4)">4</button>
-    <button id="five" @click="addNumberToDiplay(5)">5</button>
-    <button id="six" @click="addNumberToDiplay(6)">6</button>
-    <button id="seven" @click="addNumberToDiplay(7)">7</button>
-    <button id="eight" @click="addNumberToDiplay(8)">8</button>
-    <button id="nine" @click="addNumberToDiplay(9)">9</button>
+    <button id="zero" @click="addToDiplay(0)">0</button>
+    <button id="one" @click="addToDiplay(1)">1</button>
+    <button id="two" @click="addToDiplay(2)">2</button>
+    <button id="three" @click="addToDiplay(3)">3</button>
+    <button id="four" @click="addToDiplay(4)">4</button>
+    <button id="five" @click="addToDiplay(5)">5</button>
+    <button id="six" @click="addToDiplay(6)">6</button>
+    <button id="seven" @click="addToDiplay(7)">7</button>
+    <button id="eight" @click="addToDiplay(8)">8</button>
+    <button id="nine" @click="addToDiplay(9)">9</button>
     <!--
       User Story #3: My calculator should contain 4 clickable elements 
       each containing one of the 4 primary mathematical operators with 
       the following corresponding IDs: id="add", id="subtract", 
       id="multiply", id="divide".
     -->
-    <button id="add">+</button>
-    <button id="subtract">-</button>
-    <button id="multiply">*</button>
-    <button id="divide">/</button>
+    <button id="add" @click="addToDiplay('+')">+</button>
+    <button id="subtract" @click="addToDiplay('-')">-</button>
+    <button id="multiply" @click="addToDiplay('*')">*</button>
+    <button id="divide" @click="addToDiplay('/')">/</button>
     <!--
       User Story #4: My calculator should contain a clickable element 
       containing a . (decimal point) symbol with a corresponding id="decimal".
@@ -47,13 +47,6 @@
     -->
     <input id="display" v-model="value">
     <!--
-      User Story #9: In any order, I should be able to add, subtract, 
-      multiply and divide a chain of numbers of any length, and when I hit =, 
-      the correct result should be shown in the element with the id of display.
-
-      User Story #10: When inputting numbers, my calculator should not allow 
-      a number to begin with multiple zeros.
-
       User Story #11: When the decimal element is clicked, a . should append 
       to the currently displayed value; two . in one number should not be accepted.
 
@@ -110,13 +103,23 @@ export default {
     /*
       User Story #8: As I input numbers, I should be able to see my input 
       in the element with the id of display.
+
+      User Story #9: In any order, I should be able to add, subtract, 
+      multiply and divide a chain of numbers of any length, and when I hit =, 
+      the correct result should be shown in the element with the id of display.
+
+      User Story #10: When inputting numbers, my calculator should not allow 
+      a number to begin with multiple zeros.
     */
-    addNumberToDiplay(number) {
+    addToDiplay(number) {
       if (this.value === "0") {
         this.value = "";
       }
 
       this.value += number;
+    },
+    calculate() {
+      this.value = eval(this.value);
     }
   }
 };
