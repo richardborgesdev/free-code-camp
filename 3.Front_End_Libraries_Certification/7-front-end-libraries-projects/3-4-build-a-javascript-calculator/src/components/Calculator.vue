@@ -35,7 +35,7 @@
       User Story #4: My calculator should contain a clickable element 
       containing a . (decimal point) symbol with a corresponding id="decimal".
     -->
-    <button id="decimal">.</button>
+    <button id="decimal" @click="addToDiplay('.')">.</button>
     <!--
       User Story #5: My calculator should contain a clickable element 
       with an id="clear".
@@ -47,9 +47,6 @@
     -->
     <input id="display" v-model="value">
     <!--
-      User Story #11: When the decimal element is clicked, a . should append 
-      to the currently displayed value; two . in one number should not be accepted.
-
       User Story #12: I should be able to perform any operation (+, -, *, /) 
       on numbers containing decimal points.
 
@@ -111,12 +108,22 @@ export default {
       User Story #10: When inputting numbers, my calculator should not allow 
       a number to begin with multiple zeros.
     */
-    addToDiplay(number) {
-      if (this.value === "0") {
+    addToDiplay(toAdd) {
+      /*
+        User Story #11: When the decimal element is clicked, a . should append 
+        to the currently displayed value; two . in one number should not be accepted.
+      */
+      const lastCharacterToInt = parseInt(this.value[this.value.length - 1], 10);
+
+      if (!Number.isInteger(lastCharacterToInt) && toAdd === ".") {
+        return;
+      }
+
+      if (this.value === "0" && toAdd !== ".") {
         this.value = "";
       }
 
-      this.value += number;
+      this.value += toAdd;
     },
     calculate() {
       this.value = eval(this.value);
