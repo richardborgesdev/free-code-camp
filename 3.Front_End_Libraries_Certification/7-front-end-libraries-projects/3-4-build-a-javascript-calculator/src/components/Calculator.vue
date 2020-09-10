@@ -88,6 +88,35 @@ export default {
       value: "0"
     };
   },
+  mounted() {
+    const callAddToDiplay = number => {
+      this.addToDiplay(number);
+    };
+    const callCalculate = () => {
+      this.calculate();
+    };
+
+    window.addEventListener("keyup", e => {
+      console.log(e.keyCode);
+      switch (e.keyCode) {
+        case 13:
+          callCalculate();
+          break;
+        case 96 || 48:
+          callAddToDiplay("0");
+          break;
+        case 49:
+        case 97:
+          callAddToDiplay("1");
+          break;
+        case 107:
+          callAddToDiplay("+");
+          break;
+        default:
+          break;
+      }
+    });
+  },
   methods: {
     /*
       User Story #7: At any time, pressing the clear button clears the input 
@@ -113,7 +142,10 @@ export default {
         User Story #11: When the decimal element is clicked, a . should append 
         to the currently displayed value; two . in one number should not be accepted.
       */
-      const lastCharacterToInt = parseInt(this.value[this.value.length - 1], 10);
+      const lastCharacterToInt = parseInt(
+        this.value[this.value.length - 1],
+        10
+      );
 
       if (!Number.isInteger(lastCharacterToInt) && toAdd === ".") {
         return;
