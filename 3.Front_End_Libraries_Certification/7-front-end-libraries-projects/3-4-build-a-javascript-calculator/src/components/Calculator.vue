@@ -102,12 +102,45 @@ export default {
         case 13:
           callCalculate();
           break;
-        case 96 || 48:
+        case 48:
+        case 96:
           callAddToDiplay("0");
           break;
         case 49:
         case 97:
           callAddToDiplay("1");
+          break;
+        case 50:
+        case 98:
+          callAddToDiplay("2");
+          break;
+        case 51:
+        case 99:
+          callAddToDiplay("3");
+          break;
+        case 52:
+        case 100:
+          callAddToDiplay("4");
+          break;
+        case 53:
+        case 101:
+          callAddToDiplay("5");
+          break;
+        case 54:
+        case 102:
+          callAddToDiplay("6");
+          break;
+        case 55:
+        case 103:
+          callAddToDiplay("7");
+          break;
+        case 56:
+        case 104:
+          callAddToDiplay("8");
+          break;
+        case 57:
+        case 105:
+          callAddToDiplay("9");
           break;
         case 107:
           callAddToDiplay("+");
