@@ -142,6 +142,10 @@ export default {
         case 105:
           callAddToDiplay("9");
           break;
+        case 16:
+        case 106:
+          callAddToDiplay("*");
+          break;
         case 107:
           callAddToDiplay("+");
           break;
