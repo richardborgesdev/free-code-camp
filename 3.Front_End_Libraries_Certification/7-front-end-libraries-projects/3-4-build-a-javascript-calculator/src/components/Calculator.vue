@@ -47,9 +47,6 @@
     -->
     <input id="display" v-model="value">
     <!--
-      User Story #12: I should be able to perform any operation (+, -, *, /) 
-      on numbers containing decimal points.
-
       User Story #13: If 2 or more operators are entered consecutively, 
       the operation performed should be the last operator entered 
       (excluding the negative (-) sign). For example, if 5 + * 7 = is entered, 
@@ -89,69 +86,12 @@ export default {
     };
   },
   mounted() {
-    const callAddToDiplay = number => {
-      this.addToDiplay(number);
-    };
-    const callCalculate = () => {
-      this.calculate();
+    const callMapNumPad = keyCode => {
+      this.mapNumPad(keyCode);
     };
 
     window.addEventListener("keyup", e => {
-      console.log(e.keyCode);
-      switch (e.keyCode) {
-        case 13:
-          callCalculate();
-          break;
-        case 48:
-        case 96:
-          callAddToDiplay("0");
-          break;
-        case 49:
-        case 97:
-          callAddToDiplay("1");
-          break;
-        case 50:
-        case 98:
-          callAddToDiplay("2");
-          break;
-        case 51:
-        case 99:
-          callAddToDiplay("3");
-          break;
-        case 52:
-        case 100:
-          callAddToDiplay("4");
-          break;
-        case 53:
-        case 101:
-          callAddToDiplay("5");
-          break;
-        case 54:
-        case 102:
-          callAddToDiplay("6");
-          break;
-        case 55:
-        case 103:
-          callAddToDiplay("7");
-          break;
-        case 56:
-        case 104:
-          callAddToDiplay("8");
-          break;
-        case 57:
-        case 105:
-          callAddToDiplay("9");
-          break;
-        case 16:
-        case 106:
-          callAddToDiplay("*");
-          break;
-        case 107:
-          callAddToDiplay("+");
-          break;
-        default:
-          break;
-      }
+      callMapNumPad(e.keyCode);
     });
   },
   methods: {
@@ -195,7 +135,75 @@ export default {
       this.value += toAdd;
     },
     calculate() {
+      /*
+        User Story #12: I should be able to perform any operation (+, -, *, /) 
+        on numbers containing decimal points.
+      */
       this.value = eval(this.value);
+    },
+    mapNumPad(keyCode) {
+      switch (keyCode) {
+        case 13:
+          this.calculate();
+          break;
+        case 48:
+        case 96:
+          this.addToDiplay("0");
+          break;
+        case 49:
+        case 97:
+          this.addToDiplay("1");
+          break;
+        case 50:
+        case 98:
+          this.addToDiplay("2");
+          break;
+        case 51:
+        case 99:
+          this.addToDiplay("3");
+          break;
+        case 52:
+        case 100:
+          this.addToDiplay("4");
+          break;
+        case 53:
+        case 101:
+          this.addToDiplay("5");
+          break;
+        case 54:
+        case 102:
+          this.addToDiplay("6");
+          break;
+        case 55:
+        case 103:
+          this.addToDiplay("7");
+          break;
+        case 56:
+        case 104:
+          this.addToDiplay("8");
+          break;
+        case 57:
+        case 105:
+          this.addToDiplay("9");
+          break;
+        case 106:
+          this.addToDiplay("*");
+          break;
+        case 107:
+          this.addToDiplay("+");
+          break;
+        case 108:
+          this.addToDiplay(".");
+          break;
+        case 109:
+          this.addToDiplay("+");
+          break;
+        case 111:
+          this.addToDiplay("/");
+          break;
+        default:
+          break;
+      }
     }
   }
 };
