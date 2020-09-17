@@ -13,7 +13,10 @@
     <!--
       User Story #3: I can see two clickable elements with corresponding 
       IDs: id="break-decrement" and id="session-decrement".
-
+    -->
+    <button id="break-decrement">break-decrement</button>
+    <button id="session-decrement">session-decrement</button>
+    <!--
       User Story #4: I can see two clickable elements with corresponding 
       IDs: id="break-increment" and id="session-increment".
 
