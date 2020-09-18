@@ -19,7 +19,10 @@
     <!--
       User Story #4: I can see two clickable elements with corresponding 
       IDs: id="break-increment" and id="session-increment".
-
+    -->
+    <button id="break-increment">break-increment</button>
+    <button id="session-increment">session-increment</button>
+    <!--
       User Story #5: I can see an element with a corresponding id="break-length", 
       which by default (on load) displays a value of 5.
 
