@@ -3,8 +3,12 @@
     <!--
       User Story #1: I can see an element with id="break-label" that contains 
       a string (e.g. "Break Length").
+
+      User Story #5: I can see an element with a corresponding id="break-length", 
+      which by default (on load) displays a value of 5.
     -->
     <p id="break-label">Break Length</p>
+    <input id="break-length" value="5">
     <!--
       User Story #2: I can see an element with id="session-label" that contains 
       a string (e.g. "Session Length").
@@ -23,9 +27,6 @@
     <button id="break-increment">break-increment</button>
     <button id="session-increment">session-increment</button>
     <!--
-      User Story #5: I can see an element with a corresponding id="break-length", 
-      which by default (on load) displays a value of 5.
-
       User Story #6: I can see an element with a corresponding id="session-length", 
       which by default displays a value of 25.
 
