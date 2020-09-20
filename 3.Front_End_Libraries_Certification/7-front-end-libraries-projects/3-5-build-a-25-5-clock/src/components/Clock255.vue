@@ -12,24 +12,29 @@
     <!--
       User Story #2: I can see an element with id="session-label" that contains 
       a string (e.g. "Session Length").
+
+      User Story #6: I can see an element with a corresponding id="session-length", 
+      which by default displays a value of 25.
     -->
     <p id="session-label">Session Length</p>
+    <input id="session-length" value="25">
     <!--
       User Story #3: I can see two clickable elements with corresponding 
       IDs: id="break-decrement" and id="session-decrement".
     -->
-    <button id="break-decrement">break-decrement</button>
-    <button id="session-decrement">session-decrement</button>
+    <p>
+      <button id="break-decrement">break-decrement</button>
+      <button id="session-decrement">session-decrement</button>
+    </p>
     <!--
       User Story #4: I can see two clickable elements with corresponding 
       IDs: id="break-increment" and id="session-increment".
     -->
-    <button id="break-increment">break-increment</button>
-    <button id="session-increment">session-increment</button>
+    <p>
+      <button id="break-increment">break-increment</button>
+      <button id="session-increment">session-increment</button>
+    </p>
     <!--
-      User Story #6: I can see an element with a corresponding id="session-length", 
-      which by default displays a value of 25.
-
       User Story #7: I can see an element with a corresponding id="timer-label", 
       that contains a string indicating a session is initialized (e.g. "Session").
 
