@@ -37,11 +37,15 @@
     <!--
       User Story #7: I can see an element with a corresponding id="timer-label", 
       that contains a string indicating a session is initialized (e.g. "Session").
-
+    -->
+    <p id="timer-label">Session</p>
+    <!--
       User Story #8: I can see an element with corresponding id="time-left". 
       NOTE: Paused or running, the value in this field should always be displayed 
       in mm:ss format (i.e. 25:00).
-
+    -->
+    <p id="time-left">time-left</p>
+    <!--
       User Story #9: I can see a clickable element with a corresponding 
       id="start_stop".
 
