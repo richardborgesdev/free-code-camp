@@ -8,7 +8,7 @@
       which by default (on load) displays a value of 5.
     -->
     <p id="break-label">Break Length</p>
-    <input id="break-length" value="5">
+    <input id="break-length" value="5" />
     <!--
       User Story #2: I can see an element with id="session-label" that contains 
       a string (e.g. "Session Length").
@@ -17,7 +17,7 @@
       which by default displays a value of 25.
     -->
     <p id="session-label">Session Length</p>
-    <input id="session-length" value="25">
+    <input id="session-length" value="25" />
     <!--
       User Story #3: I can see two clickable elements with corresponding 
       IDs: id="break-decrement" and id="session-decrement".
@@ -48,9 +48,17 @@
     <!--
       User Story #9: I can see a clickable element with a corresponding 
       id="start_stop".
-
+    -->
+    <p>
+      <button id="start_stop">start_stop</button>
+    </p>
+    <!--
       User Story #10: I can see a clickable element with a corresponding id="reset".
-
+    -->
+    <p>
+      <button id="reset">reset</button>
+    </p>
+    <!--
       User Story #11: When I click the element with the id of reset, any running 
       timer should be stopped, the value within id="break-length" should return to 5, 
       the value within id="session-length" should return to 25, and the element with 
@@ -123,8 +131,8 @@
 <script>
 export default {
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>
 
