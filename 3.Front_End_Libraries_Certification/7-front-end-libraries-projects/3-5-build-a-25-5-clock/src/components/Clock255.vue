@@ -130,9 +130,15 @@
 
 <script>
 export default {
-  props: {
-    msg: String,
+  data() {
+    return {
+      breakLength: 5,
+      sessionLength: 5,
+      session: 0,
+      timeLeft: 0,
+    };
   },
+  methods: {},
 };
 </script>
 
