@@ -8,7 +8,7 @@
       which by default (on load) displays a value of 5.
     -->
     <p id="break-label">Break Length</p>
-    <input id="break-length" value="5" />
+    <input id="break-length" value="5" v-model="breakLength" />
     <!--
       User Story #2: I can see an element with id="session-label" that contains 
       a string (e.g. "Session Length").
@@ -17,7 +17,7 @@
       which by default displays a value of 25.
     -->
     <p id="session-label">Session Length</p>
-    <input id="session-length" value="25" />
+    <input id="session-length" value="25" v-model="sessionLength" />
     <!--
       User Story #3: I can see two clickable elements with corresponding 
       IDs: id="break-decrement" and id="session-decrement".
@@ -38,13 +38,13 @@
       User Story #7: I can see an element with a corresponding id="timer-label", 
       that contains a string indicating a session is initialized (e.g. "Session").
     -->
-    <p id="timer-label">Session</p>
+    <p id="timer-label">Session: {{ session }}</p>
     <!--
       User Story #8: I can see an element with corresponding id="time-left". 
       NOTE: Paused or running, the value in this field should always be displayed 
       in mm:ss format (i.e. 25:00).
     -->
-    <p id="time-left">time-left</p>
+    <p id="time-left">time-left: {{ timeLeft }}</p>
     <!--
       User Story #9: I can see a clickable element with a corresponding 
       id="start_stop".
@@ -56,14 +56,9 @@
       User Story #10: I can see a clickable element with a corresponding id="reset".
     -->
     <p>
-      <button id="reset">reset</button>
+      <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #11: When I click the element with the id of reset, any running 
-      timer should be stopped, the value within id="break-length" should return to 5, 
-      the value within id="session-length" should return to 25, and the element with 
-      id="time-left" should reset to it's default state.
-
       User Story #12: When I click the element with the id of break-decrement, 
       the value within id="break-length" decrements by a value of 1, and I can see 
       the updated value.
@@ -138,7 +133,19 @@ export default {
       timeLeft: 0,
     };
   },
-  methods: {},
+  methods: {
+    /*
+      User Story #11: When I click the element with the id of reset, any running 
+      timer should be stopped, the value within id="break-length" should return to 5, 
+      the value within id="session-length" should return to 25, and the element with 
+      id="time-left" should reset to it's default state.
+    */
+    reset() {
+      this.breakLength = 5;
+      this.sessionLength = 25;
+      this.timeLeft = this.sessionLength;
+    },
+  },
 };
 </script>
 
