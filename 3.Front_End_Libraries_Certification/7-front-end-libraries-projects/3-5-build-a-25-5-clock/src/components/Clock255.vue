@@ -23,7 +23,9 @@
       IDs: id="break-decrement" and id="session-decrement".
     -->
     <p>
-      <button id="break-decrement">break-decrement</button>
+      <button id="break-decrement" @click="breakDecrements()">
+        break-decrement
+      </button>
       <button id="session-decrement">session-decrement</button>
     </p>
     <!--
@@ -59,10 +61,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #12: When I click the element with the id of break-decrement, 
-      the value within id="break-length" decrements by a value of 1, and I can see 
-      the updated value.
-
       User Story #13: When I click the element with the id of break-increment, 
       the value within id="break-length" increments by a value of 1, and I can see 
       the updated value.
@@ -144,6 +142,16 @@ export default {
       this.breakLength = 5;
       this.sessionLength = 25;
       this.timeLeft = this.sessionLength;
+    },
+    /*
+      User Story #12: When I click the element with the id of break-decrement, 
+      the value within id="break-length" decrements by a value of 1, and I can see 
+      the updated value.
+    */
+    breakDecrements() {
+      if (this.breakLength > 0) {
+        this.breakLength -= 1;
+      }
     },
   },
 };
