@@ -26,7 +26,9 @@
       <button id="break-decrement" @click="breakDecrements()">
         break-decrement
       </button>
-      <button id="session-decrement">session-decrement</button>
+      <button id="session-decrement" @click="sessionDecrements()">
+        session-decrement
+      </button>
     </p>
     <!--
       User Story #4: I can see two clickable elements with corresponding 
@@ -63,10 +65,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #14: When I click the element with the id of session-decrement, 
-      the value within id="session-length" decrements by a value of 1, and I can 
-      see the updated value.
-
       User Story #15: When I click the element with the id of session-increment, 
       the value within id="session-length" increments by a value of 1, and I can 
       see the updated value.
@@ -158,6 +156,16 @@ export default {
     */
     breakIncrements() {
       this.breakLength += 1;
+    },
+    /*
+      User Story #14: When I click the element with the id of session-decrement, 
+      the value within id="session-length" decrements by a value of 1, and I can 
+      see the updated value.
+    */
+    sessionDecrements() {
+      if (this.sessionLength > 0) {
+        this.sessionLength -= 1;
+      }
     },
   },
 };
