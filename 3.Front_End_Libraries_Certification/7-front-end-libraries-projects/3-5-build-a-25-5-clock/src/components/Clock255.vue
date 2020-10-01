@@ -38,7 +38,9 @@
       <button id="break-increment" @click="breakIncrements()">
         break-increment
       </button>
-      <button id="session-increment">session-increment</button>
+      <button id="session-increment" @click="sessionIncrements()">
+        session-increment
+      </button>
     </p>
     <!--
       User Story #7: I can see an element with a corresponding id="timer-label", 
@@ -65,10 +67,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #15: When I click the element with the id of session-increment, 
-      the value within id="session-length" increments by a value of 1, and I can 
-      see the updated value.
-
       User Story #16: I should not be able to set a session or break length to <= 0.
 
       User Story #17: I should not be able to set a session or break length to > 60.
@@ -166,6 +164,14 @@ export default {
       if (this.sessionLength > 0) {
         this.sessionLength -= 1;
       }
+    },
+    /*
+      User Story #15: When I click the element with the id of session-increment, 
+      the value within id="session-length" increments by a value of 1, and I can 
+      see the updated value.
+    */
+    sessionIncrements() {
+      this.sessionLength += 1;
     },
   },
 };
