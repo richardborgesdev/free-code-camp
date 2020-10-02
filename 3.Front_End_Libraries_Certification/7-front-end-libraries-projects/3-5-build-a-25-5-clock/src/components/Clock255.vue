@@ -67,10 +67,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #16: I should not be able to set a session or break length to <= 0.
-
-      User Story #17: I should not be able to set a session or break length to > 60.
-
       User Story #18: When I first click the element with id="start_stop", 
       the timer should begin running from the value currently displayed in 
       id="session-length", even if the value has been incremented or decremented 
@@ -120,7 +116,7 @@ export default {
   data() {
     return {
       breakLength: 5,
-      sessionLength: 5,
+      sessionLength: 25,
       session: 0,
       timeLeft: 0,
     };
@@ -143,6 +139,7 @@ export default {
       the updated value.
     */
     breakDecrements() {
+      // User Story #16: I should not be able to set a session or break length to <= 0.
       if (this.breakLength > 0) {
         this.breakLength -= 1;
       }
@@ -153,7 +150,10 @@ export default {
       the updated value.
     */
     breakIncrements() {
-      this.breakLength += 1;
+      // User Story #17: I should not be able to set a session or break length to > 60.
+      if (this.breakLength < 60) {
+        this.breakLength += 1;
+      }
     },
     /*
       User Story #14: When I click the element with the id of session-decrement, 
