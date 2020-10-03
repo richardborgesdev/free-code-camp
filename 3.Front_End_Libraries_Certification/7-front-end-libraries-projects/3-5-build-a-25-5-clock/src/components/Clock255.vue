@@ -58,7 +58,7 @@
       id="start_stop".
     -->
     <p>
-      <button id="start_stop">start_stop</button>
+      <button id="start_stop" @click="startStopTimer()">start_stop</button>
     </p>
     <!--
       User Story #10: I can see a clickable element with a corresponding id="reset".
@@ -67,11 +67,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #18: When I first click the element with id="start_stop", 
-      the timer should begin running from the value currently displayed in 
-      id="session-length", even if the value has been incremented or decremented 
-      from the original value of 25.
-
       User Story #19: If the timer is running, the element with the id of time-left 
       should display the remaining time in mm:ss format (decrementing by a value of 
       1 and updating the display every 1000ms).
@@ -172,6 +167,16 @@ export default {
     */
     sessionIncrements() {
       this.sessionLength += 1;
+    },
+    /*
+      User Story #18: When I first click the element with id="start_stop", 
+      the timer should begin running from the value currently displayed in 
+      id="session-length", even if the value has been incremented or decremented 
+      from the original value of 25.
+    */
+    startStopTimer() {
+      this.session = this.sessionLength;
+      this.timeLeft = this.sessionLength;
     },
   },
 };
