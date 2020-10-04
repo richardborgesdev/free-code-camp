@@ -114,6 +114,8 @@ export default {
       sessionLength: 25,
       session: 0,
       timeLeft: 0,
+      clockOn: false,
+      timer: 0,
     };
   },
   methods: {
@@ -175,8 +177,19 @@ export default {
       from the original value of 25.
     */
     startStopTimer() {
-      this.session = this.sessionLength;
-      this.timeLeft = this.sessionLength;
+      this.clockOn = !this.clockOn;
+
+      if (this.clockOn) {
+        this.session = this.sessionLength;
+
+        this.timer = setInterval(() => {
+          this.session--;
+        }, 1000);
+      } else {
+        this.clockOn = false;
+        clearInterval(this.timer);
+        this.timer = null;
+      }
     },
   },
 };
