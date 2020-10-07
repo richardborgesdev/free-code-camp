@@ -46,13 +46,13 @@
       User Story #7: I can see an element with a corresponding id="timer-label", 
       that contains a string indicating a session is initialized (e.g. "Session").
     -->
-    <p id="timer-label">Session: {{ session }}</p>
+    <p id="timer-label">Session: {{ sessionMinutes }}:{{ sessionSeconds }}</p>
     <!--
       User Story #8: I can see an element with corresponding id="time-left". 
       NOTE: Paused or running, the value in this field should always be displayed 
       in mm:ss format (i.e. 25:00).
     -->
-    <p id="time-left">time-left: {{ timeLeft }}</p>
+    <p id="time-left">time-left: {{ timeLeftMinutes }}:{{ timeLeftSeconds }}</p>
     <!--
       User Story #9: I can see a clickable element with a corresponding 
       id="start_stop".
@@ -67,10 +67,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #19: If the timer is running, the element with the id of time-left 
-      should display the remaining time in mm:ss format (decrementing by a value of 
-      1 and updating the display every 1000ms).
-
       User Story #22: When a session countdown reaches zero (NOTE: timer MUST 
       reach 00:00), and a new countdown begins, the element with the id of 
       timer-label should display a string indicating a break has begun.
@@ -105,8 +101,10 @@ export default {
     return {
       breakLength: 5,
       sessionLength: 25,
-      session: 0,
-      timeLeft: 0,
+      sessionMinutes: 0,
+      sessionSeconds: 0,
+      timeLeftMinutes: 0,
+      timeLeftSeconds: 0,
       clockOn: false,
       timer: 0,
     };
@@ -119,9 +117,10 @@ export default {
       id="time-left" should reset to it's default state.
     */
     reset() {
-      this.breakLength = 5;
-      this.session = 0;
-      this.timeLeft = this.sessionLength;
+      this.sessionMinutes = 0;
+      this.sessionSeconds = 0;
+      this.timeLeftMinutes = this.sessionLength;
+      this.timeLeftSeconds = 0;
     },
     /*
       User Story #12: When I click the element with the id of break-decrement, 
@@ -169,6 +168,10 @@ export default {
       id="session-length", even if the value has been incremented or decremented 
       from the original value of 25.
 
+      User Story #19: If the timer is running, the element with the id of time-left 
+      should display the remaining time in mm:ss format (decrementing by a value of 
+      1 and updating the display every 1000ms).
+
       User Story #20: If the timer is running and I click the element with 
       id="start_stop", the countdown should pause.
 
@@ -180,11 +183,19 @@ export default {
       this.clockOn = !this.clockOn;
 
       if (this.clockOn) {
-        this.timeLeft = this.sessionLength;
+        this.timeLeftMinutes = this.sessionLength - 1;
+        this.timeLeftSeconds = 60;
 
         this.timer = setInterval(() => {
-          this.session++;
-          this.timeLeft--;
+          this.sessionSeconds++;
+          this.timeLeftSeconds--;
+
+          if (this.sessionSeconds === 60) {
+            this.sessionSeconds = 0;
+            this.sessionMinutes++;
+            this.timeLeftSeconds = 60;
+            this.timeLeftMinutes--;
+          }
         }, 1000);
       } else {
         this.clockOn = false;
