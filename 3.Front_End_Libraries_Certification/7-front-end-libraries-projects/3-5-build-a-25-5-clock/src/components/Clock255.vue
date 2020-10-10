@@ -52,7 +52,9 @@
       NOTE: Paused or running, the value in this field should always be displayed 
       in mm:ss format (i.e. 25:00).
     -->
-    <p id="time-left">time-left: {{ timeLeftMinutes }}:{{ timeLeftSeconds }}</p>
+    <p id="time-left">
+      {{ timeLeftLabel }}: {{ timeLeftMinutes }}:{{ timeLeftSeconds }}
+    </p>
     <!--
       User Story #9: I can see a clickable element with a corresponding 
       id="start_stop".
@@ -67,14 +69,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #22: When a session countdown reaches zero (NOTE: timer MUST 
-      reach 00:00), and a new countdown begins, the element with the id of 
-      timer-label should display a string indicating a break has begun.
-
-      User Story #23: When a session countdown reaches zero (NOTE: timer MUST 
-      reach 00:00), a new break countdown should begin, counting down from the 
-      value currently displayed in the id="break-length" element.
-
       User Story #24: When a break countdown reaches zero (NOTE: timer MUST 
       reach 00:00), and a new countdown begins, the element with the id of 
       timer-label should display a string indicating a session has begun.
@@ -103,6 +97,7 @@ export default {
       sessionLength: 25,
       sessionMinutes: 0,
       sessionSeconds: 0,
+      timeLeftLabel: "time-left",
       timeLeftMinutes: 0,
       timeLeftSeconds: 0,
       clockOn: false,
@@ -121,6 +116,7 @@ export default {
       this.sessionSeconds = 0;
       this.timeLeftMinutes = this.sessionLength;
       this.timeLeftSeconds = 0;
+      this.timeLeftLabel = "time-left";
     },
     /*
       User Story #12: When I click the element with the id of break-decrement, 
@@ -178,6 +174,14 @@ export default {
       User Story #21: If the timer is paused and I click the element with 
       id="start_stop", the countdown should resume running from the point at which 
       it was paused.
+
+      User Story #22: When a session countdown reaches zero (NOTE: timer MUST 
+      reach 00:00), and a new countdown begins, the element with the id of 
+      timer-label should display a string indicating a break has begun.
+
+      User Story #23: When a session countdown reaches zero (NOTE: timer MUST 
+      reach 00:00), a new break countdown should begin, counting down from the 
+      value currently displayed in the id="break-length" element.
     */
     startStopTimer() {
       this.clockOn = !this.clockOn;
@@ -195,6 +199,11 @@ export default {
             this.sessionMinutes++;
             this.timeLeftSeconds = 60;
             this.timeLeftMinutes--;
+          }
+
+          if (this.timeLeftMinutes === -1) {
+            this.timeLeftMinutes = this.breakLength - 1;
+            this.timeLeftLabel = "break-left";
           }
         }, 1000);
       } else {
