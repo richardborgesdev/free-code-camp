@@ -69,10 +69,6 @@
       <button id="reset" @click="reset()">reset</button>
     </p>
     <!--
-      User Story #24: When a break countdown reaches zero (NOTE: timer MUST 
-      reach 00:00), and a new countdown begins, the element with the id of 
-      timer-label should display a string indicating a session has begun.
-
       User Story #25: When a break countdown reaches zero (NOTE: timer MUST 
       reach 00:00), a new session countdown should begin, counting down from 
       the value currently displayed in the id="session-length" element.
@@ -179,9 +175,7 @@ export default {
       reach 00:00), and a new countdown begins, the element with the id of 
       timer-label should display a string indicating a break has begun.
 
-      User Story #23: When a session countdown reaches zero (NOTE: timer MUST 
-      reach 00:00), a new break countdown should begin, counting down from the 
-      value currently displayed in the id="break-length" element.
+
     */
     startStopTimer() {
       this.clockOn = !this.clockOn;
@@ -201,9 +195,23 @@ export default {
             this.timeLeftMinutes--;
           }
 
+          /*
+            User Story #23: When a session countdown reaches zero (NOTE: timer MUST 
+            reach 00:00), a new break countdown should begin, counting down from the 
+            value currently displayed in the id="break-length" element.
+
+            User Story #24: When a break countdown reaches zero (NOTE: timer MUST 
+            reach 00:00), and a new countdown begins, the element with the id of 
+            timer-label should display a string indicating a session has begun.
+          */
           if (this.timeLeftMinutes === -1) {
             this.timeLeftMinutes = this.breakLength - 1;
-            this.timeLeftLabel = "break-left";
+
+            if (this.timeLeftLabel === "time-left") {
+              this.timeLeftLabel = "break-left";
+            } else {
+              this.timeLeftLabel = "time-left";
+            }
           }
         }, 1000);
       } else {
