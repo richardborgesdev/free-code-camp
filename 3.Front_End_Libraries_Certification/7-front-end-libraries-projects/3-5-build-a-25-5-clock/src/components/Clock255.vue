@@ -68,6 +68,7 @@
     <p>
       <button id="reset" @click="reset()">reset</button>
     </p>
+
     <!--
       User Story #26: When a countdown reaches zero (NOTE: timer MUST reach 00:00), 
       a sound indicating that time is up should play. This should utilize an HTML5 
@@ -78,6 +79,12 @@
       User Story #28: The audio element with id of beep must stop playing and be 
       rewound to the beginning when the element with the id of reset is clicked.
     -->
+    <audio
+      id="beep"
+      class="clip"
+      src="https://sampleswap.org/samples-ghost/SOUND%20EFFECTS%20and%20NOISES/Cheesy%20Lo-Fi%20Sound%20Effects/7[kb]Beep-Boop.aif.mp3"
+      type="audio/mpeg"
+    />
   </div>
 </template>
 
@@ -109,6 +116,7 @@ export default {
       this.timeLeftMinutes = this.sessionLength;
       this.timeLeftSeconds = 0;
       this.timeLeftLabel = "time-left";
+      document.getElementById("beep").play();
     },
     /*
       User Story #12: When I click the element with the id of break-decrement, 
@@ -204,6 +212,7 @@ export default {
             timer-label should display a string indicating a session has begun.
           */
           if (this.timeLeftMinutes === -1) {
+            document.getElementById("beep").play();
             this.timeLeftMinutes = this.breakLength - 1;
 
             if (this.timeLeftLabel === "time-left") {
