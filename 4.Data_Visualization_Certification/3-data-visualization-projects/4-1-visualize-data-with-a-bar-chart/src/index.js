@@ -3,13 +3,13 @@ import * as d3 from "d3";
 const buildVisualization = (dataset) => {
   console.log(dataset);
 
-  const w = 500;
+  const w = dataset.length * 8;
   const h = 500;
   const padding = 60;
 
   const xScale = d3
     .scaleLinear()
-    .domain([0, d3.max(dataset, (d) => d[0])])
+    .domain([0, dataset.length])
     .range([padding, w - padding]);
 
   const yScale = d3
@@ -23,6 +23,16 @@ const buildVisualization = (dataset) => {
     .attr("width", w)
     .attr("height", h);
 
+  svg
+    .selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    .attr("x", (d, i) => i * 30 + padding + 15)
+    .attr("y", (d, i) => d[1] - padding)
+    .attr("width", 25)
+    .attr("height", (d, i) => yScale(d[1]));
+  /*
   svg
     .selectAll("circle")
     .data(dataset)
@@ -40,7 +50,7 @@ const buildVisualization = (dataset) => {
     .text((d) => d[0] + "," + d[1])
     .attr("x", (d) => xScale(d[0] + 10))
     .attr("y", (d) => yScale(d[1]));
-
+*/
   const xAxis = d3.axisBottom(xScale);
   const yAxis = d3.axisLeft(yScale);
 
@@ -104,21 +114,6 @@ const buildVisualization = (dataset) => {
   */
 };
 
-const dataset = [
-  [34, 78],
-  [109, 280],
-  [310, 120],
-  [79, 411],
-  [420, 220],
-  [233, 145],
-  [333, 96],
-  [222, 333],
-  [78, 320],
-  [21, 123]
-];
-
-buildVisualization(dataset);
-
 const buildVisualizationWithFccDataset = async () => {
   /*
     Here is the dataset you will need to complete this project:
@@ -129,7 +124,7 @@ const buildVisualizationWithFccDataset = async () => {
   );
   let fccDataset = await response.json();
   console.log(fccDataset);
-  // buildVisualization(fccDataset);
+  buildVisualization(fccDataset.data);
 };
 
 buildVisualizationWithFccDataset();
