@@ -31,7 +31,19 @@ const buildVisualization = (dataset) => {
     .attr("x", (d, i) => i * 30 + padding + 15)
     .attr("y", (d, i) => d[1] - padding)
     .attr("width", 25)
-    .attr("height", (d, i) => yScale(d[1]));
+    .attr("height", (d, i) => yScale(d[1]))
+    /*
+      User Story #5: My chart should have a rect element for each data point with
+      a corresponding class="bar" displaying the data.
+    */
+    .attr("class", "bar")
+    /*
+      User Story #6: Each bar should have the properties data-date and data-gdp
+      containing date and GDP values.
+    */
+    .attr("data-date", (d) => d[0])
+    .attr("data-gdp", (d) => d[1]);
+
   /*
   svg
     .selectAll("circle")
@@ -83,12 +95,6 @@ const buildVisualization = (dataset) => {
     .call(yAxis);
 
   /*
-    User Story #5: My chart should have a rect element for each data point with
-    a corresponding class="bar" displaying the data.
-
-    User Story #6: Each bar should have the properties data-date and data-gdp
-    containing date and GDP values.
-
     User Story #7: The bar elements' data-date properties should match the order
     of the provided data.
 
