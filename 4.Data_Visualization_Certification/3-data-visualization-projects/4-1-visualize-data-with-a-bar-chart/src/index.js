@@ -29,9 +29,13 @@ const buildVisualization = (dataset) => {
     .enter()
     .append("rect")
     .attr("x", (d, i) => i * 30 + padding + 15)
-    .attr("y", (d, i) => d[1] - padding)
+    .attr("y", (d, i) => h - d[1])
     .attr("width", 25)
-    .attr("height", (d, i) => yScale(d[1]))
+    /*
+      User Story #9: Each bar element's height should accurately represent the
+      data's corresponding GDP.
+    */
+    .attr("height", (d, i) => d[1])
     /*
       User Story #5: My chart should have a rect element for each data point with
       a corresponding class="bar" displaying the data.
@@ -100,9 +104,6 @@ const buildVisualization = (dataset) => {
 
     User Story #8: The bar elements' data-gdp properties should match the order
     of the provided data.
-
-    User Story #9: Each bar element's height should accurately represent the
-    data's corresponding GDP.
 
     User Story #10: The data-date attribute and its corresponding bar element
     should align with the corresponding value on the x-axis.
