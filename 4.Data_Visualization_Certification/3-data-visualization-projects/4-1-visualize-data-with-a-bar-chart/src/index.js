@@ -3,9 +3,9 @@ import * as d3 from "d3";
 const buildVisualization = (dataset) => {
   console.log(dataset);
 
-  const w = dataset.length * 8;
-  const h = 500;
   const padding = 60;
+  const w = dataset.length * 30 + padding + 15 + 75;
+  const h = d3.max(dataset, (d) => d[1]);
 
   const xScale = d3
     .scaleLinear()
@@ -44,29 +44,28 @@ const buildVisualization = (dataset) => {
     /*
       User Story #6: Each bar should have the properties data-date and data-gdp
       containing date and GDP values.
+
+      User Story #7: The bar elements' data-date properties should match the order
+      of the provided data.
     */
     .attr("data-date", (d) => d[0])
-    .attr("data-gdp", (d) => d[1]);
+    /*
+      User Story #8: The bar elements' data-gdp properties should match the order
+      of the provided data.
+    */
+    .attr("data-gdp", (d) => d[1])
+    /*
+      User Story #12: I can mouse over an area and see a tooltip with a
+      corresponding id="tooltip" which displays more information about the area.
 
-  /*
-  svg
-    .selectAll("circle")
-    .data(dataset)
-    .enter()
-    .append("circle")
-    .attr("cx", (d) => xScale(d[0]))
-    .attr("cy", (d) => yScale(d[1]))
-    .attr("r", (d) => 5);
+      User Story #13: My tooltip should have a data-date property that
+      corresponds to the data-date of the active area.
+    */
+    .append("div")
+    .attr("id", "tooltip")
+    .attr("title", (d) => `${d[0]}, ${d[1]}`)
+    .attr("data-date", (d) => d[0]);
 
-  svg
-    .selectAll("text")
-    .data(dataset)
-    .enter()
-    .append("text")
-    .text((d) => d[0] + "," + d[1])
-    .attr("x", (d) => xScale(d[0] + 10))
-    .attr("y", (d) => yScale(d[1]));
-*/
   const xAxis = d3.axisBottom(xScale);
   const yAxis = d3.axisLeft(yScale);
 
@@ -99,25 +98,11 @@ const buildVisualization = (dataset) => {
     .call(yAxis);
 
   /*
-    User Story #7: The bar elements' data-date properties should match the order
-    of the provided data.
-
-    User Story #8: The bar elements' data-gdp properties should match the order
-    of the provided data.
-
     User Story #10: The data-date attribute and its corresponding bar element
     should align with the corresponding value on the x-axis.
 
     User Story #11: The data-gdp attribute and its corresponding bar element
     should align with the corresponding value on the y-axis.
-
-    User Story #12: I can mouse over an area and see a tooltip with a
-    corresponding id="tooltip" which displays more information about the area.
-
-    User Story #13: My tooltip should have a data-date property that
-    corresponds to the data-date of the active area.
-
-
   */
 };
 
@@ -125,6 +110,8 @@ const buildVisualizationWithFccDataset = async () => {
   /*
     Here is the dataset you will need to complete this project:
     https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json
+
+    example: https://codepen.io/freeCodeCamp/pen/GrZVaM
   */
   const response = await fetch(
     "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json"
