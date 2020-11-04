@@ -26,6 +26,7 @@ const buildVisualization = (dataset) => {
   const divTooltip = d3
     .select("body")
     .append("div")
+    .attr("id", "tooltip")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -67,12 +68,14 @@ const buildVisualization = (dataset) => {
       User Story #13: My tooltip should have a data-date property that
       corresponds to the data-date of the active area.
     */
-    .on("mouseover", function (d) {
-      divTooltip.transition().duration(200).style("opacity", 0.9);
+    .on("mouseover", function (event, d) {
+      divTooltip.transition().duration(100).style("opacity", 0.9);
+      console.log(event);
       divTooltip
-        .html(d[0] + "<br/>" + d[1])
-        .style("left", 0 + "px")
-        .style("top", d[1] - 28 + "px");
+        .attr("data-date", d[0])
+        .html(d[0] + " - " + d[1])
+        .style("left", event.x + "px")
+        .style("top", h - d[1] + "px");
     })
     .on("mouseout", function (d) {
       divTooltip.transition().duration(500).style("opacity", 0);
