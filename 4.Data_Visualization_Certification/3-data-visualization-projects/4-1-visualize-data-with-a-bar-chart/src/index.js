@@ -3,25 +3,32 @@ import * as d3 from "d3";
 const buildVisualization = (dataset) => {
   console.log(dataset);
 
-  const padding = 60;
-  const w = dataset.length * 30 + padding + 15 + 75;
-  const h = d3.max(dataset, (d) => d[1]);
+  const padding = 60,
+    w = 800,
+    h = 400,
+    barWidth = w / dataset.length;
 
-  const xScale = d3
-    .scaleLinear()
-    .domain([0, dataset.length])
-    .range([padding, w - padding]);
+  var yearsDate = dataset.map(function (item) {
+    return new Date(item[0]);
+  });
+
+  var xMax = new Date(d3.max(yearsDate));
+  xMax.setMonth(xMax.getMonth() + 3);
+  var xScale = d3
+    .scaleTime()
+    .domain([d3.min(yearsDate), xMax])
+    .range([0, w]);
 
   const yScale = d3
     .scaleLinear()
     .domain([0, d3.max(dataset, (d) => d[1])])
-    .range([h - padding, padding]);
+    .range([h, 0]);
 
   const svg = d3
     .select("body")
     .append("svg")
-    .attr("width", w)
-    .attr("height", h);
+    .attr("width", w + 100)
+    .attr("height", h + padding);
 
   const divTooltip = d3
     .select("body")
@@ -35,14 +42,16 @@ const buildVisualization = (dataset) => {
     .data(dataset)
     .enter()
     .append("rect")
-    .attr("x", (d, i) => i * 30 + padding + 15)
+    .attr("x", (d, i) => xScale(yearsDate[i]))
     .attr("y", (d, i) => h - d[1])
-    .attr("width", 25)
+    .attr("width", barWidth)
     /*
       User Story #9: Each bar element's height should accurately represent the
       data's corresponding GDP.
     */
     .attr("height", (d, i) => d[1])
+    .style("fill", "#33adff")
+    .attr("transform", "translate(60, 0)")
     /*
       User Story #5: My chart should have a rect element for each data point with
       a corresponding class="bar" displaying the data.
@@ -95,7 +104,7 @@ const buildVisualization = (dataset) => {
       User Story #4: Both axes should contain multiple tick labels, each with the
       corresponding class="tick".
     */
-    .attr("transform", "translate(0," + (h - padding) + ")")
+    .attr("transform", "translate(60, 400)")
     .call(xAxis);
 
   /*
@@ -109,7 +118,7 @@ const buildVisualization = (dataset) => {
         User Story #4: Both axes should contain multiple tick labels, each with the
         corresponding class="tick".
       */
-    .attr("transform", "translate(" + padding + ", 0)")
+    .attr("transform", "translate(60, 0)")
     .call(yAxis);
 
   /*
