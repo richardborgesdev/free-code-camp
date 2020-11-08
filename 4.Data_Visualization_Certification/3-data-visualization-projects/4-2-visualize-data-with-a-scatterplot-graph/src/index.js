@@ -1,6 +1,4 @@
 /*
-  User Story #1: I can see a title element that has a corresponding id="title".
-
   User Story #2: I can see an x-axis that has a corresponding id="x-axis".
 
   User Story #3: I can see a y-axis that has a corresponding id="y-axis".
