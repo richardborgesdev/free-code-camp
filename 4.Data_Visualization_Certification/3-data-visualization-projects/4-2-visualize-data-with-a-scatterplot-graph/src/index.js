@@ -56,6 +56,28 @@ const buildVisualization = (dataset) => {
     .append("svg")
     .attr("width", w + 100)
     .attr("height", h + padding);
+
+  var yearsDate = dataset.map((item) => {
+    return item.Year;
+  });
+
+  var xMax = d3.max(yearsDate);
+  var xScale = d3
+    .scaleTime()
+    .domain([d3.min(yearsDate), xMax])
+    .range([0, w]);
+
+  const xAxis = d3.axisBottom(xScale);
+
+  svg
+    .append("g")
+    .attr("id", "x-axis")
+    /*
+    User Story #4: Both axes should contain multiple tick labels, each with the
+    corresponding class="tick".
+  */
+    .attr("transform", "translate(60, 400)")
+    .call(xAxis);
 };
 
 const buildVisualizationWithFccDataset = async () => {
