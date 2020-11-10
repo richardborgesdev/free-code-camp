@@ -1,6 +1,4 @@
 /*
-  User Story #2: I can see an x-axis that has a corresponding id="x-axis".
-
   User Story #3: I can see a y-axis that has a corresponding id="y-axis".
 
   User Story #4: I can see dots, that each have a class of dot,
@@ -44,6 +42,11 @@
 import * as d3 from "d3";
 
 const buildVisualization = (dataset) => {
+  dataset.forEach(function (d) {
+    d.Place = +d.Place;
+    var parsedTime = d.Time.split(":");
+    d.Time = new Date(Date.UTC(1970, 0, 1, 0, parsedTime[0], parsedTime[1]));
+  });
   console.log(dataset);
 
   const padding = 60,
@@ -57,27 +60,32 @@ const buildVisualization = (dataset) => {
     .attr("width", w + 100)
     .attr("height", h + padding);
 
-  var yearsDate = dataset.map((item) => {
-    return item.Year;
-  });
+  var x = d3.scaleLinear().range([0, w]);
+  x.domain([
+    d3.min(dataset, function (d) {
+      return d.Year - 1;
+    }),
+    d3.max(dataset, function (d) {
+      return d.Year + 1;
+    })
+  ]);
+  var xAxis = d3.axisBottom(x).tickFormat(d3.format("d"));
 
-  var xMax = d3.max(yearsDate);
-  var xScale = d3
-    .scaleTime()
-    .domain([d3.min(yearsDate), xMax])
-    .range([0, w]);
-
-  const xAxis = d3.axisBottom(xScale);
-
+  /*
+    User Story #2: I can see an x-axis that has a corresponding id="x-axis".
+  */
   svg
     .append("g")
+    .attr("class", "x axis")
     .attr("id", "x-axis")
-    /*
-    User Story #4: Both axes should contain multiple tick labels, each with the
-    corresponding class="tick".
-  */
-    .attr("transform", "translate(60, 400)")
-    .call(xAxis);
+    .attr("transform", "translate(0," + h + ")")
+    .call(xAxis)
+    .append("text")
+    .attr("class", "x-axis-label")
+    .attr("x", w)
+    .attr("y", -6)
+    .style("text-anchor", "end")
+    .text("Year");
 };
 
 const buildVisualizationWithFccDataset = async () => {
