@@ -40,24 +40,38 @@
 import * as d3 from "d3";
 
 const buildVisualization = (dataset) => {
+  console.log(dataset);
+
+  const margin = {
+      top: 100,
+      right: 20,
+      bottom: 30,
+      left: 60
+    },
+    width = 920 - margin.left - margin.right,
+    height = 630 - margin.top - margin.bottom;
+
+  const x = d3.scaleLinear().range([0, width]);
+  const y = d3.scaleTime().range([0, height]);
+
+  const timeFormat = d3.timeFormat("%M:%S");
+
+  const xAxis = d3.axisBottom(x).tickFormat(d3.format("d"));
+  const yAxis = d3.axisLeft(y).tickFormat(timeFormat);
+
+  const svg = d3
+    .select("body")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
   dataset.forEach(function (d) {
     d.Place = +d.Place;
     var parsedTime = d.Time.split(":");
     d.Time = new Date(Date.UTC(1970, 0, 1, 0, parsedTime[0], parsedTime[1]));
   });
-  console.log(dataset);
 
-  const padding = 60,
-    w = 800,
-    h = 400;
-
-  const svg = d3
-    .select("body")
-    .append("svg")
-    .attr("width", w + 100)
-    .attr("height", h + padding);
-
-  const x = d3.scaleLinear().range([0, w]);
   x.domain([
     d3.min(dataset, function (d) {
       return d.Year - 1;
@@ -66,7 +80,12 @@ const buildVisualization = (dataset) => {
       return d.Year + 1;
     })
   ]);
-  const xAxis = d3.axisBottom(x).tickFormat(d3.format("d"));
+
+  y.domain(
+    d3.extent(dataset, function (d) {
+      return d.Time;
+    })
+  );
 
   /*
     User Story #2: I can see an x-axis that has a corresponding id="x-axis".
@@ -75,24 +94,14 @@ const buildVisualization = (dataset) => {
     .append("g")
     .attr("class", "x axis")
     .attr("id", "x-axis")
-    .attr("transform", "translate(0," + h + ")")
+    .attr("transform", "translate(0," + height + ")")
     .call(xAxis)
     .append("text")
     .attr("class", "x-axis-label")
-    .attr("x", w)
+    .attr("x", width)
     .attr("y", -6)
     .style("text-anchor", "end")
     .text("Year");
-
-  const y = d3.scaleTime().range([0, h]);
-  const timeFormat = d3.timeFormat("%M:%S");
-  const yAxis = d3.axisLeft(y).tickFormat(timeFormat);
-
-  y.domain(
-    d3.extent(dataset, function (d) {
-      return d.Time;
-    })
-  );
 
   /*
     User Story #3: I can see a y-axis that has a corresponding id="y-axis".
