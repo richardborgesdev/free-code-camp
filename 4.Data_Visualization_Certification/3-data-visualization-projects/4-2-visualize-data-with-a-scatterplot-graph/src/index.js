@@ -1,21 +1,4 @@
 /*
-  User Story #4: I can see dots, that each have a class of dot,
-  which represent the data being plotted.
-
-  User Story #5: Each dot should have the properties data-xvalue
-  and data-yvalue containing their corresponding x and y values.
-
-  User Story #6: The data-xvalue and data-yvalue of each dot
-  should be within the range of the actual data and in the correct data format.
-  For data-xvalue, integers (full years) or Date objects are acceptable
-  for test evaluation. For data-yvalue (minutes), use Date objects.
-
-  User Story #7: The data-xvalue and its corresponding dot
-  should align with the corresponding point/value on the x-axis.
-
-  User Story #8: The data-yvalue and its corresponding dot
-  should align with the corresponding point/value on the y-axis.
-
   User Story #9: I can see multiple tick labels on the y-axis
   with %M:%S time format.
 
@@ -58,6 +41,8 @@ const buildVisualization = (dataset) => {
 
   const xAxis = d3.axisBottom(x).tickFormat(d3.format("d"));
   const yAxis = d3.axisLeft(y).tickFormat(timeFormat);
+
+  const color = d3.scaleOrdinal(d3.schemeCategory10);
 
   const svg = d3
     .select("body")
@@ -118,6 +103,49 @@ const buildVisualization = (dataset) => {
     .attr("dy", ".71em")
     .style("text-anchor", "end")
     .text("Best Time (minutes)");
+
+  /*
+    User Story #4: I can see dots, that each have a class of dot,
+    which represent the data being plotted.
+  */
+  svg
+    .selectAll(".dot")
+    .data(dataset)
+    .enter()
+    .append("circle")
+    .attr("class", "dot")
+    .attr("r", 6)
+    /*
+      User Story #5: Each dot should have the properties data-xvalue
+      and data-yvalue containing their corresponding x and y values.
+
+      User Story #7: The data-xvalue and its corresponding dot
+      should align with the corresponding point/value on the x-axis.
+
+      User Story #8: The data-yvalue and its corresponding dot
+      should align with the corresponding point/value on the y-axis.
+    */
+    .attr("cx", function (d) {
+      return x(d.Year);
+    })
+    .attr("cy", function (d) {
+      return y(d.Time);
+    })
+    /*
+      User Story #6: The data-xvalue and data-yvalue of each dot
+      should be within the range of the actual data and in the correct data format.
+      For data-xvalue, integers (full years) or Date objects are acceptable
+      for test evaluation. For data-yvalue (minutes), use Date objects.
+    */
+    .attr("data-xvalue", function (d) {
+      return d.Year;
+    })
+    .attr("data-yvalue", function (d) {
+      return d.Time.toISOString();
+    })
+    .style("fill", function (d) {
+      return color(d.Doping !== "");
+    });
 };
 
 const buildVisualizationWithFccDataset = async () => {
