@@ -1,18 +1,4 @@
 /*
-  User Story #9: I can see multiple tick labels on the y-axis
-  with %M:%S time format.
-
-  User Story #10: I can see multiple tick labels on the x-axis that show the year.
-
-  User Story #11: I can see that the range of the x-axis labels are within
-  the range of the actual x-axis data.
-
-  User Story #12: I can see that the range of the y-axis labels are within
-  the range of the actual y-axis data.
-
-  User Story #13: I can see a legend containing descriptive text that
-  has id="legend".
-
   User Story #14: I can mouse over an area and see a tooltip with
   a corresponding id="tooltip" which displays more information about the area.
 
@@ -40,6 +26,10 @@ const buildVisualization = (dataset) => {
   const timeFormat = d3.timeFormat("%M:%S");
 
   const xAxis = d3.axisBottom(x).tickFormat(d3.format("d"));
+  /*
+    User Story #9: I can see multiple tick labels on the y-axis
+    with %M:%S time format.
+  */
   const yAxis = d3.axisLeft(y).tickFormat(timeFormat);
 
   const color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -49,7 +39,7 @@ const buildVisualization = (dataset) => {
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + " )");
 
   dataset.forEach(function (d) {
     d.Place = +d.Place;
@@ -57,6 +47,12 @@ const buildVisualization = (dataset) => {
     d.Time = new Date(Date.UTC(1970, 0, 1, 0, parsedTime[0], parsedTime[1]));
   });
 
+  /*
+    User Story #10: I can see multiple tick labels on the x-axis that show the year.
+
+    User Story #11: I can see that the range of the x-axis labels are within
+    the range of the actual x-axis data.
+  */
   x.domain([
     d3.min(dataset, function (d) {
       return d.Year - 1;
@@ -66,6 +62,10 @@ const buildVisualization = (dataset) => {
     })
   ]);
 
+  /*
+    User Story #12: I can see that the range of the y-axis labels are within
+    the range of the actual y-axis data.
+  */
   y.domain(
     d3.extent(dataset, function (d) {
       return d.Time;
@@ -79,7 +79,7 @@ const buildVisualization = (dataset) => {
     .append("g")
     .attr("class", "x axis")
     .attr("id", "x-axis")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(100," + height + ")")
     .call(xAxis)
     .append("text")
     .attr("class", "x-axis-label")
@@ -95,6 +95,7 @@ const buildVisualization = (dataset) => {
     .append("g")
     .attr("class", "y axis")
     .attr("id", "y-axis")
+    .attr("transform", "translate(100, 0)")
     .call(yAxis)
     .append("text")
     .attr("class", "label")
@@ -145,6 +146,44 @@ const buildVisualization = (dataset) => {
     })
     .style("fill", function (d) {
       return color(d.Doping !== "");
+    })
+    .attr("transform", "translate(100, 0)");
+
+  var legendContainer = svg.append("g").attr("id", "legend");
+
+  /*
+    User Story #13: I can see a legend containing descriptive text that
+    has id="legend".
+  */
+  var legend = legendContainer
+    .selectAll("#legend")
+    .data(color.domain())
+    .enter()
+    .append("g")
+    .attr("class", "legend-label")
+    .attr("transform", function (d, i) {
+      return "translate(0," + (height / 2 - i * 20) + ")";
+    });
+
+  legend
+    .append("rect")
+    .attr("x", width - 18)
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", color);
+
+  legend
+    .append("text")
+    .attr("x", width - 24)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function (d) {
+      if (d) {
+        return "Riders with doping allegations";
+      } else {
+        return "No doping allegations";
+      }
     });
 };
 
