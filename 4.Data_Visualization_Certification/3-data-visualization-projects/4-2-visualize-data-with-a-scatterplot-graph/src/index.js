@@ -1,11 +1,3 @@
-/*
-  User Story #14: I can mouse over an area and see a tooltip with
-  a corresponding id="tooltip" which displays more information about the area.
-
-  User Story #15: My tooltip should have a data-year property
-  that corresponds to the data-xvalue of the active area.
-*/
-
 import * as d3 from "d3";
 
 const buildVisualization = (dataset) => {
@@ -33,6 +25,17 @@ const buildVisualization = (dataset) => {
   const yAxis = d3.axisLeft(y).tickFormat(timeFormat);
 
   const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+  /*
+    User Story #14: I can mouse over an area and see a tooltip with
+    a corresponding id="tooltip" which displays more information about the area.
+  */
+  var div = d3
+    .select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .attr("id", "tooltip")
+    .style("opacity", 0);
 
   const svg = d3
     .select("body")
@@ -147,7 +150,32 @@ const buildVisualization = (dataset) => {
     .style("fill", function (d) {
       return color(d.Doping !== "");
     })
-    .attr("transform", "translate(100, 0)");
+    .attr("transform", "translate(100, 0)")
+    .on("mouseover", function (event, d) {
+      div.style("opacity", 0.9);
+      /*
+        User Story #15: My tooltip should have a data-year property
+        that corresponds to the data-xvalue of the active area.
+      */
+      div.attr("data-year", d.Year);
+      div
+        .html(
+          d.Name +
+            ": " +
+            d.Nationality +
+            "<br/>" +
+            "Year: " +
+            d.Year +
+            ", Time: " +
+            timeFormat(d.Time) +
+            (d.Doping ? "<br/><br/>" + d.Doping : "")
+        )
+        .style("left", event.x + "px")
+        .style("top", event.y - 28 + "px");
+    })
+    .on("mouseout", function () {
+      div.style("opacity", 0);
+    });
 
   var legendContainer = svg.append("g").attr("id", "legend");
 
