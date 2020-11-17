@@ -1,6 +1,4 @@
 /*
-  User Story #1: My heat map should have a title with a corresponding id="title".
-
   User Story #2: My heat map should have a description with a corresponding
   id="description".
 
