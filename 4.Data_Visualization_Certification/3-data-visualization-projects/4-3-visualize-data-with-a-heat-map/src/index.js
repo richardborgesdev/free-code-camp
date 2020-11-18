@@ -5,9 +5,6 @@
   User Story #3: My heat map should have an x-axis with a corresponding
   id="x-axis".
 
-  User Story #4: My heat map should have a y-axis with a corresponding
-  id="y-axis".
-
   User Story #5: My heat map should have rect elements with a class="cell"
   that represent the data.
 
@@ -51,6 +48,33 @@ import * as d3 from "d3";
 
 const buildVisualization = (dataset) => {
   console.log(dataset);
+
+  var section = d3.select("body").append("section");
+  var fontSize = 16;
+  var width = 5 * Math.ceil(dataset.monthlyVariance.length / 12);
+  var height = 33 * 12;
+  var padding = {
+    left: 9 * fontSize,
+    right: 9 * fontSize,
+    top: 1 * fontSize,
+    bottom: 8 * fontSize
+  };
+
+  var svg = section.append("svg").attr({
+    width: width + padding.left + padding.right,
+    height: height + padding.top + padding.bottom
+  });
+
+  var yScale = d3
+    .scaleBand()
+    // months
+    .domain([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+    .rangeRound([0, height], 0, 0);
+
+  /*
+    User Story #4: My heat map should have a y-axis with a corresponding
+    id="y-axis".
+  */
 };
 
 const buildVisualizationWithFccDataset = async () => {
