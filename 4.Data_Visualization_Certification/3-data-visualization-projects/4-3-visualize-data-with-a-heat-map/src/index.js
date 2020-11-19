@@ -60,21 +60,45 @@ const buildVisualization = (dataset) => {
     bottom: 8 * fontSize
   };
 
-  var svg = section.append("svg").attr({
-    width: width + padding.left + padding.right,
-    height: height + padding.top + padding.bottom
-  });
+  const svg = d3
+    .select("body")
+    .append("svg")
+    .attr("width", width + padding.left + padding.right)
+    .attr("height", height + padding.top + padding.bottom)
+    .attr("transform", "translate(" + padding.left + "," + padding.top + " )");
 
   var yScale = d3
     .scaleBand()
     // months
     .domain([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
     .rangeRound([0, height], 0, 0);
-
-  /*
-    User Story #4: My heat map should have a y-axis with a corresponding
-    id="y-axis".
-  */
+  var yAxis = d3
+    .axisLeft()
+    .scale(yScale)
+    .tickValues(yScale.domain())
+    .tickFormat(function (month) {
+      var date = new Date(0);
+      date.setUTCMonth(month);
+      return d3.utcFormat("%B")(date);
+    })
+    .tickSize(10, 1);
+  svg
+    .append("g")
+    .classed("y-axis", true)
+    /*
+      User Story #4: My heat map should have a y-axis with a corresponding
+      id="y-axis".
+    */
+    .attr("id", "y-axis")
+    .attr("transform", "translate(" + padding.left + "," + padding.top + ")")
+    .call(yAxis)
+    .append("text")
+    .text("Months")
+    .style("text-anchor", "middle")
+    .attr(
+      "transform",
+      "translate(" + -7 * fontSize + "," + height / 2 + ") + rotate(-90)"
+    );
 };
 
 const buildVisualizationWithFccDataset = async () => {
