@@ -99,6 +99,43 @@ const buildVisualization = (dataset) => {
       "transform",
       "translate(" + -7 * fontSize + "," + height / 2 + ") + rotate(-90)"
     );
+
+  var xScale = d3
+    .scaleBand()
+    .domain(
+      dataset.monthlyVariance.map(function (val) {
+        return val.year;
+      })
+    )
+    .rangeRound([0, width], 0, 0);
+  var xAxis = d3
+    .axisBottom()
+    .scale(xScale)
+    .tickValues(
+      xScale.domain().filter(function (year) {
+        // set ticks to years divisible by 10
+        return year % 10 === 0;
+      })
+    )
+    .tickFormat(function (year) {
+      var date = new Date(0);
+      date.setUTCFullYear(year);
+      return d3.utcFormat("%Y")(date);
+    })
+    .tickSize(10, 1);
+  svg
+    .append("g")
+    .classed("x-axis", true)
+    .attr("id", "x-axis")
+    .attr(
+      "transform",
+      "translate(" + padding.left + "," + (height + padding.top) + ")"
+    )
+    .call(xAxis)
+    .append("text")
+    .text("Years")
+    .style("text-anchor", "middle")
+    .attr("transform", "translate(" + width / 2 + "," + 3 * fontSize + ")");
 };
 
 const buildVisualizationWithFccDataset = async () => {
