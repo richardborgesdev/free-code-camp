@@ -2,12 +2,6 @@
   User Story #2: My heat map should have a description with a corresponding
   id="description".
 
-  User Story #3: My heat map should have an x-axis with a corresponding
-  id="x-axis".
-
-  User Story #5: My heat map should have rect elements with a class="cell"
-  that represent the data.
-
   User Story #6: There should be at least 4 different fill colors used
   for the cells.
 
@@ -126,6 +120,10 @@ const buildVisualization = (dataset) => {
   svg
     .append("g")
     .classed("x-axis", true)
+    /*
+      User Story #3: My heat map should have an x-axis with a corresponding
+      id="x-axis".
+    */
     .attr("id", "x-axis")
     .attr(
       "transform",
@@ -136,6 +134,43 @@ const buildVisualization = (dataset) => {
     .text("Years")
     .style("text-anchor", "middle")
     .attr("transform", "translate(" + width / 2 + "," + 3 * fontSize + ")");
+
+  svg
+    .append("g")
+    .classed("map", true)
+    .attr("transform", "translate(" + padding.left + "," + padding.top + ")")
+    .selectAll("rect")
+    .data(dataset.monthlyVariance)
+    .enter()
+    .append("rect")
+    /*
+      User Story #5: My heat map should have rect elements with a class="cell"
+      that represent the data.
+    */
+    .attr("class", "cell")
+    .attr("data-month", function (d) {
+      return d.month;
+    })
+    .attr("data-year", function (d) {
+      return d.year;
+    })
+    .attr("data-temp", function (d) {
+      return dataset.baseTemperature + d.variance;
+    })
+    .attr({
+      x: function (d) {
+        return xScale(d.year);
+      },
+      y: function (d) {
+        return yScale(d.month);
+      },
+      width: function (d) {
+        return xScale.rangeBand(d.year);
+      },
+      height: function (d) {
+        return yScale.rangeBand(d.month);
+      }
+    });
 };
 
 const buildVisualizationWithFccDataset = async () => {
