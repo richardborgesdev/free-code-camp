@@ -307,22 +307,16 @@ const buildVisualization = (dataset) => {
     .attr("data-temp", function (d) {
       return dataset.baseTemperature + d.variance;
     })
-    .attr({
-      x: function (d) {
-        return xScale(d.year);
-      },
-      y: function (d) {
-        return yScale(d.month);
-      },
-      width: function (d) {
-        return xScale.rangeBand(d.year);
-      },
-      height: function (d) {
-        return yScale.rangeBand(d.month);
-      }
+    .attr("x", function (d) {
+      return xScale(d.year);
     })
-    .attr("fill", function (d) {
-      return legendThreshold(dataset.baseTemperature + d.variance);
+    .attr("y", function (d) {
+      return yScale(d.month);
+    })
+    .attr("width", xScale.bandwidth())
+    .attr("height", yScale.bandwidth())
+    .style("fill", function (d) {
+      legendThreshold(dataset.baseTemperature + d.variance);
     });
 };
 
