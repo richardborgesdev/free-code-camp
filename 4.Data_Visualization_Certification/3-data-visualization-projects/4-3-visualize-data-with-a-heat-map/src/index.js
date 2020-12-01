@@ -46,8 +46,7 @@ const buildVisualization = (dataset) => {
     .select("body")
     .append("svg")
     .attr("width", width + padding.left + padding.right)
-    .attr("height", height + padding.top + padding.bottom)
-    .attr("transform", "translate(" + padding.left + "," + padding.top + " )");
+    .attr("height", height + padding.top + padding.bottom);
 
   var yScale = d3
     .scaleBand()
@@ -316,7 +315,7 @@ const buildVisualization = (dataset) => {
     .attr("width", xScale.bandwidth())
     .attr("height", yScale.bandwidth())
     .style("fill", function (d) {
-      legendThreshold(dataset.baseTemperature + d.variance);
+      return legendThreshold(dataset.baseTemperature + d.variance);
     });
 };
 
