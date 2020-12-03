@@ -2,15 +2,6 @@
   User Story #2: My heat map should have a description with a corresponding
   id="description".
 
-  User Story #8: The data-month, data-year of each cell should be within
-  the range of the data.
-
-  User Story #9: My heat map should have cells that align with the
-  corresponding month on the y-axis.
-
-  User Story #10: My heat map should have cells that align with the
-  corresponding year on the x-axis.
-
   User Story #13: My heat map should have a legend with a corresponding
   id="legend".
 
@@ -175,7 +166,11 @@ const buildVisualization = (dataset) => {
       data-temp containing their corresponding month, year, and temperature values.
     */
     .attr("data-month", function (d) {
-      return d.month;
+      /*
+        User Story #8: The data-month, data-year of each cell should be within
+        the range of the data.
+      */
+      return d.month - 1;
     })
     .attr("data-year", function (d) {
       return d.year;
@@ -184,10 +179,18 @@ const buildVisualization = (dataset) => {
       return dataset.baseTemperature + d.variance;
     })
     .attr("x", function (d) {
+      /*
+        User Story #10: My heat map should have cells that align with the
+        corresponding year on the x-axis.
+      */
       return xScale(d.year);
     })
     .attr("y", function (d) {
-      return yScale(d.month);
+      /*
+        User Story #9: My heat map should have cells that align with the
+        corresponding month on the y-axis.
+      */
+      return yScale(d.month - 1);
     })
     .attr("width", xScale.bandwidth())
     .attr("height", yScale.bandwidth())
