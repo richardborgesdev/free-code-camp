@@ -1,7 +1,4 @@
 /*
-  User Story #2: My heat map should have a description with a corresponding
-  id="description".
-
   User Story #13: My heat map should have a legend with a corresponding
   id="legend".
 
@@ -197,6 +194,26 @@ const buildVisualization = (dataset) => {
     .style("fill", function (d) {
       return legendThreshold(dataset.baseTemperature + d.variance);
     });
+
+  /*
+    User Story #2: My heat map should have a description with a corresponding
+    id="description".
+  */
+  var heading = section.append("heading");
+  heading
+    .append("h1")
+    .attr("id", "title")
+    .text("Monthly Global Land-Surface Temperature");
+  heading
+    .append("h3")
+    .attr("id", "description")
+    .html(
+      `${dataset.monthlyVariance[0].year}
+        - ${dataset.monthlyVariance[dataset.monthlyVariance.length - 1].year}
+        : base temperature
+        ${dataset.baseTemperature}
+        &#8451;`
+    );
 };
 
 const buildVisualizationWithFccDataset = async () => {
