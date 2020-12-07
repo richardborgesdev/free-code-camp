@@ -1,12 +1,4 @@
 /*
-  User Story #13: My heat map should have a legend with a corresponding
-  id="legend".
-
-  User Story #14: My legend should contain rect elements.
-
-  User Story #15: The rect elements in the legend should use at least
-  4 different fill colors.
-
   User Story #16: I can mouse over an area and see a tooltip with a
   corresponding id="tooltip" which displays more information about the area.
 
@@ -214,6 +206,81 @@ const buildVisualization = (dataset) => {
         ${dataset.baseTemperature}
         &#8451;`
     );
+
+  var legendWidth = 400;
+  var legendHeight = 300 / legendColors.length;
+
+  var legendX = d3
+    .scaleLinear()
+    .domain([minTemp, maxTemp])
+    .range([0, legendWidth]);
+
+  var legendXAxis = d3
+    .axisBottom()
+    .scale(legendX)
+    .tickSize(10, 0)
+    .tickValues(legendThreshold.domain())
+    .tickFormat(d3.format(".1f"));
+
+  var legend = svg
+    .append("g")
+    .classed("legend", true)
+    /*
+      User Story #13: My heat map should have a legend with a corresponding
+      id="legend".
+    */
+    .attr("id", "legend")
+    .attr(
+      "transform",
+      "translate(" +
+        padding.left +
+        "," +
+        (padding.top + height + padding.bottom - 2 * legendHeight) +
+        ")"
+    );
+
+  /*
+    User Story #14: My legend should contain rect elements.
+  */
+  legend
+    .append("g")
+    .selectAll("rect")
+    .data(
+      /*
+        User Story #15: The rect elements in the legend should use at least
+        4 different fill colors.
+      */
+      legendThreshold.range().map(function (color) {
+        var d = legendThreshold.invertExtent(color);
+        if (d[0] === null) {
+          d[0] = legendX.domain()[0];
+        }
+        if (d[1] === null) {
+          d[1] = legendX.domain()[1];
+        }
+        return d;
+      })
+    )
+    .enter()
+    .append("rect")
+    .style("fill", function (d) {
+      return legendThreshold(d[0]);
+    })
+    .attr({
+      x: function (d) {
+        return legendX(d[0]);
+      },
+      y: 0,
+      width: function (d) {
+        return legendX(d[1]) - legendX(d[0]);
+      },
+      height: legendHeight
+    });
+
+  legend
+    .append("g")
+    .attr("transform", "translate(" + 0 + "," + legendHeight + ")")
+    .call(legendXAxis);
 };
 
 const buildVisualizationWithFccDataset = async () => {
