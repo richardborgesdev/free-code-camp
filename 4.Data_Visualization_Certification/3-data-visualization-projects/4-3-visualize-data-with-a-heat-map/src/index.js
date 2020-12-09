@@ -1,11 +1,3 @@
-/*
-  User Story #16: I can mouse over an area and see a tooltip with a
-  corresponding id="tooltip" which displays more information about the area.
-
-  User Story #17: My tooltip should have a data-year property that
-  corresponds to the data-year of the active area.
-*/
-
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
 import { colorbrewer } from "./constants";
@@ -146,6 +138,8 @@ const buildVisualization = (dataset) => {
     .direction("n")
     .offset([-10, 0]);
 
+  svg.call(tip);
+
   svg
     .append("g")
     .classed("map", true)
@@ -196,24 +190,33 @@ const buildVisualization = (dataset) => {
     .style("fill", function (d) {
       return legendThreshold(dataset.baseTemperature + d.variance);
     })
+    /*
+      User Story #16: I can mouse over an area and see a tooltip with a
+      corresponding id="tooltip" which displays more information about the area.
+    */
     .on("mouseover", function (d) {
       var date = new Date(d.year, d.month);
-      var str =
-        "<span class='date'>" +
-        d3.timeFormat("%Y - %B")(date) +
-        "</span>" +
-        "<br />" +
-        "<span class='temperature'>" +
-        d3.format(".1f")(dataset.baseTemperature + d.variance) +
-        "&#8451;" +
-        "</span>" +
-        "<br />" +
-        "<span class='variance'>" +
-        d3.format("+.1f")(d.variance) +
-        "&#8451;" +
-        "</span>";
+      var str = `
+        <span class='date'>
+          ${d3.timeFormat("%Y - %B")(date)}
+        </span>
+        <br />
+        <span class='temperature'>
+          ${d3.format(".1f")(dataset.baseTemperature + d.variance)}
+          &#8451;
+        </span>
+        <br />
+        <span class='variance'>
+          ${d3.format("+.1f")(d.variance)}
+          &#8451;
+        </span>
+      `;
+      /*
+        User Story #17: My tooltip should have a data-year property that
+        corresponds to the data-year of the active area.
+      */
       tip.attr("data-year", d.year);
-      tip.show(str);
+      tip.show(str, this);
     })
     .on("mouseout", tip.hide);
 
