@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "d3": "6.2.0",
+    "d3-format": "2.0.0",
     "d3-tip": "0.9.1"
   },
   "devDependencies": {
