@@ -31,12 +31,21 @@ import * as d3 from "d3";
 import * as topojson from "topojson";
 
 const buildVisualization = (educationData, countyData) => {
-  console.log(educationData, countyData);
+  //console.log(educationData, countyData);
 
   // Define body
   var body = d3.select("body");
 
-  var svg = d3.select("svg");
+  //var svg = d3.select("svg");
+
+  const padding = 60,
+    w = 1000,
+    h = 700;
+  const svg = d3
+    .select("body")
+    .append("svg")
+    .attr("width", w + 100)
+    .attr("height", h + padding);
 
   // Define the div for the tooltip
   var tooltip = body
@@ -139,7 +148,7 @@ const buildVisualization = (educationData, countyData) => {
       return color(0);
     })
     .attr("d", path)
-    .on("mouseover", function (d) {
+    .on("mouseover", function (e, d) {
       tooltip.style("opacity", 0.9);
       tooltip
         .html(function () {
@@ -169,8 +178,8 @@ const buildVisualization = (educationData, countyData) => {
           // could not find a matching fips id in the data
           return 0;
         })
-        .style("left", d3.event.pageX + 10 + "px")
-        .style("top", d3.event.pageY - 28 + "px");
+        .style("left", e.screenX + 10 + "px")
+        .style("top", e.screenY - 28 + "px");
     })
     .on("mouseout", function () {
       tooltip.style("opacity", 0);
