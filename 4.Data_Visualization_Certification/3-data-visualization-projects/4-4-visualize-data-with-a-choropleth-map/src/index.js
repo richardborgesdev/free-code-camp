@@ -36,8 +36,6 @@ const buildVisualization = (educationData, countyData) => {
   // Define body
   var body = d3.select("body");
 
-  //var svg = d3.select("svg");
-
   const padding = 60,
     w = 1000,
     h = 700;
@@ -178,8 +176,8 @@ const buildVisualization = (educationData, countyData) => {
           // could not find a matching fips id in the data
           return 0;
         })
-        .style("left", e.screenX + 10 + "px")
-        .style("top", e.screenY - 28 + "px");
+        .style("left", e.x + 10 + "px")
+        .style("top", e.y - 28 + "px");
     })
     .on("mouseout", function () {
       tooltip.style("opacity", 0);
