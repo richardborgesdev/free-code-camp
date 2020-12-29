@@ -25,10 +25,20 @@ var http = require("http");
   a JSON object with a utc key
 */
 
+const handler = (request, response) => {
+  const { url, method } = request;
+  console.log(url, method);
+
+  const [first, route, data] = url.split("/");
+  console.log(first, route, data);
+
+  const key = `/${route}:${method.toLowerCase()}`;
+  console.log("key", key);
+  /*
+  response.write("Hello World!"); //write a response to the client
+  */
+  response.end(); //end the response
+};
+
 //create a server object:
-http
-  .createServer(function (req, res) {
-    res.write("Hello World!"); //write a response to the client
-    res.end(); //end the response
-  })
-  .listen(8080); //the server object listens on port 8080
+http.createServer(handler).listen(8080); //the server object listens on port 8080
