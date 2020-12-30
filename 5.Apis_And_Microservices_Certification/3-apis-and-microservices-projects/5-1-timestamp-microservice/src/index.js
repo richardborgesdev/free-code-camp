@@ -24,12 +24,31 @@ var http = require("http");
   An empty date parameter should return the current time in
   a JSON object with a utc key
 */
+const DEFAULT_HEADER = { "Content-Type": "application/json" };
+
+const routes = {
+  "/timestamp:get": async (request, response) => {
+    const { url, method } = request;
+    console.log(url, method);
+
+    console.log(url.split("/"));
+    const [, first, route, data] = url.split("/");
+    console.log(first, route, data);
+
+    response.end();
+  },
+  default: (request, response) => {
+    response.write("Hello!");
+    response.end();
+  }
+};
 
 const handler = (request, response) => {
   const { url, method } = request;
   console.log(url, method);
 
-  const [first, route, data] = url.split("/");
+  console.log(url.split("/"));
+  const [, first, route, data] = url.split("/");
   console.log(first, route, data);
 
   const key = `/${route}:${method.toLowerCase()}`;
@@ -37,7 +56,11 @@ const handler = (request, response) => {
   /*
   response.write("Hello World!"); //write a response to the client
   */
-  response.end(); //end the response
+
+  response.writeHead(200, DEFAULT_HEADER);
+
+  const chosen = routes[key] || routes.default;
+  return chosen(request, response);
 };
 
 //create a server object:
