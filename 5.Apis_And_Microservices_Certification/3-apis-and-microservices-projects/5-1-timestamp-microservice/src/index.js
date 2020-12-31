@@ -35,6 +35,10 @@ const routes = {
     const [, first, route, data] = url.split("/");
     console.log(first, route, data);
 
+    const timestampToUTC = new Date(parseInt(data, 10)).toUTCString();
+
+    response.write(JSON.stringify({ unix: data, utc: timestampToUTC }));
+
     response.end();
   },
   default: (request, response) => {
@@ -45,12 +49,7 @@ const routes = {
 
 const handler = (request, response) => {
   const { url, method } = request;
-  console.log(url, method);
-
-  console.log(url.split("/"));
-  const [, first, route, data] = url.split("/");
-  console.log(first, route, data);
-
+  const [, , route] = url.split("/");
   const key = `/${route}:${method.toLowerCase()}`;
   console.log("key", key);
   /*
