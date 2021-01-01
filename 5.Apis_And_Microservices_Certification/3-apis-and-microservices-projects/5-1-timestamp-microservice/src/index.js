@@ -23,6 +23,8 @@ var http = require("http");
 
   An empty date parameter should return the current time in
   a JSON object with a utc key
+
+  test: https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice
 */
 const DEFAULT_HEADER = { "Content-Type": "application/json" };
 
@@ -35,10 +37,19 @@ const routes = {
     const [, first, route, data] = url.split("/");
     console.log(first, route, data);
 
-    const timestampToUTC = new Date(parseInt(data, 10)).toUTCString();
+    let resolved = { unix: Date.now() };
 
-    response.write(JSON.stringify({ unix: data, utc: timestampToUTC }));
+    if (data && data.split("-").length > 1) {
+      const timestampDate = new Date(data).valueOf();
+      resolved = JSON.stringify({ unix: timestampDate });
+    } else {
+      const intDate = parseInt(data, 10);
+      const timestampToUTC = new Date(intDate).toUTCString();
+      resolved = JSON.stringify({ unix: intDate, utc: timestampToUTC });
+    }
 
+    console.log(resolved);
+    response.write(resolved);
     response.end();
   },
   default: (request, response) => {
@@ -48,6 +59,7 @@ const routes = {
 };
 
 const handler = (request, response) => {
+  console.log("============================");
   const { url, method } = request;
   const [, , route] = url.split("/");
   const key = `/${route}:${method.toLowerCase()}`;
