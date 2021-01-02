@@ -39,12 +39,12 @@ const routes = {
 
     let resolved = { unix: Date.now() };
 
-    if (data && data.split("-").length > 1) {
+    if (data && data.match(/^\d{4}-\d{2}-\d{2}$/)) {
       const timestampDate = new Date(data).valueOf();
       resolved = JSON.stringify({ unix: timestampDate });
-    } else {
+    } else if (data && data.match(/^\d*$/)) {
       const intDate = parseInt(data, 10);
-      const timestampToUTC = new Date(intDate).toUTCString();
+      const timestampToUTC = new Date(data).toUTCString();
       resolved = JSON.stringify({ unix: intDate, utc: timestampToUTC });
     }
 
