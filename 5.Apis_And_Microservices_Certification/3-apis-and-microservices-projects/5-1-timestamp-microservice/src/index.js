@@ -71,6 +71,30 @@ const handler = (request, response) => {
   response.writeHead(200, DEFAULT_HEADER);
 
   const chosen = routes[key] || routes.default;
+
+  /** CORS */
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+    "Access-Control-Max-Age": 2592000 // 30 days
+    /** add other headers as per requirement */
+  };
+
+  if (response.method === "OPTIONS") {
+    response.writeHead(204, headers);
+    response.end();
+    return;
+  }
+
+  if (["GET", "POST"].indexOf(request.method) > -1) {
+    response.writeHead(200, headers);
+    response.end("Hello World");
+    return;
+  }
+
+  response.writeHead(405, headers);
+  response.end(`${request.method} is not allowed for the request.`);
+  /** */
   return chosen(request, response);
 };
 
