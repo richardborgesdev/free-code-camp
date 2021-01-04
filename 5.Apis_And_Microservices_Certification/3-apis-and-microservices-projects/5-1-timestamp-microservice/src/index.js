@@ -44,7 +44,7 @@ const routes = {
       resolved = JSON.stringify({ unix: timestampDate });
     } else if (data && data.match(/^\d*$/)) {
       const intDate = parseInt(data, 10);
-      const timestampToUTC = new Date(data).toUTCString();
+      const timestampToUTC = new Date(intDate).toUTCString();
       resolved = JSON.stringify({ unix: intDate, utc: timestampToUTC });
     }
 
