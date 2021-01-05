@@ -26,8 +26,6 @@ var http = require("http");
 
   test: https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice
 */
-const DEFAULT_HEADER = { "Content-Type": "application/json" };
-
 const routes = {
   "/timestamp:get": async (request, response) => {
     const { url, method } = request;
@@ -64,11 +62,6 @@ const handler = (request, response) => {
   const [, , route] = url.split("/");
   const key = `/${route}:${method.toLowerCase()}`;
   console.log("key", key);
-  /*
-  response.write("Hello World!"); //write a response to the client
-  */
-
-  response.writeHead(200, DEFAULT_HEADER);
 
   const chosen = routes[key] || routes.default;
 
@@ -76,26 +69,24 @@ const handler = (request, response) => {
   const headers = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-    "Access-Control-Max-Age": 2592000 // 30 days
+    "Access-Control-Max-Age": 2592000, // 30 days
+    "Content-Type": "application/json"
     /** add other headers as per requirement */
   };
 
   if (response.method === "OPTIONS") {
     response.writeHead(204, headers);
-    response.end();
-    return;
+    return chosen(request, response);
   }
 
   if (["GET", "POST"].indexOf(request.method) > -1) {
     response.writeHead(200, headers);
-    response.end("Hello World");
-    return;
+    return chosen(request, response);
   }
 
   response.writeHead(405, headers);
   response.end(`${request.method} is not allowed for the request.`);
   /** */
-  return chosen(request, response);
 };
 
 //create a server object:
