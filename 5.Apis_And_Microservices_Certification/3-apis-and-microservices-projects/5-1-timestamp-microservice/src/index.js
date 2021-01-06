@@ -26,6 +26,12 @@ var http = require("http");
 
   test: https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice
 */
+
+const timestampToUTC = (d) => {
+  const intDate = parseInt(d, 10);
+  return new Date(intDate).toUTCString();
+};
+
 const routes = {
   "/timestamp:get": async (request, response) => {
     const { url, method } = request;
@@ -34,16 +40,32 @@ const routes = {
     console.log(url.split("/"));
     const [, first, route, data] = url.split("/");
     console.log(first, route, data);
+    let resolved = { error: "Invalid Date" };
 
-    let resolved = { unix: Date.now() };
+    if (!data) {
+      const todayDate = Date.now();
+      resolved = {
+        unix: todayDate,
+        utc: timestampToUTC(todayDate)
+      };
+    }
 
-    if (data && data.match(/^\d{4}-\d{2}-\d{2}$/)) {
-      const timestampDate = new Date(data).valueOf();
-      resolved = JSON.stringify({ unix: timestampDate });
-    } else if (data && data.match(/^\d*$/)) {
-      const intDate = parseInt(data, 10);
-      const timestampToUTC = new Date(intDate).toUTCString();
-      resolved = JSON.stringify({ unix: intDate, utc: timestampToUTC });
+    const date = new Date(data);
+    const isValidDate = date instanceof Date && !isNaN(date);
+    console.log("valid date", isValidDate);
+
+    if (isValidDate) {
+      if (data.match(/^\d{4}-\d{2}-\d{2}$/)) {
+        const timestampDate = new Date(data).valueOf();
+        resolved = JSON.stringify({ unix: timestampDate });
+      } else if (data.match(/^\d*$/)) {
+        const intDate = parseInt(data, 10);
+
+        resolved = JSON.stringify({
+          unix: intDate,
+          utc: timestampToUTC(data)
+        });
+      }
     }
 
     console.log(resolved);
@@ -79,7 +101,7 @@ const handler = (request, response) => {
     return chosen(request, response);
   }
 
-  if (["GET", "POST"].indexOf(request.method) > -1) {
+  if (["GET"].indexOf(request.method) > -1) {
     response.writeHead(200, headers);
     return chosen(request, response);
   }
