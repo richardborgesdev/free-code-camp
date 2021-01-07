@@ -32,6 +32,15 @@ const timestampToUTC = (d) => {
   return new Date(intDate).toUTCString();
 };
 
+const isValidDate = (d) => {
+  try {
+    const date = new Date(d);
+    return date instanceof Date && !isNaN(date);
+  } catch {
+    return false;
+  }
+};
+
 const routes = {
   "/timestamp:get": async (request, response) => {
     const { url, method } = request;
@@ -48,28 +57,24 @@ const routes = {
         unix: todayDate,
         utc: timestampToUTC(todayDate)
       };
+    } else if (data.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      const timestampDate = new Date(data).valueOf();
+      resolved = { unix: timestampDate };
+    } else if (data.match(/^\d*$/)) {
+      const intDate = parseInt(data, 10);
+
+      resolved = {
+        unix: intDate,
+        utc: timestampToUTC(data)
+      };
+    } else if (isValidDate(data)) {
+      resolved = {
+        utc: timestampToUTC(data)
+      };
     }
 
-    const date = new Date(data);
-    const isValidDate = date instanceof Date && !isNaN(date);
-    console.log("valid date", isValidDate);
-
-    if (isValidDate) {
-      if (data.match(/^\d{4}-\d{2}-\d{2}$/)) {
-        const timestampDate = new Date(data).valueOf();
-        resolved = JSON.stringify({ unix: timestampDate });
-      } else if (data.match(/^\d*$/)) {
-        const intDate = parseInt(data, 10);
-
-        resolved = JSON.stringify({
-          unix: intDate,
-          utc: timestampToUTC(data)
-        });
-      }
-    }
-
-    console.log(resolved);
-    response.write(resolved);
+    console.log(JSON.stringify(resolved));
+    response.write(JSON.stringify(resolved));
     response.end();
   },
   default: (request, response) => {
