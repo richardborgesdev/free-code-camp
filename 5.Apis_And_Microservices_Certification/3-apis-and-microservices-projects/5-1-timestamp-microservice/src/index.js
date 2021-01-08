@@ -41,6 +41,8 @@ const isValidDate = (d) => {
   }
 };
 
+const toTimestampDate = (d) => new Date(d).valueOf();
+
 const routes = {
   "/timestamp:get": async (request, response) => {
     const { url, method } = request;
@@ -58,8 +60,7 @@ const routes = {
         utc: timestampToUTC(todayDate)
       };
     } else if (data.match(/^\d{4}-\d{2}-\d{2}$/)) {
-      const timestampDate = new Date(data).valueOf();
-      resolved = { unix: timestampDate };
+      resolved = { unix: toTimestampDate(data) };
     } else if (data.match(/^\d*$/)) {
       const intDate = parseInt(data, 10);
 
@@ -69,7 +70,8 @@ const routes = {
       };
     } else if (isValidDate(data)) {
       resolved = {
-        utc: timestampToUTC(data)
+        unix: toTimestampDate(data),
+        utc: new Date(data).toUTCString()
       };
     }
 
