@@ -59,8 +59,6 @@ const routes = {
         unix: todayDate,
         utc: timestampToUTC(todayDate)
       };
-    } else if (data.match(/^\d{4}-\d{2}-\d{2}$/)) {
-      resolved = { unix: toTimestampDate(data) };
     } else if (data.match(/^\d*$/)) {
       const intDate = parseInt(data, 10);
 
