@@ -14,14 +14,13 @@ var http = require("http");
 
 const routes = {
   "/whoami:get": async (request, response) => {
-    const { url, method } = request;
-    console.log(url, method);
+    const { headers } = request;
 
-    console.log(url.split("/"));
-    const [, first, route, data] = url.split("/");
-    console.log(first, route, data);
-
-    let resolved = { error: "Invalid Date" };
+    let resolved = {
+      ipaddress: headers["true-client-ip"],
+      language: headers["accept-language"],
+      software: headers["user-agent"]
+    };
 
     console.log(JSON.stringify(resolved));
     response.write(JSON.stringify(resolved));
