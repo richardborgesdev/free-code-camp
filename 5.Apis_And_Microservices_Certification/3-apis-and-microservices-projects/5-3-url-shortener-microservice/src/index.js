@@ -17,7 +17,7 @@
 var http = require("http");
 
 const routes = {
-  "/whoami:get": async (request, response) => {
+  "/shorturl:post": async (request, response) => {
     const { headers } = request;
 
     let resolved = {
@@ -59,7 +59,7 @@ const handler = (request, response) => {
     return chosen(request, response);
   }
 
-  if (["GET"].indexOf(request.method) > -1) {
+  if (["GET", "POST"].indexOf(request.method) > -1) {
     response.writeHead(200, headers);
     return chosen(request, response);
   }
