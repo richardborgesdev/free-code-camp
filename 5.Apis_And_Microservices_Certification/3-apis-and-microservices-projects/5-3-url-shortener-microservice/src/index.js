@@ -15,18 +15,30 @@
 */
 
 var http = require("http");
+const { parse } = require("querystring");
 
 const routes = {
   "/shorturl:post": async (request, response) => {
-    const { headers } = request;
+    const { url, headers } = request;
+    const [, first, route, data] = url.split("/");
+    console.log(first, route, data);
+
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    request.on("end", () => {
+      console.log("parse", parse(body));
+      body = parse(body);
+      //request.end('ok');
+      console.log(body.url);
+    });
 
     let resolved = {
-      ipaddress: headers["true-client-ip"],
-      language: headers["accept-language"],
-      software: headers["user-agent"]
+      original_url: body.url
     };
 
-    console.log(JSON.stringify(resolved));
+    console.log("resolved", JSON.stringify(resolved));
     response.write(JSON.stringify(resolved));
     response.end();
   },
@@ -53,11 +65,6 @@ const handler = (request, response) => {
     "Content-Type": "application/json"
     /** add other headers as per requirement */
   };
-
-  if (response.method === "OPTIONS") {
-    response.writeHead(204, headers);
-    return chosen(request, response);
-  }
 
   if (["GET", "POST"].indexOf(request.method) > -1) {
     response.writeHead(200, headers);
