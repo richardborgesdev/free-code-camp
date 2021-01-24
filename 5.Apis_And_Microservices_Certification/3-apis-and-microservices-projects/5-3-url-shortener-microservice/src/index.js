@@ -30,22 +30,18 @@ const routes = {
     request.on("end", () => {
       console.log("parse", parse(body));
       body = parse(body);
-      //request.end('ok');
-      console.log(body.url);
+
+      buildResponse(response, { original_url: body.url });
     });
-
-    let resolved = {
-      original_url: body.url
-    };
-
-    console.log("resolved", JSON.stringify(resolved));
-    response.write(JSON.stringify(resolved));
-    response.end();
   },
   default: (request, response) => {
-    response.write("Hello!");
-    response.end();
+    buildResponse(response, "hello!");
   }
+};
+
+const buildResponse = (response, body) => {
+  console.log("buildResponse", JSON.stringify(body));
+  response.end(JSON.stringify(body));
 };
 
 const handler = (request, response) => {
