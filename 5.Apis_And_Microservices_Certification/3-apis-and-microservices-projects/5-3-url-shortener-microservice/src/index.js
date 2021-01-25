@@ -19,9 +19,9 @@ const { parse } = require("querystring");
 
 const routes = {
   "/shorturl:post": async (request, response) => {
-    const { url, headers } = request;
+    const { url } = request;
     const [, first, route, data] = url.split("/");
-    console.log(first, route, data);
+    console.log("post", first, route, data);
 
     let body = "";
     request.on("data", (chunk) => {
@@ -31,8 +31,15 @@ const routes = {
       console.log("parse", parse(body));
       body = parse(body);
 
-      buildResponse(response, { original_url: body.url });
+      buildResponse(response, { original_url: body.url, short_url: 1 });
     });
+  },
+  "/shorturl:get": async (request, response) => {
+    const { url } = request;
+    const [, first, route, data] = url.split("/");
+    console.log("get", first, route, data);
+
+    buildResponse(response, "get!");
   },
   default: (request, response) => {
     buildResponse(response, "hello!");
