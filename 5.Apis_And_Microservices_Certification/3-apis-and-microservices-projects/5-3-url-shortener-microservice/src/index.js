@@ -1,9 +1,4 @@
 /*
-    When you visit /api/shorturl/<short_url>, you will be redirected to the original URL.
-
-  If you pass an invalid URL that doesn't follow the valid http://www.example.com format,
-  the JSON response will contain { error: 'invalid url' }
-
   HINT: Do not forget to use a body parsing middleware to handle the POST requests.
   Also, you can use the function dns.lookup(host, cb) from the dns core module
   to verify a submitted URL.
@@ -13,6 +8,8 @@
 
 var http = require("http");
 const { parse } = require("querystring");
+
+const isValidURL = (url) => true;
 
 const routes = {
   "/shorturl:post": async (request, response) => {
@@ -33,10 +30,21 @@ const routes = {
       console.log("parse", parse(body));
       body = parse(body);
 
-      buildResponse(response, { original_url: body.url, short_url: 1 });
+      if (isValidURL(body.url)) {
+        buildResponse(response, { original_url: body.url, short_url: 1 });
+      } else {
+        /*
+          If you pass an invalid URL that doesn't follow the valid http://www.example.com format,
+          the JSON response will contain { error: 'invalid url' }
+        */
+        buildResponse(response, { error: "invalid url" });
+      }
     });
   },
   "/shorturl:get": async (request, response) => {
+    /*
+      When you visit /api/shorturl/<short_url>, you will be redirected to the original URL.
+    */
     const { url } = request;
     const [, first, route, data] = url.split("/");
     console.log("get", first, route, data);
