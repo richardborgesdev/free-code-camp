@@ -9,7 +9,8 @@
 var http = require("http");
 const { parse } = require("querystring");
 
-const isValidURL = (url) => true;
+const isValidURL = (url) =>
+  /^(ftp|https?):\/\/+(www\.)?[a-z0-9\-\.]{3,}\.[a-z]{3}$/.test(url);
 
 const routes = {
   "/shorturl:post": async (request, response) => {
