@@ -9,6 +9,8 @@
 var http = require("http");
 const { parse } = require("querystring");
 
+const urlBase = [];
+
 const isValidURL = (url) =>
   /^(ftp|https?):\/\/+(www\.)?[a-z0-9\-\.]{3,}\.[a-z]{3}$/.test(url);
 
@@ -32,7 +34,11 @@ const routes = {
       body = parse(body);
 
       if (isValidURL(body.url)) {
-        buildResponse(response, { original_url: body.url, short_url: 1 });
+        urlBase.push(body.url);
+        buildResponse(response, {
+          original_url: body.url,
+          short_url: urlBase.length
+        });
       } else {
         /*
           If you pass an invalid URL that doesn't follow the valid http://www.example.com format,
@@ -40,6 +46,8 @@ const routes = {
         */
         buildResponse(response, { error: "invalid url" });
       }
+
+      console.log("urlBase", urlBase);
     });
   },
   "/shorturl:get": async (request, response) => {
