@@ -8,11 +8,10 @@
 
 var http = require("http");
 const { parse } = require("querystring");
-
+const urlRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
 const urlBase = [];
 
-const isValidURL = (url) =>
-  /^(ftp|https?):\/\/+(www\.)?[a-z0-9\-\.]{3,}\.[a-z]{3}$/.test(url);
+const isValidURL = (url) => urlRegex.test(url);
 
 const routes = {
   "/shorturl:post": async (request, response) => {
@@ -37,7 +36,7 @@ const routes = {
         urlBase.push(body.url);
         buildResponse(response, {
           original_url: body.url,
-          short_url: urlBase.length
+          short_url: urlBase.length - 1
         });
       } else {
         /*
