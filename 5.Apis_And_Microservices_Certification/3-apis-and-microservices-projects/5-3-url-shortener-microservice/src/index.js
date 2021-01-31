@@ -10,6 +10,14 @@ var http = require("http");
 const { parse } = require("querystring");
 const urlRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
 const urlBase = [];
+/** CORS */
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+  "Access-Control-Max-Age": 2592000, // 30 days
+  "Content-Type": "application/json"
+  /** add other headers as per requirement */
+};
 
 const isValidURL = (url) => urlRegex.test(url);
 
@@ -55,9 +63,12 @@ const routes = {
     */
     const { url } = request;
     const [, first, route, data] = url.split("/");
-    console.log("get", first, route, data);
+    console.log("get", first, route, urlBase[data]);
+    const redirectHeaders = { ...headers, Location: urlBase[data] };
+    console.log("redirectHeaders", redirectHeaders);
 
-    buildResponse(response, "get!");
+    response.writeHead(301, redirectHeaders);
+    response.end();
   },
   default: (request, response) => {
     buildResponse(response, "hello!");
@@ -77,15 +88,6 @@ const handler = (request, response) => {
   console.log("key", key);
 
   const chosen = routes[key] || routes.default;
-
-  /** CORS */
-  const headers = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-    "Access-Control-Max-Age": 2592000, // 30 days
-    "Content-Type": "application/json"
-    /** add other headers as per requirement */
-  };
 
   if (["GET", "POST"].indexOf(request.method) > -1) {
     response.writeHead(200, headers);
