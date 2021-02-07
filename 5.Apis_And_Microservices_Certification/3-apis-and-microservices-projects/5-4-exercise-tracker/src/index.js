@@ -23,24 +23,6 @@ const routes = {
       You can POST to /api/exercise/new-user with form data username to create a new user.
       The returned response will be an object with username and _id properties.
     */
-  },
-  "/add:post": async (request, response) => {
-    /*
-      You can POST to /api/exercise/add with form data userId=_id, description, duration,
-      and optionally date. If no date is supplied, the current date will be used.
-      The response returned will be the user object with the exercise fields added.
-    */
-  },
-  "/shorturl:post": async (request, response) => {
-    /*
-      You can POST a URL to /api/shorturl/new and get a JSON response
-      with original_url and short_url properties.
-      Here's an example: { original_url : 'https://freeCodeCamp.org', short_url : 1}
-    */
-    const { url } = request;
-    const [, first, route, data] = url.split("/");
-    console.log("post", first, route, data);
-
     let body = "";
     request.on("data", (chunk) => {
       body += chunk.toString();
@@ -48,7 +30,7 @@ const routes = {
     request.on("end", () => {
       console.log("parse", parse(body));
       body = parse(body);
-
+      /*
       if (isValidURL(body.url)) {
         urlBase.push(body.url);
         buildResponse(response, {
@@ -56,21 +38,27 @@ const routes = {
           short_url: urlBase.length - 1
         });
       } else {
-        /*
-          If you pass an invalid URL that doesn't follow the valid http://www.example.com format,
-          the JSON response will contain { error: 'invalid url' }
-        */
         buildResponse(response, { error: "invalid url" });
       }
-
-      console.log("urlBase", urlBase);
+    */
     });
+
+    buildResponse(response, "WIP");
+  },
+  "/add:post": async (request, response) => {
+    /*
+      You can POST to /api/exercise/add with form data userId=_id, description, duration,
+      and optionally date. If no date is supplied, the current date will be used.
+      The response returned will be the user object with the exercise fields added.
+    */
+    buildResponse(response, "WIP");
   },
   "/users:get": async (request, response) => {
     /*
       You can make a GET request to api/exercise/users to get an array of all users.
       Each element in the array is an object containing a user's username and _id.
     */
+    buildResponse(response, "WIP");
   },
   "/users:log": async (request, response) => {
     /*
@@ -86,6 +74,7 @@ const routes = {
       retrieve part of the log of any user. from and to are dates in yyyy-mm-dd format.
       limit is an integer of how many logs to send back.
     */
+    buildResponse(response, "WIP");
   },
   "/shorturl:get": async (request, response) => {
     /*
@@ -113,7 +102,7 @@ const buildResponse = (response, body) => {
 const handler = (request, response) => {
   console.log("============================");
   const { url, method } = request;
-  const [, , route] = url.split("/");
+  const [, , , route] = url.split("/");
   const key = `/${route}:${method.toLowerCase()}`;
   console.log("key", key);
 
