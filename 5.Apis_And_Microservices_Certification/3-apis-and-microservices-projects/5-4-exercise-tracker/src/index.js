@@ -6,6 +6,7 @@ var http = require("http");
 const { parse } = require("querystring");
 const urlRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
 const urlBase = [];
+const userBase = [];
 /** CORS */
 const headers = {
   "Access-Control-Allow-Origin": "*",
@@ -30,20 +31,12 @@ const routes = {
     request.on("end", () => {
       console.log("parse", parse(body));
       body = parse(body);
-      /*
-      if (isValidURL(body.url)) {
-        urlBase.push(body.url);
-        buildResponse(response, {
-          original_url: body.url,
-          short_url: urlBase.length - 1
-        });
-      } else {
-        buildResponse(response, { error: "invalid url" });
-      }
-    */
+      userBase.push({ username: body.username, _id: userBase.length });
+      buildResponse(response, {
+        username: body.username,
+        _id: userBase.length - 1
+      });
     });
-
-    buildResponse(response, "WIP");
   },
   "/add:post": async (request, response) => {
     /*
@@ -58,7 +51,11 @@ const routes = {
       You can make a GET request to api/exercise/users to get an array of all users.
       Each element in the array is an object containing a user's username and _id.
     */
-    buildResponse(response, "WIP");
+    const { url } = request;
+    const [, first, , route, data] = url.split("/");
+    console.log("get", first, route, data);
+
+    buildResponse(response, userBase);
   },
   "/users:log": async (request, response) => {
     /*
@@ -75,19 +72,6 @@ const routes = {
       limit is an integer of how many logs to send back.
     */
     buildResponse(response, "WIP");
-  },
-  "/shorturl:get": async (request, response) => {
-    /*
-      When you visit /api/shorturl/<short_url>, you will be redirected to the original URL.
-    */
-    const { url } = request;
-    const [, first, route, data] = url.split("/");
-    console.log("get", first, route, urlBase[data]);
-    const redirectHeaders = { ...headers, Location: urlBase[data] };
-    console.log("redirectHeaders", redirectHeaders);
-
-    response.writeHead(301, redirectHeaders);
-    response.end();
   },
   default: (request, response) => {
     buildResponse(response, "hello!");
