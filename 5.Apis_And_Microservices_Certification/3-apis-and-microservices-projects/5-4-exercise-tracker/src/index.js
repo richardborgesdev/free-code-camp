@@ -4,8 +4,6 @@
 
 var http = require("http");
 const { parse } = require("querystring");
-const urlRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
-const urlBase = [];
 const userBase = [];
 /** CORS */
 const headers = {
@@ -15,8 +13,6 @@ const headers = {
   "Content-Type": "application/json"
   /** add other headers as per requirement */
 };
-
-const isValidURL = (url) => urlRegex.test(url);
 
 const routes = {
   "/new-user:post": async (request, response) => {
@@ -44,7 +40,25 @@ const routes = {
       and optionally date. If no date is supplied, the current date will be used.
       The response returned will be the user object with the exercise fields added.
     */
-    buildResponse(response, "WIP");
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    request.on("end", () => {
+      console.log("parse", parse(body));
+      body = parse(body);
+
+      userBase[body.userId] = {
+        ...userBase[body.userId],
+        ...{
+          description: body.description,
+          duration: body.duration,
+          date: body.date ? body.date : new Date()
+        }
+      };
+
+      buildResponse(response, userBase[body.userId]);
+    });
   },
   "/users:get": async (request, response) => {
     /*
