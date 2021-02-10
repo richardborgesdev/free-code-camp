@@ -71,7 +71,7 @@ const routes = {
 
     buildResponse(response, userBase);
   },
-  "/users:log": async (request, response) => {
+  "/log:get": async (request, response) => {
     /*
       You can make a GET request to /api/exercise/log with a parameter of userId=_id
       to retrieve a full exercise log of any user. The returned response will be the
@@ -85,6 +85,10 @@ const routes = {
       retrieve part of the log of any user. from and to are dates in yyyy-mm-dd format.
       limit is an integer of how many logs to send back.
     */
+    const { url } = request;
+    const [, first, , route, data] = url.split("/");
+    console.log("get", first, route, data);
+
     buildResponse(response, "WIP");
   },
   default: (request, response) => {
@@ -101,7 +105,7 @@ const handler = (request, response) => {
   console.log("============================");
   const { url, method } = request;
   const [, , , route] = url.split("/");
-  const key = `/${route}:${method.toLowerCase()}`;
+  const key = `/${route.split("?")[0]}:${method.toLowerCase()}`;
   console.log("key", key);
 
   const chosen = routes[key] || routes.default;
