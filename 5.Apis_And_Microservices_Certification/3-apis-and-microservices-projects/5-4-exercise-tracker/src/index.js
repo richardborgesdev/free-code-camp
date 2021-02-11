@@ -105,7 +105,8 @@ const handler = (request, response) => {
   console.log("============================");
   const { url, method } = request;
   const [, , , route] = url.split("/");
-  const key = `/${route.split("?")[0]}:${method.toLowerCase()}`;
+  const routeWithoutParam = route ? route.split("?")[0] : "";
+  const key = `/${routeWithoutParam}:${method.toLowerCase()}`;
   console.log("key", key);
 
   const chosen = routes[key] || routes.default;
