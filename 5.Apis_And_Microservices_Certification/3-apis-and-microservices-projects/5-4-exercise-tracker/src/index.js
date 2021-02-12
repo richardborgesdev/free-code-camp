@@ -4,6 +4,7 @@
 
 var http = require("http");
 const { parse } = require("querystring");
+const url = require("url");
 const userBase = [];
 /** CORS */
 const headers = {
@@ -85,9 +86,8 @@ const routes = {
       retrieve part of the log of any user. from and to are dates in yyyy-mm-dd format.
       limit is an integer of how many logs to send back.
     */
-    const { url } = request;
-    const [, first, , route, data] = url.split("/");
-    console.log("get", first, route, data);
+    const queryObject = url.parse(request.url, true).query;
+    console.log(userBase[queryObject.userId]);
 
     buildResponse(response, "WIP");
   },
