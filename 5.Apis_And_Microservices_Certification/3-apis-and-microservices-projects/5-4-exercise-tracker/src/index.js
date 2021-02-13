@@ -15,6 +15,16 @@ const headers = {
   /** add other headers as per requirement */
 };
 
+const getFromToUserData = (id, from, to) => {
+  console.log("getFromToUserData", id, from, to);
+
+  if (from && to) {
+    return "user data from to WIP";
+  }
+
+  return userBase[id];
+};
+
 const routes = {
   "/new-user:post": async (request, response) => {
     /*
@@ -28,6 +38,7 @@ const routes = {
     request.on("end", () => {
       console.log("parse", parse(body));
       body = parse(body);
+
       userBase.push({ username: body.username, _id: userBase.length });
       buildResponse(response, {
         username: body.username,
@@ -53,7 +64,7 @@ const routes = {
         ...userBase[body.userId],
         ...{
           description: body.description,
-          duration: body.duration,
+          duration: parseInt(body.duration, 10),
           date: body.date ? body.date : new Date()
         }
       };
@@ -87,9 +98,9 @@ const routes = {
       limit is an integer of how many logs to send back.
     */
     const queryObject = url.parse(request.url, true).query;
-    console.log(userBase[queryObject.userId]);
+    const { userId, from, to } = queryObject;
 
-    buildResponse(response, "WIP");
+    buildResponse(response, getFromToUserData(userId, from, to));
   },
   default: (request, response) => {
     buildResponse(response, "hello!");
