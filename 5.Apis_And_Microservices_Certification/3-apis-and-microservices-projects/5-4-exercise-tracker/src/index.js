@@ -6,6 +6,7 @@ var http = require("http");
 const { parse } = require("querystring");
 const url = require("url");
 const userBase = [];
+const userExerciseBase = [];
 /** CORS */
 const headers = {
   "Access-Control-Allow-Origin": "*",
@@ -17,12 +18,13 @@ const headers = {
 
 const getFromToUserData = (id, from, to) => {
   console.log("getFromToUserData", id, from, to);
+  console.log("userExerciseBase", userExerciseBase);
 
   if (from && to) {
     return "user data from to WIP";
   }
 
-  return userBase[id];
+  return userExerciseBase[id].length;
 };
 
 const routes = {
@@ -60,16 +62,20 @@ const routes = {
       console.log("parse", parse(body));
       body = parse(body);
 
-      userBase[body.userId] = {
-        ...userBase[body.userId],
-        ...{
-          description: body.description,
-          duration: parseInt(body.duration, 10),
-          date: body.date ? body.date : new Date()
-        }
+      const exerciseToAdd = {
+        description: body.description,
+        duration: parseInt(body.duration, 10),
+        date: body.date ? body.date : new Date()
       };
 
-      buildResponse(response, userBase[body.userId]);
+      userExerciseBase[body.userId] = userExerciseBase[body.userId]
+        ? userExerciseBase[body.userId].push(exerciseToAdd)
+        : (userExerciseBase[body.userId] = [exerciseToAdd]);
+
+      buildResponse(response, {
+        ...userBase[body.userId],
+        ...exerciseToAdd
+      });
     });
   },
   "/users:get": async (request, response) => {
