@@ -17,11 +17,9 @@ const headers = {
 };
 
 const getFromToUserData = (id, from, to) => {
-  console.log("getFromToUserData", id, from, to);
-  console.log("userExerciseBase", userExerciseBase);
-
   if (from && to) {
-    return "user data from to WIP";
+    console.log("getFromToUserData", id, from, to);
+    return userExerciseBase[id];
   }
 
   return userExerciseBase[id].length;
@@ -65,12 +63,16 @@ const routes = {
       const exerciseToAdd = {
         description: body.description,
         duration: parseInt(body.duration, 10),
-        date: body.date ? body.date : new Date()
+        date: body.date ? new Date(body.date) : new Date()
       };
 
-      userExerciseBase[body.userId] = userExerciseBase[body.userId]
-        ? userExerciseBase[body.userId].push(exerciseToAdd)
-        : (userExerciseBase[body.userId] = [exerciseToAdd]);
+      if (userExerciseBase[body.userId] && userExerciseBase[body.userId].push) {
+        userExerciseBase[body.userId].push(exerciseToAdd);
+      } else {
+        userExerciseBase[body.userId] = [exerciseToAdd];
+      }
+
+      console.log(userExerciseBase[body.userId]);
 
       buildResponse(response, {
         ...userBase[body.userId],
