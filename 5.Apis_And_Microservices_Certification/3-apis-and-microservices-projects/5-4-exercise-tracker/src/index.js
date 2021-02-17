@@ -19,7 +19,12 @@ const headers = {
 const getFromToUserData = (id, from, to) => {
   if (from && to) {
     console.log("getFromToUserData", id, from, to);
-    return userExerciseBase[id];
+    const dateFrom = new Date(from);
+    const dateTo = new Date(to);
+
+    return userExerciseBase[id].filter(
+      ({ date }) => date >= dateFrom && date <= dateTo
+    );
   }
 
   return userExerciseBase[id].length;
