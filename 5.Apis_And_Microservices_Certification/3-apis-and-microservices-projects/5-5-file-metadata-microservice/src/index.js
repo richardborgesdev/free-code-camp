@@ -1,11 +1,4 @@
 /*
-  You can submit a form that includes a file upload.
-
-  The form file input field has the name attribute set to upfile.
-
-  When you submit a file, you receive the file name, type,
-  and size in bytes within the JSON response.
-
   test: https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice
 */
 
@@ -26,6 +19,21 @@ const buildResponse = (response, body) => {
 };
 
 const routes = {
+  "/:get": (request, response) => {
+    /*
+      You can submit a form that includes a file upload.
+
+      The form file input field has the name attribute set to upfile.
+    */
+    buildResponse(response, "GET!");
+  },
+  "/:post": (request, response) => {
+    /*
+      When you submit a file, you receive the file name, type,
+      and size in bytes within the JSON response.
+    */
+    buildResponse(response, "post!");
+  },
   default: (request, response) => {
     buildResponse(response, "hello!");
   }
