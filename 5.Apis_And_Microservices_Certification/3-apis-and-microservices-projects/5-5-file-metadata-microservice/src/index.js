@@ -8,14 +8,26 @@ var http = require("http");
 const headers = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-  "Access-Control-Max-Age": 2592000, // 30 days
-  "Content-Type": "application/json"
+  "Access-Control-Max-Age": 2592000 // 30 days
   /** add other headers as per requirement */
 };
 
 const buildResponse = (response, body) => {
   console.log("buildResponse", JSON.stringify(body));
+  response.writeHead(200, {
+    ...headers,
+    ...{ "Content-Type": "application/json" }
+  });
   response.end(JSON.stringify(body));
+};
+
+const buildHTMLResponse = (response, body) => {
+  console.log("buildHTMLResponse", body);
+  response.writeHead(200, {
+    ...headers,
+    ...{ "Content-Type": "text/html" }
+  });
+  response.end(body);
 };
 
 const routes = {
@@ -25,7 +37,7 @@ const routes = {
 
       The form file input field has the name attribute set to upfile.
     */
-    buildResponse(response, "GET!");
+    buildHTMLResponse(response, "<h1>GET!</h1>");
   },
   "/:post": (request, response) => {
     /*
@@ -50,7 +62,6 @@ const handler = (request, response) => {
   const chosen = routes[key] || routes.default;
 
   if (["GET", "POST"].indexOf(request.method) > -1) {
-    response.writeHead(200, headers);
     return chosen(request, response);
   }
 
