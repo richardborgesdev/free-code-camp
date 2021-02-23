@@ -37,7 +37,10 @@ const routes = {
 
       The form file input field has the name attribute set to upfile.
     */
-    buildHTMLResponse(response, "<h1>GET!</h1>");
+    buildHTMLResponse(
+      response,
+      '<form method="POST"><input type="file" name="upfile"/><input type="submit" value="upload"></form>'
+    );
   },
   "/:post": (request, response) => {
     /*
