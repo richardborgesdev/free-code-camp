@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon src/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "formidable": "1.2.2"
+  },
   "devDependencies": {
     "nodemon": "1.18.4"
   },
