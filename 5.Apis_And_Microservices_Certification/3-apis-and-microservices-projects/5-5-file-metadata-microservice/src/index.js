@@ -3,6 +3,7 @@
 */
 
 var http = require("http");
+const formidable = require("formidable");
 
 /** CORS */
 const headers = {
@@ -47,7 +48,21 @@ const routes = {
       When you submit a file, you receive the file name, type,
       and size in bytes within the JSON response.
     */
-    buildResponse(response, "post!");
+    new formidable.IncomingForm().parse(request, (err, fields, files) => {
+      if (err) {
+        console.error("Error", err);
+        buildResponse(response, "Error");
+        throw err;
+      }
+      console.log("Fields", fields);
+      console.log("Files", Object.entries(files)[0][1]);
+
+      buildResponse(response, {
+        size: Object.entries(files)[0][1].size,
+        name: Object.entries(files)[0][1].name,
+        type: Object.entries(files)[0][1].type
+      });
+    });
   },
   default: (request, response) => {
     buildResponse(response, "hello!");
