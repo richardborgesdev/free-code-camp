@@ -44,12 +44,19 @@ const headers = {
 };
 
 const routes = {
-  "/:get": async (request, response) => {
+  "/convert:get": async (request, response) => {
     const { url } = request;
-    const [, first, , route, data] = url.split("/");
+    const [, first, route, data] = url.split("/");
     console.log("get", first, route, data);
 
-    buildResponse(response, "GET!");
+    buildResponse(response, "convert!");
+  },
+  "/get-tests:get": async (request, response) => {
+    const { url } = request;
+    const [, first, route, data] = url.split("/");
+    console.log("get", first, route, data);
+
+    buildResponse(response, "get-tests!");
   },
   default: (request, response) => {
     buildResponse(response, "default!");
@@ -64,14 +71,14 @@ const buildResponse = (response, body) => {
 const handler = (request, response) => {
   console.log("============================");
   const { url, method } = request;
-  const [, , , route] = url.split("/");
+  const [, , route] = url.split("/");
   const routeWithoutParam = route ? route.split("?")[0] : "";
   const key = `/${routeWithoutParam}:${method.toLowerCase()}`;
   console.log("key", key);
 
   const chosen = routes[key] || routes.default;
 
-  if (["GET", "POST"].indexOf(request.method) > -1) {
+  if (["GET"].indexOf(request.method) > -1) {
     response.writeHead(200, headers);
     return chosen(request, response);
   }
