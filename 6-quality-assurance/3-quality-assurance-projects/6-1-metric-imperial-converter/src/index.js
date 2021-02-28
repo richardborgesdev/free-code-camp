@@ -34,6 +34,8 @@
 */
 
 var http = require("http");
+const url = require("url");
+
 /** CORS */
 const headers = {
   "Access-Control-Allow-Origin": "*",
@@ -45,9 +47,8 @@ const headers = {
 
 const routes = {
   "/convert:get": async (request, response) => {
-    const { url } = request;
-    const [, first, route, data] = url.split("/");
-    console.log("get", first, route, data);
+    const { input } = url.parse(request.url, true).query;
+    console.log(input);
 
     buildResponse(response, "convert!");
   },
