@@ -16,12 +16,6 @@
   convertHandler should correctly return an error for an invalid input unit.
   convertHandler should return the correct return unit for each valid input unit.
   convertHandler should correctly return the spelled-out string unit for each valid input unit.
-  convertHandler should correctly convert gal to L.
-  convertHandler should correctly convert L to gal.
-  convertHandler should correctly convert mi to km.
-  convertHandler should correctly convert km to mi.
-  convertHandler should correctly convert lbs to kg.
-  convertHandler should correctly convert kg to lbs.
   Write the following tests in tests/2_functional-tests.js:
 
   Convert a valid input such as 10L: GET request to /api/convert.
@@ -45,12 +39,23 @@ const headers = {
   /** add other headers as per requirement */
 };
 
+const convert = (input) => {
+  /*
+    convertHandler should correctly convert gal to L.
+    convertHandler should correctly convert L to gal.
+    convertHandler should correctly convert mi to km.
+    convertHandler should correctly convert km to mi.
+    convertHandler should correctly convert lbs to kg.
+    convertHandler should correctly convert kg to lbs.
+  */
+  return input;
+};
+
 const routes = {
   "/convert:get": async (request, response) => {
     const { input } = url.parse(request.url, true).query;
-    console.log(input);
 
-    buildResponse(response, "convert!");
+    buildResponse(response, convert(input));
   },
   "/get-tests:get": async (request, response) => {
     const { url } = request;
