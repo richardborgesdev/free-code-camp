@@ -39,6 +39,10 @@ const headers = {
   /** add other headers as per requirement */
 };
 
+const getUnit = (input) => {
+  return /gal|lbs|mi|L|km|kg/.exec(input);
+};
+
 const convert = (input) => {
   /*
     convertHandler should correctly convert gal to L.
@@ -48,7 +52,7 @@ const convert = (input) => {
     convertHandler should correctly convert lbs to kg.
     convertHandler should correctly convert kg to lbs.
   */
-  return input;
+  return `${input} unity: ${getUnit(input)}`;
 };
 
 const routes = {
