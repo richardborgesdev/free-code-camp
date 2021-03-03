@@ -43,7 +43,54 @@ const getUnit = (input) => {
   return /gal|lbs|mi|L|km|kg/.exec(input);
 };
 
+const getValue = (input, unit) => {
+  return input.replace(unit, "");
+};
+
+const galToL = (value) => {
+  return value;
+};
+
+const lToGal = (value) => {
+  return value;
+};
+
+const miToKm = (value) => {
+  return value;
+};
+
+const kmToMi = (value) => {
+  return value;
+};
+
+const lbsToKg = (value) => {
+  return value;
+};
+
+const kgToLbs = (value) => {
+  return value;
+};
+
 const convert = (input) => {
+  const unit = getUnit(input);
+  const value = getValue(input, unit);
+
+  switch (unit) {
+    case "gal":
+      return galToL(value);
+    case "L":
+      return lToGal(value);
+    case "mi":
+      return miToKm(value);
+    case "Km":
+      return kmToMi(value);
+    case "lbs":
+      return lbsToKg(value);
+    case "kg":
+      return kgToLbs(value);
+    default:
+      return "unknown unit";
+  }
   /*
     convertHandler should correctly convert gal to L.
     convertHandler should correctly convert L to gal.
