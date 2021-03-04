@@ -47,26 +47,44 @@ const getValue = (input, unit) => {
   return input.replace(unit, "");
 };
 
+/*
+  convertHandler should correctly convert gal to L.
+*/
 const galToL = (value) => {
-  return value;
+  return value * 3.785;
 };
 
+/*
+  convertHandler should correctly convert L to gal.
+*/
 const lToGal = (value) => {
-  return value;
+  return value / 3.785;
 };
 
+/*
+  convertHandler should correctly convert mi to km.
+*/
 const miToKm = (value) => {
   return value;
 };
 
+/*
+  convertHandler should correctly convert km to mi.
+*/
 const kmToMi = (value) => {
   return value;
 };
 
+/*
+  convertHandler should correctly convert lbs to kg.
+*/
 const lbsToKg = (value) => {
   return value;
 };
 
+/*
+  convertHandler should correctly convert kg to lbs.
+*/
 const kgToLbs = (value) => {
   return value;
 };
@@ -74,8 +92,9 @@ const kgToLbs = (value) => {
 const convert = (input) => {
   const unit = getUnit(input);
   const value = getValue(input, unit);
+  console.log("convert", value, unit[0]);
 
-  switch (unit) {
+  switch (unit[0]) {
     case "gal":
       return galToL(value);
     case "L":
@@ -91,15 +110,6 @@ const convert = (input) => {
     default:
       return "unknown unit";
   }
-  /*
-    convertHandler should correctly convert gal to L.
-    convertHandler should correctly convert L to gal.
-    convertHandler should correctly convert mi to km.
-    convertHandler should correctly convert km to mi.
-    convertHandler should correctly convert lbs to kg.
-    convertHandler should correctly convert kg to lbs.
-  */
-  return `${input} unity: ${getUnit(input)}`;
 };
 
 const routes = {
