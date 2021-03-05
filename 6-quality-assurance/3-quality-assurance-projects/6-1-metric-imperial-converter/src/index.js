@@ -44,21 +44,21 @@ const getUnit = (input) => {
 };
 
 const getValue = (input, unit) => {
-  return input.replace(unit, "");
+  return parseFloat(input.replace(unit, ""));
 };
 
 /*
   convertHandler should correctly convert gal to L.
 */
 const galToL = (value) => {
-  return value * 3.785;
+  return value * 3.785411784;
 };
 
 /*
   convertHandler should correctly convert L to gal.
 */
 const lToGal = (value) => {
-  return value / 3.785;
+  return value / 3.785411784;
 };
 
 /*
@@ -79,14 +79,14 @@ const kmToMi = (value) => {
   convertHandler should correctly convert lbs to kg.
 */
 const lbsToKg = (value) => {
-  return value;
+  return value / 2.205;
 };
 
 /*
   convertHandler should correctly convert kg to lbs.
 */
 const kgToLbs = (value) => {
-  return value;
+  return value * 2.205;
 };
 
 const convert = (input) => {
