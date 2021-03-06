@@ -65,14 +65,14 @@ const lToGal = (value) => {
   convertHandler should correctly convert mi to km.
 */
 const miToKm = (value) => {
-  return value;
+  return value * 1.609344;
 };
 
 /*
   convertHandler should correctly convert km to mi.
 */
 const kmToMi = (value) => {
-  return value;
+  return value / 1.609344;
 };
 
 /*
