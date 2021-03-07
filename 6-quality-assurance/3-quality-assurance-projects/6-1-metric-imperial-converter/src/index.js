@@ -40,7 +40,9 @@ const headers = {
 };
 
 const getUnit = (input) => {
-  return /gal|lbs|mi|L|km|kg/.exec(input);
+  const unit = /(gal|lbs|mi|L|km|kg)$/.exec(input);
+
+  return unit && unit.length ? unit[0] : false;
 };
 
 const getValue = (input, unit) => {
@@ -92,9 +94,15 @@ const kgToLbs = (value) => {
 const convert = (input) => {
   const unit = getUnit(input);
   const value = getValue(input, unit);
-  console.log("convert", value, unit[0]);
+  console.log("convert", value, unit);
 
-  switch (unit[0]) {
+  if (isNaN(value) && !value) {
+    return "invalid number and unit";
+  } else if (isNaN(value)) {
+    return "invalid number";
+  }
+
+  switch (unit) {
     case "gal":
       return galToL(value);
     case "L":
@@ -108,7 +116,7 @@ const convert = (input) => {
     case "kg":
       return kgToLbs(value);
     default:
-      return "unknown unit";
+      return "invalid unit";
   }
 };
 
