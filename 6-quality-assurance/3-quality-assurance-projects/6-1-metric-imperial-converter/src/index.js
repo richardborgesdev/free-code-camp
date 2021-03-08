@@ -94,7 +94,8 @@ const kgToLbs = (value) => {
 const convert = (input) => {
   const unit = getUnit(input);
   const value = getValue(input, unit);
-  console.log("convert", value, unit);
+  console.log("convert", input, value, unit);
+  let convertedObj = {};
 
   if (isNaN(value) && !value) {
     return "invalid number and unit";
@@ -104,7 +105,14 @@ const convert = (input) => {
 
   switch (unit) {
     case "gal":
-      return galToL(value);
+      const returnNum = galToL(value);
+
+      convertedObj = {
+        returnNum,
+        returnUnit: "L",
+        string: `${value} gallons converts to ${returnNum} liters`
+      };
+      break;
     case "L":
       return lToGal(value);
     case "mi":
@@ -118,6 +126,12 @@ const convert = (input) => {
     default:
       return "invalid unit";
   }
+
+  return {
+    initNum: value,
+    initUnit: unit,
+    ...convertedObj
+  };
 };
 
 const routes = {
