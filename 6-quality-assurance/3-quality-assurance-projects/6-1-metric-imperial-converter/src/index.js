@@ -40,7 +40,7 @@ const headers = {
 };
 
 const getUnit = (input) => {
-  const unit = /(gal|lbs|mi|L|km|kg)$/.exec(input);
+  const unit = /(gal|lbs|mi|L|km|kg)$/i.exec(input);
 
   return unit && unit.length ? unit[0] : false;
 };
@@ -95,17 +95,20 @@ const convert = (input) => {
   const unit = getUnit(input);
   const value = getValue(input, unit);
   console.log("convert", input, value, unit);
+  let returnNum = false;
   let convertedObj = {};
 
-  if (isNaN(value) && !value) {
+  if (isNaN(value) && !unit) {
     return "invalid number and unit";
   } else if (isNaN(value)) {
     return "invalid number";
+  } else if (!unit) {
+    return "invalid unit";
   }
 
-  switch (unit) {
+  switch (unit.toLocaleLowerCase()) {
     case "gal":
-      const returnNum = galToL(value);
+      returnNum = galToL(value);
 
       convertedObj = {
         returnNum,
@@ -113,16 +116,51 @@ const convert = (input) => {
         string: `${value} gallons converts to ${returnNum} liters`
       };
       break;
-    case "L":
-      return lToGal(value);
+    case "l":
+      returnNum = lToGal(value);
+
+      convertedObj = {
+        returnNum,
+        returnUnit: "gal",
+        string: `${value} liters converts to ${returnNum} gallons`
+      };
+      break;
     case "mi":
-      return miToKm(value);
+      returnNum = miToKm(value);
+
+      convertedObj = {
+        returnNum,
+        returnUnit: "km",
+        string: `${value} miles converts to ${returnNum} kilometers`
+      };
+      break;
     case "Km":
-      return kmToMi(value);
+      returnNum = kmToMi(value);
+
+      convertedObj = {
+        returnNum,
+        returnUnit: "km",
+        string: `${value} kilometers converts to ${returnNum} miles`
+      };
+      break;
     case "lbs":
-      return lbsToKg(value);
+      returnNum = lbsToKg(value);
+
+      convertedObj = {
+        returnNum,
+        returnUnit: "km",
+        string: `${value} lbs converts to ${returnNum} kilograms`
+      };
+      break;
     case "kg":
-      return kgToLbs(value);
+      returnNum = kgToLbs(value);
+
+      convertedObj = {
+        returnNum,
+        returnUnit: "km",
+        string: `${value} kilograms converts to ${returnNum} lbs`
+      };
+      break;
     default:
       return "invalid unit";
   }
