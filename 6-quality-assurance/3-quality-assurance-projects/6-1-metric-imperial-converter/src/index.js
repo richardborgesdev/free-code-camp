@@ -53,14 +53,14 @@ const getValue = (input, unit) => {
   convertHandler should correctly convert gal to L.
 */
 const galToL = (value) => {
-  return value * 3.785411784;
+  return value * 3.78541;
 };
 
 /*
   convertHandler should correctly convert L to gal.
 */
 const lToGal = (value) => {
-  return value / 3.785411784;
+  return value / 3.78541;
 };
 
 /*
@@ -111,7 +111,7 @@ const convert = (input) => {
       returnNum = galToL(value);
 
       convertedObj = {
-        returnNum,
+        initUnit: unit,
         returnUnit: "L",
         string: `${value} gallons converts to ${returnNum} liters`
       };
@@ -120,7 +120,7 @@ const convert = (input) => {
       returnNum = lToGal(value);
 
       convertedObj = {
-        returnNum,
+        initUnit: "L",
         returnUnit: "gal",
         string: `${value} liters converts to ${returnNum} gallons`
       };
@@ -129,7 +129,7 @@ const convert = (input) => {
       returnNum = miToKm(value);
 
       convertedObj = {
-        returnNum,
+        initUnit: unit,
         returnUnit: "km",
         string: `${value} miles converts to ${returnNum} kilometers`
       };
@@ -138,7 +138,7 @@ const convert = (input) => {
       returnNum = kmToMi(value);
 
       convertedObj = {
-        returnNum,
+        initUnit: unit,
         returnUnit: "km",
         string: `${value} kilometers converts to ${returnNum} miles`
       };
@@ -147,7 +147,7 @@ const convert = (input) => {
       returnNum = lbsToKg(value);
 
       convertedObj = {
-        returnNum,
+        initUnit: unit,
         returnUnit: "km",
         string: `${value} lbs converts to ${returnNum} kilograms`
       };
@@ -156,7 +156,7 @@ const convert = (input) => {
       returnNum = kgToLbs(value);
 
       convertedObj = {
-        returnNum,
+        initUnit: unit,
         returnUnit: "km",
         string: `${value} kilograms converts to ${returnNum} lbs`
       };
@@ -166,8 +166,8 @@ const convert = (input) => {
   }
 
   return {
+    returnNum: parseFloat(returnNum).toFixed(5),
     initNum: value,
-    initUnit: unit,
     ...convertedObj
   };
 };
