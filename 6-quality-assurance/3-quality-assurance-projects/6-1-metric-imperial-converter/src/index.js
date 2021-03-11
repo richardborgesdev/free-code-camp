@@ -81,14 +81,14 @@ const kmToMi = (value) => {
   convertHandler should correctly convert lbs to kg.
 */
 const lbsToKg = (value) => {
-  return value / 2.205;
+  return value * 0.453592;
 };
 
 /*
   convertHandler should correctly convert kg to lbs.
 */
 const kgToLbs = (value) => {
-  return value * 2.205;
+  return value / 0.453592;
 };
 
 const convert = (input) => {
@@ -148,8 +148,8 @@ const convert = (input) => {
 
       convertedObj = {
         initUnit: unit,
-        returnUnit: "km",
-        string: `${value} lbs converts to ${returnNum} kilograms`
+        returnUnit: "kg",
+        string: `${value} pounds converts to ${returnNum} kilograms`
       };
       break;
     case "kg":
@@ -157,7 +157,7 @@ const convert = (input) => {
 
       convertedObj = {
         initUnit: unit,
-        returnUnit: "km",
+        returnUnit: "lbs",
         string: `${value} kilograms converts to ${returnNum} lbs`
       };
       break;
