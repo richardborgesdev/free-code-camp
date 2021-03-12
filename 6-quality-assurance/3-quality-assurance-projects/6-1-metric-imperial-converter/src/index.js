@@ -46,49 +46,49 @@ const getUnit = (input) => {
 };
 
 const getValue = (input, unit) => {
-  return parseFloat(input.replace(unit, ""));
+  return parseFloat(input.replace(new RegExp(unit, "i"), ""));
 };
 
 /*
   convertHandler should correctly convert gal to L.
 */
 const galToL = (value) => {
-  return value * 3.78541;
+  return parseFloat(value * 3.78541).toFixed(5);
 };
 
 /*
   convertHandler should correctly convert L to gal.
 */
 const lToGal = (value) => {
-  return value / 3.78541;
+  return parseFloat(value / 3.78541).toFixed(5);
 };
 
 /*
   convertHandler should correctly convert mi to km.
 */
 const miToKm = (value) => {
-  return value * 1.609344;
+  return parseFloat(value * 1.60934).toFixed(5);
 };
 
 /*
   convertHandler should correctly convert km to mi.
 */
 const kmToMi = (value) => {
-  return value / 1.609344;
+  return parseFloat(value / 1.60934).toFixed(5);
 };
 
 /*
   convertHandler should correctly convert lbs to kg.
 */
 const lbsToKg = (value) => {
-  return value * 0.453592;
+  return parseFloat(value * 0.453592).toFixed(5);
 };
 
 /*
   convertHandler should correctly convert kg to lbs.
 */
 const kgToLbs = (value) => {
-  return value / 0.453592;
+  return parseFloat(value / 0.453592).toFixed(5);
 };
 
 const convert = (input) => {
@@ -106,12 +106,14 @@ const convert = (input) => {
     return "invalid unit";
   }
 
-  switch (unit.toLocaleLowerCase()) {
+  const lowerCaseUnit = unit.toLocaleLowerCase();
+
+  switch (lowerCaseUnit) {
     case "gal":
       returnNum = galToL(value);
 
       convertedObj = {
-        initUnit: unit,
+        initUnit: lowerCaseUnit,
         returnUnit: "L",
         string: `${value} gallons converts to ${returnNum} liters`
       };
@@ -129,17 +131,17 @@ const convert = (input) => {
       returnNum = miToKm(value);
 
       convertedObj = {
-        initUnit: unit,
+        initUnit: lowerCaseUnit,
         returnUnit: "km",
         string: `${value} miles converts to ${returnNum} kilometers`
       };
       break;
-    case "Km":
+    case "km":
       returnNum = kmToMi(value);
 
       convertedObj = {
-        initUnit: unit,
-        returnUnit: "km",
+        initUnit: lowerCaseUnit,
+        returnUnit: "mi",
         string: `${value} kilometers converts to ${returnNum} miles`
       };
       break;
@@ -147,7 +149,7 @@ const convert = (input) => {
       returnNum = lbsToKg(value);
 
       convertedObj = {
-        initUnit: unit,
+        initUnit: lowerCaseUnit,
         returnUnit: "kg",
         string: `${value} pounds converts to ${returnNum} kilograms`
       };
@@ -156,7 +158,7 @@ const convert = (input) => {
       returnNum = kgToLbs(value);
 
       convertedObj = {
-        initUnit: unit,
+        initUnit: lowerCaseUnit,
         returnUnit: "lbs",
         string: `${value} kilograms converts to ${returnNum} lbs`
       };
@@ -166,7 +168,7 @@ const convert = (input) => {
   }
 
   return {
-    returnNum: parseFloat(returnNum).toFixed(5),
+    returnNum,
     initNum: value,
     ...convertedObj
   };
