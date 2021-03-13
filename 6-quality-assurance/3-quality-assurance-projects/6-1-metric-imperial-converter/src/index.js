@@ -46,7 +46,9 @@ const getUnit = (input) => {
 };
 
 const getValue = (input, unit) => {
-  return parseFloat(input.replace(new RegExp(unit, "i"), ""));
+  const withoutUnit = input.replace(new RegExp(unit, "i"), "");
+
+  return isNaN(withoutUnit) ? false : parseFloat(withoutUnit);
 };
 
 /*
@@ -98,9 +100,9 @@ const convert = (input) => {
   let returnNum = false;
   let convertedObj = {};
 
-  if (isNaN(value) && !unit) {
+  if (!value && !unit) {
     return "invalid number and unit";
-  } else if (isNaN(value)) {
+  } else if (!value) {
     return "invalid number";
   } else if (!unit) {
     return "invalid unit";
