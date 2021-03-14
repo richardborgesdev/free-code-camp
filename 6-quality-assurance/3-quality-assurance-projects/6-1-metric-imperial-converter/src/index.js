@@ -45,10 +45,10 @@ const getUnit = (input) => {
   return unit && unit.length ? unit[0] : false;
 };
 
-const getValue = (input, unit) => {
-  const withoutUnit = input.replace(new RegExp(unit, "i"), "");
+const getValue = (input) => {
+  const value = /\d*/.exec(input);
 
-  return isNaN(withoutUnit) ? false : parseFloat(withoutUnit);
+  return isNaN(value) ? false : parseFloat(value);
 };
 
 /*
@@ -95,17 +95,17 @@ const kgToLbs = (value) => {
 
 const convert = (input) => {
   const unit = getUnit(input);
-  const value = getValue(input, unit);
+  const value = getValue(input);
   console.log("convert", input, value, unit);
   let returnNum = false;
   let convertedObj = {};
 
   if (!value && !unit) {
     return "invalid number and unit";
-  } else if (!value) {
-    return "invalid number";
   } else if (!unit) {
     return "invalid unit";
+  } else if (!value) {
+    return "invalid number";
   }
 
   const lowerCaseUnit = unit.toLocaleLowerCase();
